@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Linux_Libertine_Regular';
-    src: url("../superfoods_chia/LinLibertine_R.ttf") format('truetype');
+    src: url("https://github.com/ana-sifuentes/superfoods_chia/blob/main/LinLibertine_R.ttf") format('truetype');
     font-style: normal;
 }
 
@@ -12,3 +12,9 @@ body {
   font-family: 'Linux_Libertine_Regular', Fallback, sans-serif;
   background-color: lightblue;
 }
+
+
+h2{
+      font-family: 'Linux_Libertine_Regular';
+}
+
