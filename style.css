@@ -1,10 +1,12 @@
 
 
-
 @font-face {
-  font-family: 'Linux_Libertine_Regular';
-  src: url('LinLibertine_R.ttf'); /* IE9 Compat Modes */
+    font-family: 'Linux_Libertine_Regular';
+    src: url("../superfoods_chia/LinLibertine_R.ttf") format('truetype');
+    font-style: normal;
 }
+
+
 
 body {
   font-family: 'Linux_Libertine_Regular', Fallback, sans-serif;
