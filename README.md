@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  
+
+ <body> 
  <div id="game">
   <div id="character"></div>
   <div id="block"></div>
