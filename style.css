@@ -34,16 +34,17 @@
 
 #block{
     background-color: blue;
-    width: 20px;
+    width: 30px; /*20*/
     height: 20px;
     position: relative;
     top: 185px;
     left: 800px;
+    background-image:url("assets/fireball.png");
     animation: block 1s infinite linear;
 }
 @keyframes block{
     0%{left: 800px}
-    100%{left: -20px}
+    100%{left: -30px}
 }
 
 
