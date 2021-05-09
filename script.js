@@ -6,12 +6,12 @@ var block = document.getElementById("block");
 
 function jump(){
   
-  if(character.classList !="animate_jump"){
-    character.classList.add("animate_jump");
+  if(character.classList !="animate"){
+    character.classList.add("animate");
   }
   
   setTimeout(function(){
-    character.classList.remove("animate_jump");
+    character.classList.remove("animate");
   },500);
   
 }
