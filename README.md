@@ -9,7 +9,7 @@
 
 
 
- <div id="game">
+ <div id="game" onclick="jump()">
   <div id="character"></div>
   <div id="block"></div>
  </div>
