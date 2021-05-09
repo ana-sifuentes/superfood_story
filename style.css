@@ -6,15 +6,22 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'VCR_OSD';
+    src: url("https://github.com/ana-sifuentes/superfoods_chia/blob/main/VCR_OSD_MONO_1.001.ttf") format('truetype');
+    font-style: normal;
+}
+
+
 
 
 body {
-  font-family: 'Linux_Libertine_Regular', Fallback, sans-serif;
+  font-family: 'VCR_OSD', Fallback, sans-serif;
   background-color: pink;
 }
 
 
 h2{
-      font-family: 'Linux_Libertine_Regular';
+    font-family: 'VCR_OSD';
 }
 
