@@ -26,3 +26,8 @@ var checkDead = setInterval(function(){
    alert("you lose :c "); 
   }
 },10);
+
+
+  function showAlert() {
+    alert ("Hello world!");
+  }
