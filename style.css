@@ -18,12 +18,12 @@
 
 
 body {
-  font-family: 'VCR_OSD', Fallback, sans-serif;
+  font-family:'VCR_OSD';
   background-color: white;
 }
 
 
 h2{
-    font-family: 'VCR_OSD';
+    font-family:'VCR_OSD';
 }
 
