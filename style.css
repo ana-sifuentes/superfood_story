@@ -14,9 +14,6 @@
     font-style: normal;
 }
 
-
-
-
 * {
     padding:0;
     margin:0;
@@ -38,7 +35,7 @@
     background-image: url("assets/chia_seed.png");
 }
 
-.animate_jump{
+.animate{
        animation: jump 500ms; 
 }
 
