@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+
+<html lang="en" onclick="jump()">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 
 
 
- <div id="game" onclick="jump()">
+ <div id="game">
   <div id="character"></div>
   <div id="block"></div>
  </div>
