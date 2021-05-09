@@ -1,4 +1,7 @@
   
+//based on the code by : https://github.com/Beat0154
+
+
 var character = document.getElementById("character");
 var block = document.getElementById("block");
 
