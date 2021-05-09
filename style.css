@@ -24,17 +24,17 @@
 
 
 #game{
-    width:500px;
-    height:200px;
+    width:1000px;
+    height:500px;
     border:1px solid black;
 }
 
 #character{
-    width:20px;
-    height:50px;
+    width:180px;
+    height:206px;
     background-color:red;
     position:relative;
-    top:150px;
+    top:294px;
     background-image: url("https://github.com/ana-sifuentes/superfood_story/blob/main/assets/chia_seed.png");
 }
 
