@@ -8,12 +8,12 @@
 </head>
 
 
- <body> 
+
  <div id="game">
   <div id="character"></div>
   <div id="block"></div>
  </div>
-</body>
+
  
 <script src="script.js" type="text/javascript"></script>
 
