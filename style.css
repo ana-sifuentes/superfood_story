@@ -27,11 +27,11 @@
 }
 
 #character{
-    width:180px;
-    height:206px;
+    width:82px;
+    height:98px;
     background-color:red;
     position:relative;
-    top:294px;
+    top:418px;
     background-image: url("assets/chia_seed.png");
 }
 
@@ -40,10 +40,10 @@
 }
 
 @keyframes jump{
-    0%{top:150px;}
-    30%{top:10px;}
-    70%{top:10px;}
-    100%{top:150px;}
+    0%{top:418px;}
+    30%{top:300px;}
+    70%{top:300px;}
+    100%{top:418px;}
 }
 
 #block{
@@ -51,14 +51,14 @@
     height:20px;
     background-color:blue;
     position:relative;
-    top:130px;
-    left:480px;
+    top:480px;
+    left:980px;
     animation: block 1s infinite linear;
 }
 
 
 @keyframes block{
-    0%{left: 480px;}
+    0%{left: 980px;}
     100%{left:-40px;}
 }
 
