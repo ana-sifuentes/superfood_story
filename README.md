@@ -8,7 +8,7 @@
 </head>
 
 
- <body> 
+ <body onload="showAlert()"> 
  <div id="game">
   <div id="character"></div>
   <div id="block"></div>
