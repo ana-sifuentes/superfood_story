@@ -16,6 +16,22 @@ function jump(){
   
 }
 
+
+
+
+document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+      alert("clicked space bar");
+       jump();
+    }
+}
+
+
+
+
+
+
+
 var checkDead = setInterval(function(){
   var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));  
   var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));  
