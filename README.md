@@ -15,6 +15,6 @@
  </div>
 </body>
  
-<script src="script.js"> </script>
+<script src="script.js" type="text/javascript"></script>
 
 </html>
