@@ -10,7 +10,7 @@
 
 @font-face {
     font-family:'VCR_OSD';
-    src: url("https://github.com/ana-sifuentes/superfoods_chia/blob/main/VCR_OSD_MONO_1.001.ttf") format('truetype');
+    src: url("VCR_OSD_MONO_1.001.ttf") format('truetype');
     font-style: normal;
 }
 
@@ -35,7 +35,7 @@
     background-color:red;
     position:relative;
     top:294px;
-    background-image: url("https://github.com/ana-sifuentes/superfood_story/blob/main/assets/chia_seed.png");
+    background-image: url("assets/chia_seed.png");
 }
 
 .animate_jump{
