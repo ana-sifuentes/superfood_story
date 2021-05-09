@@ -7,6 +7,7 @@
 </head>
     
 <body>
+     <p>Click on the screen to jump!</p>
     <div class="game">
         <div id="character"></div>
         <div id="block"></div>
