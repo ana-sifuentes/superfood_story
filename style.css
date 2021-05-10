@@ -21,6 +21,7 @@
 		height:70px;
 		margin-top:10px;
 		margin-bottom:20px;
+		font-family: 'VCR_OSD_MONO';
 	}
 	
 	
@@ -61,13 +62,17 @@
 
 /**********************/
 
+/* fonts */
+	.menu.item p{
+		font-family: 'VCR_OSD_MONO';
+	}
 
-	.menu.wrapper > p{
+	.menu.main p{
 		font-family: 'VCR_OSD_MONO';
 	}
 
 
-	p{
+	h1, h2, h3, h4, h5, h6, p{
 		font-family: 'Resolve-Light';
 	}
 
