@@ -9,8 +9,6 @@ var block = document.getElementById("block");
 
 //counter set to 0 before stage 1
 var counter=0;
-document.getElementById("scoreSpan").innerHTML = "-";
-
 var game_stage=0;
 
 
@@ -26,6 +24,8 @@ function title_screen(){
   //switch to game screen
   document.getElementById("stage1").classList.add("current");
   game_stage = 1;
+  counter=0;
+  document.getElementById("scoreSpan").innerHTML = Math.floor(counter);
   
 }
 
