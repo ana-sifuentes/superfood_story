@@ -18,8 +18,9 @@ var game_stage=0;
 //title screen
 function title_screen(){
   
-  //remove the title screen
+  //remove the title screen and show score
   document.getElementById("stage0").classList.remove("current");
+  document.getElementById("scoreSpan").classList.remove("off");
   
   //switch to game screen
   document.getElementById("stage1").classList.add("current");
