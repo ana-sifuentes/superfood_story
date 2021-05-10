@@ -158,8 +158,13 @@
 }	
 
 
+#scoreSpan.off{
+display:none;
+}
 
-.stage.current{
+
+
+.stage.current, #scoreSpan{
 	display:block;
 }
 	
