@@ -147,4 +147,14 @@
     100%{left: -30px}
 }
 
+.stage{
+	display:none;	
+}	
+
+.stage.current{
+	display:block;
+}
+	
+
+
 
