@@ -2,11 +2,29 @@
 //based on the code by : https://github.com/Beat0154
 
 
+//variables
 var character = document.getElementById("character");
 var block = document.getElementById("block");
 
 var counter=0;
 
+var game_stage=0;
+
+
+//title screen
+function title_screen(){
+  
+  //remove the title screen
+  document.getElementById("stage0").classList.remove("current");
+  
+  //switch to game screen
+  document.getElementById("stage1").classList.add("current");
+  game_stage = 1;
+  
+}
+
+
+//player jumps
 function jump(){
     if(character.classList == "animate"){return}
     character.classList.add("animate");
@@ -14,6 +32,11 @@ function jump(){
         character.classList.remove("animate");
     },300);
 }
+
+
+
+//check if player lost
+
 var checkDead = setInterval(function() {
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
@@ -29,10 +52,17 @@ var checkDead = setInterval(function() {
     }
 }, 10)
 
-
+//when the user clicks 
 document.body.onkeyup = function(e){
     if(e.keyCode == 32){
-       jump();
+
+       if(game_stage == 0){
+          title_screen();
+       }
+      
+       if(game_stage == 1){
+          jump();
+       }
     }
 }
 
