@@ -25,6 +25,7 @@ function title_screen(){
   //switch to game screen
   document.getElementById("stage1").classList.add("current");
   game_stage = 1;  
+  counter=0;
 }
 
 
