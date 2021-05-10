@@ -62,6 +62,30 @@
 
 /**********************/
 
+	/* general wrapper for the content */
+	.content_wrapper {
+		margin: auto;
+    		max-width: 1250px;
+    		width: 85%;
+	}
+
+	/*main layout class */
+	.column  { 
+		float:left;
+		margin:1% 1%;
+		padding: 0px;
+	}
+
+	/* 100% */
+	.full_size { width:98%; }
+	/* 33% */
+	.third_size { width: 31.33%; }
+	/* 66% */
+	.two_third_size { width: 64.6%; }
+
+
+
+
 /* fonts */
 	.menu.item p{
 		font-family: 'VCR_OSD_MONO';
