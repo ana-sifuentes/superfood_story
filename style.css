@@ -147,9 +147,17 @@
     100%{left: -30px}
 }
 
+
+
 .stage{
-	display:none;	
+	float: left;
+	height: 300px;
+    	width: 100%;
+    	position: relative;
+	display:none;
 }	
+
+
 
 .stage.current{
 	display:block;
