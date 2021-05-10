@@ -5,6 +5,13 @@
 }
 
 
+@font-face {
+  font-family: Resolve-Light;
+  src: url("assets/Resolve-Light 3.otf");
+}
+
+
+
 
 /**********************/
 /* MENU */
@@ -55,12 +62,14 @@
 /**********************/
 
 
-p{
-    text-align: center;
-    font-family: 'VCR_OSD_MONO';
-}
+	.menu.wrapper > p{
+		font-family: 'VCR_OSD_MONO';
+	}
 
 
+	p{
+		font-family: 'Resolve-Light';
+	}
 
 
 /**********************/
