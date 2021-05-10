@@ -8,7 +8,7 @@ var block = document.getElementById("block");
 
 
 //counter set to 0 before stage 1
-var counter;
+var counter=0;
 document.getElementById("scoreSpan").innerHTML = "-";
 
 var game_stage=0;
@@ -70,7 +70,6 @@ document.body.onkeyup = function(e){
        }
       
        if(game_stage == 1){
-          counter = 0;
           jump();
        }
     }
