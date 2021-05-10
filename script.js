@@ -43,7 +43,7 @@ var checkDead = setInterval(function() {
   
     if(blockLeft<70 && blockLeft>-20 && characterTop>=185){
         block.style.animation = "none";
-        alert("Game Over. score: "+Math.floor(counter/100));
+      //  alert("Game Over. score: "+Math.floor(counter/100));
         counter=0;
         block.style.animation = "block 1s infinite linear";
     }else{
@@ -51,6 +51,9 @@ var checkDead = setInterval(function() {
         document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
     }
 }, 10)
+
+
+
 
 //when the user clicks 
 document.body.onkeyup = function(e){
