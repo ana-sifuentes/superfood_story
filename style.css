@@ -25,14 +25,17 @@
 	}
 	
 	.menu.spacer{
-		float:left; 
-		width:50%;
+    		float: left;
+    		width: 44%;
+    		height: 1px;
 	}
 	
 	.menu.item{
     		float: left;
-   		width: 10%;
-    		font-size: 25px;
+    		width: 12%;
+    		margin: 10px 0px;
+    		padding: 8px 0px;
+    		font-size: 20px;
     		text-align: center;
 	}
 	
