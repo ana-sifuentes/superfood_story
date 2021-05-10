@@ -1,20 +1,2 @@
 
-<html lang="en" onclick="jump()">
-<head>
-    <meta charset="UTF-8">
-    <title> SUPERFOOD STORY </title>
-    <link rel="stylesheet" href="style.css">
-</head>
-    
-<body>
-     <p>Click on the screen to jump!</p>
-    <div class="game">
-        <div id="character"></div>
-        <div id="block"></div>
-    </div>
-    <p>SCORE: <span id="scoreSpan"></span></p>
-</body>
-
-
-<script src="script.js"></script>
-</html>
+    <h1> SUPERFOOD STORY </h1>
