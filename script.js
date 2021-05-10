@@ -6,9 +6,15 @@
 var character = document.getElementById("character");
 var block = document.getElementById("block");
 
+
+//counter set to 0 before stage 1
 var counter;
+document.getElementById("scoreSpan").innerHTML = "-";
 
 var game_stage=0;
+
+
+
 
 
 //title screen
