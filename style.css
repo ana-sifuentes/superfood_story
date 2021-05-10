@@ -162,12 +162,17 @@
 display:none;
 }
 
-
-
 .stage.current, #scoreSpan{
-	display:block;
+	display:block; 
 }
-	
+
+#stage0 p{
+    color: green;
+    font-size: 30PX;
+    font-weight: 900;
+    padding-top: 150px;
+}
+
 
 
 
