@@ -6,7 +6,7 @@
 var character = document.getElementById("character");
 var block = document.getElementById("block");
 
-var counter=0;
+var counter;
 
 var game_stage=0;
 
@@ -64,6 +64,7 @@ document.body.onkeyup = function(e){
        }
       
        if(game_stage == 1){
+          counter = 0;
           jump();
        }
     }
