@@ -23,10 +23,7 @@ function title_screen(){
   
   //switch to game screen
   document.getElementById("stage1").classList.add("current");
-  game_stage = 1;
-  counter=0;
-  document.getElementById("scoreSpan").innerHTML = Math.floor(counter);
-  
+  game_stage = 1;  
 }
 
 
