@@ -206,7 +206,7 @@
 			
 
 				
-				.options_wrapper > .option{
+				.option{
 					width:70%;
 					background-color:blue;
 					color:white;
@@ -220,7 +220,12 @@
 					font-family: 'VCR_OSD_MONO';
 				}
 				
-				.options_wrapper > .option.selected{
+				.option.nutrinfo{
+					width:20%;		
+				}
+			
+			
+				.option.selected{
 					background-color: darkred;	
 				}
 				
@@ -295,17 +300,180 @@
 		<!---CHIA ORIGIN------>
 		<div class="section_wrapper lavender">				
 		<div class="content_wrapper">	
-		<div class="column third_size">
+		<div class="column full_size">
 			<h3> Origin of chia </h3>
 			<p>Chia is actually from mesoamerica, present day Mexico and Guatemala. <br>
 				It was used by various indigenous groups, like the Aztecs - famous for their strong military, amazing architecture and progressive education.</p>
+			
+			
+			
+			
+			<style>
+			
+				.gallery_image{display: none;}
+				
+				.gallery_image.selected{display:block; background-color: red; height: 200px;}
+				
+				.gallery_controls{width:100%;float:left;}
+				
+				.gallery_controls > .control{
+					width:10%; 
+					background-color: aliceblue;
+					cursor: pointer;
+					height: 30px;
+					float:left;
+				}
+				
+				.gallery_controls > .control:hover{
+					background-color: aquamarine;
+				}
+				
+				.gallery_controls > .control.previous::before{
+					content: "<";
+				}
+				.gallery_controls > .control.next::before{
+					content: ">";
+				}
+				
+				.gallery_controls > .gallery_texts{
+					width:80%;
+				}
+				
+				.gallery_controls > .gallery_texts > .gallery_text{display: none;}
+				
+				.gallery_controls > .gallery_texts > .gallery_text.selected{display:block;}
+				
+			</style>
+			
+			
+			<div class="gallery_wrapper" id="origin_images">
+				
+				<div class="gallery_image selected" id="origin_image_1"> 1</div>
+					
+				<div class="gallery_image" id="origin_image_2"> 2</div>
+				
+				<div class="gallery_image" id="origin_image_3"> 3</div>
+				
+			</div>	
+			
+			<div class="gallery_controls" id="origin">
+				
+				<div class="control previous">  </div>
+				
+				<div class="gallery_texts">
+					
+					<p class="gallery_text selected" id="origin_text_1"> lorem ipsum 1 </p>
+					<p class="gallery_text"id="origin_text_2"> lorem ipsum 2 </p>
+					<p class="gallery_text" id="origin_text_3"> lorem ipsum 3 </p>
+				
+				</div>
+				
+				<div class="control next">  </div>
+			</div>	
+			
+			
 		</div>	
 			
-		<div class="column two_third_size">
-		
-			<img src="demos/demos_aztecs.png">
 			
-		</div>
+			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+			<script>
+			
+				
+			
+			var group;
+			var current;
+			var counter;
+			var tot_children;	
+			
+				
+				
+			$('.control').click(function(){
+
+				//get which section has been clicked
+				group = $(this).parent().attr('id');
+				
+				//get what number of 
+				current = $('#'+group+'> .gallery_text.selected').attr('id');
+				
+				current = current.slice(-1);
+				
+				//if it is next
+				if($(this).hasClass('next')){
+					counter =  parseInt(current) + 1; 
+				}
+				else{ //if previous
+					counter =  parseInt(current) - 1; 
+				}
+				
+				//check it doesn't go over
+				
+				tot_children = $('#'+group+'_images').children().length;
+				
+				if(counter <= 0 ){
+					
+					counter =  tot_children;
+				}
+				if(counter > tot_children){
+					counter = 1;
+				}
+				
+				current =  counter.toString();
+					
+				//clear previous selection
+				
+				//remove from texts
+				$('#'+group+'> .gallery_texts > .gallery_text.selected').removeClass('selected');
+				
+				//remove from images
+				$('#'+group+'_images > .gallery_image.selected').removeClass('selected');
+				
+					
+
+				
+				//append new selection to texts
+				$('#'+group+'> .gallery_texts > #'+group+'_text_'+current).addClass('selected');
+				
+				$('#'+group+'_images > #'+origin+'_text_'+current).removeClass('selected');
+				
+			});
+	
+				
+				
+			var clicked_option;
+			var clicked_group;	
+				
+			$('.option').click(function(){
+
+				//get which section has been clicked
+				clicked_group = $(this).parent().attr('id');
+				
+				
+				//clear previous selection
+				//remove from options
+				$('#'+clicked_group+'> .option.selected').removeClass('selected');
+				//remove from images
+				$('#'+clicked_group+'_images > .image_displayed.selected').removeClass('selected');
+				
+				
+				//append new selection to options
+				$(this).addClass('selected');
+				
+
+				//get what was clicked
+				clicked_option = $(this).attr('id');
+				//get the number of option
+				clicked_option= clicked_option.slice(-1);
+				//append new selection to images
+				$('#'+clicked_group+'_images > #'+clicked_group+'_image_'+clicked_option).addClass('selected');
+			});
+			
+			</script>
+			
+			
+
+			
+			
+
 		</div>
 		</div>
 			
@@ -321,14 +489,46 @@
 			<h3> Lost for almost 500 years </h3>
 			<p>Because of the key role chia had in Aztec society and religion, it was banned during colonization and lost for almost 500 years. 
 				Thankfully, chia managed to survive in small, isolated communities.
+				
+				
+			<div class="options_wrapper" id="lost">
+			
+			
+				<div class="option selected" id="lost_option_1">
+					<p>OPTION 1</p>
+				</div>
+				
+				<div class="option" id="lost_option_2">
+					<p>OPTION 2</p>
+				</div>
+				
+				
+				<div class="option" id="lost_option_3">
+					<p>OPTION 3</p>
+				</div>
+				
+				<div class="option" id="lost_option_4">
+					<p>OPTION 4</p>
+				</div>
+				
+				
+			</div>
+		
+			
+			
 		</div>	
 			
-		<div class="column two_third_size">
+		<div class="column two_third_size" id="lost_images">
 		
-			<img src="demos/demo_lost_rediscovery.png">
-
+			<div class="image_displayed selected" id="lost_image_1"> 1</div>
+			<div class="image_displayed" id="lost_image_2"> 2</div>
+			<div class="image_displayed" id="lost_image_3"> 3</div>
+			<div class="image_displayed" id="lost_image_4"> 4</div>
+			
 			
 		</div>
+			
+		
 		</div>
 		</div>
 	
@@ -396,20 +596,20 @@
 			<div class="options_wrapper" id="nutrinfo">
 			
 			
-				<div class="option selected" id="nutrinfo_option_1">
+				<div class="option nutrinfo selected" id="nutrinfo_option_1">
 					<p>OPTION 1</p>
 				</div>
 				
-				<div class="option" id="nutrinfo_option_2">
+				<div class="option nutrinfo" id="nutrinfo_option_2">
 					<p>OPTION 2</p>
 				</div>
 				
 				
-				<div class="option" id="nutrinfo_option_3">
+				<div class="option nutrinfo" id="nutrinfo_option_3">
 					<p>OPTION 3</p>
 				</div>
 				
-				<div class="option" id="nutrinfo_option_4">
+				<div class="option nutrinfo" id="nutrinfo_option_4">
 					<p>OPTION 4</p>
 				</div>			
 				
@@ -670,40 +870,6 @@
 	</div>
 	
 
-			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-			<script>
-			
-				
-			var clicked_option;
-			var clicked_group;	
-			$('.option').click(function(){
-
-				//get which section has been clicked
-				clicked_group = $(this).parent().attr('id');
-				
-				
-				//clear previous selection
-				//remove from options
-				$('#'+clicked_group+'> .option.selected').removeClass('selected');
-				//remove from images
-				$('#'+clicked_group+'_images > .image_displayed.selected').removeClass('selected');
-				
-				
-				//append new selection to options
-				$(this).addClass('selected');
-				
-
-				//get what was clicked
-				clicked_option = $(this).attr('id');
-				//get the number of option
-				clicked_option= clicked_option.slice(-1);
-				//append new selection to images
-				$('#'+clicked_group+'_images > #'+clicked_group+'_image_'+clicked_option).addClass('selected');
-			});
-			
-			</script>
-			
-			
 
 
 
