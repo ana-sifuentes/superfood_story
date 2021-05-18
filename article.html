@@ -334,7 +334,7 @@
 				<div class="gallery_texts">
 					
 					<p class="gallery_text selected" id="system_text_1"> lorem ipsum 1 </p>
-					<p class="gallery_text"id="system_text_2"> lorem ipsum 2 </p>
+					<p class="gallery_text" id="system_text_2"> lorem ipsum 2 </p>
 					<p class="gallery_text" id="system_text_3"> lorem ipsum 3 </p>
 				
 				</div>
@@ -425,7 +425,7 @@
 				Thankfully, chia managed to survive in small, isolated communities.
 				
 				
-			<div class="options_wrapper" id="lost">
+			<div class="options_wrapper" id="lost_options">
 			
 			
 				<div class="option selected" id="lost_option_1">
@@ -441,10 +441,6 @@
 					<p>OPTION 3</p>
 				</div>
 				
-				<div class="option" id="lost_option_4">
-					<p>OPTION 4</p>
-				</div>
-				
 				
 			</div>
 		
@@ -452,14 +448,30 @@
 			
 		</div>	
 			
-		<div class="column two_third_size" id="lost_images">
+		<div class="column two_third_size">
 		
-			<div class="image_displayed selected" id="lost_image_1"> 1</div>
-			<div class="image_displayed" id="lost_image_2"> 2</div>
-			<div class="image_displayed" id="lost_image_3"> 3</div>
-			<div class="image_displayed" id="lost_image_4"> 4</div>
 			
+			<div class="gallery_wrapper" id="lost_images">
+				
+				<div class="gallery_image selected" id="lost_image_1"> 1</div>
+					
+				<div class="gallery_image" id="lost_image_2"> 2</div>
+				
+				<div class="gallery_image" id="lost_image_3"> 3</div>
+				
+			</div>	
 			
+			<div class="gallery_controls" id="lost_controls">
+				
+				<div class="control previous">  </div>			
+				<div class="gallery_texts">				
+					<p class="gallery_text selected" id="lost_text_1"> lorem ipsum 1 </p>
+					<p class="gallery_text"id="lost_text_2"> lorem ipsum 2 </p>
+					<p class="gallery_text" id="lost_text_3"> lorem ipsum 3 </p>
+				</div>	
+				<div class="control next">  </div>
+				
+			</div>	
 		</div>
 			
 		
@@ -838,11 +850,93 @@
 			<script>
 			
 				
+				
+				$('.control').click(function(){
+					
+					navigation($(this).parent().attr('id'), 'control');
+					
+				});
 			
+				
+				
+				$('.option').click(function(){
+					
+					navigation($(this).attr('id'), 'option');
+					
+				});
+				
+				
+				function navigation(clicked, element){
+					
+					
+					var num;
+					var total;
+					var new_num;
+					
+					//which section (myths, nutrinfo, timeline, etc)
+					var section = clicked.substring(0, clicked.indexOf('_'));
+					
+					
+					if(element == 'option'){
+						
+						//what number of child is selected (1,2,3)
+						num = clicked.slice(-1);
+					
+						//total number of children
+						total =  $('#'+clicked).parent().children().length;
+						
+					}
+					
+					if(element =='control'){
+						
+						var temp = $('#'+section+'_controls > .gallery_texts > .gallery_text.selected').attr(id);
+						num = temp.slice(-1);
+						num = parseInt(num);
+						
+						
+						total= $('#'+section+'_controls > .gallery_texts').children().length;
+						
+						
+						//add or subtract
+						if( $('#'+clicked).hasClass('next')){
+							num = num +1;
+						}
+						else if ($('#'+clicked).hasClass('previous')){
+							num = num -1;	
+						}
+						
+						
+						//adjust for total numbers 
+						if(num > total){
+							num = 1;
+						}
+						if(num == 0){
+							num = total;
+						}		
+						
+					}
+					
+					
+					num = num.toString();
+					
+					//remove previous selections
+					$('#'+section+'_options > .option.selected').removeClass('selected');
+					$('#'+section+'_images > .gallery_image.selected').removeClass('selected');
+					$('#'+section+'_controls > .gallery_texts > .gallery_text.selected').removeClass('selected');
+					
+					//apped new selection 
+					$('#'section+'_option_'+num).addClass('selected');
+					$('#'section+'_image_'+num).addClass('selected');
+					$('#'section+'_text_'+num).addClass('selected');
+					
+					
+					
+					
+				}
 
 			
 				
-				
+			/*	
 			$('.control').click(function(){
 
 				var group ="";
@@ -931,7 +1025,7 @@
 				//append new selection to images
 				$('#'+clicked_group+'_images > #'+clicked_group+'_image_'+clicked_option).addClass('selected');
 			});
-			
+			*/
 			</script>
 			
 	
