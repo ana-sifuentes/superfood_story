@@ -853,7 +853,7 @@
 				
 				$('.control').click(function(){
 					
-					navigation($(this).attr('id'),clicked.substring(0, clicked.indexOf('_')),  'control');
+					navigation($(this).attr('id'), $(this).substring(0, clicked.indexOf('_')),  'control');
 					
 				});
 			
@@ -861,7 +861,7 @@
 				
 				$('.option').click(function(){
 					
-					navigation($(this).attr('id'), clicked.substring(0, clicked.indexOf('_')),  'option');
+					navigation($(this).attr('id'),  $(this).substring(0, clicked.indexOf('_')),  'option');
 					
 				});
 				
