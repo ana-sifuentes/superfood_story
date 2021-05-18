@@ -42,6 +42,108 @@
   
 <style>
 	
+@font-face {
+  font-family: VCR_OSD_MONO;
+  src: url("assets/VCR_OSD_MONO_1.001.ttf");
+}
+
+
+@font-face {
+  font-family: Resolve-Light;
+  src: url("assets/Resolve-Light 3.otf");
+}
+
+
+
+
+/**********************/
+/* MENU */
+
+	.menu.wrapper{
+		width:100%;  
+		height:70px;
+		margin-top:10px;
+		font-family: 'VCR_OSD_MONO';
+	}
+	
+	
+	.menu.main{
+	 	float: left;
+    		width: 18%;
+    		padding: 0px 1%;
+    		font-size: 28px;
+    		text-align: left;
+		font-weight: 800;
+	}
+	
+	.menu.spacer{
+    		float: left;
+    		width: 44%;
+    		height: 1px;
+	}
+	
+	.menu.item{
+    		float: left;
+    		width: 8%;
+    		margin: 10px 2%;
+    		padding: 8px 0px;
+    		font-size: 20px;
+    		text-align: center;
+	}
+	
+	
+	a > .menu.item {
+		color:black;
+	}
+	
+	.menu.item.current, 
+	.menu.item:hover{
+		border-bottom:2px solid black;
+	}
+
+
+/**********************/
+/*PAGES */
+
+	/* general wrapper for the content */
+	.content_wrapper {
+    		max-width: 1250px;
+    		width: 85%;
+		margin: 40px auto 0px auto;
+	}
+
+	/*main layout class */
+	.column  { 
+		float:left;
+		margin:1% 1%;
+		padding: 0px;
+	}
+
+	/* 100% */
+	.full_size { width:98%; }
+	/* 33% */
+	.third_size { width: 31.33%; }
+	/* 66% */
+	.two_third_size { width: 64.6%; }
+
+
+
+
+/* fonts */
+	.menu.item p, .menu.main p{
+		font-family: 'VCR_OSD_MONO';
+	}
+
+	.game_container p{
+		font-family: 'VCR_OSD_MONO';
+		text-align:center;
+	}
+
+	h1, h2, h3, h4, h5, h6, p{
+		font-family: 'Resolve-Light';
+	}
+	
+	
 	.clear{
 		clear:both;
 		height: 30px;
@@ -62,7 +164,7 @@
 		background-color:lavenderblush; 
 	}
 	
-	img{width: 100%;}
+	img{width:50%}
 	
 	.content_wrapper > .column >  p{font-size:1.5em;}
 	h2{font-size: 2.5em; font-weight: 900;}
@@ -85,13 +187,18 @@
 	}
 	
 	.button.blue{
-		background-image: url(assets/blue_button.svg);
+		background-image: url('"../blue_button.svg"');
 	}
 
 	
 	.button.blue:hover{
 		background-image: url('');
 	}
+	
+	
+	
+	
+	
 </style>
 	
 	
@@ -263,28 +370,97 @@
 		</div>
 			
 		<div class="clear"></div>
-				
-
-		<!---MYTHS------>
-		<div class="section_wrapper lavender" style="height: auto;">				
+	
+		<div class="section_wrapper">				
 		<div class="content_wrapper">
-		<div class="column full_size">
+		<div class="column third_size">
 			<h3> The myths of chia</h3>
 			
 			<p> There is a lot of fuzz around chia, but what is a myth and what is real? Click below to find out. 
 			</p>
 			
+			
+			
+			<div class="clear"></div>
+			
+			
+			<div class="options_wrapper" id="myths_selection">
+			
+			
+				<div class="option selected" id="option_1">
+					<p>OPTION 1</p>
+				</div>
+				
+				<div class="option" id="option_2">
+					<p>OPTION 2</p>
+				</div>
+				
+				
+				<div class="option" id="option_3">
+					<p>OPTION 3</p>
+				</div>
+				
+				<div class="option" id="option_4">
+					<p>OPTION 3</p>
+				</div>
+				
+				
+			</div>
+			
+		</div>	
+			
+			<style>
+			
 
-			<img src="demos/wireframe_myths.jpg">
+				
+				.options_wrapper > .option{
+					width:90%;
+					background-color:blue;
+					color:white;
+					float:left;
+					margin:5px 0px;
+					height: 30px;
+					padding:10px 0px;
+					text-align: center;
+					font-weight: 900;
+				}
+				
+				.options_wrapper > .option.selected{
+					background-color: darkred;	
+				}
+				
+				.image_displayed{display: none;}
+				
+				.image_displayed.selected{display: block; background-color: darkred;}
+			</style>
+			
+		<div class="column two_third_size">
+		
+			<div class="image_displayed selected" id="myths_1"> 1</div>
+			<div class="image_displayed" id="myths_2"> 2</div>
+			<div class="image_displayed" id="myths_3"> 3</div>
+			<div class="image_displayed" id="myths_4"> 4</div>
+
+		</div>
+			
 			
 		</div>
 		</div>
-		</div>
-			
+
+
 		<div class="clear"></div>
 	
 	
 	
+			<script>
+			
+			$('.options_wrapper > .option').click(function(){
+			
+				alert('clicked');
+			});
+			
+			</script>
+			
 			
 			
 					
