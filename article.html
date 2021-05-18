@@ -202,6 +202,34 @@
 </style>
 	
 	
+		<style>
+			
+
+				
+				.options_wrapper > .option{
+					width:70%;
+					background-color:blue;
+					color:white;
+					float:left;
+					margin:5px 0px;
+					height: 30px;
+					padding:15px 0px 5px 0px;
+					text-align: center;
+					font-weight: 900;
+					cursor: pointer;
+					font-family: 'VCR_OSD_MONO';
+				}
+				
+				.options_wrapper > .option.selected{
+					background-color: darkred;	
+				}
+				
+				.image_displayed{display: none;}
+				
+				.image_displayed.selected{display: block; background-color: darkred; color:white; height: 40px;}
+			</style>
+	
+	
 	
 	<div class="section_wrapper" style="background-image:url('assets/superfoods_banner.png'); background-repeat: repeat-x; background-size: contain; height: 70%;">
 	</div>	
@@ -348,29 +376,69 @@
 			
 					
 		<!---NUTRINFO------>
+
+
+	
 		<div class="section_wrapper">				
 		<div class="content_wrapper">
 		<div class="column third_size">
 			<h3> Nutritional Information</h3>
-			<p>What am I getting when I eat chia? Let's break it down.
-				<br><br>
-				You can also see how it compares to other foods, like almonds.  </p>
 			
-			<br>
-			<img src="demos/wireframe_nutrifo0.png"
+			<p> What am I getting when I eat chia? Let's break it down. 
+				You can also see how it compares to other foods, like almonds.
+			</p>
+			
+			
+			
+			<div class="clear"></div>
+			
+			
+			<div class="options_wrapper" id="nutrinfo">
+			
+			
+				<div class="option selected" id="nutrinfo_option_1">
+					<p>OPTION 1</p>
+				</div>
+				
+				<div class="option" id="nutrinfo_option_2">
+					<p>OPTION 2</p>
+				</div>
+				
+				
+				<div class="option" id="nutrinfo_option_3">
+					<p>OPTION 3</p>
+				</div>
+				
+				<div class="option" id="nutrinfo_option_4">
+					<p>OPTION 4</p>
+				</div>			
+				
+			</div>
+			
 		</div>	
-			
-		<div class="column two_third_size">
 		
-			<img src="demos/wireframe_nutrifo1.png">
+			
+		<div class="column two_third_size" id="nutrinfo_images">
+		
+			<div class="image_displayed selected" id="nutrinfo_image_1"> 1</div>
+			<div class="image_displayed" id="nutrinfo_image_2"> 2</div>
+			<div class="image_displayed" id="nutrinfo_image_3"> 3</div>
+			<div class="image_displayed" id="nutrinfo_image_4"> 4</div>
+		</div>
+			
+			
+		</div>
+		</div>
 
-			
-		</div>
-		</div>
-		</div>
-			
+
+	
+
 		<div class="clear"></div>
 	
+
+
+
+		<!--MYTHS-->
 		<div class="section_wrapper">				
 		<div class="content_wrapper">
 		<div class="column third_size">
@@ -401,40 +469,14 @@
 				</div>
 				
 				<div class="option" id="myths_option_4">
-					<p>OPTION 3</p>
+					<p>OPTION 4</p>
 				</div>
 				
 				
 			</div>
 			
 		</div>	
-			
-			<style>
-			
-
-				
-				.options_wrapper > .option{
-					width:70%;
-					background-color:blue;
-					color:white;
-					float:left;
-					margin:5px 0px;
-					height: 30px;
-					padding:15px 0px 5px 0px;
-					text-align: center;
-					font-weight: 900;
-					cursor: pointer;
-					font-family: 'VCR_OSD_MONO';
-				}
-				
-				.options_wrapper > .option.selected{
-					background-color: darkred;	
-				}
-				
-				.image_displayed{display: none;}
-				
-				.image_displayed.selected{display: block; background-color: darkred; color:white; height: 40px;}
-			</style>
+		
 			
 		<div class="column two_third_size" id="myths_images">
 		
@@ -453,41 +495,6 @@
 		<div class="clear"></div>
 	
 	
-			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-			<script>
-			
-				
-			var clicked_option;
-			var clicked_group;	
-			$('.options_wrapper > .option').click(function(){
-
-				//get which section has been clicked
-				clicked_group = $(this).parent().attr('id');
-				
-				
-				//clear previous selection
-				
-				//remove from options
-				$('#'+clicked_group+'> .option.selected').removeClass('selected');
-				//remove from images
-				$('#'+clicked_group+'_images > .image_displayed.selected').removeClass('selected');
-				
-				
-				//append new selection to options
-				$(this).addClass('selected');
-				
-				//append new selection to images
-				//get what was clicked
-				clicked_option = $(this).attr('id');
-				
-				clicked_option= clicked_option.slice(-1);
-				
-				$('#'+clicked_group+'_images > #'+clicked_group+'_image_'+clicked_option).addClass('selected');
-			});
-			
-			</script>
-			
-			
 			
 					
 		<!---GROWING CHIA------>
@@ -526,19 +533,60 @@
 	
 		<!--- CHIA WORLDWIDE------>
 	
-		<div class="section_wrapper lavender" style="height: auto;">				
+
+	
+		<div class="section_wrapper">				
 		<div class="content_wrapper">
-		<div class="column full_size">
-			<h3> Chia worldwide </h3>
-			<p> Although the crop is native to Mexico and Guatemala, nowadays the top producers are Bolivia, Paraguay and Argentina.  In 2020 the top importers were the United States, Germany and Spain.  </p>
+		<div class="column third_size">
+			<h3> Chia worldwide</h3>
+			
+			<p> Although the crop is native to Mexico and Guatemala, nowadays the top producers are Bolivia, Paraguay and Argentina. In 2020 the top importers were the United States, Germany and Spain. 
+			</p>
+			
+			
+			
+			<div class="clear"></div>
+			
+			
+			<div class="options_wrapper" id="worldwide">
+			
+			
+				<div class="option selected" id="worlwide_option_1">
+					<p>OPTION 1</p>
+				</div>
+				
+				<div class="option" id="worldwide_option_2">
+					<p>OPTION 2</p>
+				</div>
+				
+				
+				<div class="option" id="worldwide_option_3">
+					<p>OPTION 3</p>
+				</div>
+				
+				
+				
+			</div>
+			
+		</div>	
+		
+			
+		<div class="column two_third_size" id="worldwide_images">
+		
+			<div class="image_displayed selected" id="worldwide_image_1"> 1</div>
+			<div class="image_displayed" id="worldwide_image_2"> 2</div>
+			<div class="image_displayed" id="worldwide_image_3"> 3</div>
 
-			<img src="demos/demo_worldwide.png">
+		</div>
+			
 			
 		</div>
 		</div>
-		</div>
-			
 
+
+	
+	
+	
 			
 			
 		<div class="clear"></div>		
@@ -621,6 +669,42 @@
 	
 	</div>
 	
+
+			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+			<script>
+			
+				
+			var clicked_option;
+			var clicked_group;	
+			$('.option').click(function(){
+
+				//get which section has been clicked
+				clicked_group = $(this).parent().attr('id');
+				
+				
+				//clear previous selection
+				//remove from options
+				$('#'+clicked_group+'> .option.selected').removeClass('selected');
+				//remove from images
+				$('#'+clicked_group+'_images > .image_displayed.selected').removeClass('selected');
+				
+				
+				//append new selection to options
+				$(this).addClass('selected');
+				
+
+				//get what was clicked
+				clicked_option = $(this).attr('id');
+				//get the number of option
+				clicked_option= clicked_option.slice(-1);
+				//append new selection to images
+				$('#'+clicked_group+'_images > #'+clicked_group+'_image_'+clicked_option).addClass('selected');
+			});
+			
+			</script>
+			
+			
+
 
 
 </html>
