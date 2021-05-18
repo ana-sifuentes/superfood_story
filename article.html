@@ -853,7 +853,7 @@
 				
 				$('.control').click(function(){
 					
-					navigation($(this).parent().attr('id'), 'control');
+					navigation($(this).attr('id'),clicked.substring(0, clicked.indexOf('_')),  'control');
 					
 				});
 			
@@ -861,20 +861,19 @@
 				
 				$('.option').click(function(){
 					
-					navigation($(this).attr('id'), 'option');
+					navigation($(this).attr('id'), clicked.substring(0, clicked.indexOf('_')),  'option');
 					
 				});
 				
 				
-				function navigation(clicked, element){
+				function navigation(clicked, section, element){
 					
 					
 					var num;
 					var total;
 					var new_num;
 					
-					//which section (myths, nutrinfo, timeline, etc)
-					var section = clicked.substring(0, clicked.indexOf('_'));
+		
 					
 					
 					if(element == 'option'){
