@@ -855,6 +855,7 @@
 				$('.control').click(function(){
 					
 					var section = $(this);
+					section = section.toString();
 					section = section.substring(0, section.indexOf('_'));
 					
 					
@@ -867,6 +868,7 @@
 				$('.option').click(function(){
 					
 					var section = $(this);
+					section = section.toString();
 					section = section.substring(0, section.indexOf('_'));
 					
 					navigation( $(this).attr('id'), section ,  'option');
