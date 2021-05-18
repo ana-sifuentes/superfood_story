@@ -854,8 +854,11 @@
 				
 				$('.control').click(function(){
 					
-				
-					navigation( $(this).attr('id'), $(this) ,  'control');
+					var section = $(this);
+					section = section.substring(0, section.indexOf('_'));
+					
+					
+					navigation( $(this).attr('id'), section,  'control');
 					
 				});
 			
@@ -863,7 +866,10 @@
 				
 				$('.option').click(function(){
 					
-					navigation( $(this).attr('id'), $(this) ,  'option');
+					var section = $(this);
+					section = section.substring(0, section.indexOf('_'));
+					
+					navigation( $(this).attr('id'), section ,  'option');
 					
 				});
 				
@@ -875,9 +881,10 @@
 					var total;
 
 		
-					section = section.toString();
-					section = section.substring(0, section.indexOf('_'));
 					
+					
+					
+					console.log(section);
 					
 					if(element_type == 'option'){
 						
