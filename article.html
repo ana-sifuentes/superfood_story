@@ -384,23 +384,23 @@
 			<div class="clear"></div>
 			
 			
-			<div class="options_wrapper" id="myths_selection">
+			<div class="options_wrapper" id="myths">
 			
 			
-				<div class="option selected" id="option_1">
+				<div class="option selected" id="myths_option_1">
 					<p>OPTION 1</p>
 				</div>
 				
-				<div class="option" id="option_2">
+				<div class="option" id="myths_option_2">
 					<p>OPTION 2</p>
 				</div>
 				
 				
-				<div class="option" id="option_3">
+				<div class="option" id="myths_option_3">
 					<p>OPTION 3</p>
 				</div>
 				
-				<div class="option" id="option_4">
+				<div class="option" id="myths_option_4">
 					<p>OPTION 3</p>
 				</div>
 				
@@ -436,12 +436,12 @@
 				.image_displayed.selected{display: block; background-color: darkred; color:white; height: 40px;}
 			</style>
 			
-		<div class="column two_third_size">
+		<div class="column two_third_size" id="myths_images">
 		
-			<div class="image_displayed selected" id="myths_1"> 1</div>
-			<div class="image_displayed" id="myths_2"> 2</div>
-			<div class="image_displayed" id="myths_3"> 3</div>
-			<div class="image_displayed" id="myths_4"> 4</div>
+			<div class="image_displayed selected" id="myths_image_1"> 1</div>
+			<div class="image_displayed" id="myths_image_2"> 2</div>
+			<div class="image_displayed" id="myths_image_3"> 3</div>
+			<div class="image_displayed" id="myths_image_4"> 4</div>
 
 		</div>
 			
@@ -456,9 +456,33 @@
 			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 			<script>
 			
+				
+			var clicked_option;
+			var clicked_group;	
 			$('.options_wrapper > .option').click(function(){
-			
-				alert('clicked');
+
+				//get which section has been clicked
+				clicked_group = $(this).parent().attr('id');
+				
+				
+				//clear previous selection
+				
+				//remove from options
+				$('#'+clicked_group+'> .option.selected').removeClass('selected');
+				//remove from images
+				$('#'+clicked_group+'_images > .image_displayed.selected').removeClass('selected');
+				
+				
+				//append new selection to options
+				$(this).addClass('selected');
+				
+				//append new selection to images
+				//get what was clicked
+				clicked_option = $(this).attr('id');
+				
+				clicked_option= clicked_option.slice(-1);
+				
+				$('#'+clicked_group+'_images > #'+clicked_group+'_image_'+clicked_option).addClass('selected');
 			});
 			
 			</script>
