@@ -854,9 +854,8 @@
 				
 				$('.control').click(function(){
 					
-					var id_control = $(this);
-					id_control = id_control.substring(0, id_control.indexOf('_');
-					navigation( $(this).attr('id'), id_control,  'control');
+				
+					navigation( $(this).attr('id'), $(this) ,  'control');
 					
 				});
 			
@@ -864,24 +863,22 @@
 				
 				$('.option').click(function(){
 					
-					var id_option = $(this);
-					id_option = id_option.substring(0, id_option.indexOf('_'))
-					navigation( $(this).attr('id'), id_option,  'option');
+					navigation( $(this).attr('id'), $(this) ,  'option');
 					
 				});
 				
 				
-				function navigation(clicked, section, element){
+				function navigation(clicked, section, element_type){
 					
 					
 					var num;
 					var total;
-					var new_num;
-					
+
 		
+					section = section.substring(0, section.indexOf('_'));
 					
 					
-					if(element == 'option'){
+					if(element_type == 'option'){
 						
 						//what number of child is selected (1,2,3)
 						num = clicked.slice(-1);
@@ -891,7 +888,7 @@
 						
 					}
 					
-					if(element =='control'){
+					if(element_type =='control'){
 						
 						var temp = $('#'+section+'_controls > .gallery_texts > .gallery_text.selected').attr('id');
 						num = temp.slice(-1);
