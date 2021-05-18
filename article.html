@@ -851,9 +851,11 @@
 			
 				
 				
+				
 				$('.control').click(function(){
 					
-					navigation( $(this).attr('id'), $(this).substring(0, $(this).indexOf('_')),  'control');
+					var id_control = $(this);
+					navigation( $(this).attr('id'), (id_control).substring(0, id_control.indexOf('_')),  'control');
 					
 				});
 			
@@ -861,7 +863,8 @@
 				
 				$('.option').click(function(){
 					
-					navigation( $(this).attr('id'),  $(this).substring(0, $(this).indexOf('_')),  'option');
+					var id_option = $(this);
+					navigation( $(this).attr('id'), (id_option).substring(0, id_option.indexOf('_')),  'option');
 					
 				});
 				
