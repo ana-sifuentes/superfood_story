@@ -854,12 +854,11 @@
 				
 				$('.control').click(function(){
 					
-					var section = $(this);
-					section = section.toString();
-					section = section.substring(0, section.indexOf('_'));
+					var clicked_id = $(this).attr('id')
 					
+					var section = clicked_id.substring(0, clicked_id.indexOf('_'));
 					
-					navigation( $(this).attr('id'), section,  'control');
+					navigation( clicked_id, section,  'control');
 					
 				});
 			
@@ -867,11 +866,11 @@
 				
 				$('.option').click(function(){
 					
-					var section = $(this);
-					section = section.toString();
-					section = section.substring(0, section.indexOf('_'));
+					var clicked_id = $(this).attr('id')
 					
-					navigation( $(this).attr('id'), section ,  'option');
+					var section = clicked_id.substring(0, clicked_id.indexOf('_'));
+					
+					navigation( clicked_id, section,  'option');
 					
 				});
 				
