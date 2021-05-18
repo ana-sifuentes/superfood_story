@@ -855,7 +855,8 @@
 				$('.control').click(function(){
 					
 					var id_control = $(this);
-					navigation( $(this).attr('id'), (id_control).substring(0, id_control.indexOf('_')),  'control');
+					id_control = id_control.substring(0, id_control.indexOf('_');
+					navigation( $(this).attr('id'), id_control,  'control');
 					
 				});
 			
@@ -864,7 +865,8 @@
 				$('.option').click(function(){
 					
 					var id_option = $(this);
-					navigation( $(this).attr('id'), (id_option).substring(0, id_option.indexOf('_')),  'option');
+					id_option = id_option.substring(0, id_option.indexOf('_'))
+					navigation( $(this).attr('id'), id_option,  'option');
 					
 				});
 				
