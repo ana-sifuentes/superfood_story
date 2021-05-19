@@ -1203,25 +1203,27 @@
 
 		$(window).scroll(function() {
 	
-	
 			//scroll progress function
 			progress_bar_scrolling();
 	
-	
+			let window_scrolled = $(document).scrollTop();
 			
-    		var scroll = $(window).scrollTop();
-    		if(scroll > position) {
-        		//scroll down
-
-				$('#navbar').animate({marginTop: "-80px"});
+				if(window_scrolled > 200){
+					
+    			var scroll = $(window).scrollTop();
+		
+			
+				if(scroll > position) {
+        			//scroll down
+					$('#navbar').animate({marginTop: "-80px"});
+	
+				} else {
+         			//scroll up
+					$('#navbar').animate({marginTop: "+10px"});
+				}
+				position = scroll;
 				
-        
-			} else {
-         		//scroll up
-
-				$('#navbar').animate({marginTop: "+10px"});
 			}
-			position = scroll;
 		});
 	
 
