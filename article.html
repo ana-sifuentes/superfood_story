@@ -732,17 +732,17 @@
 			
 			
 			
-			<div class="info_options_wrapper" id="growing_info">
+			<div class="info_blocks_wrapper" id="growing_info">
 				
-				<div class="column third_size more_info" id="growing_1">
+				<div class="column third_size info_block intro" id="growing_intro_1">
 					<h4> CHINAMPAS</h4>
 				</div>	
 		
-				<div class="column third_size more_info" id="growing_2">
+				<div class="column third_size info_block intro" id="growing_intro_2">
 					<h4>FARMS</h4>
 				</div>	
 			
-				<div class="column third_size more_info" id="growing_3">
+				<div class="column third_size info_block intro" id="growing_intro_3">
 					<h4>HOME </h4>
 				</div>	
 			</div>
@@ -750,21 +750,21 @@
 			
 			
 			
-			<div class="column full_size more_info_text" id="growing_text_1">
+			<div class="column full_size info_block content" id="growing_content_1">
 			
 				<p> More information on 1...</p>
 			
 			</div>	
 			
 					
-			<div class="column full_size more_info_text" id="growing_text_2">
+			<div class="column full_size info_block content" id="growing_content_2">
 			
 				<p> More information on 2...</p>
 			
 			</div>	
 			
 						
-			<div class="column full_size more_info_text" id="growing_text_3">
+			<div class="column full_size info_block content" id="growing_content_3">
 			
 				<p> More information on 3...</p>
 			
@@ -777,37 +777,40 @@
 		<style>
 			
 			
-			.more_info{
+			.info_blocks_wrapper{
+				float: left;
+    			width: 100%;
+				display: block;
+			}
+			
+			
+			.info_block.intro{
 				background-color:blue;
 				height: 300px;
 				cursor: pointer;
 			}
 			
 			
-			.more_info:hover{
+			.info_block.intro:hover{
 				background-color: aliceblue;
 			}
 			
 			
-			.info_options_wrapper.hidden,
-			.more_info.not_selected, 
-			.more_info_text{
+			.info_blocks_wrapper.hidden,
+			.info_block.intro.not_selected, 
+			.info_block_content{
 				display: none;
 			}
 	
 
-			.more_info_text.selected{
+			.info_block.content.selected{
 				display: block;
 				height: 300px;
 				background-color: aliceblue;
 			}
 			
 			
-			.info_options_wrapper{
-				float: left;
-    			width: 100%;
-				display: block;
-			}
+
 			
 		</style>
 
@@ -1004,46 +1007,38 @@
 				
 				
 				
-				$('.more_info').click(function(){
+				$('.info_block').click(function(){
 
+					
 					var clicked_id =  $(this).attr('id');
 					
-					
 					var section_id = clicked_id.substring(0, clicked_id.indexOf('_'));
-						
-						
+								
 					var num_id= clicked_id.slice(-1);
 					
-					//hide all options
-					$('#'+section_id+'_info').addClass('hidden');	
+					
+					if($(this).hasClass('intro')){
+					   
+					   	//hide all options
+						$('#'+section_id+'_info').addClass('hidden');	
 						
+						//show the selected info
+						$('#'+section_id+'_content_'+num_id).addClass('selected');
+					   
+					}
 					
-					//show the selected info
-					$('#'+section_id+'_text_'+num_id).addClass('selected');
+					else if($(this).hasClass('content')){ 
 					
+					   	//hide the selected info
+						$(this).removeClass('selected');
 					
+						//show all options
+						$('#'+section_id+'_info').removeClass('hidden');	
+					   
+					}
 					
-				});
-				
-				
-				
-				$('.more_info_text').click(function(){
-
-					var clicked_id =  $(this).attr('id');
-					
-					
-					var section_id = clicked_id.substring(0, clicked_id.indexOf('_'));
-						
-						
-					//hide the selected info
-					$(this).removeClass('selected');
-					
-					
-					//show all options
-					$('#'+section_id+'_info').removeClass('hidden');	
 	
 				});
-				
 				
 				
 				
