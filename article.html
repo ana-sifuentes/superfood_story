@@ -166,7 +166,7 @@
 	
 	img{width:50%}
 	
-	.content_wrapper > .column >  p{font-size:1.5em;}
+	.content_wrapper > .column >  p{font-size:1.2em;}
 	h2{font-size: 2.5em; font-weight: 900;}
 	h3{font-size: 2em; font-weight: 900;}
 	
@@ -731,24 +731,78 @@
 		</div>
 			
 			
-		<div class="column third_size">
-			<h4> CHINAMPAS</h4>
-			<img src="demos/demo_scenario.png">
-		</div>	
+			
+			<div class="info_options_wrapper" id="growing_info">
+				
+				<div class="column third_size more_info" id="growing_1">
+					<h4> CHINAMPAS</h4>
+				</div>	
 		
-		<div class="column third_size">
-			<h4> FARMS</h4>
-			<img src="demos/demo_scenario.png">
-		</div>	
-		
-		<div class="column third_size">
-			<h4> AT HOME</h4>
-			<img src="demos/demo_scenario.png">
-		</div>		
+				<div class="column third_size more_info" id="growing_2">
+					<h4>FARMS</h4>
+				</div>	
+			
+				<div class="column third_size more_info" id="growing_3">
+					<h4>HOME </h4>
+				</div>	
+			</div>
+			
+			
+			
+			
+			<div class="column full_size more_info_text" id="text_growing_1">
+			
+				<p> More information on 1...</p>
+			
+			</div>	
+			
+					
+			<div class="column full_size more_info_text" id="text_growing_2">
+			
+				<p> More information on 2...</p>
+			
+			</div>	
+			
+						
+			<div class="column full_size more_info_text" id="text_growing_3">
+			
+				<p> More information on 3...</p>
+			
+			</div>	
 			
 		</div>
 		</div>
 	
+
+		<style>
+			
+			
+			.more_info{
+				background-color:blue;
+				height: 300px;
+				cursor: pointer;
+			}
+			
+			
+			.more_info:hover{
+				background-color: aliceblue;
+			}
+			
+			
+			.info_options_wrapper.hidden,
+			.more_info.not_selected, 
+			.more_info_text{
+				display: none;
+			}
+	
+			.info_options_wrapper,
+			.more_info_text.selected{
+				display: block;
+			}
+			
+			
+		</style>
+
 		<div class="clear"></div>		
 		
 		
@@ -941,6 +995,29 @@
 				
 				
 				
+				
+				$('.more_info').click(function(){
+
+					var clicked_id =  $(this).attr('id');
+					
+					
+					var section_id = clicked_id.substring(0, clicked_id.indexOf('_'));
+						
+						
+					//hide all options
+					$('#'+section_id+'_info').addClass('hidden');	
+						
+					
+					//show the selected info
+					$('#text_'+clicked_id).addClass('selected');
+					
+					
+					
+				});
+				
+				
+				
+				
 				$('.control').click(function(){
 		
 					navigation( $(this).attr('id') ,  'control');
@@ -954,8 +1031,6 @@
 					navigation( $(this).attr('id') ,  'option');
 					
 				});
-				
-				
 				
 				
 				function navigation(clicked,  element_type){
