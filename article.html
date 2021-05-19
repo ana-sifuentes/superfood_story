@@ -382,6 +382,15 @@
 			
 	
 	
+	.section_wrapper.banner{
+		background-image:url('assets/superfoods_banner.png'); 
+		background-repeat: repeat-x; 
+		background-size: contain; 
+		height: 70%; 
+		margin-top:100px; 
+		min-height: 350px;
+	}
+	
 	
 	
 	@media only screen and (max-width: 1200px) {
@@ -397,37 +406,33 @@
 	@media only screen and (max-width: 700px) {
 		
 		.content_wrapper{width:98%;}
-		.menu.spacer{width: 1%;}
-		.menu.item{width:20%; font-size: 14px; }
-		.menu.main{width:29%; font-size: 20px;}
-		
+			
+		.menu.main{width: 29%; font-size: 100%;}
+		.menu.spacer{width: 5%;}
+		.menu.item{width: 20%; font-size: 80%; margin: 5px 2px;}
 
+		.menu_wrapper {height: 46px;}
+			
 		.full_size, .third_size, .two_third_size { width: 98%; }
 		.superfood_item{width:31.25%; margin 10px 1%;}
 	}
 	
 	
-			</style>
+	</style>
 			
 
 	
 	
-	<div class="section_wrapper" style="background-image:url('assets/superfoods_banner.png'); background-repeat: repeat-x; background-size: contain; height: 70%; margin-top:100px; min-height: 350px;">
-	</div>	
+		<div class="section_wrapper banner"></div>	
 			
 
     	<div class="content_wrapper">
     	<div class="column full_size">
 	
-		<H2> The history behind superfoods... </H2>
+		<H2 id="scroll_marker"> The history behind superfoods... </H2>
 		<br>
 		<P>Superfoods are considered better choices than other other <i>non super</i> foods. This marketing term can be misleading and the true origin of these foods is often overlooked or forgotten. </p>
 			
-			
-		<div class="button blue">
-		<p>READ MORE</p>
-		</div>
-
 		</div>
 		</div>	
 	
@@ -1199,8 +1204,7 @@
 				
 	
 
-
-		
+	
 		var position = $(window).scrollTop(); 
 
 		// should start at 0
@@ -1212,9 +1216,17 @@
 	
 			let window_scrolled = $(document).scrollTop();
 			
-				if(window_scrolled > 200){
-					
-    			var scroll = $(window).scrollTop();
+			
+			var hT = $('#scroll_marker').offset().top,
+       			hH = $('#scroll_marker').outerHeight(),
+				wH = $(window).height(),
+				wS = $(this).scrollTop();
+			
+			
+   			if (wS > (hT+hH-wH)){
+				console.log('marker on the view!');
+				
+				var scroll = $(window).scrollTop();
 		
 			
 				if(scroll > position) {
@@ -1228,7 +1240,11 @@
 				}
 				position = scroll;
 				
+				
+				
 			}
+			
+			
 		});
 	
 
