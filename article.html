@@ -1270,10 +1270,22 @@
 				//progres bar scrolling 
 				function progress_bar_scrolling() {
 					
-  					let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
-      				height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
-      				scrolled = (winScroll / height) * 100;
-  					document.getElementById("progressBar").style.width = scrolled + "%";
+					
+					let page_heigth = $('body').height();
+					
+  					//let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+      				//height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
+      				//scrolled = (winScroll / height) * 100;
+  					//document.getElementById("progressBar").style.width = scrolled + "%";
+					
+					
+					let window_scrolled = $(document).scrollTop();
+					let scrolled = (window_scrolled / page_heigth) *100;
+					
+					
+					let progress_final = scrolled + '%';
+					
+					$('#progressBar').css('width', progress_final);
 				}
 
 
@@ -1285,9 +1297,17 @@
 		var currentScrollPos = window.pageYOffset;
 		
   		if (prevScrollpos > currentScrollPos) {
-			$('#navbar').removeClass('collapsed');
+			
+			$('#navbar').fadeIn("slow", function() {
+    			$(this).removeClass('collapsed');
+			});
+			
+
 		} else {
-    		$('#navbar').addClass('collapsed')
+    		$('#navbar').fadeIn("slow", function() {
+    			$(this).addClass('collapsed');
+			});
+			
   		}
 		
   		prevScrollpos = currentScrollPos;
