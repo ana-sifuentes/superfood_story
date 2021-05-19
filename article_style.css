@@ -1,0 +1,353 @@
+	
+	
+	
+@font-face {
+  font-family: VCR_OSD_MONO;
+  src: url("assets/VCR_OSD_MONO_1.001.ttf");
+}
+
+
+@font-face {
+  font-family: Resolve-Light;
+  src: url("assets/Resolve-Light 3.otf");
+}
+
+
+
+
+/**********************/
+/* MENU */
+
+.top_wrapper{
+	position:fixed; 
+	width:100%; 
+	z-index: 1; 
+	top:0; 
+	background-color: white;
+}
+
+	
+	.menu_wrapper{
+		width: 100%;
+   	 	height: 70px;
+    	padding-top: 10px;
+    	top: 0px;
+    	font-family: 'VCR_OSD_MONO';
+		display: block;
+	}
+	
+	.menu_wrapper.collapsed{
+		display: none;
+	}
+
+	
+	.menu.main{
+		float: left;
+   		width: 18%;
+   		padding: 0px 1%;
+   		font-size: 28px;
+    	text-align: left;
+		font-weight: 800;
+	}
+	
+	.menu.spacer{
+    		float: left;
+    		width: 44%;
+    		height: 1px;
+	}
+	
+	.menu.item{
+    		float: left;
+    		width: 8%;
+    		margin: 10px 2%;
+    		padding: 8px 0px;
+    		font-size: 20px;
+    		text-align: center;
+	}
+	
+	
+	a > .menu.item {
+		color:black;
+	}
+	
+	.menu.item.current, 
+	.menu.item:hover{
+		border-bottom: 2px solid black;
+	}
+
+	
+	.submenu_wrapper{
+		margin-right:12%; 
+		width:12%; 
+		float:right;  
+		z-index: 10;
+		border-bottom: 2px solid black;
+	}	
+	
+	
+	.submenu_wrapper.collapsed{display: none;}
+	
+		.submenu.item{
+			  width:100%;
+			  background-color: aquamarine;
+			  height: 20px;
+			text-align: center;
+			
+			  
+		}
+	
+	
+.progress-container {
+  background-color: gray;
+  height: 10px;
+  width: 100%;
+  float:left;
+}
+
+.progress-bar {
+  background-color: #000000;
+  height: 10px;
+  width: 0%;
+}
+
+	
+/**********************/
+/*PAGES */
+
+	/* general wrapper for the content */
+	.content_wrapper {
+    		max-width: 1250px;
+    		width: 85%;
+		margin: 40px auto 0px auto;
+	}
+
+	/*main layout class */
+	.column  { 
+		float:left;
+		margin:1% 1%;
+		padding: 0px;
+	}
+
+	/* 100% */
+	.full_size { width:98%; }
+	/* 33% */
+	.third_size { width: 31.33%; }
+	/* 66% */
+	.two_third_size { width: 64.6%; }
+
+
+
+
+/* fonts */
+	.menu.item p, .menu.main p{
+		font-family: 'VCR_OSD_MONO';
+	}
+
+	.game_container p{
+		font-family: 'VCR_OSD_MONO';
+		text-align:center;
+	}
+
+	h1, h2, h3, h4, h5, h6, p{
+		font-family: 'Resolve-Light';
+	}
+	
+	
+	.clear{
+		clear:both;
+		height: 30px;
+	}	
+	
+	.section_wrapper{
+		height: auto; 
+		width:100%;
+		background-color: white;
+	}
+	
+	.section_wrapper.blue{
+		background-color: aliceblue; 
+	}
+	
+	
+	.section_wrapper.lavender{
+		background-color:lavenderblush; 
+	}
+	
+	img{width:50%}
+	
+	.content_wrapper > .column >  p{font-size:1.2em;}
+	h2{font-size: 2.5em; font-weight: 900;}
+	h3{font-size: 2em; font-weight: 900;}
+	
+	.button{
+		width: 19%;
+    	display: block;
+    	margin: 1em auto;
+    	float: left;
+    	font-size: 20px;
+    	max-width: 155px;
+    	text-align: center;
+		cursor: pointer;
+  		 color: white;
+   		 font-weight: 900;
+    		font-family: 'VCR_OSD_MONO';
+		 background-repeat: no-repeat;
+    	background-size: contain;
+	}
+	
+	.button.blue{
+		background-image: url('"../blue_button.svg"');
+	}
+
+	
+	.button.blue:hover{
+		background-image: url('');
+	}
+	
+	
+
+				
+				.option{
+					width:70%;
+					background-color:blue;
+					color:white;
+					float:left;
+					margin:5px 0px;
+					height: 30px;
+					padding:15px 0px 5px 0px;
+					text-align: center;
+					font-weight: 900;
+					cursor: pointer;
+					font-family: 'VCR_OSD_MONO';
+				}
+				
+				.option.nutrinfo{
+					width:20%;		
+				}
+			
+			
+				.option.selected{
+					background-color: darkred;	
+				}
+			
+			
+				.gallery_image{display: none;}
+				
+				.gallery_image.selected{display:block; background-color: red; height: 500px;}
+				
+				.gallery_controls{width:100%;float:left;}
+				
+				.gallery_controls > .control{
+					width:7%; 
+					background-color: aliceblue;
+					cursor: pointer;
+					height: 30px;
+					float:left;
+					text-align: center;
+				}
+				
+				.gallery_controls > .control:hover{
+					background-color: aquamarine;
+				}
+				
+				.gallery_controls > .control.previous::before{
+					content: "<";
+				}
+				.gallery_controls > .control.next::before{
+					content: ">";
+				}
+				
+				.gallery_controls > .gallery_texts{
+					width: 86%;
+    				float: left;
+				}
+				
+				.gallery_controls > .gallery_texts > .gallery_text{display: none;}
+				
+				.gallery_controls > .gallery_texts > .gallery_text.selected{display:block;}
+				
+	
+
+			
+			
+			.info_blocks_wrapper{
+				float: left;
+    			width: 100%;
+				display: block;
+			}
+			
+			
+			.info_block.intro{
+				background-color:blue;
+				height: 300px;
+				cursor: pointer;
+			}
+			
+			
+			.info_block.intro:hover{
+				background-color: aliceblue;
+			}
+			
+			
+			.info_blocks_wrapper.hidden,
+			.info_block.intro.not_selected, 
+			.info_block.content{
+				display: none;
+			}
+	
+
+			.info_block.content.selected{
+				display: block;
+				height: 300px;
+				background-color: aliceblue;
+				cursor: pointer;
+			}
+			
+				.superfoods_wrapper{width:100%; float:left;margin:auto;}
+				
+				.superfood_item{width:14%; height: 100px; background-color:blue; float:left; margin:0 1%; cursor:pointer;}
+				
+				.superfood_item:hover{background-color: aliceblue;}
+				
+			
+	
+	
+	.section_wrapper.banner{
+		background-image:url('assets/superfoods_banner.png'); 
+		background-repeat: repeat-x; 
+		background-size: contain; 
+		height: 70%; 
+		margin-top:100px; 
+		min-height: 350px;
+	}
+	
+	
+	
+	@media only screen and (max-width: 1200px) {
+		
+		.content_wrapper{width:90%;}
+
+		.menu.spacer{width: 28%;}
+		.menu.item{ width: 14%; margin: 10px 1%;}
+		.menu.main{width:22%;}
+		
+	}
+	
+	@media only screen and (max-width: 700px) {
+		
+		.content_wrapper{width:98%;}
+			
+		.menu.main{width: 29%; font-size: 100%;}
+		.menu.spacer{width: 5%;}
+		.menu.item{width: 20%; font-size: 80%; margin: 5px 2px;}
+
+		.menu_wrapper {height: 46px;}
+			
+		.full_size, .third_size, .two_third_size { width: 98%; }
+		.superfood_item{width:31.25%; margin 10px 1%;}
+	}
+	
+
+			
+
+	
