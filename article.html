@@ -1216,15 +1216,8 @@
 	
 			let window_scrolled = $(document).scrollTop();
 			
-			
-			var hT = $('#scroll_marker').offset().top,
-       			hH = $('#scroll_marker').outerHeight(),
-				wH = $(window).height(),
-				wS = $(this).scrollTop();
-			
-			
-   			if (wS > (hT+hH-wH)){
-				console.log('marker on the view!');
+   			if (window_scrolled > 400 ){
+				
 				
 				var scroll = $(window).scrollTop();
 		
