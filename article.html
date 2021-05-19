@@ -106,6 +106,10 @@
     	font-family: 'VCR_OSD_MONO';
 		display: block;
 	}
+	
+	.menu_wrapper.collapsed{
+		display: none;
+	}
 
 	
 	.menu.main{
@@ -394,8 +398,8 @@
 		
 		.content_wrapper{width:98%;}
 		.menu.spacer{width: 1%;}
-		.menu.item{width:20%; font-size: 16px; }
-		.menu.main{width:29%; font-size: 24px;}
+		.menu.item{width:20%; font-size: 14px; }
+		.menu.main{width:29%; font-size: 20px;}
 		
 
 		.full_size, .third_size, .two_third_size { width: 98%; }
@@ -1215,11 +1219,12 @@
 			
 				if(scroll > position) {
         			//scroll down
-					$('#navbar').animate({marginTop: "-80px"});
+					//$('#navbar').animate({marginTop: "-80px"});
+					$('#navbar').addClass('collapsed');
 	
 				} else {
          			//scroll up
-					$('#navbar').animate({marginTop: "+10px"});
+					$('#navbar').removeClass('collapsed');
 				}
 				position = scroll;
 				
@@ -1305,15 +1310,10 @@
 					let page_heigth = $('body').height();			
 					
 					//how much did the user scroll
-					let window_scrolled = $(document).scrollTop();
+					let window_scrolled = $(document).scrollTop() +300;
 					
 					//what % it represents
 					let scrolled_percentage = (window_scrolled / page_heigth) *100;
-					
-					//ensure it reaches the bottom
-					if(window_scrolled > 7150){
-						scrolled_percentage = 110;
-					}
 					
 					//change progress bar width
 					$('#progress_bar').css('width', scrolled_percentage+'%');
