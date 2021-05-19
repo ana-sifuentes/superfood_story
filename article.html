@@ -1204,7 +1204,7 @@
 		
   		if (prevScrollpos > currentScrollPos) {
 			
-	 		$('#navbar').animate({ marginTop: '10px', opacity: 0.5 }, 500);
+	 		$('#navbar').animate({ marginTop: '10px', opacity: 100 }, 500);
 
 		} else {
     		
@@ -1298,6 +1298,11 @@
 					
 					//what % it represents
 					let scrolled_percentage = (window_scrolled / page_heigth) *100;
+					
+					//ensure it reaches the bottom
+					if(scrolled_percentage >= 94){
+						scrolled_percentage = 100;
+					}
 					
 					//change progress bar width
 					$('#progress_bar').css('width', scrolled_percentage+'%');
