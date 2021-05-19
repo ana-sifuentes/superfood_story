@@ -21,21 +21,21 @@ body{
 /* MENU */
 
 .top_wrapper{
-	position:fixed; 
-	width:100%; 
-	z-index: 1; 
-	top:0; 
-	background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    background-color: white;
 }
 
 	
 	.menu_wrapper{
-		width: 100%;
-   	 	height: 70px;
-    	padding-top: 10px;
-    	top: 0px;
-    	font-family: 'VCR_OSD_MONO';
-		display: block;
+width: 100%;
+    height: 75px;
+    /* padding-top: 10px; */
+    top: 0px;
+    font-family: 'VCR_OSD_MONO';
+    display: block;
 	}
 	
 	.menu_wrapper.collapsed{
@@ -44,12 +44,14 @@ body{
 
 	
 	.menu.main{
-		float: left;
-   		width: 18%;
-   		padding: 0px 1%;
-   		font-size: 28px;
-    	text-align: left;
-		font-weight: 800;
+    float: left;
+    width: 18%;
+    padding: 8px 1% 5px 1%;
+    font-size: 28px;
+    text-align: left;
+    font-weight: 800;
+    /* height: 63px; */
+    margin: 0px;
 	}
 	
 	.menu.spacer{
@@ -59,12 +61,13 @@ body{
 	}
 	
 	.menu.item{
-    		float: left;
-    		width: 8%;
-    		margin: 10px 2%;
-    		padding: 8px 0px;
-    		font-size: 20px;
-    		text-align: center;
+float: left;
+    width: 10%;
+    margin: 10px 1% 11px 1%;
+    padding: 12px 0px 0px 0px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
 	}
 	
 	
