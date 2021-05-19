@@ -409,7 +409,7 @@
 
 	
 	
-	<div class="section_wrapper" style="background-image:url('assets/superfoods_banner.png'); background-repeat: repeat-x; background-size: contain; height: 70%; margin-top:100px;">
+	<div class="section_wrapper" style="background-image:url('assets/superfoods_banner.png'); background-repeat: repeat-x; background-size: contain; height: 70%; margin-top:100px; min-height: 350px;">
 	</div>	
 			
 
@@ -1241,23 +1241,25 @@ $(window).scroll(function(event){
 		
 		var position = $(window).scrollTop(); 
 
-// should start at 0
+		// should start at 0
 
-$(window).scroll(function() {
+		$(window).scroll(function() {
 	
 	
-	progress_bar_scrolling();
+			progress_bar_scrolling();
 	
 	
-    var scroll = $(window).scrollTop();
-    if(scroll > position) {
-        console.log('scrollDown');
+    		var scroll = $(window).scrollTop();
+    		if(scroll > position) {
+        		console.log('scrollDown');
+				$('#navbar').animate({ marginTop: '-70px', opacity: 0.5 }, 500);
         
-    } else {
-         console.log('scrollUp');
-    }
-    position = scroll;
-});
+			} else {
+         		console.log('scrollUp');
+				$('#navbar').animate({ marginTop: '10px', opacity: 100 }, 500);
+			}
+			position = scroll;
+		});
 	
 
 	
