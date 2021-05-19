@@ -60,7 +60,7 @@
   </div>  
 
   <div class="progress-container">
-    <div class="progress-bar" id="progressBar"></div>
+    <div class="progress-bar" id="progress_bar"></div>
   </div>
 	  
   </div>	
@@ -98,17 +98,16 @@
 }
 
 	
-.menu_wrapper{
-	width:100%;  
-	height:70px;
-	margin-top:10px;
-	font-family: 'VCR_OSD_MONO';
-	transition: top 0.3s;
-}
-	
-	.menu_wrapper.collapsed{
-		display: none;
+	.menu_wrapper{
+		width: 100%;
+   	 height: 70px;
+    	margin-top: 10px;
+
+    	top: 0px;
+    	font-family: 'VCR_OSD_MONO';
 	}
+	
+
 	
 	.menu.main{
 		float: left;
@@ -1205,16 +1204,12 @@
 		
   		if (prevScrollpos > currentScrollPos) {
 			
-			$('#navbar').fadeIn("slow", function() {
-    			$(this).removeClass('collapsed');
-			});
-			
+	 		$('#navbar').animate({ marginTop: '10px', opacity: 0.5 }, 500);
 
 		} else {
-    		$('#navbar').fadeOut("slow", function() {
-    			$(this).addClass('collapsed');
-			});
-			
+    		
+    	 	$('#navbar').animate({ marginTop: '-70px', opacity: 0.5 }, 500);
+	
   		}
 		
   		prevScrollpos = currentScrollPos;
@@ -1295,22 +1290,17 @@
 				//progres bar scrolling 
 				function progress_bar_scrolling() {
 					
+					//height of the page
+					let page_heigth = $('body').height();			
 					
-					let page_heigth = $('body').height();
+					//how much did the user scroll
+					let window_scrolled = $(document).scrollTop(); + 320;
 					
-  					//let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
-      				//height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
-      				//scrolled = (winScroll / height) * 100;
-  					//document.getElementById("progressBar").style.width = scrolled + "%";
+					//what % it represents
+					let scrolled_percentage = (window_scrolled / page_heigth) *100;
 					
-					
-					let window_scrolled = $(document).scrollTop();
-					let scrolled = (window_scrolled / page_heigth) *100;
-					
-					
-					let progress_final = scrolled + '%';
-					
-					$('#progressBar').css('width', progress_final);
+					//change progress bar width
+					$('#progress_bar').css('width', scrolled_percentage+'%');
 				}
 
 
