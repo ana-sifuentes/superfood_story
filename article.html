@@ -1177,17 +1177,13 @@
 				});
 				
 				
-				
-				
-				
 				$('.control').click(function(){
 		
 					navigation( $(this).attr('id') ,  'control');
 					
 				});
 			
-				
-				
+		
 				$('.option').click(function(){
 
 					navigation( $(this).attr('id') ,  'option');
@@ -1195,6 +1191,38 @@
 				});
 				
 				
+	
+				
+	var prevScrollpos = window.pageYOffset;
+				
+	window.onscroll = function() {
+		
+		
+		progress_bar_scrolling();
+		
+		
+		var currentScrollPos = window.pageYOffset;
+		
+  		if (prevScrollpos > currentScrollPos) {
+			
+			$('#navbar').fadeIn("slow", function() {
+    			$(this).removeClass('collapsed');
+			});
+			
+
+		} else {
+    		$('#navbar').fadeOut("slow", function() {
+    			$(this).addClass('collapsed');
+			});
+			
+  		}
+		
+  		prevScrollpos = currentScrollPos;
+	}
+
+
+	
+	
 				function navigation(clicked,  element_type){
 					
 					
@@ -1262,9 +1290,6 @@
 
 	
 	
-				window.onscroll = function () {
-					progress_bar_scrolling();
-				};
 	
 			
 				//progres bar scrolling 
@@ -1290,30 +1315,7 @@
 
 
 		
-				
-	var prevScrollpos = window.pageYOffset;
-				
-	window.onscroll = function() {
-		var currentScrollPos = window.pageYOffset;
-		
-  		if (prevScrollpos > currentScrollPos) {
-			
-			$('#navbar').fadeIn("slow", function() {
-    			$(this).removeClass('collapsed');
-			});
-			
-
-		} else {
-    		$('#navbar').fadeIn("slow", function() {
-    			$(this).addClass('collapsed');
-			});
-			
-  		}
-		
-  		prevScrollpos = currentScrollPos;
-	}
-
-
+	
 			</script>
 			
 	
