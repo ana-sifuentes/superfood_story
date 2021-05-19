@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 594 467" style="enable-background:new 0 0 594 467;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#BEBFB9;stroke-width:0.25;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#2B2B2A;stroke-width:0.25;stroke-miterlimit:10;}
+	.st2{fill:#03464F;}
+	.st3{fill:#026385;}
+	.st4{fill:#35BCC0;}
+	.st5{fill:#018F9F;}
+	.st6{fill:#606161;}
+	.st7{fill:#BEBFB9;}
+	.st8{fill:#3A3A3A;}
+	.st9{fill:#161616;}
+	.st10{fill:#E1E1DF;}
+	.st11{fill:none;stroke:#BEBFB9;stroke-miterlimit:10;}
+	.st12{fill:none;stroke:#BEBFB9;stroke-width:0.15;stroke-miterlimit:10;}
+	.st13{fill:#FFFFFF;}
+	.st14{fill:none;stroke:#3A3A3A;stroke-miterlimit:10;}
+	.st15{fill:none;}
+	.st16{stroke:#000000;stroke-miterlimit:10;}
+	.st17{font-family:'VCROSDMono';}
+	.st18{font-size:22px;}
+	.st19{stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
+	.st20{font-size:14px;}
+	.st21{font-size:7px;}
+	.st22{font-size:5px;}
+	.st23{stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
+	.st24{font-size:30px;}
+</style>
+<g id="layout">
+</g>
+<g id="Layer_4">
+	<g>
+		<line class="st0" x1="190" y1="72" x2="190" y2="468"/>
+		<line class="st0" x1="235" y1="72" x2="235" y2="468"/>
+		<line class="st0" x1="280" y1="72" x2="280" y2="468"/>
+		<line class="st0" x1="325" y1="72" x2="325" y2="468"/>
+		<line class="st0" x1="370" y1="72" x2="370" y2="468"/>
+		<line class="st0" x1="415" y1="72" x2="415" y2="468"/>
+		<line class="st0" x1="460" y1="72" x2="460" y2="468"/>
+		<line class="st0" x1="505" y1="72" x2="505" y2="468"/>
+		<line class="st0" x1="550" y1="72" x2="550" y2="468"/>
+	</g>
+	<rect x="1" class="st10" width="144" height="468"/>
+</g>
+<g id="AMOUNTS">
+	<line class="st11" x1="145.4" y1="90.4" x2="595" y2="90.4"/>
+	<rect x="203" y="81" class="st5" width="18" height="18"/>
+	<line class="st11" x1="144.5" y1="162" x2="594" y2="162"/>
+	<rect x="185" y="153" class="st5" width="18" height="18"/>
+	<line class="st11" x1="145.2" y1="125.9" x2="594.8" y2="125.9"/>
+	<rect x="212.8" y="116.9" class="st5" width="18" height="18"/>
+	<line class="st11" x1="145.3" y1="197.9" x2="594.8" y2="197.9"/>
+	<rect x="409.8" y="188.9" class="st5" width="18" height="18"/>
+	<line class="st11" x1="145.3" y1="233.9" x2="594.9" y2="233.9"/>
+	<rect x="145" y="225" class="st5" width="18" height="18"/>
+	<line class="st11" x1="145.5" y1="269.5" x2="595.1" y2="269.5"/>
+	<rect x="248" y="260.5" class="st5" width="18" height="18"/>
+	<line class="st11" x1="144.6" y1="306" x2="594.2" y2="306"/>
+	<rect x="328.1" y="297" class="st5" width="18" height="18"/>
+	<line class="st11" x1="144.8" y1="341.3" x2="594.3" y2="341.3"/>
+	<rect x="363.3" y="332.3" class="st5" width="18" height="18"/>
+	<line class="st11" x1="144.9" y1="377.2" x2="594.5" y2="377.2"/>
+	<line class="st11" x1="145.4" y1="414.3" x2="595" y2="414.3"/>
+	<rect x="346" y="405.3" class="st5" width="18" height="18"/>
+	<line class="st11" x1="145.4" y1="450" x2="595" y2="450"/>
+	<rect x="328" y="441" class="st5" width="18" height="18"/>
+	<g>
+		<rect x="147.5" y="227.5" class="st13" width="13" height="13"/>
+	</g>
+	<rect x="145" y="368" class="st5" width="18" height="18"/>
+	<g>
+		<rect x="147.5" y="370.5" class="st13" width="13" height="13"/>
+	</g>
+</g>
+<g id="LABELS">
+	<rect x="19.3" y="0.7" class="st15" width="126" height="54"/>
+	<text transform="matrix(1 0 0 1 19.2979 35.7909)" class="st16 st17 st18">CALORIES</text>
+	<rect x="19.3" y="72" class="st15" width="71.7" height="36"/>
+	<text transform="matrix(1 0 0 1 19.2979 95.1239)" class="st19 st17 st20">PROTEIN</text>
+	<rect x="19.3" y="144.7" class="st15" width="107.7" height="35.3"/>
+	<text transform="matrix(1 0 0 1 19.2979 167.4934)" class="st19 st17 st20">CARBOHYDRATES</text>
+	<rect x="19.2" y="108" class="st15" width="80.8" height="36"/>
+	<text transform="matrix(1 0 0 1 19.238 131.1239)" class="st19 st17 st20">TOTAL FAT</text>
+	<rect x="18.3" y="180" class="st15" width="45.7" height="36"/>
+	<text transform="matrix(1 0 0 1 18.2559 203.1242)" class="st19 st17 st20">FIBER</text>
+	<rect x="18.3" y="216" class="st15" width="45.7" height="36"/>
+	<text transform="matrix(1 0 0 1 18.2512 239.1239)" class="st19 st17 st20">SUGAR</text>
+	<line class="st11" x1="1" y1="54.3" x2="595" y2="54.3"/>
+	<line class="st11" x1="1" y1="108.5" x2="145" y2="108.5"/>
+	<line class="st11" x1="1" y1="144.5" x2="145" y2="144.5"/>
+	<line class="st11" x1="1" y1="180.3" x2="145" y2="180.3"/>
+	<line class="st11" x1="0.7" y1="216.5" x2="144.7" y2="216.5"/>
+	<line class="st11" x1="0.7" y1="251.5" x2="144.7" y2="251.5"/>
+	<rect x="19.5" y="288.5" class="st15" width="107.7" height="35.3"/>
+	<text transform="matrix(1 0 0 1 19.53 311.2099)" class="st19 st17 st20">Copper</text>
+	<rect x="19.5" y="251" class="st15" width="116.5" height="36"/>
+	<text transform="matrix(1 0 0 1 19.4702 274.1241)" class="st19 st17 st20">Calcium </text>
+	<rect x="18.5" y="323" class="st15" width="117.5" height="36"/>
+	<text transform="matrix(1 0 0 1 18.4875 346.1239)" class="st19 st17 st20">Manganisium</text>
+	<rect x="18.5" y="359" class="st15" width="90.5" height="36"/>
+	<text transform="matrix(1 0 0 1 18.4834 382.1241)" class="st19 st17 st20">Sodium</text>
+	<line class="st11" x1="1" y1="287.5" x2="145" y2="287.5"/>
+	<line class="st11" x1="1" y1="322.5" x2="145" y2="322.5"/>
+	<line class="st11" x1="1" y1="359.5" x2="145" y2="359.5"/>
+	<line class="st11" x1="1" y1="395.5" x2="145" y2="395.5"/>
+	<line class="st11" x1="1" y1="251.5" x2="145" y2="251.5"/>
+	<rect x="18.5" y="395" class="st15" width="117.5" height="36"/>
+	<text transform="matrix(1 0 0 1 18.5203 418.1242)" class="st19 st17 st20">Phosphorus</text>
+	<rect x="18.5" y="431" class="st15" width="90.5" height="36"/>
+	<text transform="matrix(1 0 0 1 18.5161 454.1239)" class="st19 st17 st20">Selenium</text>
+	<line class="st11" x1="1" y1="430.5" x2="145" y2="430.5"/>
+	<rect x="0.5" y="0.5" class="st14" width="594" height="467"/>
+	<line class="st11" x1="1" y1="71.5" x2="595" y2="71.5"/>
+	<rect x="361" y="54" class="st15" width="18" height="18"/>
+	<text transform="matrix(1 0 0 1 364.4333 65.5621)"><tspan x="0" y="0" class="st17 st21">50</tspan><tspan x="8.2" y="0" class="st17 st22">%</tspan></text>
+	<rect x="235" y="53.8" class="st15" width="45" height="18"/>
+	<text transform="matrix(1 0 0 1 251.9336 65.3271)"><tspan x="0" y="0" class="st17 st21">25</tspan><tspan x="8.2" y="0" class="st17 st22">%</tspan></text>
+	<rect x="460" y="54.3" class="st15" width="45" height="18"/>
+	<text transform="matrix(1 0 0 1 476.9136 65.9061)"><tspan x="0" y="0" class="st17 st21">75</tspan><tspan x="8.2" y="0" class="st17 st22">%</tspan></text>
+	<rect x="175.2" y="1" class="st15" width="126" height="54"/>
+	<text transform="matrix(1 0 0 1 175.2029 38.9721)" class="st23 st17 st24">243</text>
+</g>
+</svg>
