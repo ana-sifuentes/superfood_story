@@ -1329,6 +1329,11 @@
 						scrolled_percentage = 100;
 					}
 					
+					if(scrolled_percentage < 9){
+						scrolled_percentage = 0;
+					}
+					
+					
 					//change progress bar width
 					$('#progress_bar').css('width', scrolled_percentage+'%');
 				}
