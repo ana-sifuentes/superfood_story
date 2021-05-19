@@ -750,21 +750,21 @@
 			
 			
 			
-			<div class="column full_size more_info_text" id="text_growing_1">
+			<div class="column full_size more_info_text" id="growing_text_1">
 			
 				<p> More information on 1...</p>
 			
 			</div>	
 			
 					
-			<div class="column full_size more_info_text" id="text_growing_2">
+			<div class="column full_size more_info_text" id="growing_text_2">
 			
 				<p> More information on 2...</p>
 			
 			</div>	
 			
 						
-			<div class="column full_size more_info_text" id="text_growing_3">
+			<div class="column full_size more_info_text" id="growing_text_3">
 			
 				<p> More information on 3...</p>
 			
@@ -795,11 +795,19 @@
 				display: none;
 			}
 	
-			.info_options_wrapper,
+
 			.more_info_text.selected{
 				display: block;
+				height: 300px;
+				background-color: aliceblue;
 			}
 			
+			
+			.info_options_wrapper{
+				float: left;
+    			width: 100%;
+				display: block;
+			}
 			
 		</style>
 
@@ -1004,16 +1012,39 @@
 					var section_id = clicked_id.substring(0, clicked_id.indexOf('_'));
 						
 						
+					var num_id= clicked_id.slice(-1);
+					
 					//hide all options
 					$('#'+section_id+'_info').addClass('hidden');	
 						
 					
 					//show the selected info
-					$('#text_'+clicked_id).addClass('selected');
+					$('#'+section_id+'_text_'+num_id).addClass('selected');
 					
 					
 					
 				});
+				
+				
+				
+				$('.more_info_text').click(function(){
+
+					var clicked_id =  $(this).attr('id');
+					
+					
+					var section_id = clicked_id.substring(0, clicked_id.indexOf('_'));
+						
+						
+					//hide the selected info
+					$(this).removeClass('selected');
+					
+					
+					//show all options
+					$('#'+section_id+'_info').removeClass('hidden');	
+	
+				});
+				
+				
 				
 				
 				
