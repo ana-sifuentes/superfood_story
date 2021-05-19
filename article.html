@@ -1116,6 +1116,8 @@
    			 <h1> CREDITS </h1>
     		<p> A project developed by Ana Sifuentes as part of the MADD ELISAVA Masters</p>
 
+			
+			<div style="height: 300px; width:100%; background-color:aliceblue;"></div>
 		</div>
 		</div>
 
@@ -1235,11 +1237,28 @@ $(window).scroll(function(event){
 		*/
 	
 	
-		//scrolling to show where the user is on the page
-		window.onscroll = function() {
-			progress_bar_scrolling();
-		}
 
+		
+		var position = $(window).scrollTop(); 
+
+// should start at 0
+
+$(window).scroll(function() {
+	
+	
+	progress_bar_scrolling();
+	
+	
+    var scroll = $(window).scrollTop();
+    if(scroll > position) {
+        console.log('scrollDown');
+        
+    } else {
+         console.log('scrollUp');
+    }
+    position = scroll;
+});
+	
 
 	
 	
@@ -1326,7 +1345,7 @@ $(window).scroll(function(event){
 					
 					//ensure it reaches the bottom
 					if(window_scrolled > 7000){
-						scrolled_percentage = 120;
+						scrolled_percentage = 110;
 					}
 					
 					//change progress bar width
