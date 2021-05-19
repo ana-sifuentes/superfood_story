@@ -1194,9 +1194,24 @@
 	
 	
 	
-			$('body').on( "mousemove", function( event ) {
+		/*	$('body').on( "mousemove", function( event ) {
   				console.log( "pageX: " + event.pageX + ", pageY: " + event.pageY );
 			});
+	*/
+	
+	var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+       // downscroll code
+	   $('#navbar').animate({ marginTop: '-70px', opacity: 0.5 }, 500);
+   } else {
+      // upscroll code
+	   $('#navbar').animate({ marginTop: '10px', opacity: 100 }, 500);
+
+   }
+   lastScrollTop = st;
+});
 	
 	
 		/*
