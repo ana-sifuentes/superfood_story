@@ -1194,26 +1194,12 @@
 	
 	
 	
-		$( document ).on( "mousemove", function( event ) {
-  			$( "#log" ).text( "pageX: " + event.pageX + ", pageY: " + event.pageY );
-		});
+			$('body').on( "mousemove", function( event ) {
+  				console.log( "pageX: " + event.pageX + ", pageY: " + event.pageY );
+			});
 	
 	
-				
-	var prevScrollpos = window.pageYOffset;
-				
-	window.onscroll = function() {
-		
-		
-		progress_bar_scrolling();
-		
-		
-		
-
-
-
-
-
+		/*
 		var currentScrollPos = window.pageYOffset;
 		
   		if (prevScrollpos > currentScrollPos) {
@@ -1227,7 +1213,15 @@
   		}
 		
   		prevScrollpos = currentScrollPos;
-	}
+	
+	var prevScrollpos = window.pageYOffset;
+		*/
+	
+	
+		//scrolling to show where the user is on the page
+		window.onscroll = function() {
+			progress_bar_scrolling();
+		}
 
 
 	
