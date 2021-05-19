@@ -1315,6 +1315,11 @@
 					//what % it represents
 					let scrolled_percentage = (window_scrolled / page_heigth) *100;
 					
+					//make sure it reaches the bottom
+					if(scrolled_percentage > 94){
+						scrolled_percentage = 100;
+					}
+					
 					//change progress bar width
 					$('#progress_bar').css('width', scrolled_percentage+'%');
 				}
