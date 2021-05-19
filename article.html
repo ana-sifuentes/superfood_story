@@ -166,14 +166,14 @@
 	
 	
 .progress-container {
-  background-color: rgba(150, 150, 150, 0.6);
+  background-color: gray;
   height: 10px;
   width: 100%;
   float:left;
 }
 
 .progress-bar {
-  background-color: #2196f3;
+  background-color: #000000;
   height: 10px;
   width: 0%;
 }
@@ -1191,6 +1191,14 @@
 				
 				
 	
+	
+	
+	
+		$( document ).on( "mousemove", function( event ) {
+  			$( "#log" ).text( "pageX: " + event.pageX + ", pageY: " + event.pageY );
+		});
+	
+	
 				
 	var prevScrollpos = window.pageYOffset;
 				
@@ -1200,6 +1208,12 @@
 		progress_bar_scrolling();
 		
 		
+		
+
+
+
+
+
 		var currentScrollPos = window.pageYOffset;
 		
   		if (prevScrollpos > currentScrollPos) {
@@ -1300,8 +1314,8 @@
 					let scrolled_percentage = (window_scrolled / page_heigth) *100;
 					
 					//ensure it reaches the bottom
-					if(scrolled_percentage >= 94){
-						scrolled_percentage = 100;
+					if(window_scrolled > 7000){
+						scrolled_percentage = 120;
 					}
 					
 					//change progress bar width
