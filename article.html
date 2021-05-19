@@ -258,6 +258,42 @@
 				.gallery_controls > .gallery_texts > .gallery_text.selected{display:block;}
 				
 	
+
+			
+			
+			.info_blocks_wrapper{
+				float: left;
+    			width: 100%;
+				display: block;
+			}
+			
+			
+			.info_block.intro{
+				background-color:blue;
+				height: 300px;
+				cursor: pointer;
+			}
+			
+			
+			.info_block.intro:hover{
+				background-color: aliceblue;
+			}
+			
+			
+			.info_blocks_wrapper.hidden,
+			.info_block.intro.not_selected, 
+			.info_block.content{
+				display: none;
+			}
+	
+
+			.info_block.content.selected{
+				display: block;
+				height: 300px;
+				background-color: aliceblue;
+			}
+			
+
 	
 	
 	
@@ -367,9 +403,48 @@
 		<div class="content_wrapper">
 		<!--- CHOOSE SUPERFOOD ------>
 		<div class="column full_size">
-			<img src="demos/demo_choose_superfood.png">
-			<p><i> select which superfood - for now only chia is available</i></p>
+			<H4>Choose your superfood</H4>
+			<p> As the project grows, more superfoods will be added...</p>
+			
+			
+			<div class="superfoods_wrapper">
+			
+				<div class="superfood_item" id="chia">
+					<p> CHIA </p>
+				</div>
+				
+				<div class="superfood_item">
+					<p> QUINOA </p>
+				</div>
+				
+				<div class="superfood_item">
+					<p> SPIRULINA </p>
+				</div>
+				
+				<div class="superfood_item">
+					<p> AMARANTH </p>
+				</div>				
+				
+				<div class="superfood_item">
+					<p> AVOCADO </p>
+				</div>
+				
+				<div class="superfood_item">
+					<p> TOMATO </p>
+				</div>
+			</div>
 		</div>
+			
+			
+			<style>
+				.superfoods_wrapper{width:100%; float:left;margin:auto;}
+				
+				.superfood_item{width:12%; height: 100px; background-color:blue; float:left; margin:0 1%;}
+			
+				.superfood_item:hover{background-color: aliceblue;}
+			</style>
+			
+		
 		</div>	
 
 	
@@ -773,48 +848,7 @@
 		</div>
 		</div>
 	
-
-		<style>
-			
-			
-			.info_blocks_wrapper{
-				float: left;
-    			width: 100%;
-				display: block;
-			}
-			
-			
-			.info_block.intro{
-				background-color:blue;
-				height: 300px;
-				cursor: pointer;
-			}
-			
-			
-			.info_block.intro:hover{
-				background-color: aliceblue;
-			}
-			
-			
-			.info_blocks_wrapper.hidden,
-			.info_block.intro.not_selected, 
-			.info_block_content{
-				display: none;
-			}
-	
-
-			.info_block.content.selected{
-				display: block;
-				height: 300px;
-				background-color: aliceblue;
-			}
-			
-			
-
-			
-		</style>
-
-		<div class="clear"></div>		
+	<div class="clear"></div>		
 		
 		
 	
@@ -899,22 +933,44 @@
 			Most likely chia production will increase in the next couple of years, let's explore 3 potential scenarios.</p>
 		</div>
 			
-			
-		<div class="column third_size">
-			<h4> SCENARIO 1</h4>
-			<img src="demos/demo_scenario.png">
-		</div>	
+	
+			<div class="info_blocks_wrapper" id="prediction_info">
+				
+				<div class="column third_size info_block intro" id="prediction_intro_1">
+					<h4> SCENARIO 1</h4>
+				</div>	
 		
-		<div class="column third_size">
-			<h4> SCENARIO 2</h4>
-			<img src="demos/demo_scenario.png">
-		</div>	
-		
-		<div class="column third_size">
-			<h4> SCENARIO 3</h4>
-			<img src="demos/demo_scenario.png">
-		</div>		
+				<div class="column third_size info_block intro" id="prediction_intro_2">
+					<h4> SCENARIO 2</h4>
+				</div>	
 			
+				<div class="column third_size info_block intro" id="prediction_intro_3">
+					<h4> SCENARIO 3</h4>
+				</div>	
+			</div>
+			
+			
+			
+			
+			<div class="column full_size info_block content" id="prediction_content_1">
+			
+				<p> More information on 1...</p>
+			
+			</div>	
+			
+					
+			<div class="column full_size info_block content" id="prediction_content_2">
+			
+				<p> More information on 2...</p>
+			
+			</div>	
+			
+						
+			<div class="column full_size info_block content" id="prediction_content_3">
+			
+				<p> More information on 3...</p>
+			
+			</div>			
 		</div>
 		</div>
 	
