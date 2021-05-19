@@ -101,15 +101,12 @@
 	.menu_wrapper{
 		width: 100%;
    	 	height: 70px;
-    	margin-top: 10px;
+    	padding-top: 10px;
     	top: 0px;
     	font-family: 'VCR_OSD_MONO';
 		display: block;
 	}
-	
-	.menu_wrapper.collapsed{
-		display:none;
-	}
+
 	
 	.menu.main{
 		float: left;
@@ -1207,20 +1204,22 @@
 		$(window).scroll(function() {
 	
 	
+			//scroll progress function
 			progress_bar_scrolling();
 	
 	
+			
     		var scroll = $(window).scrollTop();
     		if(scroll > position) {
-        		console.log('scrollDown');
-				//$('#navbar').animate({ marginTop: '-70px', opacity: 0.5 }, 500);
+        		//scroll down
+
+				$('#navbar').animate({marginTop: "-=80px"});
 				
-				$('#navbar').addClass('collapsed');
         
 			} else {
-         		console.log('scrollUp');
-				//$('#navbar').animate({ marginTop: '10px', opacity: 100 }, 500);
-				$('#navbar').removeClass('collapsed');
+         		//scroll up
+
+				$('#navbar').animate({marginTop: "+=80px"});
 			}
 			position = scroll;
 		});
