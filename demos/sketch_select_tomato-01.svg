@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 150 150" style="enable-background:new 0 0 150 150;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#515151;}
+	.st1{fill:none;}
+	.st2{fill:#353535;}
+	.st3{font-family:'VCROSDMono';}
+	.st4{font-size:25px;}
+	.st5{opacity:0.85;}
+	.st6{fill:#C4C4C4;}
+</style>
+<g>
+	<g>
+		<g>
+			<polygon class="st0" points="93.5,109.3 93.5,99 88.4,99 88.4,109.3 67.7,109.3 67.7,99 62.6,99 62.6,109.3 57.4,109.3 
+				57.4,140.2 98.7,140.2 98.7,109.3 			"/>
+			<rect x="67.7" y="93.8" class="st0" width="5.2" height="5.2"/>
+			<rect x="83.2" y="93.8" class="st0" width="5.2" height="5.2"/>
+			<rect x="72.9" y="88.6" class="st0" width="10.3" height="5.2"/>
+		</g>
+		<polygon points="85.8,114.4 70.3,114.4 70.3,124.7 75.5,124.7 75.5,135.1 80.6,135.1 80.6,124.7 85.8,124.7 		"/>
+	</g>
+	<rect x="-1.9" y="-1.6" class="st1" width="153" height="153"/>
+	<text transform="matrix(1 0 0 1 31.6275 84.0841)" class="st2 st3 st4">TOMATO</text>
+	<g class="st5">
+		<rect x="-2" y="-1.4" class="st6" width="154" height="153"/>
+	</g>
+	<path d="M151-0.4v151H-1v-151H151 M152-1.4H-2v153h154V-1.4L152-1.4z"/>
+</g>
+</svg>

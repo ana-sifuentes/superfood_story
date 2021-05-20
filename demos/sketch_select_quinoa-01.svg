@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 150 150" style="enable-background:new 0 0 150 150;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#515151;}
+	.st1{fill:none;}
+	.st2{fill:#353535;}
+	.st3{font-family:'VCROSDMono';}
+	.st4{font-size:25px;}
+	.st5{opacity:0.85;}
+	.st6{fill:#C4C4C4;}
+</style>
+<g>
+	<g>
+		<g>
+			<polygon class="st0" points="88,109.4 88,99.1 82.8,99.1 82.8,109.4 62.2,109.4 62.2,99.1 57,99.1 57,109.4 51.9,109.4 
+				51.9,140.4 93.1,140.4 93.1,109.4 			"/>
+			<rect x="62.2" y="94" class="st0" width="5.2" height="5.2"/>
+			<rect x="77.7" y="94" class="st0" width="5.2" height="5.2"/>
+			<rect x="67.4" y="88.8" class="st0" width="10.3" height="5.2"/>
+		</g>
+		<polygon points="80.3,114.6 64.8,114.6 64.8,124.9 69.9,124.9 69.9,135.2 75.1,135.2 75.1,124.9 80.3,124.9 		"/>
+	</g>
+	<rect x="-1.2" y="-1.5" class="st1" width="153" height="153"/>
+	<text transform="matrix(1 0 0 1 32.3815 84.118)" class="st2 st3 st4">QUINOA</text>
+	<g class="st5">
+		<rect x="-2" y="-1.5" class="st6" width="154" height="153"/>
+	</g>
+	<path d="M151-0.5v151H-1v-151H151 M152-1.5H-2v153h154V-1.5L152-1.5z"/>
+</g>
+</svg>
