@@ -81,10 +81,12 @@
         			//scroll down
 					//$('#navbar').animate({marginTop: "-80px"});
 					$('#navbar').addClass('collapsed');
+					$('#navwrapper').addClass('collapsed');
 	
 				} else {
          			//scroll up
 					$('#navbar').removeClass('collapsed');
+					$('#navwrapper').removeClass('collapsed');
 				}
 				position = scroll;
 				
