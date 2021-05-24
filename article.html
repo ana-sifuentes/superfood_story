@@ -59,6 +59,12 @@ img {width:100%;}
 	.menu_wrapper.collapsed{
 		height:0vh;
 	}
+	
+	html {
+  scroll-behavior: smooth;
+}
+	
+	
 </style>	
 
 	
@@ -83,19 +89,21 @@ img {width:100%;}
 			<div style="height: 91vh; background-color:blue; width:25%; float:left;"></div>
 			<div style="height: 91vh; background-color: aliceblue; width: 50%; float:left;">
 				
-				<div style="height: 30vh; background-color: azure;"></div>
+				<div style="height: 21vh;background-color: rebeccapurple;"></div>
 				
-				<div style="height: 31vh; background-color: white;">
+				<div style="height: 28vh;padding: 10vh;background-color: white;">
 				
-					<h1 style="font-size:60px;text-align: center;"> THE HISTORY OF <BR> SUPERFOODS</h1>
-						<P style="font-size: 18px; text-align: center;">
+					<h1 style="font-size:60px;text-align: center;margin: 0px;"> THE HISTORY OF <br> SUPERFOODS</h1>
+						<p style="font-size: 18px;text-align: center;margin: 2vh 0px 0px 0px;">
 							Superfoods are considered more nutritionally dense than other foods.<br>
 							However, this marketing term can be misleading, leaving <br>
 							consumers vulnerable and the foods themselves a mystery. 
-						</P>
+						</p>
+					
+					<h3 style="background-color: red; width:30%; padding: 1vh; " href="#superfoods"> START </h3>
 				</div>
 				
-				<div style="height: 30vh; background-color: azure;"></div>
+				<div style="height: 20vh;background-color: rebeccapurple;"></div>
 				
 			</div>
 			<div style="height: 91vh; background-color:blue; width:25%;  float:left;"></div>
@@ -107,8 +115,8 @@ img {width:100%;}
 			
 		
 	
-		<!----- WHAT ARE SUPERFOODS? --->	
-		<div class="section_wrapper lavender">				
+		<!----- SUPERFOODS --->	
+		<div class="section_wrapper lavender" style="height: 99vh;" id="superfoods">				
 		<div class="content_wrapper">	
 			
 	
@@ -938,5 +946,30 @@ img {width:100%;}
 	<!-- loading scripts -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="article_script.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
 
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 </html>
