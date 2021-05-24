@@ -71,7 +71,12 @@
 	
 			let window_scrolled = $(document).scrollTop();
 			
-   			if (window_scrolled > 400 ){
+			
+			let section1 = $('.section_wrapper.banner').height();
+			
+			
+			
+   			if (window_scrolled > section1 ){
 				
 				
 				var scroll = $(window).scrollTop();
