@@ -14,7 +14,11 @@ body{
   src: url("assets/Resolve-Light 3.otf");
 }
 
-
+@font-face {
+  font-family: Linux_Libertine;
+  src: url("assets/LinLibertine_R.ttf");
+}
+	
 
 
 /**********************/
@@ -153,8 +157,13 @@ float: left;
 		text-align:center;
 	}
 
-	h1, h2, h3, h4, h5, h6, p{
-		font-family: 'Resolve-Light';
+
+	h1, h2, h3, h4, h5, h6{
+	font-family: 'VCR_OSD_MONO';
+	}
+
+	p{
+	font-family: 'Linux_Libertine';
 	}
 	
 	
