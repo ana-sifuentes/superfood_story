@@ -76,51 +76,130 @@ img {width:100%;}
 
 			</div>
 			
- 			 <div class="progress-container" style="height: 1vh">
+ 			 <div class="progress-container">
  				   <div class="progress-bar" id="progress_bar"></div>
  			 </div>
 			
 		</div>
 	
 	
+	
+	<style>
+		.section_wrapper.banner{
+			margin-top:9vh; 
+			height: 91vh;
+			background-image: url('');
+		}
+	
+		
+		.main_title{
+			font-size:60px;
+			text-align: center;
+			margin: 0px;
+		}
+		
+		.main_intro{
+			font-size: 18px;
+			text-align: center;
+			margin: 2vh 0px 0px 0px;
+		}
+		
+		
+		.side_banner{
+			height: 20vh;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		
+		.side_banner.right{
+			background-image: url('assets/welcome_bottom-05.svg');
+		}
+		
+		.side_banner.left{
+			background-image: url('assets/welcome_left-02.svg')
+		}
+		
+		
+		.banner_center_wrapper{
+			height: 91vh; width: 50%; float:left;
+		}
+		
+		.banner_center_wrapper > .top{
+			height: 21vh;
+			background-size: contain;
+			background-image: url('assets/welcome_top-04.svg');
+			background-repeat: no-repeat;
+		}
+		
+		.banner_center_wrapper > .center{
+			height: 36vh;
+			padding: 7vh 0px;
+			background-color: white;
+		}
+		
+		.banner_center_wrapper > .bottom{
+			height: 20vh;
+			background-size: contain;
+			background-image: url('assets/welcome_bottom-05.svg');
+			background-repeat: no-repeat;
+		}
+		
+		.button{
+			background-color:black; 
+			color:white; 
+			width: 25%;
+			padding: 1vh;
+			cursor: pointer;
+			margin: 2vh auto;
+			text-align: center
+		}
+		
+		
+		.section_wrapper{
+			height: 100vh;
+		}
+		
+		
+	</style>
+	
 		
 		<!-----WELCOME BANNER --->
-		<div class="section_wrapper banner" style="margin-top:9vh; height: 91vh; background-image: url('');">
-			<!--- <img src="assets/welcome_banner_chia.svg" style="width:100%; height:91vh;">-->
+		<div class="section_wrapper banner">
 			
-			<div style="height: 91vh;background-image: url('assets/welcome_left-02.svg');width:25%;float:left;background-repeat: repeat-y;background-size: contain;"></div>
+			<div class="side_banner left"></div>
 			
 			
-			<div style="height: 91vh; width: 50%; float:left;">
+			<div class="banner_center_wrapper">
 				
-				<div style="height: 21vh;background-size: contain;background-image: url('assets/welcome_top-04.svg');background-repeat: no-repeat;"></div>
+				<div class="top"></div>
 				
-				<div style="height: 36vh;padding: 7vh 0px;background-color: white;">
+				<div class="center">
 				
-					<h1 style="font-size:60px;text-align: center;margin: 0px;"> THE HISTORY OF <br> SUPERFOODS</h1>
-						<p style="font-size: 18px;text-align: center;margin: 2vh 0px 0px 0px;">
+					<h1 class="main_title"> THE HISTORY OF <br> SUPERFOODS</h1>
+						<p class="main_intro">
 							Superfoods are considered more nutritionally dense than other foods.<br>
 							However, this marketing term can be misleading, leaving <br>
 							consumers vulnerable and the foods themselves a mystery. 
 						</p>
 					
 					<a href="#superfoods" style="color: white; text-decoration: none;">
-					<h3 style="background-color:black; color:white; width: 25%;padding: 1vh;cursor: pointer;margin: 2vh auto;text-align: center;" href="#superfoods"> START </h3>
+					<h3 class="button"> START </h3>
 					</a>
+					
 				</div>
 				
-				
-				<div style="height: 20vh;background-size: contain;background-image: url('assets/welcome_bottom-05.svg');background-repeat: no-repeat;"></div>
-				
+				<div class="bottom"></div>
 				
 			</div>
-			<div style="height: 91vh;background-image: url('assets/welcome_right-03.svg');width:25%;float:left;background-repeat: repeat-y;background-size: contain;"></div>
+			
+			<div class="side_banner right"></div>
+			
 		</div>	
 			
 
 
 		<!----- SUPERFOODS --->	
-		<div class="section_wrapper" style="height: 100vh;" id="superfoods">				
+		<div class="section_wrapper" id="superfoods">				
 		<div class="content_wrapper">	
 			
 			<div class="column third_size">
@@ -148,7 +227,10 @@ img {width:100%;}
 			
 			
 			<div class="column two_third_size" style="margin:0px 1%;">	
-				<div style="background-color: white; height: 100vh;"></div>
+				<div style="background-color: white; height: 100vh;">
+				
+					<img src="assets/superfoods.svg">
+				</div>
 			</div>	
 			
 	
