@@ -70,8 +70,15 @@ img {width:100%;}
 		.section_wrapper.banner{
 			margin-top:9vh; 
 			height: 91vh;
-			background-image: url('');
+			background-image: url('assets/welcome_banner_chia.svg');
+			
+			        display: flex;
+        width: 100%;
+        justify-content: center;
+        background-color: #0666a3;
+			
 		}
+	
 	
 		
 		.main_title{
@@ -87,51 +94,7 @@ img {width:100%;}
 		}
 		
 		
-		.side_banner{
-			height: 91vh;
-    		background-size: contain;
-   		 background-repeat: repeat;
-   		 width: 25%;
-    		float: left;
-
-		}
 		
-		.side_banner.right{
-			background-image: url('assets/welcome_right-03.svg');
-			background-position: left;
-		}
-		
-		.side_banner.left{
-			background-image: url('assets/welcome_left-02.svg');
-			background-position: right;
-		}
-		
-		
-		.banner_center_wrapper{
-			height: 91vh; 
-			width: 50%; 
-			float:left;
-		}
-		
-		.banner_center_wrapper > .top{
-			height: 21vh;
-			background-size: contain;
-			background-image: url('assets/welcome_top-04.svg');
-			background-repeat: no-repeat;
-		}
-		
-		.banner_center_wrapper > .center{
-			height: 36vh;
-			padding: 7vh 0px;
-			background-color: white;
-		}
-		
-		.banner_center_wrapper > .bottom{
-			height: 20vh;
-			background-size: contain;
-			background-image: url('assets/welcome_bottom-05.svg');
-			background-repeat: no-repeat;
-		}
 		
 		h3.button{
 			background-color:black; 
@@ -143,18 +106,12 @@ img {width:100%;}
 			text-align: center
 		}
 		
-		
-		.section_wrapper{
-			height: 100vh;
-		}
-		
+
 		
 	
 	@media only screen and (max-width: 1100px) {
 		
-		
-		.side_banner{width: 12.5%;}
-		.banner_center_wrapper{width: 75%;}
+
 		
 	}
 	
@@ -179,14 +136,9 @@ img {width:100%;}
 		<!-----WELCOME BANNER --->
 		<div class="section_wrapper banner">
 			
-			<div class="side_banner left"></div>
 			
-			
-			<div class="banner_center_wrapper">
-				
-				<div class="top"></div>
-				
-				<div class="center">
+				<div style="       background-color: #8ebf42;
+        padding: 10px;">
 				
 					<h1 class="main_title"> THE HISTORY OF <br> SUPERFOODS</h1>
 						<p class="main_intro">
@@ -200,13 +152,8 @@ img {width:100%;}
 					</a>
 					
 				</div>
-				
-				<div class="bottom"></div>
-				
-			</div>
 			
-			<div class="side_banner right"></div>
-			
+		
 		</div>	
 			
 
