@@ -110,8 +110,13 @@ margin-top: 9vh;
 			text-align: center
 		}
 		
-
-		
+	.option{
+		background-color:black;
+	}
+	.option.selected{
+		background-color:white;
+		color:black;
+	}	
 	
 	@media only screen and (max-width: 900px) {
 		
@@ -631,25 +636,35 @@ margin-top: 9vh;
 		
 			<div class="column third_size">
 			<h3> Nutritional Information</h3>
-			<p>What am I getting when I eat chia? Let's break it down. You can also see how it compares to other foods, like almonds.</p>
+			<p>
+				What am I getting when I eat chia?<br>
+				Let's break it down. 
+				<br><br>
+				You can also see how it compares to other similar foods.
+			</p>
+			
+			<p> For 50 grams of: </p>	
 				
 				
 			<div class="options_wrapper" id="nutrinfo_options">
 			
 			
 				<div class="option nutrinfo selected" id="nutrinfo_option_1">
-					<p>25 grams </p>
+					<p>CHIA</p>
 				</div>
 				
 				<div class="option nutrinfo"  id="nutrinfo_option_2">
-					<p>50 grams </p>
+					<p>ALMONDS </p>
 				</div>
 				
 				
 				<div class="option nutrinfo" id="nutrinfo_option_3">
-					<p>100 grams </p>
+					<p>SUNFLOWER SEEDS</p>
 				</div>
 				
+				<div class="option nutrinfo" id="nutrinfo_option_4">
+					<p>PEANUTS</p>
+				</div>
 				
 			</div>
 		
@@ -664,16 +679,25 @@ margin-top: 9vh;
 				
 				<div class="gallery_image selected" id="nutrinfo_image_1"> 
 				
-					<img src="demos/sketch_nutrinfo_2tablespoons.svg" >
+					<img src="demos/nutrinfo_CHIA.svg" >
 				
 				</div>
 					
-				<div class="gallery_image" id="nutrinfo_image_2" > 
-					<img  style="height: 90vh;  width: 100%; margin: 4vh 0px;" src="demos/sketch_nutrinfo_50g.svg" >
-				</div>
+				<div class="gallery_image selected" id="nutrinfo_image_2"> 
 				
-				<div class="gallery_image" id="nutrinfo_image_3" > 
-					<img src="demos/sketch_nutrinfo_100g.svg" >
+					<img src="demos/nutrinfo_ALMONDS.svg" >
+				
+				</div>
+					
+				<div class="gallery_image selected" id="nutrinfo_image_3"> 
+				
+					<img src="demos/nutrinfo_SUNFLOWER.svg" >
+				
+				</div>
+					
+				
+				<div class="gallery_image" id="nutrinfo_image_4" > 
+					<img src="demos/nutrinfo_PEANUT.svg" >
 				</div>
 				
 			</div>	
