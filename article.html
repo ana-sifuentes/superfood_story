@@ -15,7 +15,7 @@
 	
 .gallery_image.selected {
     display: block;
-    background-color: aliceblue;
+    background-color:white;
     height: auto;
 }
 	
@@ -112,8 +112,9 @@ margin-top: 9vh;
 		
 	.option{
 		background-color:black;
+		border: solid 1px black;
 	}
-	.option.selected{
+	.option.selected, .option:hover{
 		background-color:white;
 		color:black;
 	}	
@@ -630,7 +631,7 @@ margin-top: 9vh;
 
 
 	
-		<div class="section_wrapper">				
+		<div class="section_wrapper" id="nutrinfo">				
 		<div class="content_wrapper">
 		
 		
@@ -649,21 +650,21 @@ margin-top: 9vh;
 			<div class="options_wrapper" id="nutrinfo_options">
 			
 			
-				<div class="option nutrinfo selected" id="nutrinfo_option_1">
-					<p>CHIA</p>
+				<div class="option selected" id="nutrinfo_option_1">
+					CHIA
 				</div>
 				
-				<div class="option nutrinfo"  id="nutrinfo_option_2">
-					<p>ALMONDS </p>
+				<div class="option"  id="nutrinfo_option_2">
+					ALMONDS 
 				</div>
 				
 				
-				<div class="option nutrinfo" id="nutrinfo_option_3">
-					<p>SUNFLOWER SEEDS</p>
+				<div class="option" id="nutrinfo_option_3">
+					SUNFLOWER SEEDS
 				</div>
 				
-				<div class="option nutrinfo" id="nutrinfo_option_4">
-					<p>PEANUTS</p>
+				<div class="option" id="nutrinfo_option_4">
+					PEANUTS
 				</div>
 				
 			</div>
@@ -679,25 +680,25 @@ margin-top: 9vh;
 				
 				<div class="gallery_image selected" id="nutrinfo_image_1"> 
 				
-					<img src="demos/nutrinfo_CHIA.svg" >
+					<img src="assets/nutrinfo_CHIA.svg" >
 				
 				</div>
 					
 				<div class="gallery_image selected" id="nutrinfo_image_2"> 
 				
-					<img src="demos/nutrinfo_ALMONDS.svg" >
+					<img src="assets/nutrinfo_ALMONDS.svg" >
 				
 				</div>
 					
 				<div class="gallery_image selected" id="nutrinfo_image_3"> 
 				
-					<img src="demos/nutrinfo_SUNFLOWER.svg" >
+					<img src="assets/nutrinfo_SUNFLOWER.svg" >
 				
 				</div>
 					
 				
 				<div class="gallery_image" id="nutrinfo_image_4" > 
-					<img src="demos/nutrinfo_PEANUT.svg" >
+					<img src="assets/nutrinfo_PEANUT.svg" >
 				</div>
 				
 			</div>	
