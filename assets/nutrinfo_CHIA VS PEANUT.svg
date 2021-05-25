@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1108 791" style="enable-background:new 0 0 1108 791;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.15;}
+	.st1{opacity:0.15;fill:#BEBFB9;}
+	.st2{fill:none;stroke:#E1E1DF;stroke-miterlimit:10;}
+	.st3{fill:none;}
+	.st4{stroke:#000000;stroke-miterlimit:10;}
+	.st5{font-family:'VCROSDMono';}
+	.st6{font-size:22px;}
+	.st7{font-size:25px;}
+	.st8{font-size:10px;}
+	.st9{stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;}
+	.st10{font-size:14px;}
+	.st11{fill:#03464F;}
+	.st12{fill:#03464F;stroke:#03464F;stroke-width:0.5;stroke-miterlimit:10;}
+	.st13{font-size:63px;}
+	.st14{font-size:46px;}
+	.st15{font-size:19px;}
+	.st16{font-size:23px;}
+	.st17{fill:#026385;}
+	.st18{fill:#018F9F;}
+	.st19{fill:#35BCC0;}
+	.st20{fill:#35BCC0;stroke:#35BCC0;stroke-width:0.5;stroke-miterlimit:10;}
+	.st21{fill:none;stroke:#606161;stroke-miterlimit:10;}
+</style>
+<g id="layout">
+</g>
+<g id="GUIDES">
+	<line class="st2" x1="404.8" y1="417.5" x2="404.8" y2="471"/>
+	<line class="st2" x1="585.3" y1="417.5" x2="585.3" y2="471"/>
+	<line class="st2" x1="765.3" y1="417.5" x2="765.3" y2="471"/>
+	<line class="st2" x1="405" y1="30" x2="405" y2="102"/>
+	<line class="st2" x1="585.5" y1="30" x2="585.5" y2="102"/>
+	<line class="st2" x1="765.5" y1="30" x2="765.5" y2="102"/>
+	<line class="st2" x1="405.1" y1="119.8" x2="405.1" y2="407.6"/>
+	<line class="st2" x1="585" y1="120" x2="585" y2="407.8"/>
+	<line class="st2" x1="584.6" y1="120.6" x2="584.6" y2="408.4"/>
+	<line class="st2" x1="765.3" y1="120" x2="765.3" y2="407.8"/>
+	<rect x="99.3" y="120" class="st3" width="107.7" height="72"/>
+	<text transform="matrix(1 0 0 1 116.7656 164.0519)" class="st4 st5 st6">PROTEIN</text>
+	<rect x="99.5" y="191.7" class="st3" width="107.5" height="72"/>
+	<text transform="matrix(1 0 0 1 168.3276 235.7117)" class="st4 st5 st6">FAT</text>
+	<rect x="99.5" y="263.7" class="st3" width="107.5" height="72"/>
+	<text transform="matrix(1 0 0 1 142.5469 307.7117)" class="st4 st5 st6">CARBS</text>
+	<rect x="99" y="335.6" class="st3" width="107.5" height="72"/>
+	<text transform="matrix(1 0 0 1 142.0439 379.6665)" class="st4 st5 st6">FIBER</text>
+	<rect x="99" y="417" class="st3" width="107.5" height="53.6"/>
+	<text transform="matrix(1 0 0 1 142.0425 451.8594)" class="st4 st5 st6">SUGAR</text>
+	<rect x="99" y="30" class="st3" width="108" height="72"/>
+	<text transform="matrix(1 0 0 1 103.875 74.0518)" class="st4 st5 st6">CALORIES</text>
+	<rect x="594.4" y="489" class="st3" width="62.7" height="36"/>
+	<text transform="matrix(1 0 0 1 611.062 516.15)" class="st4 st5 st7">Ca</text>
+	<rect x="594.4" y="516" class="st3" width="62.6" height="18"/>
+	<text transform="matrix(1 0 0 1 605.1616 528.6603)" class="st5 st8">Calcium</text>
+	<line class="st2" x1="656.8" y1="489.6" x2="656.8" y2="757.7"/>
+	<line class="st2" x1="729.7" y1="489.2" x2="729.7" y2="757.5"/>
+	<line class="st2" x1="872.6" y1="491" x2="872.6" y2="759"/>
+	<line class="st2" x1="801.1" y1="491" x2="801.1" y2="759"/>
+	<rect x="594.4" y="534.4" class="st3" width="62.7" height="36"/>
+	<text transform="matrix(1 0 0 1 611.0752 561.5197)" class="st4 st5 st7">Fe</text>
+	<rect x="594.4" y="561.4" class="st3" width="62.6" height="18"/>
+	<text transform="matrix(1 0 0 1 613.9663 574.03)" class="st5 st8">Iron</text>
+	<rect x="594" y="579.1" class="st3" width="62.7" height="36"/>
+	<text transform="matrix(1 0 0 1 610.6787 606.2355)" class="st4 st5 st7">Na</text>
+	<rect x="594" y="606.1" class="st3" width="62.6" height="18"/>
+	<text transform="matrix(1 0 0 1 607.709 618.7454)" class="st5 st8">Sodium</text>
+	<rect x="594.1" y="624.3" class="st3" width="62.7" height="36"/>
+	<text transform="matrix(1 0 0 1 610.7549 651.4581)" class="st4 st5 st7">Mg</text>
+	<rect x="594.1" y="651.3" class="st3" width="62.6" height="18"/>
+	<text transform="matrix(1 0 0 1 598.9961 663.9684)" class="st5 st8">Magnesium</text>
+	<rect x="594.3" y="668.8" class="st3" width="62.7" height="36.2"/>
+	<text transform="matrix(1 0 0 1 618.3076 696.0432)" class="st4 st5 st7">P</text>
+	<rect x="594.3" y="695.8" class="st3" width="62.7" height="18"/>
+	<text transform="matrix(1 0 0 1 596.355 708.4467)" class="st5 st8">Phosphorus</text>
+	<rect x="594" y="714.6" class="st3" width="63.3" height="36.2"/>
+	<text transform="matrix(1 0 0 1 610.9961 741.8857)" class="st4 st5 st7">Zn</text>
+	<rect x="594.6" y="741.6" class="st3" width="62.8" height="18"/>
+	<text transform="matrix(1 0 0 1 614.2891 754.2897)" class="st5 st8">Zinc</text>
+	<rect x="225.6" y="489" class="st3" width="62.7" height="36"/>
+	<text transform="matrix(1 0 0 1 245.5479 516.1498)"><tspan x="0" y="0" class="st4 st5 st7">B</tspan><tspan x="14.6" y="0" class="st9 st5 st10">1</tspan></text>
+	<rect x="225.6" y="516" class="st3" width="62.6" height="18"/>
+	<text transform="matrix(1 0 0 1 236.4253 528.6602)" class="st5 st8">Thiamin</text>
+	<line class="st2" x1="288.1" y1="489.5" x2="288.1" y2="757.7"/>
+	<line class="st2" x1="359.9" y1="489" x2="359.9" y2="757.5"/>
+	<line class="st2" x1="503.8" y1="488.8" x2="503.8" y2="757"/>
+	<line class="st2" x1="432.4" y1="488.8" x2="432.4" y2="757"/>
+	<rect x="225" y="579.1" class="st3" width="62.7" height="36"/>
+	<text transform="matrix(1 0 0 1 244.9409 606.2466)"><tspan x="0" y="0" class="st4 st5 st7">B</tspan><tspan x="14.6" y="0" class="st9 st5 st10">3</tspan></text>
+	<rect x="225" y="606.1" class="st3" width="62.6" height="18"/>
+	<text transform="matrix(1 0 0 1 238.748 618.757)" class="st5 st8">Niacin</text>
+	<rect x="225.2" y="624" class="st3" width="62.7" height="45"/>
+	<text transform="matrix(1 0 0 1 245.0767 655.6395)"><tspan x="0" y="0" class="st4 st5 st7">B</tspan><tspan x="14.6" y="0" class="st9 st5 st10">6</tspan></text>
+	<rect x="225" y="669" class="st3" width="62.7" height="45"/>
+	<text transform="matrix(1 0 0 1 240.7666 700.6497)"><tspan x="0" y="0" class="st4 st5 st7">B</tspan><tspan x="14.6" y="0" class="st9 st5 st10">12</tspan></text>
+	<rect x="225.1" y="714.2" class="st3" width="62.7" height="45"/>
+	<text transform="matrix(1 0 0 1 249.1147 745.8807)" class="st4 st5 st7">E</text>
+	<rect x="225.2" y="533.3" class="st3" width="62.7" height="36"/>
+	<text transform="matrix(1 0 0 1 245.1313 560.4399)"><tspan x="0" y="0" class="st4 st5 st7">B</tspan><tspan x="14.6" y="0" class="st9 st5 st10">2</tspan></text>
+	<rect x="225.2" y="560.3" class="st3" width="62.6" height="18"/>
+	<text transform="matrix(1 0 0 1 227.2197 572.9503)" class="st5 st8">Riboflavin</text>
+	<rect x="144.1" y="489" class="st3" width="71.9" height="279"/>
+	<text transform="matrix(0 -1 1 0 188.0913 757.8926)" class="st4 st5 st6">VITAMINS &amp; MINERALS</text>
+</g>
+<g id="PEANUTS">
+	<polygon class="st11" points="414,156 414,147 405,147 396,147 387,147 387,156 378,156 378,165 378,174 378,183 387,183 387,192 
+		396,192 405,192 414,192 414,183 423,183 423,174 423,165 423,156 	"/>
+	<polygon class="st11" points="468,228 468,219 459,219 450,219 441,219 441,228 432,228 432,237 432,246 432,255 441,255 441,264 
+		450,264 459,264 468,264 468,255 477,255 477,246 477,237 477,228 	"/>
+	<polygon class="st11" points="261,300 261,291 252,291 243,291 234,291 234,300 225,300 225,309 225,318 225,327 234,327 234,336 
+		243,336 252,336 261,336 261,327 270,327 270,318 270,309 270,300 	"/>
+	<polygon class="st11" points="351,372 351,363 342,363 333,363 324,363 324,372 315,372 315,381 315,390 315,399 324,399 324,408 
+		333,408 342,408 351,408 351,399 360,399 360,390 360,381 360,372 	"/>
+	<rect x="765" y="29.8" class="st3" width="180" height="72"/>
+	<text transform="matrix(1 0 0 1 799.6069 88.8195)" class="st12 st5 st13">294</text>
+	<rect x="764.7" y="417.7" class="st3" width="180" height="53.6"/>
+	<text transform="matrix(1 0 0 1 815.3965 461.3147)"><tspan x="0" y="0" class="st12 st5 st14">2</tspan><tspan x="27" y="0" class="st12 st5 st15"> </tspan><tspan x="38.1" y="0" class="st12 st5 st14">5</tspan><tspan x="65" y="0" class="st12 st5 st16">G</tspan></text>
+	<rect x="828.1" y="417.2" class="st3" width="44.3" height="54"/>
+	<text transform="matrix(1 0 0 1 836.7505 461.0376)" class="st12 st5 st14">.</text>
+	<rect x="315" y="741" class="st11" width="18" height="18"/>
+	<path class="st11" d="M288.3,696v18h18v-18H288.3z M301.8,709.5h-9v-9h9V709.5z"/>
+	<rect x="333" y="651" class="st11" width="18" height="18"/>
+	<rect x="414" y="606" class="st11" width="18" height="18"/>
+	<rect x="306" y="561" class="st11" width="18" height="18"/>
+	<rect x="297" y="516" class="st11" width="18" height="18"/>
+	<rect x="657" y="516" class="st11" width="18" height="18"/>
+	<rect x="657" y="561" class="st11" width="18" height="18"/>
+	<rect x="675" y="606" class="st11" width="18" height="18"/>
+	<rect x="711" y="651" class="st11" width="18" height="18"/>
+	<rect x="720" y="696" class="st11" width="18" height="18"/>
+	<rect x="684" y="741" class="st11" width="18" height="18"/>
+</g>
+<g id="SUNFLOWER_copy">
+</g>
+<g id="ALMONDS">
+</g>
+<g id="CHIA">
+	<polygon class="st19" points="360,129 360,120 351,120 342,120 333,120 333,129 324,129 324,138 324,147 324,156 333,156 333,165 
+		342,165 351,165 360,165 360,156 369,156 369,147 369,138 369,129 	"/>
+	<rect x="225" y="30" class="st3" width="180" height="72"/>
+	<text transform="matrix(1 0 0 1 259.6289 89.0576)" class="st20 st5 st13">243</text>
+	<rect x="225.8" y="417.4" class="st3" width="180" height="53.6"/>
+	<text transform="matrix(1 0 0 1 295.6079 461.0192)"><tspan x="0" y="0" class="st20 st5 st14">0</tspan><tspan x="27" y="0" class="st20 st5 st16">G</tspan></text>
+	<polygon class="st19" points="369,201 369,192 360,192 351,192 342,192 342,201 333,201 333,210 333,219 333,228 342,228 342,237 
+		351,237 360,237 369,237 369,228 378,228 378,219 378,210 378,201 	"/>
+	<polygon class="st19" points="297,273 297,264 288,264 279,264 270,264 270,273 261,273 261,282 261,291 261,300 270,300 270,309 
+		279,309 288,309 297,309 297,300 306,300 306,291 306,282 306,273 	"/>
+	<polygon class="st19" points="675.1,344.3 675.1,335.3 666.1,335.3 657.1,335.3 648.1,335.3 648.1,344.3 639.1,344.3 639.1,353.3 
+		639.1,362.3 639.1,371.3 648.1,371.3 648.1,380.3 657.1,380.3 666.1,380.3 675.1,380.3 675.1,371.3 684.1,371.3 684.1,362.3 
+		684.1,353.3 684.1,344.3 	"/>
+	<rect x="720" y="489" class="st19" width="18" height="18"/>
+	<rect x="711" y="534" class="st19" width="18" height="18"/>
+	<path class="st19" d="M657,579v18h18v-18H657z M670.5,592.5h-9v-9h9V592.5z"/>
+	<rect x="765" y="624" class="st19" width="18" height="18"/>
+	<rect x="819" y="669" class="st19" width="18" height="18"/>
+	<rect x="711" y="714.6" class="st19" width="18" height="17.4"/>
+	<rect x="360" y="579" class="st19" width="18" height="18"/>
+	<rect x="360" y="489" class="st19" width="18" height="18"/>
+	<rect x="306" y="534" class="st19" width="18" height="18"/>
+	<rect x="288" y="714" class="st19" width="18" height="18"/>
+	<path class="st19" d="M288,624v18h18v-18H288z M301.5,637.5h-9v-9h9V637.5z"/>
+	<path class="st19" d="M288,669v18h18v-18H288z M301.5,682.5h-9v-9h9V682.5z"/>
+</g>
+<g id="top_lines">
+	<line class="st21" x1="224.6" y1="192.2" x2="944.6" y2="192.2"/>
+	<line class="st21" x1="224.4" y1="263.1" x2="944.4" y2="263.1"/>
+	<line class="st21" x1="224.4" y1="335.6" x2="944.4" y2="335.6"/>
+	<path class="st21" d="M944.6,30H225c0,0,0,63.6,0,72h719.6V30z"/>
+	<polygon class="st21" points="224.5,120.5 225.5,407.5 944.5,408.5 944.5,119.5 	"/>
+	<polygon class="st21" points="944.6,417.2 225.5,417.5 225.5,471.5 944.7,471.4 	"/>
+	<line class="st21" x1="594" y1="534.6" x2="944.8" y2="534.3"/>
+	<line class="st21" x1="594.1" y1="578.8" x2="945" y2="578.5"/>
+	<line class="st21" x1="594.3" y1="623.8" x2="945.2" y2="623.5"/>
+	<line class="st21" x1="594.4" y1="669" x2="945.2" y2="668.7"/>
+	<line class="st21" x1="594.4" y1="714.5" x2="945.2" y2="714.2"/>
+	<rect x="593.5" y="489.5" class="st21" width="352" height="270"/>
+	<line class="st21" x1="224.5" y1="534.5" x2="575.6" y2="534.3"/>
+	<line class="st21" x1="224.7" y1="578.7" x2="575.7" y2="578.4"/>
+	<line class="st21" x1="224.9" y1="623.7" x2="575.9" y2="623.4"/>
+	<line class="st21" x1="224.9" y1="668.9" x2="576" y2="668.6"/>
+	<line class="st21" x1="224.9" y1="714.4" x2="576" y2="714.2"/>
+	<rect x="225.2" y="489.4" class="st21" width="350.3" height="270"/>
+</g>
+</svg>
