@@ -9,38 +9,7 @@
 				});
 					
 	
-				$('.info_block').click(function(){
-
-					
-					var clicked_id =  $(this).attr('id');
-					
-					var section_id = clicked_id.substring(0, clicked_id.indexOf('_'));
-								
-					var num_id= clicked_id.slice(-1);
-					
-					
-					if($(this).hasClass('intro')){
-					   
-					   	//hide all options
-						$('#'+section_id+'_info').addClass('hidden');	
-						
-						//show the selected info
-						$('#'+section_id+'_content_'+num_id).addClass('selected');
-					   
-					}
-					
-					else if($(this).hasClass('content')){ 
-					
-					   	//hide the selected info
-						$(this).removeClass('selected');
-					
-						//show all options
-						$('#'+section_id+'_info').removeClass('hidden');	
-					   
-					}
-					
-	
-				});
+				
 				
 				
 				$('.control').click(function(){
