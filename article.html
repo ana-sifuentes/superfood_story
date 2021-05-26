@@ -33,12 +33,7 @@ img {width:100%;}
     cursor: pointer;
 	}
 	
-	
-	.info_block.intro {
-    background-color: aliceblue;
-     height: auto; 
-    cursor: pointer;		
-	}
+
 	
 	.progress-container, .progress-bar{
 		height: 1vh;
@@ -124,6 +119,7 @@ margin-top: 9vh;
 					.info_block > .intro, 
 					.info_block > .content.showing{
 						display:block;
+						cursor:pointer;
 					}
 					
 					.info_block > .content, 
@@ -815,11 +811,14 @@ margin-top: 9vh;
 				<div class="column third_size info_block" id="growing_info_1">
 					
 					<div class="intro">
-						<img src="demos/sketch_growing_-01.svg">
+						<img src="assets/growing_CHINAMPAS.svg">
 					</div>
 					
 					<div class="content">
-						<p>info 1</p>
+						<h3>CHINAMPAS</h3>
+						<p>The Aztecs used a  highly efficient agricultural technique called chinampas, <br>
+							which translates to a square made of canes. <br>
+							Chinampas were ‘floating’ gardens that maximized water and the soil’s nutrients around them. </p>
 					</div>
 					
 				</div>	
@@ -827,11 +826,13 @@ margin-top: 9vh;
 				<div class="column third_size info_block" id="growing_info_2">
 					
 					<div class="intro">
-						<img src="demos/sketch_growing_-03.svg">
+						<h3> MODERN FARMING </h3>
+						<img src="assets/growing_CHIA FARM.svg">
 					</div>
 					
 					<div class="content ">
-						<p>info 1</p>
+						<h3> MODERN FARMING </h3>
+						<p>Chia seed production is very sustainable with a low water footprint and there is no significant damage to soil. <br> However, look for fair trade chia since farming is a dangerous industry to laborers and they may be exposed to unsafe conditions and abuse. </p>
 					</div>
 					
 				</div>	
@@ -842,11 +843,16 @@ margin-top: 9vh;
 				<div class="column third_size info_block" id="growing_info_3">
 					
 					<div class="intro">
-						<img src="demos/sketch_growing_-02.svg">
+						<img src="assets/growing_MICROGREENS.svg">
 					</div>
 					
 					<div class="content">
-						<p>info 1</p>
+						<h3>MICROGREENS</h3>
+						<p>Chia is very easy to grow at home, it doesn’t even need soil!
+							<br>
+							You can soak the seeds for a day, place them on a paper towel and see them grow over the next 2 weeks. 
+							<br>
+							Once they are ready for harvest, you can add them to salads or other dishes. </p>
 					</div>
 					
 				</div>	
@@ -927,47 +933,57 @@ margin-top: 9vh;
 			<h3> Predictions </h3>
 			<p>What will happen with chia in the future? 
 			<br>
-			Most likely chia production will increase in the next couple of years, let's explore 3 potential scenarios.</p>
+			Most likely chia production will increase in the next couple of years,<br>
+			but let's explore 3 potential scenarios.</p>
 		</div>
 			
 	
 			<div class="info_blocks_wrapper" id="prediction_info">
 				
-				<div class="column third_size info_block intro" id="prediction_intro_1">
-					<img src="demos/sketch_prediction-01.svg">
+				
+				<div class="column third_size info_block" id="prediction_info_1">
+					
+					<div class="intro">
+						<img src="demos/sketch_prediction-01.svg">
+					</div>
+					
+					<div class="content">
+						<p>info 1</p>
+					</div>
+					
 				</div>	
-		
-				<div class="column third_size info_block intro" id="prediction_intro_2">
-					<img src="demos/sketch_prediction-02.svg">
+				
+				
+				<div class="column third_size info_block" id="prediction_info_2">
+					
+					<div class="intro">
+						<img src="demos/sketch_prediction-02.svg">
+					</div>
+					
+					<div class="content">
+						<p>info 1</p>
+					</div>
+					
 				</div>	
-			
-				<div class="column third_size info_block intro" id="prediction_intro_3">
-					<img src="demos/sketch_prediction-03.svg">
-				</div>	
+				
+				<div class="column third_size info_block" id="prediction_info_3">
+					
+					<div class="intro">
+						<img src="demos/sketch_prediction-03.svg">
+					</div>
+					
+					<div class="content">
+						<p>info 1</p>
+					</div>
+					
+				</div>		
+				
+
 			</div>
 			
 			
 			
-			
-			<div class="column full_size info_block content" id="prediction_content_1">
-			
-				<p> More information on 1...</p>
-			
-			</div>	
-			
-					
-			<div class="column full_size info_block content" id="prediction_content_2">
-			
-				<p> More information on 2...</p>
-			
-			</div>	
-			
-						
-			<div class="column full_size info_block content" id="prediction_content_3">
-			
-				<p> More information on 3...</p>
-			
-			</div>			
+		
 		</div>
 		</div>
 	
@@ -1066,34 +1082,6 @@ margin-top: 9vh;
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="article_script.js"></script>
 
-<!-----
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
--->
 
 
 <script>
