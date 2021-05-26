@@ -117,7 +117,21 @@ margin-top: 9vh;
 	.option.selected, .option:hover{
 		background-color:white;
 		color:black;
-	}	
+	}
+	
+
+				
+					.info_block > .intro, 
+					.info_block > .content.showing{
+						display:block;
+					}
+					
+					.info_block > .content, 
+					.info_block > .intro.hidden{
+						display: none;
+					}
+
+	
 	
 	@media only screen and (max-width: 900px) {
 		
@@ -724,7 +738,7 @@ margin-top: 9vh;
 		
 		<div class="column third_size">
 			<h3> The myths of chia </h3>
-			<p>There is a lot of fuzz around chia, but what is a myth and what is real? </p>
+			<p>There is a lot of fuzz around chia, <br> but what is a myth and what is real? </p>
 				
 				
 			<div class="options_wrapper" id="myths_options">
@@ -740,7 +754,7 @@ margin-top: 9vh;
 				
 				
 				<div class="option" id="myths_option_3">
-					MORE ENERGY
+					TOILET HELP
 				</div>
 				
 				
@@ -788,48 +802,62 @@ margin-top: 9vh;
 		<div class="content_wrapper">
 		<div class="column full_size">
 			<h3> Growing chia </h3>
-			<p>Chia grows well in arid regions with low quality soils and requires little irrigation once established. You can also grow it on paper towels at home. </p>
+			<p>Chia grows well in arid regions with low quality soils and requires <BR>
+			  little irrigation once established. 
+				<BR>
+				You can also grow it on paper towels at home! </p>
 		</div>
 			
 			
 			
-			<div class="info_blocks_wrapper" id="growing_info">
+			<div class="info_blocks_wrapper">
 				
-				<div class="column third_size info_block intro" id="growing_intro_1">
-					<img src="demos/sketch_growing_-01.svg">
+				<div class="column third_size info_block" id="growing_info_1">
+					
+					<div class="intro">
+						<img src="demos/sketch_growing_-01.svg">
+					</div>
+					
+					<div class="content">
+						<p>info 1</p>
+					</div>
+					
 				</div>	
-		
-				<div class="column third_size info_block intro" id="growing_intro_2">
-					<img src="demos/sketch_growing_-03.svg">
+				
+				<div class="column third_size info_block" id="growing_info_2">
+					
+					<div class="intro">
+						<img src="demos/sketch_growing_-03.svg">
+					</div>
+					
+					<div class="content ">
+						<p>info 1</p>
+					</div>
+					
 				</div>	
+				
+
+				
+				
+				<div class="column third_size info_block" id="growing_info_3">
+					
+					<div class="intro">
+						<img src="demos/sketch_growing_-02.svg">
+					</div>
+					
+					<div class="content">
+						<p>info 1</p>
+					</div>
+					
+				</div>	
+				
+
 			
-				<div class="column third_size info_block intro" id="growing_intro_3">
-					<img src="demos/sketch_growing_-02.svg">
-				</div>	
+	
 			</div>
 			
 			
-			
-			
-			<div class="column full_size info_block content" id="growing_content_1">
-			
-				<p> More information on 1...</p>
-			
-			</div>	
-			
-					
-			<div class="column full_size info_block content" id="growing_content_2">
-			
-				<p> More information on 2...</p>
-			
-			</div>	
-			
-						
-			<div class="column full_size info_block content" id="growing_content_3">
-			
-				<p> More information on 3...</p>
-			
-			</div>	
+		
 			
 		</div>
 		</div>
@@ -1067,5 +1095,20 @@ $(document).ready(function(){
 </script>
 -->
 
+
+<script>
+
+				$('.info_block').click(function(){
+
+					
+					var clicked_id =  $(this).attr('id');
+					
+					$('#'+clicked_id +'> .intro').toggleClass('hidden');
+					$('#'+clicked_id +'> .content').toggleClass('showing');
+
+	
+				});
+
+</script>
 
 </html>
