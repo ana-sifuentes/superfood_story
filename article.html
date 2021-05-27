@@ -1308,8 +1308,12 @@
 	
 				} else {
          			//scroll up
-					$('#navbar').removeClass('collapsed');
-					$('#navwrapper').removeClass('collapsed');
+					
+					//make sure user is scrolling a bunch
+					if((position - scroll)>300){
+						$('#navbar').removeClass('collapsed');
+						$('#navwrapper').removeClass('collapsed');
+					}	
 				}
 				position = scroll;
 				
