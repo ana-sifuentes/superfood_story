@@ -101,6 +101,7 @@
     	width: 100%;
     	background-color: white;
 		float:left;
+		scroll-snap-align: start;
 	}
 
 	/*wrapper for the section content, this makes the margins */
@@ -160,13 +161,26 @@
 		background-color:black;
 		border: solid 1px black;
 	}
-		
+	
+
+	
 	/*selected option*/
 	.option.selected, .option:hover{
 		background-color:white;
 		color:black;
 	}
 
+	.option.gray{
+		width:45%;
+		background-color: darkgray;
+		border: 1px solid darkgray;
+	}
+	
+	.option.gray:hover{
+		background-color:lightgrey;
+		color:darkgray;
+	}
+	
 	/****************************/
 	/*information blocks*/
 	.info_blocks_wrapper{
@@ -309,6 +323,7 @@
 	
 	
 
+	<div style="scroll-snap-type: y proximity; float:left;">
 
 	
 		<div class="top_wrapper" id="navwrapper">	
@@ -385,13 +400,13 @@
 		</div>
 	
 			
-		<div class="clear"></div>
+	
 
-			
-		<div class="section_wrapper lavender" id="food_system">				
+		<!---FOOD SYSTEMS------>
+		<div class="section_wrapper" id="food_system">				
 		<div class="content_wrapper">
 					
-		<!---FOOD SYSTEMS------>
+		
 		<div class="column third_size">
 			<h3> The complexity of Food systems </h3>
 			<br>
@@ -502,11 +517,11 @@
 			<div class="options_wrapper" id="rediscovery_options">
 			
 			
-				<div class="option " id="rediscovery_option_1">
+				<div class="option gray" id="rediscovery_option_1">
 					AMARANTH
 				</div>
 				
-				<div class="option" id="rediscovery_option_2">
+				<div class="option gray" id="rediscovery_option_2">
 					AVOCADO
 				</div>
 				
@@ -514,11 +529,11 @@
 					CHIA
 				</div>
 				
-				<div class="option" id="rediscovery_option_4">
+				<div class="option gray" id="rediscovery_option_4">
 					QUINOA
 				</div>
 				
-				<div class="option" id="rediscovery_option_5">
+				<div class="option gray" id="rediscovery_option_5">
 					SPIRULINA
 				</div>
 				
@@ -590,9 +605,7 @@
 		</div>
 		</div>
 			
-		<div class="clear"></div>
-			
-			
+	
 		
 			
 		<!---LOST ------>
@@ -705,8 +718,6 @@
 		</div>
 	
 
-		<div class="clear"></div>
-
 
 		<!---REDISCOVERY------>
 		<div class="section_wrapper">				
@@ -779,9 +790,6 @@
 				 
 			
 				
-		
-		<div class="clear"></div>
-			
 					
 		<!---TIMELINE------>
 		<div class="section_wrapper lavender" style="height: auto;">				
@@ -831,14 +839,9 @@
 		</div>
 		</div>
 			
-		<div class="clear"></div>
-				
-			
+		
 					
-		<!---NUTRINFO------>
-
-
-	
+		<!---NUTRINFO------>	
 		<div class="section_wrapper" id="nutrinfo">				
 		<div class="content_wrapper">
 		
@@ -920,11 +923,6 @@
 		</div>
 
 
-	
-
-		<div class="clear"></div>
-	
-
 
 		<!--MYTHS-->
 		<div class="section_wrapper" id="myths">				
@@ -986,9 +984,6 @@
 		</div>
 
 
-		<div class="clear"></div>
-	
-	
 			
 					
 		<!---GROWING CHIA------>
@@ -1199,8 +1194,8 @@
 		</div>
 		</div>
 	
-		<div class="clear"></div>		
 		
+			
 			
 		<!---REFLECT------>
 
@@ -1261,11 +1256,7 @@
 		</div>		
 		</div>
 		</div>
-
-		<div class="clear"></div>	
-		
-			
-			
+	
 			
 		<!--- CREDITS --->
 				
@@ -1280,11 +1271,10 @@
 		</div>
 		</div>
 
-		<div class="clear"></div>	
+
+
 	
 	</div>
-	
-
 
 
 
