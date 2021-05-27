@@ -168,7 +168,7 @@ margin-top: 9vh;
 	
 		
 		<!-----WELCOME BANNER --->
-		<div class="section_wrapper banner">
+		<div class="section_wrapper banner"  >
 			
 			
 				<div style=" padding-top: 30vh;">
@@ -191,7 +191,7 @@ margin-top: 9vh;
 
 
 		<!----- SUPERFOODS --->	
-		<div class="section_wrapper" id="superfoods">				
+		  <div class="height-100" data-snap-point id="superfoods">				
 		<div class="content_wrapper">	
 			
 			<div class="column third_size">
@@ -233,7 +233,7 @@ margin-top: 9vh;
 		<div class="clear"></div>
 
 			
-		<div class="section_wrapper lavender" id="food_system">				
+		  <div class="height-100" data-snap-point id="food_system">				
 		<div class="content_wrapper">
 					
 		<!---FOOD SYSTEMS------>
@@ -794,7 +794,7 @@ margin-top: 9vh;
 					
 		<!---GROWING CHIA------>
 
-		<div class="section_wrapper" id="growing">				
+		<div class="section_wrapper">				
 		<div class="content_wrapper">
 		<div class="column full_size">
 			<h3> Growing chia </h3>
@@ -870,7 +870,6 @@ margin-top: 9vh;
 		</div>
 
 
-			<div class="clear"></div>
 
 	
 		<!--- CHIA WORLDWIDE------>
@@ -1095,11 +1094,25 @@ margin-top: 9vh;
 	<!-- loading scripts -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="article_script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="example.css">
+<!-- snapScroll.js JS -->
+<script src="jquery.snapScroll.min.js"></script>
 
 
 
 <script>
 
+	
+	$(document).ready(function(){
+	$('main').snapScroll();
+
+	
+	
 				$('.info_block').click(function(){
 
 					
@@ -1110,6 +1123,9 @@ margin-top: 9vh;
 
 	
 				});
+		
+		
+			});
 
 </script>
 
