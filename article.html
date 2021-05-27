@@ -96,9 +96,10 @@
 
 	/*wrapper for each section*/
 	.section_wrapper{
-		height: 100vh; 
-		width:100%;
-		background-color: white;
+    	height: 90vh;
+    	padding: 5vh 0px;
+    	width: 100%;
+    	background-color: white;
 	}
 
 	/*wrapper for the section content, this makes the margins */
@@ -129,7 +130,15 @@
 		height: 30px;
 	}	
 
-	
+	.click_button{
+		background-color:black; 
+		color:white; 
+		width: 25%;
+		padding: 1vh;
+		cursor: pointer;
+		margin: 2vh auto;
+		text-align: center;
+	}
 
 /**********************************************************************/
 /**SECTION FUNCTIONALITIES **/
@@ -328,7 +337,7 @@
 							consumers vulnerable and the foods themselves a mystery. 
 						</p>
 					<a href="#superfoods" style="color: white; text-decoration: none;">
-					<h3 style="background-color:black; color:white; width: 25%;padding: 1vh;cursor: pointer;margin: 2vh auto;text-align: center;" href="#superfoods"> START </h3>
+					<h3 class="click_button"> START </h3>
 					</a>	
 					
 				</div>
@@ -359,7 +368,7 @@
 				
 			
 					<a href="#food_system" style="color: white; text-decoration: none;">
-					<h3 style="background-color:black; color:white; width: 25%;padding: 1vh;cursor: pointer;margin: 2vh auto;text-align: center;" href="#superfoods"> NEXT </h3>
+						<h3 class="click_button"> NEXT </h3>
 					</a>	
 				
 				
@@ -387,9 +396,13 @@
 			<br>
 			<p>There are many players behind the scenes. <br><br>
 				
-			Goverments make legislation to incentivise farmer to grow certain crops which are then transported, packed and marketed by companies and then sold to us in supermarkets. <br>
-				
-				<br> Let's explore where our food comes from...  </P>
+			Goverments make legislation to incentivise farmer to grow certain crops which are then transported, packed and marketed by companies and then sold to us in supermarkets.  </P>
+			
+						
+			<a href="#choose_superfood" style="color: white; text-decoration: none;">
+				<h3 class="click_button"> NEXT </h3>
+			</a>	
+			
 		</div>	
 			
 		<div class="column two_third_size">
@@ -399,15 +412,11 @@
 			<div class="gallery_wrapper" id="system_images">
 				
 				<div class="gallery_image selected" id="system_image_1"> 
-				
 					<img src="demos/sketch_system_g0-01.svg">
-				
 				</div>
 					
 				<div class="gallery_image" id="system_image_2"> 
-				
-						<img src="demos/sketch_system_g1-02.svg">
-				
+					<img src="demos/sketch_system_g1-02.svg">
 				</div>
 				
 				<div class="gallery_image" id="system_image_3"> 	
@@ -442,7 +451,7 @@
 			
 		
 					
-		<div class="content_wrapper">
+		<div class="content_wrapper" id="choose_superfood">
 		<!--- CHOOSE SUPERFOOD ------>
 		<div class="column full_size">
 			<H4>Choose your superfood</H4>
@@ -1051,7 +1060,7 @@
 			
 		</div>	
 			
-			<div class="column two_third_size" style="margin:0px 1%;">	
+			<div class="column two_third_size" >
 			
 			<div class="gallery_wrapper" id="worldwide_images">
 				
