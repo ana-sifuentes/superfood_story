@@ -248,7 +248,7 @@
 				
 				
 	.carrousel_controls:hover{
-		backgrond-color:white;
+		background-color:white;
 		color:black;
 	}
 				
@@ -521,10 +521,7 @@ This particular story will set the script for future superfoods. Superfoods equa
 			<p>The story is even more complicated when it comes to foods with an indigenous origin.
 			<br>
 			These foods used to play a key role in ancient civilizations but colonization often led to three potential scenarios: exploitation, neglect or eradication.
-				<br><br>
-
-				PS: Hope you like chia! As the project grows, more superfoods will be added...
-			<br>
+				<br>
 				<a href="#origin">		NEXT  </a>
 				</p>
 				
@@ -556,7 +553,10 @@ This particular story will set the script for future superfoods. Superfoods equa
 					TOMATOES
 				</div>				
 				
-				
+				<p><i>
+				PS: Hope you like chia! As the project grows, more superfoods will be added...
+				</i>
+				</p>
 			</div>
 		
 			
@@ -1144,18 +1144,29 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 		<div class="content_wrapper">	
 
 		<div class="column full_size">
+			
+			<img src="https://via.placeholder.com/1200x500">
+			
+			
 			<h3> What now? </h3>
 			<p>
 			Food is something so essential that we often overlook how complex it is. 
 			<br>
 				
-			Superfoods used to have a role in indigenous diets, colonization and globalization have obscured this fact. While some of these crops are more nutritionally dense end even more sustainable, marketers have stretched their benefits to increase sales. Consumers are vulnerable to misinformation but their purchases end up shaping agriculture practices around the world. 
+			Superfoods used to have a role in indigenous diets, colonization and globalization have obscured this fact. 
+			<br>
+			While some of these crops are more nutritionally dense end even more sustainable, marketers have stretched their benefits to increase sales. 
+			<br>
+			Consumers are vulnerable to misinformation but their purchases end up shaping agriculture practices around the world. 
 			
 			<br> One small seed can have a giant impact.
 				
-			<bR><br>	
-			So, should you eat chia? Maybe, it is up to you.
-				<br> Good luck!
+			<br><br>	
+			Maybe you are wondering if you should you eat chia? <br>
+			The answer isn't that simple, there are lots of things to consider,<br>
+			sometimes the best solution is asking more questions. 
+			<br>
+				
 			</p>
 		</div>		
 		</div>
@@ -1364,25 +1375,12 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 			
 			if(direction == 'up'){
 				
-				w = w-1;
-				if(w < 0){
-					w=0;
-					$(window).scrollTop(0);
-				}
-				else{
-			   		$(window).scrollTop($('#'+page_sections[w]).offset().top);
-				}
+					$(window).scrollTop($('#'+page_sections[w-1]).offset().top);
 			}
 			else if (direction== 'down'){
-				w = w+1;
-				
-				if(w > page_sections.length){
-					w = page_sections.length;
-					$(window).scrollTop($('#'+page_sections[w]).offset().top);
-				}
-				else{
-					$(window).scrollTop($('#'+page_sections[w]).offset().top);
-				}
+	
+					$(window).scrollTop($('#'+page_sections[w+1]).offset().top);
+		
 			}
 			
 		}
