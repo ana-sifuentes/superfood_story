@@ -549,6 +549,7 @@
 					background-color:black;
 					color:white;
 					font-family: 'VCR_OSD_MONO';
+					cursor:pointer;
 				}
 				
 				.gallery_controls.previous::before{
@@ -582,9 +583,9 @@
 				
 				<div class="gallery_images_wrapper">
 					
-					<img class="gallery_image selected" id="origin_image_1" src="https://via.placeholder.com/1200x450">
-					<img class="gallery_image" id="origin_image_2" src="https://via.placeholder.com/1200x451">
-					<img class="gallery_image" id="origin_image_3" src="https://via.placeholder.com/1200x452">
+					<img class="gallery_image selected" id="origin_gallery_image_1" src="https://via.placeholder.com/1200x450">
+					<img class="gallery_image" id="origin_gallery_image_2" src="https://via.placeholder.com/1200x451">
+					<img class="gallery_image" id="origin_gallery_image_3" src="https://via.placeholder.com/1200x452">
 					
 				</div>
 				<div class="gallery_controls next">  </div>
@@ -1284,10 +1285,8 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 					
 					//hide current selected
 					$(current_image).removeClass('selected');
-					
-					
-				
-					$('#'+(section.substring(0, section.indexOf('_'))+'gallery_'+num).addClass('selected');
+					//ad new selection
+					$('#'+section+'_image_'+num).addClass('selected');
 					
 					
 				});
