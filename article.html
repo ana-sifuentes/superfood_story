@@ -1319,11 +1319,11 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 
 		
 		
-
+		
+		////scrolling with keys
 		
 		
-		document.onkeydown = function(e) {
-			
+		
 			//sections of the page
 			var page_sections =['introduction','superfoods', 'marketing',
 							    'food_system','choose_superfood','origin',
@@ -1334,22 +1334,32 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 			var section_length =[];
 		
 
-			
-			for(x=0; x<= page_sections.length; x++){
+			let h=0;
+			for(x=0; x< page_sections.length; x++){
 				
-				section_length[x] = $('#'+page_sections[x]).height();
+				h = h + $('#'+page_sections[x]).height();
+				section_length[x] = h;
 				console.log("section"+page_sections[x]+"----"+section_length[x]);
 
 			}
 		
+		
+		document.onkeydown = function(e) {
 			
 			let heights=0;
-			var body_heigth = $("body").height();
 			var current_position = $(window).scrollTop();
 			
-			console.log(current_position +"of "+body_heigth);
+			var temp=0;
 			
-		
+			console.log(current_position +" of "+ $("body").height() );
+			
+			for(y=0; y< section_length.length; y++){
+				
+				if(current_position < section_length[y] && current_position > section_length[y-1]){
+				   temp = y;
+				}
+				   
+			}
 				
 				
 				
@@ -1357,11 +1367,12 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
     		switch(e.which) {
         	case 37: case 38:  //up / left 
 				console.log('up/left');
-				//	$(window).scrollTop($('').offset().top);	
+				$(window).scrollTop($('#'+page_sections[temp-1]).offset().top);	
         	break;
 
         	case 39: case 40: // down / right
 				console.log('down/right');
+				$(window).scrollTop($('#'+page_sections[temp+1]).offset().top);	
         	break;
 
         	default: return; // exit this handler for other keys
