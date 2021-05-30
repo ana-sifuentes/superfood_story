@@ -182,6 +182,20 @@
 		color:darkgray;
 	}
 	
+	/****/
+	
+	.gallery_image.selected {
+    	display: block;
+    	background-color: white;
+    	height: auto;
+	}
+	
+	.gallery_image {
+    	display: none;
+	}
+	
+	
+	
 	/****************************/
 	/*information blocks*/
 	.info_blocks_wrapper{
@@ -202,11 +216,59 @@
 	}
 
 
+	
+	
 	/****************************/
-	/*gallery*/
+	/*carrousel*/
+			
+	.carrousel_wrapper{
+		width:100%; 
+		margin:auto; 
+		float: left;
+		display: flex;
+	}
+				
+	.carrousel_controls{
+		width: 3.5%;
+    	float: left;
+   		background-color: black;
+    	color: white;
+    	text-align: center;
+    	font-family: 'VCR_OSD_MONO';
+    	cursor: pointer;
+    	font-size: xxx-large;
+    	padding-top: 15%;
+    	font-weight: 900;
+	}
+				
+				
+	.carrousel_controls:hover{
+		backgrond-color:white;
+		color:black;
+	}
+				
+	.carrousel_controls.previous::before{
+		content: "<";
+	}
 
-			
-			
+	.carrousel_controls.next::before{
+		content: ">";
+	}
+	
+	.carrousel_images_wrapper{
+		width:93%;
+		float:left;
+		background-color: aliceblue;
+	}
+				
+	.carrousel_image{
+		display: none;
+	}
+				
+	.carrousel_image.selected{
+		display: block;
+	}
+		
 
 
 /**********************************************************************/
@@ -377,58 +439,33 @@
 		<div class="content_wrapper">
 					
 		
-		<div class="column third_size">
+		<div class="column full_size">
 			<h3> The complexity of Food systems </h3>
-			<br>
+	
 			<p>There are many players behind the scenes. <br><br>
 				
-			Goverments make legislation to incentivise farmer to grow certain crops which are then transported, packed and marketed by companies and then sold to us in supermarkets.  </P>
+			Goverments make legislation to incentivise farmer to grow certain crops which are then transported, packed and marketed by companies and then sold to us in supermarkets.  <a href="#choose_superfood">		NEXT  </a>	 </P>
 			
-						
-			<a href="#choose_superfood" style="color: white; text-decoration: none;">
-				<h3 class="click_button"> NEXT </h3>
-			</a>	
+			<div class="carrousel_wrapper" id="system_carrousel">
+			
+				<div class="carrousel_controls previous">  </div>
+				
+				<div class="carrousel_images_wrapper">
+					
+					<img class="carrousel_image selected" id="system_carrousel_image_1" src="https://via.placeholder.com/1200x450">
+					<img class="carrousel_image" id="system_carrousel_image_2" src="https://via.placeholder.com/1200x450">
+					<img class="carrousel_image" id="system_carrousel_image_3" src="https://via.placeholder.com/1200x450">
+					
+				</div>
+				<div class="carrousel_controls next">  </div>
+			</div>
+	
+			
+			
 			
 		</div>	
 			
-		<div class="column two_third_size">
 		
-						
-		
-			<div class="gallery_wrapper" id="system_images">
-				
-				<div class="gallery_image selected" id="system_image_1"> 
-					<img src="demos/sketch_system_g0-01.svg">
-				</div>
-					
-				<div class="gallery_image" id="system_image_2"> 
-					<img src="demos/sketch_system_g1-02.svg">
-				</div>
-				
-				<div class="gallery_image" id="system_image_3"> 	
-					<img src="demos/sketch_system_g1-02.svg">
-				</div>
-				
-				<div class="gallery_image" id="system_image_4"> 
-					<img src="demos/sketch_system_g1-02.svg">
-				</div>
-				
-			</div>	
-			
-			<div class="gallery_controls" id="system_controls">
-				
-				<div class="control previous" id="system_previous">  </div>			
-				<div class="gallery_texts">				
-					<p class="gallery_text selected" id="system_text_1"> A lot of different things affect what food sia vailable to us and even  what we select.. </p>
-					<p class="gallery_text"id="system_text_2"> It starts with agriculture, where crops are grown. </p>
-					<p class="gallery_text" id="system_text_3"> lorem ipsum 3 </p>
-					<p class="gallery_text" id="system_text_4"> lorem ipsum 4 </p>
-				</div>	
-				<div class="control next" id="system_next">  </div>
-				
-			</div>		
-			
-		</div>
 			
 		</div>
 		</div>
@@ -533,62 +570,20 @@
 				famous for their strong military, amazing architecture and progressive education.
 			</p>
 			
-			
-			<style>
-			
-				.gallery_wrapper{
-					width:100%; 
-					margin:auto; 
-					float: left;
-					display: flex;
-				}
-				
-				.gallery_controls{
-					width:3.5%;
-					float: left; 
-					background-color:black;
-					color:white;
-					font-family: 'VCR_OSD_MONO';
-					cursor:pointer;
-				}
-				
-				.gallery_controls.previous::before{
-					content: "<";
-				}
-
-				.gallery_controls.next::before{
-					content: ">";
-				}
 	
-				.gallery_images_wrapper{
-					width:93%;
-					float:left;
-					background-color: aliceblue;
-				}
-				
-				.gallery_image{
-					display: none;
-				}
-				
-				.gallery_image.selected{
-					display: block;
-				}
-				
-			</style>
-		
-			<div class="gallery_wrapper" id="origin_gallery">
+			<div class="carrousel_wrapper" id="origin_carrousel">
 			
 			
-				<div class="gallery_controls previous">  </div>
+				<div class="carrousel_controls previous">  </div>
 				
-				<div class="gallery_images_wrapper">
+				<div class="carrousel_images_wrapper">
 					
-					<img class="gallery_image selected" id="origin_gallery_image_1" src="https://via.placeholder.com/1200x450">
-					<img class="gallery_image" id="origin_gallery_image_2" src="https://via.placeholder.com/1200x451">
-					<img class="gallery_image" id="origin_gallery_image_3" src="https://via.placeholder.com/1200x452">
+					<img class="carrousel_image selected" id="origin_carrousel_image_1" src="https://via.placeholder.com/1200x450">
+					<img class="carrousel_image" id="origin_carrousel_image_2" src="https://via.placeholder.com/1200x450">
+					<img class="carrousel_image" id="origin_carrousel_image_3" src="https://via.placeholder.com/1200x450">
 					
 				</div>
-				<div class="gallery_controls next">  </div>
+				<div class="carrousel_controls next">  </div>
 			</div>
 			
 		</div>	
@@ -722,49 +717,33 @@
 
 					
 		<!---TIMELINE------>
-		<div class="section_wrapper lavender" style="height: auto;">				
+		<div class="section_wrapper">				
 		<div class="content_wrapper">
 		<div class="column full_size">
 			<h3> TIMELINE </h3>
 			<p>What happened to chia? <br> 
 			Explore the story on this interactive timeline or you can also see it as a <a href="/superfood_story/index"> videogame! </a> </p>
 
-						
-			
-			<div class="gallery_wrapper" id="timeline_images">
 				
-				<div class="gallery_image selected" id="timeline_image_1"> 
-				
-					<img src="demos/sketch_origin_1-01.svg">
-				</div>
 					
-				<div class="gallery_image" id="timeline_image_2"> 
-					<img src="demos/sketch_origin_1-01.svg">
-				</div>
-				
-				<div class="gallery_image" id="timeline_image_3"> 
-				<img src="demos/sketch_origin_1-01.svg">
-				</div>
-				
-				<div class="gallery_image" id="timeline_image_4"> 
-				<img src="demos/sketch_origin_1-01.svg">
-				</div>
-				
-			</div>	
+			<div class="carrousel_wrapper" id="timeline_carrousel">
 			
-			<div class="gallery_controls" id="timeline_controls">
+				<div class="carrousel_controls previous">  </div>
 				
-				<div class="control previous" id="timeline_previous">  </div>			
-				<div class="gallery_texts">				
-					<p class="gallery_text selected" id="timeline_text_1"> lorem ipsum 1 </p>
-					<p class="gallery_text"id="timeline_text_2"> lorem ipsum 2 </p>
-					<p class="gallery_text" id="timeline_text_3"> lorem ipsum 3 </p>
-					<p class="gallery_text" id="timeline_text_4"> lorem ipsum 4 </p>
-				</div>	
-				<div class="control next" id="timeline_next">  </div>
-				
-			</div>	
+				<div class="carrousel_images_wrapper">
+					
+					<img class="carrousel_image selected" id="timeline_carrousel_image_1" src="https://via.placeholder.com/1200x450">
+					<img class="carrousel_image" id="timeline_carrousel_image_2" src="https://via.placeholder.com/1200x450">
+					<img class="carrousel_image" id="timeline_carrousel_image_3" src="https://via.placeholder.com/1200x450">
+					
+				</div>
+				<div class="carrousel_controls next">  </div>
+			</div>
+	
 			
+		
+			
+	
 		</div>
 		</div>
 		</div>
@@ -1131,47 +1110,10 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 			
 		<!---REFLECT------>
 
-		<div class="section_wrapper lavender">				
+		<div class="section_wrapper">				
 		<div class="content_wrapper">	
-		<div class="column two_third_size">
-		
-				
-			<div class="gallery_wrapper" id="conclusion_images">
-				
-				<div class="gallery_image selected" id="conclusion_image_1"> 
-					<img src="demos/sketch_conclusion_-01.svg">
-				</div>
-					
-				<div class="gallery_image" id="conclusion_image_2"> 
-					<img src="demos/sketch_conclusion_-02.svg">
-				</div>
-				
-				<div class="gallery_image" id="conclusion_image_3"> 
-					<img src="demos/sketch_conclusion_-03.svg">
-				</div>
-				
-				<div class="gallery_image" id="conclusion_image_4"> 
-					<img src="demos/sketch_conclusion_-04.svg">
-				</div>
-				
-			</div>	
-			
-			<div class="gallery_controls" id="conclusion_controls">
-				
-				<div class="control previous" id="conclusion_previous">  </div>			
-				<div class="gallery_texts">				
-					<p class="gallery_text selected" id="conclusion_text_1"> lorem ipsum 1 </p>
-					<p class="gallery_text"id="conclusion_text_2"> lorem ipsum 2 </p>
-					<p class="gallery_text" id="conclusion_text_3"> lorem ipsum 3 </p>
-					<p class="gallery_text" id="conclusion_text_4"> lorem ipsum 4 </p>
-				</div>	
-				<div class="control next" id="conclusion_next">  </div>
-				
-			</div>		
-	
-			
-		</div>
-		<div class="column third_size">
+
+		<div class="column full_size">
 			<h3> What now? </h3>
 			<p>
 			Food is something so essential that we often overlook how complex it is. 
