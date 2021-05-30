@@ -434,23 +434,22 @@ This particular story will set the script for future superfoods. Superfoods equa
 	
 			
 		<!----- MARKETING --->	
-		<div class="section_wrapper" id="marketing">				
+		<div class="section_wrapper" id="marketing" style="height: auto;">				
 		<div class="content_wrapper">	
 			
 			<div class="column third_size">
 			<h4> Are 'superfoods' really</h4>
 			<h3>Super? </h3>
 			<p>
-			While some ‘superfoods’ might have more nutrients than others, no single product can cover all nutritional needs<br><br>
-
-			Marketers can use the term ‘superfood’ to stretch the nutritional value of a food and use carefully worded statements that imply extraordinary health benefits. <br> <br>
-
-			For example, in 2017 a Canadian news agency, CBC News, found a granola-quinoa product that claimed it lowered cholesterol, controlled blood sugar and prevented cancer.
-			Only after the news agency filed a complaint against them, the company was forced to change their marketing. <br><br>
-				
-			This example shows how lack of regulation allows companies to exaggerate the health benefits of a product, putting a lot of weight on the consumer’s decisions. To protect consumers from these predatory practices, the European Union banned the term in 2007, unless it was accompanied by a specific authorised health claim. <br><br>
-				
-			However, other areas of the world lack regulation.<br>
+			No one ‘superfood’ can cover all nutritional needs.<br>
+			
+			Marketers use the term ‘superfood’ to stretch the nutritional value of a food, using carefully worded statements that imply extraordinary health benefits.
+			<br><br>	
+			For example, in 2017 a Canadian news agency, CBC News, found a granola-quinoa product that claimed it lowered cholesterol, controlled blood sugar and prevented cancer. Only after the news agency filed a complaint against them, the company was forced to change their marketing.
+			<br><br>
+			This example shows how lack of regulation allows companies to exaggerate the health benefits of a product, putting a lot of weight on the consumer’s decisions. To protect consumers from these predatory practices, the European Union banned the term in 2007, unless it was accompanied by a specific authorised health claim.
+			<br><br>
+			However, other areas of the world lack regulation.
 				
 
 			</p>
@@ -519,11 +518,10 @@ This particular story will set the script for future superfoods. Superfoods equa
 	
 		<div class="column third_size">
 			<h3> Choose your superfood!</h3>
-			<p>The story is even more complicated when talking about foods with an indigenous origin. <br>
-These foods used to play a key role in ancient civilizations but due to colonization they faced three potential scenarios: exploitation, neglect or eradication.
- <br>
-				And even thought they are mostly sustainable, the way they are harvested nowadays can be very negative for the laborers.
-				<br>
+			<p>The story is even more complicated when it comes to foods with an indigenous origin.
+			<br>
+			These foods used to play a key role in ancient civilizations but colonization often led to three potential scenarios: exploitation, neglect or eradication.
+				<br><br>
 
 				PS: Hope you like chia! As the project grows, more superfoods will be added...
 			<br>
@@ -1284,6 +1282,7 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 			for(x=0; x< page_sections.length; x++){			
 				h = h + $('#'+page_sections[x]).height();
 				section_length[x] = h;
+				console.log("section  :"+page_sections[x]+" - "+h);
 
 			}
 
@@ -1363,9 +1362,6 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 				   
 			}
 			
-			
-			
-			
 			if(direction == 'up'){
 				
 				w = w-1;
@@ -1381,7 +1377,7 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 				w = w+1;
 				
 				if(w > page_sections.length){
-					w=page_sections.length;
+					w = page_sections.length;
 					$(window).scrollTop($('#'+page_sections[w]).offset().top);
 				}
 				else{
