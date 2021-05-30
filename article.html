@@ -102,6 +102,7 @@
     	background-color: white;
 		float:left;
 		scroll-snap-align: start;
+		overflow: auto;
 	}
 
 	/*wrapper for the section content, this makes the margins */
@@ -384,7 +385,7 @@
 							However, this marketing term can be misleading, leaving <br>
 							consumers vulnerable and the foods themselves a mystery. 
 						</p>
-					<a href="#marketing" style="color: white; text-decoration: none;">
+					<a href="#superfoods" style="color: white; text-decoration: none;">
 					<h3 class="click_button"> START </h3>
 					</a>	
 					
@@ -407,14 +408,14 @@
 				<br> <br>
 				
 The term was first used in 1917 by The United Fruit Company, now ‘Chiquita Banana’, in a series of pamphlets they called bananas superfoods to promote sales, then, researches published articles about bananas using the term and in turn the media at the time printed headlines talking about the super nutritious bananas. All of this increased banana sales for years to come. 
-<br>
+<br><br> 
 This particular story will set the script for future superfoods. 
  Superfoods equal money, the global industry is estimated to be worth 137 billion USD,  and in 2015 there was a 36% increase of foods claiming the 'superfood' status.
  
 			</p>
 				
 			
-					<a href="#food_system" style="color: white; text-decoration: none;">
+					<a href="#marketing" style="color: white; text-decoration: none;">
 						<h3 class="click_button"> NEXT </h3>
 					</a>	
 				
@@ -439,14 +440,17 @@ This particular story will set the script for future superfoods.
 			<h4> are 'superfoods'</h4>
 			<h3>Super? </h3>
 			<p>
-			Marketers can use the term ‘superfood’ to stretch the nutritional value and place carefully worded statements that imply extraordinary health benefits. <br> 
-			To protect consumers from these predatory practices, Japan developed strict regulations and the European Union banned the term in 2007, unless it was accompanied by a specific authorised health claim. <br><br>
-				
-			However other areas of the world lack regulation against these types of false claims.<br>
-			In 2017, a Canadian news agency, CBC News, found a granola-quinoa product that claimed it lowered cholesterol, controlled blood sugar and prevented cancer.
+			While some ‘superfoods’ might have more nutrients than others, no single product can cover all nutritional needs<br><br>
+
+			Marketers can use the term ‘superfood’ to stretch the nutritional value of a food and use carefully worded statements that imply extraordinary health benefits. <br> <br>
+
+			For example, in 2017 a Canadian news agency, CBC News, found a granola-quinoa product that claimed it lowered cholesterol, controlled blood sugar and prevented cancer.
 			Only after the news agency filed a complaint against them, the company was forced to change their marketing. <br><br>
 				
-			This example shows how lack of regulation allows companies to exaggerate the health benefits of a product, putting a lot of weight on the consumer’s decisions. While some ‘superfoods’ might have more nutrients than others, no single product can cover all nutritional needs
+			This example shows how lack of regulation allows companies to exaggerate the health benefits of a product, putting a lot of weight on the consumer’s decisions. To protect consumers from these predatory practices, the European Union banned the term in 2007, unless it was accompanied by a specific authorised health claim. <br><br>
+				
+			However, other areas of the world lack regulation.<br>
+				
 
 			</p>
 				
@@ -475,11 +479,11 @@ This particular story will set the script for future superfoods.
 					
 		
 		<div class="column full_size">
-			<h3> The complexity of Food systems </h3>
+			<h3> The complexity of food systems </h3>
 	
 			<p>With superfoods we have a glimpse on how complex food systems are. <br>
-				We would like to think it is a straightforward process, from farm to table. Simple. <br>
-However, there are interconnected systems in play that affect what food is available to us and there are many steps before we can even select it. 
+			There are interconnected systems in play that affect what food is <br>
+				available to us and there are many steps before we can even select it. 
 
 				<a href="#choose_superfood">		NEXT  </a>	 </P>
 			
@@ -1309,6 +1313,31 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 		});
 	
 
+		
+		
+		document.onkeydown = function(e) {
+    		switch(e.which) {
+        	case 37: // left
+        	break;
+
+        	case 38: // up
+				console.log('up');
+        	break;
+
+        	case 39: // right
+        	break;
+
+        	case 40: // down
+				console.log('down');
+        	break;
+
+        	default: return; // exit this handler for other keys
+    	}
+    	e.preventDefault(); // prevent the default action (scroll / move caret)
+		};
+		
+		
+		
 		//functions
 	
 		function navigation(clicked,  element_type){
