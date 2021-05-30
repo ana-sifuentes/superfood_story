@@ -1268,62 +1268,10 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 				});
 
 
+		
+				
+			//scrolling with keys
 
-		//scrolling controls 
-		var position = $(window).scrollTop(); 
-
-		// should start at 0
-
-		$(window).scroll(function() {
-	
-			//scroll progress function
-			progress_bar_scrolling();
-	
-			let window_scrolled = $(document).scrollTop();
-			
-			
-			let section1 = $('.section_wrapper.banner').height();
-			
-			
-			
-   			if (window_scrolled > section1 ){
-				
-				
-				var scroll = $(window).scrollTop();
-		
-			
-				if(scroll > position) {
-        			//scroll down
-					//$('#navbar').animate({marginTop: "-80px"});
-					$('#navbar').addClass('collapsed');
-					$('#navwrapper').addClass('collapsed');
-	
-				} else {
-         			//scroll up
-					
-					//make sure user is scrolling a bunch
-					if((position - scroll)>300){
-						$('#navbar').removeClass('collapsed');
-						$('#navwrapper').removeClass('collapsed');
-					}	
-				}
-				position = scroll;
-				
-				
-				
-			}
-			
-			
-		});
-	
-
-		
-		
-		
-		////scrolling with keys
-		
-		
-		
 			//sections of the page
 			var page_sections =['introduction','superfoods', 'marketing',
 							    'food_system','choose_superfood','origin',
@@ -1335,44 +1283,62 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 		
 
 			let h=0;
-			for(x=0; x< page_sections.length; x++){
-				
+			for(x=0; x< page_sections.length; x++){			
 				h = h + $('#'+page_sections[x]).height();
 				section_length[x] = h;
-				console.log("section"+page_sections[x]+"----"+section_length[x]);
 
 			}
-		
-		
-		document.onkeydown = function(e) {
-			
-			let heights=0;
-			var current_position = $(window).scrollTop();
-			
-			var temp=0;
-			
-			console.log(current_position +" of "+ $("body").height() );
-			
-			for(y=0; y< section_length.length; y++){
+
+
+
+		//scrolling controls 
+		var position = $(window).scrollTop(); 
+
+
+		$(window).scroll(function() {
+	
+			//start scroll progress function
+			progress_bar_scrolling();
+
+   			if ($(document).scrollTop() > section_length[0] ){
 				
-				if(current_position < section_length[y] && current_position > section_length[y-1]){
-				   temp = y;
-				}
-				   
+				$('#navbar').addClass('collapsed');
+				$('#navwrapper').addClass('collapsed');
+			}
+			else{
+				$('#navbar').removeClass('collapsed');
+				$('#navwrapper').removeClass('collapsed');
+			}
+			
+			var scroll = $(window).scrollTop();
+		
+			//scroll down
+			if(scroll > position) {
+				section_scrolling( page_sections,section_length, 'down');
+			//scroll up
+			} else {
+         		section_scrolling( page_sections,section_length, 'up');				
 			}
 				
-				
-				
+				position = scroll;
+	
+			}
 			
+			
+		});
+	
+		document.onkeydown = function(e) {
+						
     		switch(e.which) {
         	case 37: case 38:  //up / left 
 				console.log('up/left');
-				$(window).scrollTop($('#'+page_sections[temp-1]).offset().top);	
+				section_scrolling( page_sections,section_length, 'up');
+					
         	break;
 
         	case 39: case 40: // down / right
 				console.log('down/right');
-				$(window).scrollTop($('#'+page_sections[temp+1]).offset().top);	
+				section_scrolling( page_sections,section_length, 'down');
         	break;
 
         	default: return; // exit this handler for other keys
@@ -1382,7 +1348,50 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 		
 		
 		
-		//functions
+		
+		//functions		
+
+		function section_scrolling( page_sections,section_length, direction){
+						
+			let current_position = $(window).scrollTop();
+			
+			var w=0;
+			
+			for(y=0; y< section_length.length; y++){
+				
+				if(current_position < section_length[y] && current_position > section_length[y-1]){
+				   w = y;
+				}
+				   
+			}
+			
+			
+			
+			
+			if(direction == 'up'){
+				
+				w = w-1;
+				if(w < 0){
+					w=0;
+				}
+				
+			   $(window).scrollTop($('#'+page_sections[w]).offset().top);
+			}
+			else if (direction== 'down'){
+				w= w+1;
+				
+				if(w > page_sections.length){
+					w=page_sections.length;
+				}
+				
+				$(window).scrollTop($('#'+page_sections[w+1]).offset().top);	
+			}
+			
+		}
+		
+
+		
+
 	
 		function navigation(clicked,  element_type){
 					
