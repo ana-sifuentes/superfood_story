@@ -36,11 +36,11 @@
 
 	p{font-family: 'Linux_Libertine'; font-size:1.2em;}
 
-	h1, h2, h3, h4, h5, h6{ font-family: 'VCR_OSD_MONO';}
+	h1, h2, h3, h4, h5, h6{ font-family: 'VCR_OSD_MONO'; margin:0px; padding:0px;}
 
-	h2{font-size: 2.5em; font-weight: 900;margin:0px; padding:0px;}
+	h2{font-size: 2.5em; font-weight: 900;}
 
-	h3{font-size: 2em; font-weight: 900; margin:0px; padding:0px;}
+	h3{font-size: 2em; font-weight: 900; }
 
 	img {width:100%;}
 
@@ -97,7 +97,7 @@
 	/*wrapper for each section*/
 	.section_wrapper{
     	height: 90vh;
-    	padding: 2vh 0px 6vh 0px;
+    	padding: 4vh 0px 5vh 0px;
     	width: 100%;
     	background-color: white;
 		float:left;
@@ -376,9 +376,9 @@
 		</div>
 	
 	
-		
+	
 		<!-----WELCOME BANNER --->
-		<div class="section_wrapper banner">
+		<div class="section_wrapper banner" id="introduction">
 			
 			
 				<div style=" padding-top: 30vh;">
@@ -398,7 +398,6 @@
 		
 		</div>	
 			
-
 
 		<!----- SUPERFOODS --->	
 		<div class="section_wrapper" id="superfoods">				
@@ -468,15 +467,13 @@ This particular story will set the script for future superfoods.
 			
 			
 			<div class="column two_third_size">
-				<img src="https://via.placeholder.com/300x425">
+				<img src="https://via.placeholder.com/600x425">
 			</div>	
 			
 	
 		</div>
 		</div>
 	
-		
-
 		<!---FOOD SYSTEMS------>
 		<div class="section_wrapper" id="food_system">				
 		<div class="content_wrapper">
@@ -515,6 +512,8 @@ This particular story will set the script for future superfoods.
 		</div>
 		</div>
 			
+		
+
 
 		<!---CHOOSE SUPERFOOD-->			
 		<div class="section_wrapper" id="choose_superfood">			
@@ -733,7 +732,8 @@ These foods used to play a key role in ancient civilizations but due to coloniza
 		</div>
 	
 
-					
+
+			
 		<!---TIMELINE------>
 		<div class="section_wrapper" id="timeline">				
 		<div class="content_wrapper">
@@ -919,7 +919,7 @@ These foods used to play a key role in ancient civilizations but due to coloniza
 		</div>
 
 
-			
+		
 					
 		<!---GROWING CHIA------>
 
@@ -1319,20 +1319,49 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 
 		
 		
+
+		
+		
 		document.onkeydown = function(e) {
+			
+			//sections of the page
+			var page_sections =['introduction','superfoods', 'marketing',
+							    'food_system','choose_superfood','origin',
+							    'lost','timeline','nutrinfo','myths','growing',
+							    'worldwide','prediction','conclusion','credits' ];	
+		
+			//get height of all sections
+			var section_length =[];
+		
+
+			
+			for(x=0; x<= page_sections.length; x++){
+				
+				section_length[x] = $('#'+page_sections[x]).height();
+				console.log("section"+page_sections[x]+"----"+section_length[x]);
+
+			}
+		
+			
+			let heights=0;
+			var body_heigth = $("body").height();
+			var current_position = $(window).scrollTop();
+			
+			console.log(current_position +"of "+body_heigth);
+			
+		
+				
+				
+				
+			
     		switch(e.which) {
-        	case 37: // left
+        	case 37: case 38:  //up / left 
+				console.log('up/left');
+				//	$(window).scrollTop($('').offset().top);	
         	break;
 
-        	case 38: // up
-				console.log('up');
-        	break;
-
-        	case 39: // right
-        	break;
-
-        	case 40: // down
-				console.log('down');
+        	case 39: case 40: // down / right
+				console.log('down/right');
         	break;
 
         	default: return; // exit this handler for other keys
