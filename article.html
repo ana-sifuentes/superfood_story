@@ -1373,18 +1373,22 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 				w = w-1;
 				if(w < 0){
 					w=0;
+					$(window).scrollTop(0);
 				}
-				
-			   $(window).scrollTop($('#'+page_sections[w]).offset().top);
+				else{
+			   		$(window).scrollTop($('#'+page_sections[w]).offset().top);
+				}
 			}
 			else if (direction== 'down'){
-				w= w+1;
+				w = w+1;
 				
 				if(w > page_sections.length){
 					w=page_sections.length;
+					$(window).scrollTop($('#'+page_sections[w]).offset().top);
 				}
-				
-				$(window).scrollTop($('#'+page_sections[w+1]).offset().top);	
+				else{
+					$(window).scrollTop($('#'+page_sections[w]).offset().top);
+				}
 			}
 			
 		}
