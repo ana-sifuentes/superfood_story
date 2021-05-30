@@ -205,48 +205,9 @@
 	/****************************/
 	/*gallery*/
 
-	.gallery_image{display: none;}
-				
+			
+			
 
-	.gallery_image.selected {
-    	display: block;
-    	background-color:white;
-    	height: auto;
-	}
-
-	.gallery_controls{width:100%;float:left;}
-				
-	.gallery_controls > .control{
-		width:7%; 
-		background-color: aliceblue;
-		cursor: pointer;
-		height: 30px;
-		float:left;
-		text-align: center;
-	}
-				
-	.gallery_controls > .control:hover{
-		background-color: aquamarine;
-	}
-				
-	.gallery_controls > .control.previous::before{
-		content: "<";
-	}
-
-	.gallery_controls > .control.next::before{
-		content: ">";
-	}
-				
-	.gallery_controls > .gallery_texts{
-		width: 86%;
-    	float: left;
-	}
-				
-	.gallery_controls > .gallery_texts > .gallery_text{display: none;}
-				
-	.gallery_controls > .gallery_texts > .gallery_text.selected{display:block;}
-				
-	
 
 /**********************************************************************/
 /*SECTION SPECIFIC*/
@@ -573,16 +534,60 @@
 			</p>
 			
 			
-		
-			<div class="" style="width:100%; margin:auto; float: left;">
+			<style>
 			
-			
-				<div class="" style="width:2%;float: left; background-color:blue;"> p </div>
+				.gallery_wrapper{
+					width:100%; 
+					margin:auto; 
+					float: left;
+					display: flex;
+				}
 				
-				<div class="" style="width:96%;float:left; background-color: aliceblue;">
-					<img src="https://via.placeholder.com/1200x450">
+				.gallery_controls{
+					width:3.5%;
+					float: left; 
+					background-color:black;
+					color:white;
+					font-family: 'VCR_OSD_MONO';
+				}
+				
+				.gallery_controls.previous::before{
+					content: "<";
+				}
+
+				.gallery_controls.next::before{
+					content: ">";
+				}
+	
+				.gallery_images_wrapper{
+					width:93%;
+					float:left;
+					background-color: aliceblue;
+				}
+				
+				.gallery_image{
+					display: none;
+				}
+				
+				.gallery_image.selected{
+					display: block;
+				}
+				
+			</style>
+		
+			<div class="gallery_wrapper" id="origin_gallery">
+			
+			
+				<div class="gallery_controls previous">  </div>
+				
+				<div class="gallery_images_wrapper">
+					
+					<img class="gallery_image selected" id="origin_image_1" src="https://via.placeholder.com/1200x450">
+					<img class="gallery_image" id="origin_image_2" src="https://via.placeholder.com/1200x451">
+					<img class="gallery_image" id="origin_image_3" src="https://via.placeholder.com/1200x452">
+					
 				</div>
-				<div class="" style="width:2%;float: left; background-color:blue;"> n </div>
+				<div class="gallery_controls next">  </div>
 			</div>
 			
 		</div>	
@@ -1222,6 +1227,8 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 				});
 			
 		
+		
+		
 				$('.option').click(function(){
 
 					navigation( $(this).attr('id') ,  'option');
@@ -1241,6 +1248,49 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 				});
 	
 
+				$('.gallery_controls').click(function(){
+		
+					//get which section
+					var section = $(this).parent().attr('id');
+					
+					//get which image is selected
+					var current_image = '#'+section+' > .gallery_images_wrapper > .gallery_image.selected';
+					
+					//get what number it is
+					var num =  parseInt(($(current_image).attr('id')).slice(-1));
+				
+					//get total images in gallery
+					var total =  $('#'+section+' > .gallery_images_wrapper').children().length;
+					
+					
+					
+					//get if previous or next to add or subtract
+					if( $(this).hasClass('next')){
+							num = num +1;
+					}
+					else if( $(this).hasClass('previous')){
+							num = num -1;	
+					}
+								
+					
+					//adjust for total numbers 
+					if(num > total){
+						num = 1;
+					}
+					if(num == 0){
+						num = total;
+					}
+					
+					
+					//hide current selected
+					$(current_image).removeClass('selected');
+					
+					
+				
+					$('#'+(section.substring(0, section.indexOf('_'))+'gallery_'+num).addClass('selected');
+					
+					
+				});
 
 
 
