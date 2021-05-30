@@ -1329,13 +1329,13 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
     		switch(e.which) {
         	case 37: case 38:  //up / left 
 				console.log('up/left');
-				section_scrolling( page_sections,section_length, 'up');
+				section_scrolling(section_length, 'up');
 					
         	break;
 
         	case 39: case 40: // down / right
 				console.log('down/right');
-				section_scrolling( page_sections,section_length, 'down');
+				section_scrolling(section_length, 'down');
         	break;
 
         	default: return; // exit this handler for other keys
@@ -1348,7 +1348,7 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 		
 		//functions		
 
-		function section_scrolling( page_sections,section_length, direction){
+		function section_scrolling( section_length, direction){
 						
 			let current_position = $(window).scrollTop();
 			
@@ -1365,12 +1365,12 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 			if(direction == 'up'){
 				
 				console.log(w+""+page_sections[w-1]);
-				$(window).scrollTop(page_sections[w-1]);
+				$(window).scrollTop(section_length[w-1]);
 			}
 			else if (direction== 'down'){
 	
 				console.log(w+""+page_sections[w+1]);
-				$(window).scrollTop(page_sections[w+1]);
+				$(window).scrollTop(section_length[w+1]);
 		
 			}
 			
