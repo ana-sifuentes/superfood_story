@@ -553,6 +553,8 @@ This particular story will set the script for future superfoods. Superfoods equa
 					TOMATOES
 				</div>				
 				
+				
+				<div class="clear"></div>
 				<p><i>
 				PS: Hope you like chia! As the project grows, more superfoods will be added...
 				</i>
@@ -662,27 +664,19 @@ This particular story will set the script for future superfoods. Superfoods equa
 				
 			<div class="options_wrapper" id="lost_options">
 			
-			
+							
 				<div class="option selected" id="lost_option_1">
-					Aztec nutrition
+					Religious offering
 				</div>
+			
 				
 				<div class="option" id="lost_option_2">
-					Food for warriors
-				</div>
-							
-				<div class="option" id="lost_option_3">
-					Religious offering 
-				</div>
-				
-				
-				<div class="option" id="lost_option_4">
-					Forbidden religion 
-				</div>
-				
-				<div class="option" id="lost_option_5">
 					Banned crop 
-				</div>				
+				</div>	
+				
+				<div class="option" id="lost_option_3">
+					Novelty Item
+				</div>
 			</div>
 		
 			
@@ -704,19 +698,10 @@ This particular story will set the script for future superfoods. Superfoods equa
 				</div>
 				
 				<div class="gallery_image " id="lost_image_3"> 
-					<img src="demos/sketch_lost_1-02-02.svg">
+					<img src="assets/lost_rediscovery_CHIA PET.svg">
 				
 				</div>
-				
-				<div class="gallery_image " id="lost_image_4"> 
-					<img src="demos/sketch_lost_1-02-02.svg">
-				
-				</div>
-				
-				<div class="gallery_image" id="lost_image_5"> 
-					<img src="demos/sketch_lost_1-02-02.svg">
-				
-				</div>			
+		
 				
 			</div>	
 			
@@ -923,7 +908,8 @@ This particular story will set the script for future superfoods. Superfoods equa
 		<div class="content_wrapper">
 		<div class="column full_size">
 			<h3> Growing chia </h3>
-			<p>Chia grows well in arid regions with low quality soils <BR>
+			<p>Chia is a very sustainable crop<br>
+			It grows well in arid regions with low quality soils <BR>
 			  and requires little irrigation once established. 
 				<BR>
 				You can also grow it on paper towels at home! 
@@ -1375,11 +1361,13 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 			
 			if(direction == 'up'){
 				
-					$(window).scrollTop($('#'+page_sections[w-1]).offset().top);
+				console.log(w+""+page_sections[w-1]);
+				$(window).scrollTop($('#'+page_sections[w-1]).offset().top);
 			}
 			else if (direction== 'down'){
 	
-					$(window).scrollTop($('#'+page_sections[w+1]).offset().top);
+				console.log(w+""+page_sections[w-1]);
+				$(window).scrollTop($('#'+page_sections[w+1]).offset().top);
 		
 			}
 			
