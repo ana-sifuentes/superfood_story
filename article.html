@@ -1040,7 +1040,7 @@ This particular story will set the script for future superfoods. Superfoods equa
 					<img src="assets/worldwide_FLOW.svg">
 				</div>
 				<div class="gallery_image" id="worldwide_image_3"> 
-					<img src="assets/hia_worldwide_SUSTAINABILITY.svg">
+					<img src="assets/chia_worldwide_SUSTAINABILITY.svg">
 				</div>
 				
 	c
@@ -1173,11 +1173,45 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 		<div class="content_wrapper" >
 		<div class="column full_size">
 			
-   			 <h1> CREDITS </h1>
-    		<p> A project developed by Ana Sifuentes as part of the MADD ELISAVA Masters</p>
+   			<h1> CREDITS </h1>
+    		<p> Superfood Story is a  project developed by <b>Ana Sifuentes</b> as part of the MADD ELISAVA Masters</p>
 
 			
-			<div style="height: 300px; width:100%; background-color:aliceblue;"></div>
+			
+			
+			<h2>SOURCES</h2>
+			
+			
+			<h4>Primary</h4>
+			<OL>
+				<li>Amaranth: Promise and history <br>
+				<i>Raúl Hernández Garciadiego  and Gisela Herrerías Guerra </i>
+					<a href="http://www.alternativas.org.mx/Amaranto.pdf">http://www.alternativas.org.mx/Amaranto.pdf</a>
+				</li>
+				
+				
+				
+				<li>Maya to Aztec: Ancient Mesoamerica Revealed <br>
+				<i>Professor Edwin Barnhart </i>
+					<a href="https://www.thegreatcoursesplus.com/maya-to-aztec-ancient-mesoamerica-revealed">
+						https://www.thegreatcoursesplus.com/maya-to-aztec-ancient-mesoamerica-revealed
+					</a>
+				</li>				
+				
+				<li>Nutrition Value 
+				<i>USDA Food Data Central</i>
+				<a href="https://www.nutritionvalue.org/">https://www.nutritionvalue.org/</a>
+				</li>
+				
+				<li>OFRENDAS DE AMARANTO PARA LOS DIOSES DE LA LLUVIA. TRADICIÓN MESOAMERICANA</li>
+				<i>Aurora Montúfar López</i>
+				<a href="https://arqueologiamexicana.mx/mexico-antiguo/ofrendas-de-amaranto-para-los-dioses-de-la-lluvia-tradicion-mesoamericana">https://arqueologiamexicana.mx</a>
+				</li>
+				
+			</OL>	
+		
+			
+			<h4>Auxiliary</h4>
 		</div>
 		</div>
 		</div>
@@ -1343,17 +1377,28 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 			
 			for(x=0; x< section_length.length; x++){
 				
-				if(current_position < section_length[x] ){
-					w=0;
+				if(x==0){
+					if(current_position < section_length[x] ){
+						w=0;
+					}
 				}
-				else if(current_position > section_length[x] && current_position < section_length[x+1]){
+				else if(x==section_length.length){
+					
+					if(current_position > section_length[section_length.length] ){
+						w=section_length.length;
+					}
+					
+				}
+				else{
+					if(current_position > section_length[x] && current_position < section_length[x+1]){
 					w=x;
+					}
 				}
-				else if(current_position > section_length[section_length.length] ){
-					w=section_length.length;
-				}
+			 
 			}
 		
+			console.log('value:   '+w);
+			
     		switch(e.which) {
         	case 37: case 38:  //up / left 
 					
