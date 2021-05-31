@@ -1266,19 +1266,19 @@ has disrupted the short term supply of disk drives.
 				});
 	
 
-				$('.gallery_controls').click(function(){
+				$('.carrousel_controls').click(function(){
 		
 					//get which section
 					var section = $(this).parent().attr('id');
 					
 					//get which image is selected
-					var current_image = '#'+section+' > .gallery_images_wrapper > .gallery_image.selected';
+					var current_image = '#'+section+' > .carrousel_images_wrapper > .carrousel_image.selected';
 					
 					//get what number it is
 					var num =  parseInt(($(current_image).attr('id')).slice(-1));
 				
 					//get total images in gallery
-					var total =  $('#'+section+' > .gallery_images_wrapper').children().length;
+					var total =  $('#'+section+' > .carrousel_images_wrapper').children().length;
 					
 					
 					
