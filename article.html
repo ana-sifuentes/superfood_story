@@ -1131,7 +1131,7 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 
 		<div class="column full_size">
 			
-			<img src="https://via.placeholder.com/1200x500">
+			<img src="assets/conclusion.svg">
 			
 			
 			<h3> What now? </h3>
@@ -1354,6 +1354,7 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 			
 			var w=0;
 			
+			//get current position
 			for(y=0; y< section_length.length; y++){
 				
 				if(current_position < section_length[y] && current_position > section_length[y-1]){
@@ -1362,17 +1363,20 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 				   
 			}
 			
-			if(direction == 'up'){
-				
-				console.log(w+""+page_sections[w-1]);
-				$(window).scrollTop(section_length[w-1]);
+			//add for down , subtract for up 
+			if(direction == 'up'){		
+				w= w-1;
 			}
 			else if (direction== 'down'){
-	
-				console.log(w+""+page_sections[w+1]);
-				$(window).scrollTop(section_length[w+1]);
-		
+				w = w+1;
 			}
+			
+			
+			
+			$('html, body').animate({
+        		scrollTop: $("#"+page_sections[w]).offset().top
+    		}, 2000);
+
 			
 		}
 		
