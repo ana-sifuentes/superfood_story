@@ -464,7 +464,7 @@ This particular story will set the script for future superfoods. Superfoods equa
 			
 			
 			<div class="column two_third_size">
-				<img src="https://via.placeholder.com/600x425">
+				<img src="assets/marketing-01.svg">
 			</div>	
 			
 	
@@ -1331,21 +1331,21 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 			
 			//store current array position
 			var w = 0;
-			let found = false;
+
 			
-			while (found == false) {
-				if(current_position > section_length[w] && current_position< section_length[w+1]){
-					found =true;
+			for(x=0; x< section_length.length; x++;)
+				
+				if(current_position < section_length[x] ){
+					w=0;
 				}
-				else{
-					w++;
+				else if(current_position > section_length[x] && current_position < section_length[x+1]){
+					w=x;
+				}
+				else if(current_position > section_length[section_length.length] ){
+					w=section_length.length;
 				}
 			}
-			
-
-
-			
-			
+		
     		switch(e.which) {
         	case 37: case 38:  //up / left 
 					
