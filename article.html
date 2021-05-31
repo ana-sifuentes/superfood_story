@@ -1291,7 +1291,6 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 		//scrolling controls 
 		var position = $(window).scrollTop(); 
 
-
 		$(window).scroll(function() {
 	
 			//start scroll progress function
@@ -1309,15 +1308,16 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 			
 			var scroll = $(window).scrollTop();
 		
+			/*
 			//scroll down
 			if(scroll > position) {
-			//	section_scrolling( page_sections,section_length, 'down');
+			
 			//scroll up
 			} else {
-         	//	section_scrolling( page_sections,section_length, 'up');				
+        		
 			}
-				
-				position = scroll;
+			*/	
+			position = scroll;
 	
 			
 			
@@ -1326,36 +1326,47 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 	
 		document.onkeydown = function(e) {
 				
+			//get page height / position
 			let current_position = $(window).scrollTop();
 			
-			var w=0;
+			//store current array position
+			var w = 0;
+			let found = false;
 			
-			//get current position
-			for(y=0; y< section_length.length; y++){
-				
-				if(current_position < section_length[y] && current_position > section_length[y-1]){
-				   w = y;
+			while (found == false) {
+				if(current_position > section_length[w] && current_position< section_length[w+1]){
+					found =true;
 				}
-				   
+				else{
+					w++;
+				}
 			}
+			
+
+
 			
 			
     		switch(e.which) {
         	case 37: case 38:  //up / left 
-				console.log('up/left');
-				//section_scrolling(section_length, 'up');
-				   $([document.documentElement, document.body]).animate({
-        				scrollTop: $("#"+page_sections[w-1]).offset().top
-    				}, 200);	
+					
+				w--;		
+				if(w<0){
+					w=0;
+				}	
+				
+			   	$(window).scrollTop($('#'+page_sections[w]).offset().top);	
+				console.log('up/left'+"-----"+page_sections[w]);	
         	break;
 
         	case 39: case 40: // down / right
-				console.log('down/right');
-				//section_scrolling(section_length, 'down');
-				 $([document.documentElement, document.body]).animate({
-        			scrollTop: $("#"+page_sections[w+1]).offset().top
-    			}, 200);	
-					
+				
+				w++;
+				if(w>page_sections.length){
+					w=page_sections.length;
+				}	
+		
+				$(window).scrollTop($('#'+page_sections[w]).offset().top);	
+				console.log('down/right'+"-----"+page_sections[w]);	
         	break;
 
         	default: return; // exit this handler for other keys
