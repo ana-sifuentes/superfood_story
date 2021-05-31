@@ -1325,17 +1325,37 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 		});
 	
 		document.onkeydown = function(e) {
-						
+				
+			let current_position = $(window).scrollTop();
+			
+			var w=0;
+			
+			//get current position
+			for(y=0; y< section_length.length; y++){
+				
+				if(current_position < section_length[y] && current_position > section_length[y-1]){
+				   w = y;
+				}
+				   
+			}
+			
+			
     		switch(e.which) {
         	case 37: case 38:  //up / left 
 				console.log('up/left');
-				section_scrolling(section_length, 'up');
-					
+				//section_scrolling(section_length, 'up');
+				   $([document.documentElement, document.body]).animate({
+        				scrollTop: $("#"+page_sections[w-1]).offset().top
+    				}, 200);	
         	break;
 
         	case 39: case 40: // down / right
 				console.log('down/right');
-				section_scrolling(section_length, 'down');
+				//section_scrolling(section_length, 'down');
+				 $([document.documentElement, document.body]).animate({
+        			scrollTop: $("#"+page_sections[w+1]).offset().top
+    			}, 200);	
+					
         	break;
 
         	default: return; // exit this handler for other keys
@@ -1370,14 +1390,7 @@ has disrupted the short term supply of disk drives.  Cryptocurrencies change day
 			else if (direction== 'down'){
 				w = w+1;
 			}
-			
-			
-			
-			$('html, body').animate({
-        		scrollTop: $("#"+page_sections[w]).offset().top
-    		}, 2000);
-
-			
+		
 		}
 		
 
