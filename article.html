@@ -1460,14 +1460,19 @@
 			let current_position = $(window).scrollTop();
 			
 			//store current array position
-			var w = 0;
+			let w = 0;
 
 			
 				
 			for(x=0; x< section_length.length; x++){
 			
+				console.log('position'+current_position);
+				
 				if(current_position > section_length[x] && current_position < section_length[x+1]){
+					console.log(section_length[x] +''+ section_length[x+1]);
+					
 					w=x;
+					console.log(w);
 				}
 
 			}
@@ -1477,15 +1482,11 @@
 			
     		switch(e.which) {
         	case 37: case 38:  //up / left 
-					
 			   	$(window).scrollTop($('#'+page_sections[w-1]).offset().top);	
 				console.log('up/left'+"-----"+page_sections[w]);	
         	break;
 
         	case 39: case 40: // down / right
-				
-			
-		
 				$(window).scrollTop($('#'+page_sections[w+1]).offset().top);	
 				console.log('down/right'+"-----"+page_sections[w]);	
         	break;
