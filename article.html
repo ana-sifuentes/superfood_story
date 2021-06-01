@@ -545,6 +545,7 @@
 		<div class="info_blocks_wrapper">
 			
 		<div class="column third_size">	
+			<img src="assets/indigenous_TOMATOES.svg">
 			<h4>Exploitation: Tomatoes </h4>
 			<p>
 			Taken from mesoamerica and incorporated into western diets, nowadays they are associated with the Mediterranean cuisine and its cultures.
@@ -552,13 +553,13 @@
 		</div>
 		
 		<div class="column third_size">	
-		
+			<img src="assets/indigenous_AVOCADO.svg">
 			<h4>Neglect: Avocados </h4>
 			<p>	Another mesoamerican crop was exported outside the region but it didn't gain popularity until the 1950’s
 			</p>	
 		</div>
 		<div class="column third_size">		
-			
+			<img src="assets/indigenous_CHIA.svg">	
 			<h4>Eradication: Chia seeds</h4> 
 			<p>Due to its high value in various indigenous cultures, they were prohibited and lost for almost 500 years. Since their ‘rediscovery’ it has become a very popular food.
 			</p>
@@ -1217,10 +1218,7 @@
 		<div class="section_wrapper" id="conclusion">				
 		<div class="content_wrapper">	
 
-		<div class="column full_size">
-			
-			<img src="assets/conclusion.svg">
-		</div>
+
 		
 		<div class="column third_size">
 			<h3> What now? </h3>
@@ -1244,6 +1242,10 @@
 			<br>
 				
 			</p>
+		</div>	
+			
+		<div class="column two_third_size">
+			<img src="assets/conclusion.svg">	
 		</div>	
 			
 		</div>
@@ -1458,28 +1460,25 @@
 			var w = 0;
 
 			
-			for(x=0; x< section_length.length; x++){
-				
-				if(x===0){
-					if(current_position < section_length[x] ){
-						w=0;
-					}
-				}
-				else if(x===section_length.length){
-					
-					if(current_position > section_length[section_length.length] ){
-						w=section_length.length;
-					}
-					
-				}
-				else{
-					if(current_position > section_length[x] && current_position < section_length[x+1]){
-					w=x;
-					}
-				}
-			 
+			
+			if(current_position >= 0 && current_position < section_length[w]){
+				w=0;
 			}
-		
+			
+			else if(current_position> section_length[section_length.length-1]){
+				w= section_length.length - 1;
+			}
+			else{
+				
+				for(x=1; x< section_length.length; x++){
+			
+					if(current_position > section_length[x] && current_position < section_length[x+1]){
+						w=x;
+					}
+
+				}
+			}
+
 			console.log('value:   '+w);
 			
     		switch(e.which) {
