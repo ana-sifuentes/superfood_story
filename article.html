@@ -680,7 +680,7 @@
 		<div class="column full_size">
 			<h3> Origin of chia </h3>
 			<p>Chia is actually from mesoamerica, present day Mexico and Guatemala. <br>
-				It was used by various indigenous groups, like the Aztecs - <br>
+				It was used by various indigenous groups, like <a href="https://www.thegreatcoursesplus.com/maya-to-aztec-ancient-mesoamerica-revealed">the Aztecs</a> - <br>
 				famous for their strong military, amazing architecture and progressive education.
 				<br> 	<a href="#lost">		NEXT  </a>
 			</p>
@@ -1248,7 +1248,7 @@
 		</div>	
 			
 		<div class="column two_third_size">
-			<img src="assets/conclusion.svg">	
+			<img src="assets/conclusion-01.svg">	
 		</div>	
 			
 		</div>
@@ -1463,47 +1463,30 @@
 			var w = 0;
 
 			
-			
-			if(current_position >= 0 && current_position < section_length[w]){
-				w=0;
-			}
-			
-			else if(current_position> section_length[section_length.length-1]){
-				w= section_length.length - 1;
-			}
-			else{
 				
-				for(x=1; x< section_length.length; x++){
+			for(x=0; x< section_length.length; x++){
 			
-					if(current_position > section_length[x] && current_position < section_length[x+1]){
-						w=x;
-					}
-
+				if(current_position > section_length[x] && current_position < section_length[x+1]){
+					w=x;
 				}
+
 			}
+			
 
 			console.log('value:   '+w);
 			
     		switch(e.which) {
         	case 37: case 38:  //up / left 
 					
-				w--;		
-				if(w<0){
-					w=0;
-				}	
-				
-			   	$(window).scrollTop($('#'+page_sections[w]).offset().top);	
+			   	$(window).scrollTop($('#'+page_sections[w-1]).offset().top);	
 				console.log('up/left'+"-----"+page_sections[w]);	
         	break;
 
         	case 39: case 40: // down / right
 				
-				w++;
-				if(w>page_sections.length){
-					w=page_sections.length;
-				}	
+			
 		
-				$(window).scrollTop($('#'+page_sections[w]).offset().top);	
+				$(window).scrollTop($('#'+page_sections[w+1]).offset().top);	
 				console.log('down/right'+"-----"+page_sections[w]);	
         	break;
 
