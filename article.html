@@ -1454,46 +1454,22 @@
 			
 		});
 	
+		
 		document.onkeydown = function(e) {
-				
-			//get page height / position
-			let current_position = $(window).scrollTop();
-			
-			//store current array position
-			let w = 0;
-
-			
-				
-			for(x=0; x< section_length.length; x++){
-			
-				console.log('position'+current_position);
-				
-				if(current_position > section_length[x] && current_position < section_length[x+1]){
-					console.log(section_length[x] +''+ section_length[x+1]);
-					
-					w=x;
-					console.log(w);
-				}
-
-			}
-			
-
-			console.log('value:   '+w);
-			
+	
     		switch(e.which) {
         	case 37: case 38:  //up / left 
-			   	$(window).scrollTop($('#'+page_sections[w-1]).offset().top);	
-				console.log('up/left'+"-----"+page_sections[w]);	
+				section_scrolling(section_length,-1);		
+	
         	break;
 
         	case 39: case 40: // down / right
-				$(window).scrollTop($('#'+page_sections[w+1]).offset().top);	
-				console.log('down/right'+"-----"+page_sections[w]);	
+				section_scrolling(section_length, 1);
         	break;
 
         	default: return; // exit this handler for other keys
     	}
-    	e.preventDefault(); // prevent the default action (scroll / move caret)
+    		e.preventDefault(); // prevent the default action (scroll / move caret)
 		};
 		
 		
@@ -1507,23 +1483,23 @@
 			
 			var w=0;
 			
-			//get current position
-			for(y=0; y< section_length.length; y++){
+			for(x=0; x< section_length.length; x++){
+			
+				console.log('position'+current_position);
 				
-				if(current_position < section_length[y] && current_position > section_length[y-1]){
-				   w = y;
+				if(current_position > section_length[x] && current_position < section_length[x+1]){
+					console.log(section_length[x] +''+ section_length[x+1]);
+					
+					w=x;
+					console.log(w);
 				}
-				   
+
 			}
 			
-			//add for down , subtract for up 
-			if(direction == 'up'){		
-				w= w-1;
-			}
-			else if (direction== 'down'){
-				w = w+1;
-			}
-		
+			w= w+direction;
+			console.log('value:   '+w);
+			$(window).scrollTop($('#'+page_sections[w]).offset().top);
+	
 		}
 		
 
