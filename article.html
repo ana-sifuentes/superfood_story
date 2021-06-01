@@ -1321,7 +1321,8 @@
 
 				$('.option').click(function(){
 
-									
+							
+					var clicked = $(this).attr('id');
 					var num = clicked.slice(-1);
 					var total =  $('#'+clicked).parent().children().length;
 
