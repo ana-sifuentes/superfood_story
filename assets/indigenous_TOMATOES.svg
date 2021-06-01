@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 250" style="enable-background:new 0 0 300 250;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#A7B941;}
+	.st1{fill:#E0E48D;}
+	.st2{fill:#8A370F;}
+	.st3{fill:#DA895E;}
+	.st4{fill:#63240B;}
+	.st5{fill:#DC0000;}
+	.st6{fill:#FF7A69;}
+	.st7{fill:#426024;}
+	.st8{fill:#649238;}
+	.st9{fill:#645C5A;}
+	.st10{fill:#7F6D57;}
+	.st11{fill:#4B423B;}
+	.st12{fill:#E9E1D4;}
+</style>
+<g id="layout">
+</g>
+<g id="GUIDES">
+	<g>
+		<polygon class="st5" points="222,120.6 222,102.6 213,102.6 213,93.6 204,93.6 204,84.6 195,84.6 195,75.6 168,75.6 105,75.6 
+			105,84.6 96,84.6 96,93.6 87,93.6 87,102.6 78,102.6 78,120.6 69,120.6 69,165.6 78,165.6 78,174.6 87,174.6 87,183.6 96,183.6 
+			96,192.6 105,192.6 105,201.6 195,201.6 195,192.6 204,192.6 204,183.6 213,183.6 213,174.6 222,174.6 222,165.6 231,165.6 
+			231,120.6 		"/>
+		<rect x="105" y="102.6" class="st6" width="9" height="9"/>
+		<polygon class="st6" points="105,111.6 96,111.6 87,111.6 87,129.6 87,147.6 96,147.6 96,129.6 105,129.6 		"/>
+		<g>
+			<rect x="123" y="57.6" class="st7" width="9" height="9"/>
+			<rect x="105" y="84.6" class="st7" width="9" height="9"/>
+			<rect x="186" y="102.6" class="st7" width="9" height="9"/>
+			<rect x="177" y="57.6" class="st7" width="9" height="9"/>
+			<rect x="123" y="102.6" class="st7" width="9" height="9"/>
+			<rect x="186.4" y="48.4" class="st7" width="9" height="9"/>
+			<rect x="114" y="48.6" class="st7" width="9" height="9"/>
+			<rect x="195" y="66.6" class="st7" width="9" height="9"/>
+			<polygon class="st7" points="177,66.6 159,66.6 132,66.6 132,75.6 114,75.6 114,84.6 132,84.6 141,84.6 141,93.6 132,93.6 
+				132,102.6 150,102.6 150,93.6 159,93.6 168,93.6 168,102.6 177,102.6 186,102.6 186,93.6 177,93.6 177,84.6 195,84.6 195,75.6 
+				177,75.6 			"/>
+		</g>
+		<polygon class="st8" points="159,48.6 159,57.6 150,57.6 150,66.6 150,75.6 159,75.6 159,66.6 168,66.6 168,57.6 168,48.6 		"/>
+		<rect x="141" y="75.6" class="st8" width="9" height="9"/>
+	</g>
+</g>
+</svg>
