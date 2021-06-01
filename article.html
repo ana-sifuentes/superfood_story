@@ -114,7 +114,8 @@
 	.content_wrapper {
     	max-width: 1250px;
     	width: 95%;
-		margin: auto;
+    	margin: 2.5%;
+    	float: left;
 	}
 
 
@@ -334,6 +335,9 @@
 	.superfood_item:hover{background-color: aliceblue;}
 				
 
+	.content_wrapper.border_division{
+		border-bottom: 1px solid black;
+	}
 
 /**********************************************************************/	
 /*MOBILE*/	
@@ -485,7 +489,8 @@
 		<div class="section_wrapper" id="food_system">				
 		<div class="content_wrapper">
 					
-		
+				
+					
 		<div class="column full_size">
 			<h3> The complexity of food systems </h3>
 	
@@ -493,7 +498,7 @@
 			There are interconnected systems in play that affect what food is <br>
 				available to us and there are many steps before we can even select it. 
 
-				<a href="#choose_superfood">		NEXT  </a>	 </P>
+				<a href="#indigenous">		NEXT  </a>	 </P>
 			
 			<div class="carrousel_wrapper" id="system_carrousel">
 			
@@ -514,10 +519,21 @@
 			
 		</div>	
 			
+	
+		</div>
+		</div>
+			
 		
+		
+		<!---- INDIGENOUS FOODS---->
+		
+		<div class="section_wrapper" id="indigenous">
+		<div class="content_wrapper">
+	
 		<div class="column full_size">
 		
 			<h4>The plot thickens...</h4>
+			<h3>Indigenous foods</h3>
 			
 			<p>The story is even more complicated when it comes to foods with an indigenous origin.
 			<br>
@@ -526,31 +542,36 @@
 		
 		</div>	
 			
+		<div class="info_blocks_wrapper">
+			
 		<div class="column third_size">	
-			<p><b>Exploitation: Tomatoes </b> 
-			<br>taken from mesoamerica and incorporated into western diets, nowadays they are associated with the Mediterranean cuisine and its cultures.
+			<h4>Exploitation: Tomatoes </h4>
+			<p>
+			Taken from mesoamerica and incorporated into western diets, nowadays they are associated with the Mediterranean cuisine and its cultures.
 			</p>
 		</div>
 		
 		<div class="column third_size">	
-			<p>
-			<b>Neglect: Avocados </b><br>
-			another mesoamerican crop was exported outside the region but it didn't gain popularity until the 1950’s
+		
+			<h4>Neglect: Avocados </h4>
+			<p>	Another mesoamerican crop was exported outside the region but it didn't gain popularity until the 1950’s
 			</p>	
 		</div>
 		<div class="column third_size">		
-			<p>
-			<b>Eradication: Chia seeds</b> <br>Due to its high value in various indigenous cultures, they were prohibited and lost for almost 500 years. Since their ‘rediscovery’ it has become a very popular food.
+			
+			<h4>Eradication: Chia seeds</h4> 
+			<p>Due to its high value in various indigenous cultures, they were prohibited and lost for almost 500 years. Since their ‘rediscovery’ it has become a very popular food.
 			</p>
 		</div>	
 			
+		</div>	
 			
 		</div>
 		</div>
-			
+		
 		<!---CHOOSE SUPERFOOD-->			
 		<div class="section_wrapper" id="choose_superfood">			
-		<div class="content_wrapper">
+		<div class="content_wrapper border_division">
 			
 	
 		<div class="column third_size">
@@ -1373,7 +1394,7 @@
 
 			//sections of the page
 			var page_sections =['introduction','superfoods', 'marketing',
-							    'food_system','choose_superfood','origin',
+							    'food_system','indigenous','choose_superfood','origin',
 							    'lost','timeline','nutrinfo','myths','growing',
 							    'worldwide','prediction','conclusion','credits' ];	
 		
@@ -1439,12 +1460,12 @@
 			
 			for(x=0; x< section_length.length; x++){
 				
-				if(x==0){
+				if(x===0){
 					if(current_position < section_length[x] ){
 						w=0;
 					}
 				}
-				else if(x==section_length.length){
+				else if(x===section_length.length){
 					
 					if(current_position > section_length[section_length.length] ){
 						w=section_length.length;
