@@ -114,7 +114,7 @@
 	.content_wrapper {
     	max-width: 1250px;
     	width: 95%;
-    	margin: 5%;
+    	padding: 0px 2.5%;
     	float: left;
 	}
 
@@ -196,7 +196,7 @@
 	/****/
 	
 	.gallery_wrapper{
-		border:1px solid black;
+		
 	}
 	
 	.gallery_image.selected {
@@ -334,7 +334,7 @@
 	.superfood_item:hover{background-color: aliceblue;}
 				
 
-	.content_wrapper.border_division{
+	.section_wrapper.border_division{
 		border-bottom: 1px solid black;
 	}
 
@@ -561,8 +561,8 @@
 		</div>
 		
 		<!---CHOOSE SUPERFOOD-->			
-		<div class="section_wrapper" id="choose_superfood">			
-		<div class="content_wrapper border_division">
+		<div class="section_wrapper border_division" id="choose_superfood">			
+		<div class="content_wrapper ">
 			
 	
 		<div class="column third_size">
@@ -1319,7 +1319,7 @@
 					num = num.toString();
 					
 					//remove previous selections
-					$(this).removeClass('selected');
+					$('#'+clicked).removeClass('selected');
 					$('#'+section+'_images > .gallery_image.selected').removeClass('selected');
 				
 					//apped new selection 
