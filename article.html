@@ -1318,19 +1318,25 @@
 
 				
 				//section functionality 
-				
-				$('.control').click(function(){
-		
-					navigation( $(this).attr('id') ,  'control');
-					
-				});
-			
-		
-		
-		
+
 				$('.option').click(function(){
 
-					navigation( $(this).attr('id') ,  'option');
+									
+					var num = clicked.slice(-1);
+					var total =  $('#'+clicked).parent().children().length;
+
+					var section =  clicked.substring(0, clicked.indexOf('_'));
+				
+					num = num.toString();
+					
+					//remove previous selections
+					$(this).removeClass('selected');
+					$('#'+section+'_images > .gallery_image.selected').removeClass('selected');
+				
+					//apped new selection 
+					$('#'+section+'_option_'+num).addClass('selected');
+					$('#'+section+'_image_'+num).addClass('selected');
+	
 					
 				});
 				
@@ -1502,71 +1508,7 @@
 
 		
 
-	
-		function navigation(clicked,  element_type){
-					
-					
-					var num;
-					var total;
 
-					var section =  clicked.substring(0, clicked.indexOf('_'));
-					
-					if(element_type == 'option'){
-						
-						//what number of child is selected (1,2,3)
-						num = clicked.slice(-1);
-					
-						//total number of children
-						total =  $('#'+clicked).parent().children().length;
-						
-					}
-					
-					if(element_type =='control'){
-						
-						var temp = $('#'+section+'_controls > .gallery_texts > .gallery_text.selected').attr('id');
-						num = temp.slice(-1);
-						num = parseInt(num);
-						
-						
-						total= $('#'+section+'_controls > .gallery_texts').children().length;
-						
-						
-						//add or subtract
-						if( $('#'+clicked).hasClass('next')){
-							num = num +1;
-						}
-						else if ($('#'+clicked).hasClass('previous')){
-							num = num -1;	
-						}
-						
-						
-						//adjust for total numbers 
-						if(num > total){
-							num = 1;
-						}
-						if(num == 0){
-							num = total;
-						}		
-						
-					}
-					
-					
-					num = num.toString();
-					
-					//remove previous selections
-					$('#'+section+'_options > .option.selected').removeClass('selected');
-					$('#'+section+'_images > .gallery_image.selected').removeClass('selected');
-					$('#'+section+'_controls > .gallery_texts > .gallery_text.selected').removeClass('selected');
-					
-					//apped new selection 
-					$('#'+section+'_option_'+num).addClass('selected');
-					$('#'+section+'_image_'+num).addClass('selected');
-					$('#'+section+'_text_'+num).addClass('selected');
-					
-					
-					
-					
-				}
 
 	
 		//progres bar scrolling 
