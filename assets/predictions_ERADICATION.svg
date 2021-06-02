@@ -52,13 +52,10 @@
 	.st46{fill:#E9ECFD;}
 	.st47{fill:#FCB912;}
 	.st48{fill:#FCF54D;}
-	.st49{fill:none;}
-	.st50{stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
-	.st51{font-family:'VCROSDMono';}
-	.st52{font-size:18px;}
-	.st53{fill:#FFDE01;}
-	.st54{fill:#6F6252;}
-	.st55{fill:#32A00D;}
+	.st49{stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
+	.st50{fill:#FFDE01;}
+	.st51{fill:#6F6252;}
+	.st52{fill:#32A00D;}
 </style>
 <g id="layout">
 </g>
@@ -144,7 +141,25 @@
 	</g>
 </g>
 <g id="GUIDES">
-	<rect x="64.5" y="5.2" class="st49" width="171" height="24.8"/>
-	<text transform="matrix(1 0 0 1 91.9922 18.35)" class="st50 st51 st52">ERADICATION</text>
+	<g>
+		<path class="st49" d="M101.7,5.2v1.8h-7v3.5h5.3v1.8h-5.3v3.5h7v1.8h-8.8V5.2H101.7z"/>
+		<path class="st49" d="M106.1,12.2h-0.9v5.3h-1.8V5.2h7V6h0.9v0.9h0.9v3.5h-0.9v0.9h-0.9v0.9h-1.8v0.9h0.9V14h0.9v0.9h0.9v0.9h0.9
+			v1.8h-1.8v-0.9h-0.9v-0.9h-0.9v-0.9h-0.9V14h-0.9v-0.9h-0.9V12.2z M105.2,6.9v3.5h4.4V9.6h0.9V7.8h-0.9V6.9H105.2z"/>
+		<path class="st49" d="M115.7,17.5H114V8.7h0.9V7.8h0.9V6.9h0.9V6h0.9V5.2h1.8V6h0.9v0.9h0.9v0.9h0.9v0.9h0.9v8.8H121V14h-5.3V17.5
+			z M115.7,12.2h5.3V9.6h-0.9V8.7h-0.9V7.8h-1.8v0.9h-0.9v0.9h-0.9V12.2z"/>
+		<path class="st49" d="M124.5,17.5V5.2h7V6h0.9v0.9h0.9v8.8h-0.9v0.9h-0.9v0.9H124.5z M126.3,6.9v8.8h4.4v-0.9h0.9v-7h-0.9V6.9
+			H126.3z"/>
+		<path class="st49" d="M136.8,17.5v-1.8h1.8V6.9h-1.8V5.2h5.3v1.8h-1.8v8.8h1.8v1.8H136.8z"/>
+		<path class="st49" d="M148.2,15.7h3.5v-0.9h0.9V14h1.8v1.8h-0.9v0.9h-0.9v0.9h-5.3v-0.9h-0.9v-0.9h-0.9V6.9h0.9V6h0.9V5.2h5.3V6
+			h0.9v0.9h0.9v1.8h-1.8V7.8h-0.9V6.9h-3.5v0.9h-0.9v7h0.9V15.7z"/>
+		<path class="st49" d="M157.9,17.5h-1.8V8.7h0.9V7.8h0.9V6.9h0.9V6h0.9V5.2h1.8V6h0.9v0.9h0.9v0.9h0.9v0.9h0.9v8.8h-1.8V14h-5.3
+			V17.5z M157.9,12.2h5.3V9.6h-0.9V8.7h-0.9V7.8h-1.8v0.9h-0.9v0.9h-0.9V12.2z"/>
+		<path class="st49" d="M170.2,6.9h-3.5V5.2h8.8v1.8H172v10.5h-1.8V6.9z"/>
+		<path class="st49" d="M179,17.5v-1.8h1.8V6.9H179V5.2h5.3v1.8h-1.8v8.8h1.8v1.8H179z"/>
+		<path class="st49" d="M189.6,6V5.2h5.3V6h0.9v0.9h0.9v8.8h-0.9v0.9h-0.9v0.9h-5.3v-0.9h-0.9v-0.9h-0.9V6.9h0.9V6H189.6z
+			 M193.9,6.9h-3.5v0.9h-0.9v7h0.9v0.9h3.5v-0.9h0.9v-7h-0.9V6.9z"/>
+		<path class="st49" d="M200.1,10.4v7h-1.8V5.2h1.8v2.6h0.9v0.9h0.9v0.9h0.9v0.9h0.9v0.9h0.9v0.9h0.9v-7h1.8v12.3h-1.8v-2.6h-0.9V14
+			h-0.9v-0.9h-0.9v-0.9h-0.9v-0.9H201v-0.9H200.1z"/>
+	</g>
 </g>
 </svg>
