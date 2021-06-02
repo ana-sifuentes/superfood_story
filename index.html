@@ -157,13 +157,30 @@
 
 
 .stage{
-	float: left;
-	height: 300px;
-    	width: 100%;
-    	position: relative;
-	display:none;
-	background-color:aliceblue;
+  
+      float: left;
+      height: 300px;
+      width: 100%;
+      position: relative;
+      display: none;
+      background-repeat: no-repeat;
+      background-position: left;
+      background-image: url(https://via.placeholder.com/2000x300);
+      -webkit-animation-name: MOVE-BG;
+-webkit-animation-duration: 100s;
+-webkit-animation-timing-function: linear;
+-webkit-animation-iteration-count: infinite;
+
 }	
+
+@-webkit-keyframes MOVE-BG {
+	from {
+		-webkit-transform: translateX(0);
+	}
+	to { 
+		-webkit-transform: translateX(-187%);
+	}
+}
 
 
 #scoreSpan.off{
@@ -237,7 +254,8 @@ display:none;
     </div>
 
 
-    <div id="BOTON" style="width:50%; border:1px solid black; height:40px; background-color:red; margin:auto;">
+    <div id="BOTON" style="width:50%; 
+    text-align: center; cursor: pointer; border:1px solid black; height:40px; background-color:red; margin:auto;">
         CLICK HERE
     </div>
     
