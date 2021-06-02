@@ -1387,7 +1387,23 @@
 		
 				
 			
+				//sections of the page
+				var page_sections =['introduction','superfoods', 'marketing',
+								    'food_system','indigenous','choose_superfood','origin',
+								    'lost','timeline','nutrinfo','myths','growing',
+								    'worldwide','prediction','conclusion','credits' ];	
+			
+				//get height of all sections
+				var section_length =[];
+			
 
+				let h=0;
+				for(x=0; x< page_sections.length; x++){			
+					h = h + $('#'+page_sections[x]).height();
+					section_length[x] = h;
+					console.log("section  :"+page_sections[x]+" - "+h);
+
+				}
 		
 
 
