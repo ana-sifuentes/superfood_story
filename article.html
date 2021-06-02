@@ -1386,25 +1386,7 @@
 
 		
 				
-			//scrolling with keys
-
-			//sections of the page
-			var page_sections =['introduction','superfoods', 'marketing',
-							    'food_system','indigenous','choose_superfood','origin',
-							    'lost','timeline','nutrinfo','myths','growing',
-							    'worldwide','prediction','conclusion','credits' ];	
-		
-			//get height of all sections
-			var section_length =[];
-		
-
-			let h=0;
-			for(x=0; x< page_sections.length; x++){			
-				h = h + $('#'+page_sections[x]).height();
-				section_length[x] = h;
-				console.log("section  :"+page_sections[x]+" - "+h);
-
-			}
+			
 
 		
 
@@ -1446,52 +1428,11 @@
 		});
 	
 		
-		document.onkeydown = function(e) {
 	
-    		switch(e.which) {
-        	case 37: case 38:  //up / left 
-				section_scrolling(section_length,-1);		
-	
-        	break;
-
-        	case 39: case 40: // down / right
-				section_scrolling(section_length, 1);
-        	break;
-
-        	default: return; // exit this handler for other keys
-    	}
-    		e.preventDefault(); // prevent the default action (scroll / move caret)
-		};
-		
-		
-		
 		
 		//functions		
 
-		function section_scrolling( section_length, direction){
-						
-			let current_position = $(window).scrollTop();
-			
-			var w=0;
-			
-			for(x=0; x< section_length.length; x++){
-			
-				console.log('position'+current_position);
-				
-				if(current_position > section_length[x] && current_position < section_length[x+1]){
-					console.log(section_length[x] +''+ section_length[x+1]);
-					
-					w=x;
-					console.log(w);
-				}
-
-			}
-			
-			w= w+direction;
-			console.log('value:   '+w);
-			$(window).scrollTop($('#'+page_sections[w]).offset().top);
 	
-		}
 		
 
 		
@@ -1525,6 +1466,76 @@
 					$('#progress_bar').css('width', scrolled_percentage+'%');
 				}
 
+		
+		
+		
+		/***
+			
+		//scrolling with keys
+
+			//sections of the page
+			var page_sections =['introduction','superfoods', 'marketing',
+							    'food_system','indigenous','choose_superfood','origin',
+							    'lost','timeline','nutrinfo','myths','growing',
+							    'worldwide','prediction','conclusion','credits' ];	
+		
+			//get height of all sections
+			var section_length =[];
+		
+
+			let h=0;
+			for(x=0; x< page_sections.length; x++){			
+				h = h + $('#'+page_sections[x]).height();
+				section_length[x] = h;
+				console.log("section  :"+page_sections[x]+" - "+h);
+
+			}
+		
+		document.onkeydown = function(e) {
+	
+    		switch(e.which) {
+        	case 37: case 38:  //up / left 
+				section_scrolling(section_length,-1);		
+	
+        	break;
+
+        	case 39: case 40: // down / right
+				section_scrolling(section_length, 1);
+        	break;
+
+        	default: return; // exit this handler for other keys
+    	}
+    		e.preventDefault(); // prevent the default action (scroll / move caret)
+		};
+		function section_scrolling( section_length, direction){
+						
+			let current_position = $(window).scrollTop();
+			
+			var w=0;
+			
+			for(x=0; x< section_length.length; x++){
+			
+				console.log('position'+current_position);
+				
+				if(current_position > section_length[x] && current_position < section_length[x+1]){
+					console.log(section_length[x] +''+ section_length[x+1]);
+					
+					w=x;
+					console.log(w);
+				}
+
+			}
+			
+			w= w+direction;
+			console.log('value:   '+w);
+			$(window).scrollTop($('#'+page_sections[w]).offset().top);
+	
+		}
+		
+		
+		
+		
+		***/
 
 </script>		
 
