@@ -185,9 +185,26 @@ display:none;
   display: block;
   background-position-y:100%;
   background-repeat: repeat-y;
+  background-size: contain;
   animation: 40s A linear alternate infinite;
   background-image: url('game assets/welcome_screen.svg');
 }
+
+
+#welcome_screen > h3{
+    font-weight: 900;
+    font-size: 50px;
+    line-height: normal;
+    top: 35%;
+    position: relative;
+}
+
+
+#welcome_screen p{
+  top: 38%;
+position: relative;
+}
+
 
 @keyframes A {
     from {
@@ -296,7 +313,7 @@ display:none;
 
 	        <div id="welcome_screen" class="levels lvl_0 current">
 
-              <h3>SUPERFOOD <br> STORY</h3>
+              <h3>SUPERFOOD STORY</h3>
               
 		          <p> PRESS SPACE </p>
               
