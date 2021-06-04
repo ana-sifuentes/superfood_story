@@ -455,40 +455,27 @@ var checkDead = setInterval(function() {
     function change_lvl(){
 
 
-      var close = 1;
-      
-      console.log('gaming begins!');
+        console.log('gaming begins!');
 
-      do{
-        
-      //every x seconds , change lvl
-      setInterval(function(){
-        console.log('changing lvl from ' + game_stage);
-        //remove previous lvl
-        $("#levels").removeClass('lvl_'+game_stage);
 
-        //add new lvl
-        game_stage = game_stage+1;
+        var intervalId = window.setInterval(function(){
+
+
+              $("#levels").removeClass('lvl_'+game_stage);
+              console.log('lvl is now' + game_stage);
+
+              game_stage = game_stage+1;
+              $("#levels").addClass('lvl_'+game_stage);
+              
+        }, 3000);
+
 
         //make sure it doesnt go above 5
-        if(game_stage > 5){
-          game_stage = 5;
-          close = 0;
-        }
-
-        console.log('lvl is now' + game_stage);
-        //change to new lvl
-        $("#levels").addClass('lvl_'+game_stage);
-
-        
-      }, 3000)//for now its every 3 seconds
-
-
-    } while(close == 1);
+          if(game_stage > 5){
+            game_stage = 5;
+            clearInterval(intervalId);
+          }
       
-
-      //call function to end game
-
       
     }
 
