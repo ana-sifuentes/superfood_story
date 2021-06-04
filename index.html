@@ -460,7 +460,7 @@ var checkDead = setInterval(function() {
 
         var intervalId = window.setInterval(function(){
 
-
+              game_stage = 0;
               $("#levels").removeClass('lvl_'+game_stage);
               console.log('lvl is now' + game_stage);
 
@@ -468,8 +468,11 @@ var checkDead = setInterval(function() {
               game_stage = game_stage+1;
               $("#levels").addClass('lvl_'+game_stage);
 
-  
+
+              
               //animate background
+              $('.lvl_'+game_stage).css('background-position', '0%');
+              
               $('.lvl_'+game_stage).animate({
                 
                 'background-position-x': '100%'
