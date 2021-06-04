@@ -376,7 +376,8 @@ var game_stage=0;
 if(game_stage > 0 ){
 
   setInterval(function(){
-    change_lvl()
+    console.log('changing lvl');
+    change_lvl();
   }, 1500)//for now its every 1.5 seconds
 
   
@@ -463,7 +464,9 @@ var checkDead = setInterval(function() {
 
     //change lvl 
     function change_lvl(){
-      
+
+
+      console.log(game_stage);
       //remove previous lvl
       $("#levels").removeClass('lvl_'+game_stage);
       
