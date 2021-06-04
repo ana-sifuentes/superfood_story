@@ -3,14 +3,231 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-
 <head>
     <meta charset="UTF-8">
     <title> SUPERFOOD STORY </title>
-    <link rel="stylesheet" href="style.css">
 </head>
 
 
+
+<style>
+
+@font-face {
+  font-family: VCR_OSD_MONO;
+  src: url("assets/VCR_OSD_MONO_1.001.ttf");
+}
+
+
+@font-face {
+  font-family: Resolve-Light;
+  src: url("assets/Resolve-Light 3.otf");
+}
+
+
+
+
+/**********************/
+/* MENU */
+
+	.menu.wrapper{
+		width:100%;  
+		height:70px;
+		margin-top:10px;
+		font-family: 'VCR_OSD_MONO';
+	}
+	
+	
+	.menu.main{
+	 	float: left;
+    		width: 18%;
+    		padding: 0px 1%;
+    		font-size: 28px;
+    		text-align: left;
+		font-weight: 800;
+	}
+	
+	.menu.spacer{
+    		float: left;
+    		width: 44%;
+    		height: 1px;
+	}
+	
+	.menu.item{
+    		float: left;
+    		width: 8%;
+    		margin: 10px 2%;
+    		padding: 8px 0px;
+    		font-size: 20px;
+    		text-align: center;
+	}
+	
+	
+	a > .menu.item {
+		color:black;
+	}
+	
+	.menu.item.current, 
+	.menu.item:hover{
+		border-bottom:2px solid black;
+	}
+
+
+/**********************/
+/*PAGES */
+
+	/* general wrapper for the content */
+	.content_wrapper {
+    		max-width: 1250px;
+    		width: 85%;
+		margin: 40px auto 0px auto;
+	}
+
+	/*main layout class */
+	.column  { 
+		float:left;
+		margin:1% 1%;
+		padding: 0px;
+	}
+
+	/* 100% */
+	.full_size { width:98%; }
+	/* 33% */
+	.third_size { width: 31.33%; }
+	/* 66% */
+	.two_third_size { width: 64.6%; }
+
+
+
+
+/* fonts */
+	.menu.item p, .menu.main p{
+		font-family: 'VCR_OSD_MONO';
+	}
+
+	.game_container p{
+		font-family: 'VCR_OSD_MONO';
+		text-align:center;
+	}
+
+	h1, h2, h3, h4, h5, h6, p{
+		font-family: 'Resolve-Light';
+	}
+
+
+/**********************/
+/* GAME */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+.game{
+    width: 800px;
+    height: 300px; /*200*/
+    border: 1px solid black;
+    margin: auto;
+}
+#character{
+    width: 81px;  /*20*/
+    height: 98px; /*50*/
+    background-image:url("assets/chia_seed.png");
+    position:relative;
+    top: 202px;
+}
+.animate{
+    animation: jump 0.3s linear;
+}
+@keyframes jump{
+    0%{top: 202px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 202px;}
+}
+
+#block{
+    width: 30px; /*20*/
+    height: 20px;
+    position: relative;
+    top: 185px;
+    left: 800px;
+    background-image:url("assets/fireball.png");
+    animation: block 1s infinite linear;
+}
+@keyframes block{
+    0%{left: 800px}
+    100%{left: -30px}
+}
+
+.mobile_button{
+  width:50%; 
+  text-align: center; 
+  cursor: pointer; 
+  border:1px solid black; 
+  height:40px; 
+  background-color:red; 
+  margin:auto;
+}
+
+.stage{
+      float: left;
+      height: 300px;
+      width: 100%;
+      position: relative;
+      display: none;
+      background-repeat: no-repeat;
+      background-position: left;
+      background-image: url(https://via.placeholder.com/2000x300);
+      -webkit-animation-name: MOVE-BG;
+      -webkit-animation-duration: 100s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+}	
+
+@-webkit-keyframes MOVE-BG {
+	from {
+		-webkit-transform: translateX(0);
+	}
+	to { 
+		-webkit-transform: translateX(-187%);
+	}
+}
+
+
+#scoreSpan.off{
+display:none;
+}
+
+.stage.current, #scoreSpan{
+	display:block; 
+}
+
+
+
+
+/****************/
+/* levels */
+#stage0 p{
+    color: green;
+    font-size: 30PX;
+    font-weight: 900;
+    padding-top: 150px;
+}
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+<body>
   <div class="menu wrapper">
 
     <div class="menu main" id="main_logo">
@@ -42,37 +259,105 @@
 
 
 
+  
+  <style>
+
+  .levels{
+    float: left;
+    height: 300px;
+    width: 100%;
+    position: relative;
+    display: none;
+    background-repeat: no-repeat;
+    background-position-x: 0%;
+  }
+
+  .levels.current{
+    display: block;
+  }
+
+  /*welcome screen*/
+  .levels.current.lvl_0{
+    display: block;
+    background-image: url(https://via.placeholder.com/300x300/FF0000/000000);
+  } 
+
+  /*mesoamerica*/
+  .levels.current.lvl_1{
+    display: block;
+    background-image: url(https://via.placeholder.com/2000x300);
+  }  
+
+  /*colonization*/
+  .levels.current.lvl_2{
+    display: block;
+    background-image: url(https://via.placeholder.com/2000x300/FFFF00/000000);
+  }
+
+  /*rediscovery*/
+  .levels.current.lvl_3{
+    display: block;
+    background-image: url(https://via.placeholder.com/2000x300/000000/FFFFFF);
+  }
+
+  /*modernity*/
+  .levels.current.lvl_4{
+    display: block;
+    background-image: url(https://via.placeholder.com/2000x300);
+  }
+
+
+  /*GAME ENDED*/
+  .levels.current.lvl_5{
+    display: block;
+    background-image: url(https://via.placeholder.com/100x100);
+  }
+
+  </style>
+
+  
+
     	<div class="content_wrapper">
     	<div class="column full_size game_container" >
 
-     <p>Click on the space bar to jump!</p>
-    <div class="game">
+       <p>Click on the space bar to jump!</p>
 
 
-	<div id="stage0" class="stage current">
-		<p> PRESS SPACE BAR TO START! </p>
-	</div>
+       <div class="game">
 
-	<div id="stage1" class="stage">
-        <div id="character"></div>
-        <div id="block"></div>
-	</div>
 
+	        <div id="welcome_screen" class="levels lvl_0 current">
+		          <p> PRESS SPACE BAR TO START! </p>
+	        </div>
+
+	         <div id="levels" class="levels lvl_1">
+             <div id="character"></div>
+             <div id="block"></div>
+	         </div>
+
+         </div>
+
+
+
+
+    <div id="BOTON" class="mobile_button">
+        JUMP
     </div>
+    
     <p>SCORE: <span id="scoreSpan" class="off"></span></p>
 
 	</div>
 	</div>
 
+</body>
 
 
 
-<!-- loading scripts -->
+
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
+  
 <script>
-
 //based on the code by : https://github.com/Beat0154
 
 
@@ -86,31 +371,17 @@ var counter=0;
 var game_stage=0;
 
 
+//if we arent on the title screen 
+// change levels every 30 seconds 
+if(game_stage > 0 ){
 
+  setInterval(function(){
+    change_lvl()
+  }, 1500)//for now its every 1.5 seconds
 
-
-//title screen
-function title_screen(){
-
-  //remove the title screen and show score
-  document.getElementById("stage0").classList.remove("current");
-  document.getElementById("scoreSpan").classList.remove("off");
-
-  //switch to game screen
-  document.getElementById("stage1").classList.add("current");
-  game_stage = 1;
-  counter=0;
+  
 }
 
-
-//player jumps
-function jump(){
-    if(character.classList == "animate"){return}
-    character.classList.add("animate");
-    setTimeout(function(){
-        character.classList.remove("animate");
-    },300);
-}
 
 
 
@@ -133,20 +404,83 @@ var checkDead = setInterval(function() {
 
 
 
-
-//when the user clicks
-document.body.onkeyup = function(e){
-    if(e.keyCode == 32){
+////////////////////////////////////////////////////////////////////////
+//user clicks space or button
+  
+  //when the user clicks
+  document.body.onkeyup = function(e){
+      if(e.keyCode == 32){
 
        if(game_stage == 0){
           title_screen();
        }
 
-       if(game_stage == 1){
+       if(game_stage != 0){
           jump();
        }
     }
-}
-<script>
+  }
 
+		$('#BOTON').click(function(){
+      
+      if(game_stage == 0){
+         title_screen();
+      }
+
+      if(game_stage != 0){
+         jump();
+      }
+
+    });
+
+
+////////////////////////////////////////////////////////////////////////
+//functions
+
+    //title screen
+    function title_screen(){
+
+      //remove the title screen and show score
+      $('#welcome_screen').removeClass('current');
+      $('#scoreSpan').removeClass('off');
+
+      //switch to levels 
+      $("#levels").addClass('current');
+
+      game_stage = 1;
+      counter=0;
+    }
+
+
+    //player jumps
+    function jump(){
+        if(character.classList == "animate"){return}
+        character.classList.add("animate");
+        setTimeout(function(){
+            character.classList.remove("animate");
+        },300);
+    }
+
+    //change lvl 
+    function change_lvl(){
+      
+      //remove previous lvl
+      $("#levels").removeClass('lvl_'+game_stage);
+      
+      //add new lvl 
+      game_stage = game_stage+1;
+
+      //make sure it doesnt go above 5
+      if(game_stage > 5){
+        game_stage 5;
+      }
+
+      //change to new lvl
+      $("#levels").addClass('lvl_'+game_stage);
+
+    }
+
+
+</script>
 </html>
+
