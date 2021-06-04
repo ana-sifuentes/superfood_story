@@ -472,14 +472,15 @@ var checkDead = setInterval(function() {
 
               
               //animate background
-              $('.lvl_'+game_stage).css('background-position', '0%');
+              $('#levels').css('background-position', '0%');
               
               $('.lvl_'+game_stage).animate({
                 
                 'background-position-x': '100%'
                 
               }, 3000, 'linear');
-
+              
+              $('#levels').css('background-position', '0%');
 
             
               //make sure it doesnt go above 5
