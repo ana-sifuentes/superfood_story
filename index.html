@@ -73,38 +73,12 @@
 
 
 /**********************/
-/*PAGES */
-
-	/* general wrapper for the content */
-	.content_wrapper {
-    		max-width: 1250px;
-    		width: 85%;
-		margin: 40px auto 0px auto;
-	}
-
-	/*main layout class */
-	.column  {
-		float:left;
-		margin:1% 1%;
-		padding: 0px;
-	}
-
-	/* 100% */
-	.full_size { width:98%; }
-	/* 33% */
-	.third_size { width: 31.33%; }
-	/* 66% */
-	.two_third_size { width: 64.6%; }
-
 
 
 
 /* fonts */
-	.menu.item p, .menu.main p{
-		font-family: 'VCR_OSD_MONO';
-	}
 
-	.game_container p{
+  p{
 		font-family: 'VCR_OSD_MONO';
 		text-align:center;
 	}
@@ -139,6 +113,8 @@
 .animate{
     animation: jump 0.3s linear;
 }
+
+
 @keyframes jump{
     0%{top: 202px;}
     30%{top: 100px;}
@@ -155,6 +131,9 @@
     background-image:url("assets/fireball.png");
     animation: block 1s infinite linear;
 }
+
+
+
 @keyframes block{
     0%{left: 800px}
     100%{left: -30px}
@@ -170,36 +149,13 @@
   margin:auto;
 }
 
-.stage{
-      float: left;
-      height: 300px;
-      width: 100%;
-      position: relative;
-      display: none;
-      background-repeat: no-repeat;
-      background-position: left;
-      background-image: url(https://via.placeholder.com/2000x300);
-      -webkit-animation-name: MOVE-BG;
-      -webkit-animation-duration: 100s;
-      -webkit-animation-timing-function: linear;
-      -webkit-animation-iteration-count: infinite;
-}
 
-@-webkit-keyframes MOVE-BG {
-	from {
-		-webkit-transform: translateX(0);
-	}
-	to {
-		-webkit-transform: translateX(-187%);
-	}
-}
 
 
 #scoreSpan.off{
 display:none;
 }
-
-.stage.current, #scoreSpan{
+ #scoreSpan{
 	display:block;
 }
 
@@ -208,14 +164,73 @@ display:none;
 
 /****************/
 /* levels */
-#stage0 p{
-    color: green;
-    font-size: 30PX;
-    font-weight: 900;
-    padding-top: 150px;
+
+
+.levels{
+  float: left;
+  height: 300px;
+  width: 100%;
+  position: relative;
+  display: none;
+  background-repeat: no-repeat;
+  background-position-x: 0%;
+}
+
+.levels.current{
+  display: block;
+}
+
+/*welcome screen*/
+.levels.current.lvl_0{
+  display: block;
+  background-image: url(https://via.placeholder.com/300x300/FF0000/000000);
+}
+
+/*mesoamerica*/
+.levels.current.lvl_1{
+  display: block;
+  background-position-x: 0%;
+  background-image: url(https://via.placeholder.com/2000x300);
+}
+
+/*colonization*/
+.levels.current.lvl_2{
+  display: block;
+  background-position-x: 0%;
+  background-image: url(https://via.placeholder.com/2000x300/FFFF00/000000);
+}
+
+/*rediscovery*/
+.levels.current.lvl_3{
+  display: block;
+  background-position-x: 0%;
+  background-image: url(https://via.placeholder.com/2000x300/000000/FFFFFF);
+}
+
+/*modernity*/
+.levels.current.lvl_4{
+  display: block;
+  background-position-x: 0%;
+  background-image: url(https://via.placeholder.com/2000x300);
 }
 
 
+/*GAME ENDED*/
+.levels.current.lvl_5{
+  display: block;
+  background-position-x: 0%;
+  background-image: url(https://via.placeholder.com/100x100);
+}
+
+
+/***********************************************************************/
+
+/* MOBILE */
+@media only screen and (max-width: 450px) {
+
+
+
+}
 
 
 
@@ -259,76 +274,10 @@ display:none;
 
 
 
-
-  <style>
-
-  .levels{
-    float: left;
-    height: 300px;
-    width: 100%;
-    position: relative;
-    display: none;
-    background-repeat: no-repeat;
-    background-position-x: 0%;
-  }
-
-  .levels.current{
-    display: block;
-  }
-
-  /*welcome screen*/
-  .levels.current.lvl_0{
-    display: block;
-    background-image: url(https://via.placeholder.com/300x300/FF0000/000000);
-  }
-
-  /*mesoamerica*/
-  .levels.current.lvl_1{
-    display: block;
-    background-position-x: 0%;
-    background-image: url(https://via.placeholder.com/2000x300);
-  }
-
-  /*colonization*/
-  .levels.current.lvl_2{
-    display: block;
-    background-position-x: 0%;
-    background-image: url(https://via.placeholder.com/2000x300/FFFF00/000000);
-  }
-
-  /*rediscovery*/
-  .levels.current.lvl_3{
-    display: block;
-    background-position-x: 0%;
-    background-image: url(https://via.placeholder.com/2000x300/000000/FFFFFF);
-  }
-
-  /*modernity*/
-  .levels.current.lvl_4{
-    display: block;
-    background-position-x: 0%;
-    background-image: url(https://via.placeholder.com/2000x300);
-  }
+  <h1>Click on the space bar to jump!</h1>
 
 
-  /*GAME ENDED*/
-  .levels.current.lvl_5{
-    display: block;
-    background-position-x: 0%;
-    background-image: url(https://via.placeholder.com/100x100);
-  }
-
-  </style>
-
-
-
-    	<div class="content_wrapper">
-    	<div class="column full_size game_container" >
-
-       <p>Click on the space bar to jump!</p>
-
-
-       <div class="game">
+  <div class="game">
 
 
 	        <div id="welcome_screen" class="levels lvl_0 current">
@@ -340,7 +289,7 @@ display:none;
              <div id="block"></div>
 	         </div>
 
-         </div>
+  </div>
 
 
 
