@@ -274,14 +274,17 @@ display:none;
 
 
 
-  <h1>Click on the space bar to jump!</h1>
 
 
   <div class="game">
 
 
 	        <div id="welcome_screen" class="levels lvl_0 current">
-		          <p> PRESS SPACE BAR TO START! </p>
+
+              <h3>SUPERFOOD <br> STORY</h3>
+              
+		          <p> PRESS SPACE </p>
+              
 	        </div>
 
 	         <div id="levels" class="levels lvl_1">
@@ -295,7 +298,7 @@ display:none;
 
 
     <div id="BOTON" class="mobile_button">
-        JUMP
+        SPACE
     </div>
 
     <p>SCORE: <span id="scoreSpan" class="off"></span></p>
@@ -424,6 +427,7 @@ var checkDead = setInterval(function() {
               game_stage = game_stage+1;
               $("#levels").addClass('lvl_'+game_stage);
 
+              $("#levels").css('background-position-x', '0%');
               animate_background();
 
           
