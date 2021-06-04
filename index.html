@@ -467,21 +467,27 @@ var checkDead = setInterval(function() {
               game_stage = game_stage+1;
               $("#levels").addClass('lvl_'+game_stage);
 
+              $('#levels').animate({
+                
+                'background-position-x': '100%'
+                
+              }, 3000, 'linear');
+            
               //make sure it doesnt go above 5
-                if(game_stage > 5){
+              if(game_stage > 5){
                   game_stage = 5;
                   clearInterval(intervalId);
 
                   console.log('the game is over');
-                }
+              }
 
-            
-              
+
+
         }, 3000);
 
 
 
-      
+
     }
 
 
