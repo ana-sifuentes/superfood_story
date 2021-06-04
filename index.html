@@ -468,19 +468,10 @@ var checkDead = setInterval(function() {
 
               game_stage = game_stage+1;
               $("#levels").addClass('lvl_'+game_stage);
-              $("#levels").css('background-position-x', '0%');
 
-              
-              //animate background
-              $("#levels").animate({
-                
-                'background-position-x': '100%'
-                
-              }, 3000, 'linear');
-              
-  
+              reset_position();
 
-            
+          
               //make sure it doesnt go above 5
               if(game_stage >= 5){
                   game_stage = 5;
@@ -498,7 +489,23 @@ var checkDead = setInterval(function() {
 
     }
 
+    function reset_position(){
+      
+      $("#levels").css('background-position-x', '0%');
 
+      animate_background();
+    }
+
+    function animate_background(){
+      //animate background
+      $("#levels").animate({
+        
+        'background-position-x': '100%'
+        
+      }, 3000, 'linear');
+      
+
+    }
 
 
 </script>
