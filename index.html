@@ -30,13 +30,13 @@
 /* MENU */
 
 	.menu.wrapper{
-		width:100%;  
+		width:100%;
 		height:70px;
 		margin-top:10px;
 		font-family: 'VCR_OSD_MONO';
 	}
-	
-	
+
+
 	.menu.main{
 	 	float: left;
     		width: 18%;
@@ -45,13 +45,13 @@
     		text-align: left;
 		font-weight: 800;
 	}
-	
+
 	.menu.spacer{
     		float: left;
     		width: 44%;
     		height: 1px;
 	}
-	
+
 	.menu.item{
     		float: left;
     		width: 8%;
@@ -60,13 +60,13 @@
     		font-size: 20px;
     		text-align: center;
 	}
-	
-	
+
+
 	a > .menu.item {
 		color:black;
 	}
-	
-	.menu.item.current, 
+
+	.menu.item.current,
 	.menu.item:hover{
 		border-bottom:2px solid black;
 	}
@@ -83,7 +83,7 @@
 	}
 
 	/*main layout class */
-	.column  { 
+	.column  {
 		float:left;
 		margin:1% 1%;
 		padding: 0px;
@@ -161,12 +161,12 @@
 }
 
 .mobile_button{
-  width:50%; 
-  text-align: center; 
-  cursor: pointer; 
-  border:1px solid black; 
-  height:40px; 
-  background-color:red; 
+  width:50%;
+  text-align: center;
+  cursor: pointer;
+  border:1px solid black;
+  height:40px;
+  background-color:red;
   margin:auto;
 }
 
@@ -183,13 +183,13 @@
       -webkit-animation-duration: 100s;
       -webkit-animation-timing-function: linear;
       -webkit-animation-iteration-count: infinite;
-}	
+}
 
 @-webkit-keyframes MOVE-BG {
 	from {
 		-webkit-transform: translateX(0);
 	}
-	to { 
+	to {
 		-webkit-transform: translateX(-187%);
 	}
 }
@@ -200,7 +200,7 @@ display:none;
 }
 
 .stage.current, #scoreSpan{
-	display:block; 
+	display:block;
 }
 
 
@@ -259,7 +259,7 @@ display:none;
 
 
 
-  
+
   <style>
 
   .levels{
@@ -280,13 +280,13 @@ display:none;
   .levels.current.lvl_0{
     display: block;
     background-image: url(https://via.placeholder.com/300x300/FF0000/000000);
-  } 
+  }
 
   /*mesoamerica*/
   .levels.current.lvl_1{
     display: block;
     background-image: url(https://via.placeholder.com/2000x300);
-  }  
+  }
 
   /*colonization*/
   .levels.current.lvl_2{
@@ -315,7 +315,7 @@ display:none;
 
   </style>
 
-  
+
 
     	<div class="content_wrapper">
     	<div class="column full_size game_container" >
@@ -343,7 +343,7 @@ display:none;
     <div id="BOTON" class="mobile_button">
         JUMP
     </div>
-    
+
     <p>SCORE: <span id="scoreSpan" class="off"></span></p>
 
 	</div>
@@ -356,7 +356,7 @@ display:none;
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
+
 <script>
 //based on the code by : https://github.com/Beat0154
 
@@ -393,7 +393,7 @@ var checkDead = setInterval(function() {
 
 ////////////////////////////////////////////////////////////////////////
 //user clicks space or button
-  
+
   //when the user clicks
   document.body.onkeyup = function(e){
       if(e.keyCode == 32){
@@ -409,7 +409,7 @@ var checkDead = setInterval(function() {
   }
 
 		$('#BOTON').click(function(){
-      
+
       if(game_stage == 0){
          title_screen();
       }
@@ -431,13 +431,13 @@ var checkDead = setInterval(function() {
       $('#welcome_screen').removeClass('current');
       $('#scoreSpan').removeClass('off');
 
-      //switch to levels 
+      //switch to levels
       $("#levels").addClass('current');
 
       game_stage = 1;
       counter=0;
 
-      begin_counting();
+      change_lvl();
     }
 
 
@@ -451,41 +451,44 @@ var checkDead = setInterval(function() {
     }
 
 
-    //start 
-    function begin_counting(){
-
-      //every x seconds , change lvl 
-      setInterval(function(){
-        console.log('changing lvl');
-        change_lvl();
-      }, 1500)//for now its every 1.5 seconds
-
-    }
-
-    
-    //change lvl 
+    //start
     function change_lvl(){
 
+      console.log('gaming begins!');
 
-      console.log(game_stage);
-      //remove previous lvl
-      $("#levels").removeClass('lvl_'+game_stage);
-      
-      //add new lvl 
-      game_stage = game_stage+1;
+      while( game_stage <= 5){
+        
+      //every x seconds , change lvl
+      setInterval(function(){
+        console.log('changing lvl from ' + game_stage);
+        //remove previous lvl
+        $("#levels").removeClass('lvl_'+game_stage);
 
-      //make sure it doesnt go above 5
-      if(game_stage > 5){
-        game_stage = 5;
+        //add new lvl
+        game_stage = game_stage+1;
+
+        //make sure it doesnt go above 5
+        if(game_stage > 5){
+          game_stage = 5;
+        }
+
+        console.log('lvl is now' + game_stage);
+        //change to new lvl
+        $("#levels").addClass('lvl_'+game_stage);
+
+        
+      }, 3000)//for now its every 3 seconds
+
+
       }
 
-      //change to new lvl
-      $("#levels").addClass('lvl_'+game_stage);
-      begin_counting();
+      //call function to end game
 
+      
     }
+
+
 
 
 </script>
 </html>
-
