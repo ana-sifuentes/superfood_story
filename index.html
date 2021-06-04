@@ -371,20 +371,6 @@ var counter=0;
 var game_stage=0;
 
 
-//if we arent on the title screen 
-// change levels every 30 seconds 
-if(game_stage > 0 ){
-
-  setInterval(function(){
-    console.log('changing lvl');
-    change_lvl();
-  }, 1500)//for now its every 1.5 seconds
-
-  
-}
-
-
-
 
 //check if player lost
 
@@ -450,6 +436,8 @@ var checkDead = setInterval(function() {
 
       game_stage = 1;
       counter=0;
+
+      begin_counting();
     }
 
 
@@ -462,6 +450,19 @@ var checkDead = setInterval(function() {
         },300);
     }
 
+
+    //start 
+    function begin_counting(){
+
+      //every x seconds , change lvl 
+      setInterval(function(){
+        console.log('changing lvl');
+        change_lvl();
+      }, 1500)//for now its every 1.5 seconds
+
+    }
+
+    
     //change lvl 
     function change_lvl(){
 
@@ -480,6 +481,7 @@ var checkDead = setInterval(function() {
 
       //change to new lvl
       $("#levels").addClass('lvl_'+game_stage);
+      begin_counting();
 
     }
 
