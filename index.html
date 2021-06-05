@@ -160,10 +160,10 @@
 
 
 
-#scoreSpan.off{
+#score_points.off{
 display:none;
 }
- #scoreSpan{
+ #score_points{
 	display:block;
 }
 
@@ -332,7 +332,9 @@ display:none;
 
 
 
+  <div class="play">Play</div>
 
+  <div class="pause">Stop</div>
 
   <div class="game">
 
@@ -355,11 +357,13 @@ display:none;
 
 
 
-    <div id="BOTON" class="mobile_button">
+    <div id="mobile_button" class="mobile_button">
         SPACE
     </div>
 
-    <p>SCORE: <span id="scoreSpan" class="off"></span></p>
+
+    
+    <p id="score_display">SCORE: <span id="score_points" class="off"></span></p>
 
 	</div>
 	</div>
@@ -376,42 +380,70 @@ display:none;
 //based on the code by : https://github.com/Beat0154
 
 
-//variables
-var character = document.getElementById("character");
-var block = document.getElementById("block");
+
+$(document).ready(function() {
 
 
-//counter set to 0 before stage 1
-var counter=0;
-var game_stage=0;
+  
+  //variables
+  var character = document.getElementById("character");
+  var block = document.getElementById("block");
+
+
+  //counter set to 0 before stage 1
+  var counter=0;
+  var game_stage=0;
 
 
 
-//check if player lost
+  //check if player makes points 
 
-var checkDead = setInterval(function() {
-    let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-    let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+  var check_lose_points = setInterval(function() {
+    
+      let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+      let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
 
-    if(blockLeft<70 && blockLeft>-20 && characterTop>=185){
-        block.style.animation = "none";
-      //  alert("Game Over. score: "+Math.floor(counter/100));
-        counter=0;
-        block.style.animation = "block 1s infinite linear";
-    }else{
-        counter++;
-        document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
+      if(blockLeft<70 && blockLeft>-20 && characterTop>=185){
+        
+          block.style.animation = "none";
+        //  alert("Game Over. score: "+Math.floor(counter/100));
+          counter--;
+          if(counter< 0){
+            counter= 0;
+          }
+          
+          block.style.animation = "block 1s infinite linear";
+      }else{
+          counter++;
+          document.getElementById("score_points").innerHTML = Math.floor(counter/100);
+      }
+  }, 10)
+
+
+
+  ////////////////////////////////////////////////////////////////////////
+  //user clicks space or button
+
+    //when the user clicks
+    document.body.onkeyup = function(e){
+        if(e.keyCode == 32){
+
+          if(game_stage == 0){
+             title_screen();
+          }
+
+          if(game_stage > 0 && game_stage <5){
+             jump();
+          }
+
+          if(game_stage == 5){
+            location.reload();
+          }
+
+      }
     }
-}, 10)
 
-
-
-////////////////////////////////////////////////////////////////////////
-//user clicks space or button
-
-  //when the user clicks
-  document.body.onkeyup = function(e){
-      if(e.keyCode == 32){
+  		$('#mobile_button').click(function(){
 
         if(game_stage == 0){
            title_screen();
@@ -425,24 +457,40 @@ var checkDead = setInterval(function() {
           location.reload();
         }
 
-    }
-  }
+      });
 
-		$('#BOTON').click(function(){
 
-      if(game_stage == 0){
-         title_screen();
-      }
+      
+////////////////////////////////////////////////////////////////////////
+//audio
 
-      if(game_stage > 0 && game_stage <5){
-         jump();
-      }
+  var audio_music = document.createElement('audio');
+  audio_music.setAttribute('src', 'game assets/aztec fall.wav');
+  audio_music.setAttribute('autoplay', 'autoplay');
+  
+  //audio_music.load()
+  $.get();
+      audio_music.addEventListener("load", function() {
+      audio_music.play();
+  }, true);
 
-      if(game_stage == 5){
-        location.reload();
-      }
 
-    });
+
+
+  $('.play').click(function() {
+    audio_music.play();
+  });
+
+
+  $('.pause').click(function() {
+    audio_music.pause();
+  });
+
+
+
+});
+
+
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -453,7 +501,7 @@ var checkDead = setInterval(function() {
 
       //remove the title screen and show score
       $('#welcome_screen').removeClass('current');
-      $('#scoreSpan').removeClass('off');
+      $('#score_points').removeClass('off');
 
       //switch to levels
       $("#levels").addClass('current');
@@ -515,7 +563,7 @@ var checkDead = setInterval(function() {
       //hide character
        $('#character').hide();
        $('#block').hide();
-
+       $('#score_display').hide();
 
     }
 
