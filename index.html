@@ -380,7 +380,8 @@
 
     
     <div class="column volume">
-      AUDIO <span class="volume_control on" id="volume_control"></span>
+      AUDIO: 
+      <span class="volume_control on" id="volume_control"></span>
     </div>
     
   </div>
@@ -506,10 +507,14 @@
       });
 
 
-      
+    	$('.column.volume').click(function(){    
 
+        if( $('#volume_control').hasClass('on')  ){
+          $('#volume_control').removeClass('on').addClass('off');
+        }
 
-
+        $('#volume_control').removeClass('off').addClass('on');
+      });
 
 
 
@@ -588,6 +593,8 @@
        $('#character').hide();
        $('#block').hide();
 
+       $('.column.level').html('GAME OVER');
+       
        game_ended = true;
 
     }
