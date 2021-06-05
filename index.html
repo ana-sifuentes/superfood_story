@@ -430,7 +430,14 @@
 //based on the code by : https://github.com/Beat0154
 
 
-  
+//audio files 
+$(function(){
+  const intro_music = new Audio('game assets/aztec fall.wav');
+  intro_music.loop = true;
+  intro_music.play();
+});
+
+
   //variables
   var character = document.getElementById("character");
   var block = document.getElementById("block");
@@ -445,12 +452,9 @@
 
 
 
-  //audio files 
-  const intro_music = new Audio('game assets/aztec fall.wav');
-  intro_music.loop = true;
-  intro_music.play();
-  
 
+
+  
   //check if player makes points 
 
   var check_lose_points = setInterval(function() {
