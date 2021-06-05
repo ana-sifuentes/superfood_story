@@ -222,7 +222,7 @@ position: relative;
   display: block;
   background-position-x: 0%;
   animation: 30s level_animation linear alternate infinite;
-  background-image: url(https://via.placeholder.com/2000x400);
+  background-image: url(https://via.placeholder.com/2000x400/FFFFFF/000000?text=LEVEL_1);
 }
 
 /*colonization*/
@@ -230,7 +230,23 @@ position: relative;
   display: block;
   background-position-x: 0%;
   animation: 30s level_animation linear alternate infinite;
-  background-image: url(https://via.placeholder.com/2000x400/FFFF00/000000);
+  background-image: url(https://via.placeholder.com/2000x400/FFFF00/000000?text=LEVEL_2);
+}
+
+/*rediscovery*/
+.levels.current.lvl_3{
+  display: block;
+  background-position-x: 0%;
+  animation: 30s level_animation linear alternate infinite;
+  background-image: url(https://via.placeholder.com/2000x400/FF0000/000000?text=LEVEL_3);
+}
+
+/*modernity*/
+.levels.current.lvl_4{
+  display: block;
+  background-position-x: 0%;
+  animation: 30s level_animation linear alternate infinite;
+  background-image: url(https://via.placeholder.com/2000x400/0000FF/000000?text=LEVEL_4);
 }
 
 
@@ -244,28 +260,11 @@ position: relative;
 }
 
 
-
-
-/*rediscovery*/
-.levels.current.lvl_3{
-  display: block;
-  background-position-x: 0%;
-  background-image: url(https://via.placeholder.com/2000x400/000000/FFFFFF);
-}
-
-/*modernity*/
-.levels.current.lvl_4{
-  display: block;
-  background-position-x: 0%;
-  background-image: url(https://via.placeholder.com/2000x400);
-}
-
-
 /*GAME ENDED*/
 .levels.current.lvl_5{
   display: block;
   background-position-x: 0%;
-  background-image: url(https://via.placeholder.com/600x400);
+  background-image: url(https://via.placeholder.com/600x400?text=GAME_END);
 }
 
 
@@ -440,7 +439,6 @@ var checkDead = setInterval(function() {
       game_stage = 1;
       counter=0;
 
-  //    animate_background();
       change_lvl();
     }
 
@@ -455,7 +453,7 @@ var checkDead = setInterval(function() {
     }
 
 
-    //start
+    //start levels 
     function change_lvl(){
 
 
@@ -473,35 +471,29 @@ var checkDead = setInterval(function() {
               game_stage = game_stage+1;
               $("#levels").addClass('lvl_'+game_stage);
 
-            /*  $("#levels").css('background-position-x', '0%');
-              animate_background();
-            */
-
           
-              //make sure it doesnt go above 5
+              //make sure it doesnt go above 5, if so the game is over 
               if(game_stage >= 5){
+                
                   game_stage = 5;
                   clearInterval(intervalId);
 
                   console.log('the game is over');
+                  end_game();
+                  
               }
 
-
-
-        }, 3000);
-
-
-
+        }, 30000); //every 30 seconds change lvl
 
     }
 
-    function animate_background(){
 
-      $("#levels").css('background-position-x', '0%').animate({'background-position-x': '100%'}, 3000);
-      
+    function end_game(){
+
+      //hide character 
+       $('#character').hide();
+       $('#block').hide();
     }
-
-
 
 
 </script>
