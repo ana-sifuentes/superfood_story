@@ -432,10 +432,7 @@
 
 
 //audio files 
-$(function(){
-  const intro_music = new Audio('game assets/aztec fall.wav');
-  intro_music.loop = true;
-});
+
 
 
   //variables
@@ -450,7 +447,8 @@ $(function(){
   var game_ended = false;
 
 
-
+  const intro_music = new Audio('game assets/aztec fall.wav');
+  intro_music.loop = true;
 
 
 
@@ -532,7 +530,10 @@ $(function(){
         }
         else{ //unmute
           $('#volume_control').removeClass('off').addClass('on');
+
+
           intro_music.play();
+          
           $('intro_music').prop("muted", false);
         }
       });
