@@ -400,10 +400,6 @@ display:none;
 //based on the code by : https://github.com/Beat0154
 
 
-
-$(document).ready(function() {
-
-
   
   //variables
   var character = document.getElementById("character");
@@ -481,34 +477,8 @@ $(document).ready(function() {
 
 
       
-////////////////////////////////////////////////////////////////////////
-//audio
-
-  var audio_music = document.createElement('audio');
-  audio_music.setAttribute('src', 'game assets/aztec fall.wav');
-  audio_music.setAttribute('autoplay', 'autoplay');
-  
-  //audio_music.load()
-  $.get();
-      audio_music.addEventListener("load", function() {
-      audio_music.play();
-  }, true);
 
 
-
-
-  $('.play').click(function() {
-    audio_music.play();
-  });
-
-
-  $('.pause').click(function() {
-    audio_music.pause();
-  });
-
-
-
-});
 
 
 
@@ -587,6 +557,34 @@ $(document).ready(function() {
 
     }
 
+
+/*
+////////////////////////////////////////////////////////////////////////
+//audio
+
+  var audio_music = document.createElement('audio');
+  audio_music.setAttribute('src', 'game assets/aztec fall.wav');
+  audio_music.setAttribute('autoplay', 'autoplay');
+  
+  //audio_music.load()
+  $.get();
+      audio_music.addEventListener("load", function() {
+      audio_music.play();
+  }, true);
+
+
+
+
+  $('.play').click(function() {
+    audio_music.play();
+  });
+
+
+  $('.pause').click(function() {
+    audio_music.pause();
+  });
+
+*/
 
 </script>
 </html>
