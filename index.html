@@ -129,26 +129,6 @@
     100%{left: -30px}
 }
 
-.mobile_button{
-  width:50%;
-  text-align: center;
-  cursor: pointer;
-  border:1px solid black;
-  height:40px;
-  background-color:red;
-  margin:auto;
-}
-
-
-
-
-#scoreSpan.off{
-display:none;
-}
- #scoreSpan{
-	display:block;
-}
-
 
 
 
@@ -160,6 +140,32 @@ display:none;
   max-width: 600px;
 }
 
+  .mobile_button{
+      width: 50%;
+      max-width: 600px;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid black;
+      height: 40px;
+      font-family: 'VCR_OSD_MONO';
+      padding: 4vh 0px 2vh 0px;
+      background-color: #BEBFB9;
+      margin: 2vh auto;
+      font-size: 25px;
+  }
+
+  .mobile_button:hover{
+    background-color: #E1E1DF;
+  }
+
+
+
+#scoreSpan.off{
+display:none;
+}
+ #scoreSpan{
+	display:block;
+}
 
 
 /****************/
@@ -191,6 +197,10 @@ display:none;
   background-image: url('game assets/welcome_screen.svg');
 }
 
+
+
+
+  
 @keyframes welcome_screen_animation {
     from {
         background-position-y: 100% 
@@ -201,17 +211,19 @@ display:none;
 }
 
 #welcome_screen > h3{
-    font-weight: 900;
-    font-size: 50px;
-    line-height: normal;
-    top: 35%;
-    position: relative;
-    
+  font-weight: 900;
+  font-size: 50px;
+  line-height: normal;
+  top: 35%;
+  position: relative;
+  width: 75%;
+  background-color: white;
+  margin: auto;
 }
 
 #welcome_screen p{
   top: 38%;
-position: relative;
+  position: relative;
 }
 
 
@@ -221,7 +233,7 @@ position: relative;
 .levels.current.lvl_1{
   display: block;
   background-position-x: 0%;
-  animation: 30s level_animation linear alternate infinite;
+  animation: 30s level_animation linear;
   background-image: url(https://via.placeholder.com/2000x400/FFFFFF/000000?text=LEVEL_1);
 }
 
@@ -229,7 +241,7 @@ position: relative;
 .levels.current.lvl_2{
   display: block;
   background-position-x: 0%;
-  animation: 30s level_animation linear alternate infinite;
+  animation: 30s level_animation linear;
   background-image: url(https://via.placeholder.com/2000x400/FFFF00/000000?text=LEVEL_2);
 }
 
@@ -237,7 +249,7 @@ position: relative;
 .levels.current.lvl_3{
   display: block;
   background-position-x: 0%;
-  animation: 30s level_animation linear alternate infinite;
+  animation: 30s level_animation linear;
   background-image: url(https://via.placeholder.com/2000x400/FF0000/000000?text=LEVEL_3);
 }
 
@@ -245,7 +257,7 @@ position: relative;
 .levels.current.lvl_4{
   display: block;
   background-position-x: 0%;
-  animation: 30s level_animation linear alternate infinite;
+  animation: 30s level_animation linear;
   background-image: url(https://via.placeholder.com/2000x400/0000FF/000000?text=LEVEL_4);
 }
 
@@ -274,6 +286,10 @@ position: relative;
 @media only screen and (max-width: 450px) {
 
   .game{  max-width: 300px;}
+  
+  .levels.current.lvl_0{
+    animation: 05s welcome_screen_animation linear alternate infinite;
+  }
 
 }
 
