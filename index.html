@@ -400,13 +400,18 @@ var checkDead = setInterval(function() {
   document.body.onkeyup = function(e){
       if(e.keyCode == 32){
 
-       if(game_stage == 0){
-          title_screen();
-       }
+        if(game_stage == 0){
+           title_screen();
+        }
 
-       if(game_stage != 0){
-          jump();
-       }
+        if(game_stage > 0 && game_stage <5){
+           jump();
+        }
+
+        if(game_stage == 5){
+          location.reload();
+        }
+        
     }
   }
 
@@ -416,10 +421,14 @@ var checkDead = setInterval(function() {
          title_screen();
       }
 
-      if(game_stage != 0){
+      if(game_stage > 0 && game_stage <5){
          jump();
       }
 
+      if(game_stage == 5){
+        location.reload();
+      }
+      
     });
 
 
@@ -493,6 +502,8 @@ var checkDead = setInterval(function() {
       //hide character 
        $('#character').hide();
        $('#block').hide();
+
+
     }
 
 
