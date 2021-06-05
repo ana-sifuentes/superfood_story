@@ -512,8 +512,9 @@
         if( $('#volume_control').hasClass('on')  ){
           $('#volume_control').removeClass('on').addClass('off');
         }
-
-        $('#volume_control').removeClass('off').addClass('on');
+        else{
+          $('#volume_control').removeClass('off').addClass('on');
+        }
       });
 
 
