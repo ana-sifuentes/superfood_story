@@ -443,6 +443,14 @@
   var game_ended = false;
 
 
+
+
+  //audio files 
+  const intro_music = new Audio('game assets/aztec fall.wav');
+  intro_music.loop = true;
+  intro_music.play();
+  
+
   //check if player makes points 
 
   var check_lose_points = setInterval(function() {
@@ -453,10 +461,12 @@
       if(blockLeft<70 && blockLeft>-20 && characterTop>=185){
         
           block.style.animation = "none";
-        //  alert("Game Over. score: "+Math.floor(counter/100));
-        counter=0;
-          
+          counter--;
+          if(counter<0){
+            counter=0;
+          }
           block.style.animation = "block 1s infinite linear";
+          
       }else{
 
           if(game_ended == false){
@@ -509,11 +519,16 @@
 
     	$('.column.volume').click(function(){    
 
+        //mute
         if( $('#volume_control').hasClass('on')  ){
-          $('#volume_control').removeClass('on').addClass('off');
+          
+          $('#volume_control').removeClass('on').addClass('off');      
+          $('intro_music').prop("muted", true);
+          
         }
-        else{
+        else{ //unmute
           $('#volume_control').removeClass('off').addClass('on');
+          $('intro_music').prop("muted", false;
         }
       });
 
