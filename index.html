@@ -160,9 +160,51 @@
 
 
 
-/****************/
-/* levels */
+  
+/*****************************************************************/
+/* level data */
 
+.level_data{   
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    margin: auto;
+    max-width: 600px;
+    font-family: 'VCR_OSD_MONO';
+    font-size: 20px;
+    margin-bottom: 2vh;
+    color:#ffffff;
+  }
+
+  .level_data.playing{
+    color:#000000;
+  }
+
+  .level_data > .column{ 
+    width:33%;
+    float:left;
+  }
+
+  .level_data > .column.level{
+    text-align: center;
+  }
+
+  .level_data > .column.volume{
+    cursor:pointer;
+    text-align: right;
+  }
+  
+  .level_data >  .column.volume > .volume_control.on::before{
+    content:'ON';
+  }
+  
+  .level_data >  .column.volume > .volume_control.off::before{
+    content:'OFF';
+  }
+
+
+/*****************************************************************/
+/* levels */
 
 .levels{
   float: left;
@@ -323,42 +365,6 @@
   </div>
 
 
-<style>
-.level_data{   
-    width: 100%;
-    height: auto;
-    border: 1px solid black;
-    margin: auto;
-    max-width: 600px;
-    font-family: 'VCR_OSD_MONO';
-    font-size: 20px;
-    margin-bottom: 2vh;
-    display:none;
-  }
-
-  .level_data.playing{
-    display: block;
-  }
-
-  .level_data >  .column{ 
-    width:33%;
-    float:left;
-  }
-
-
-  .column.volume{
-    cursor:pointer;
-  }
-  
-  .volume_control.on::before{
-    content:'ON';
-  }
-  
-  .volume_control.off::before{
-    content:'OFF';
-  }
-  
-</style>
 
 
   <div class="level_data">
@@ -385,14 +391,11 @@
 	        <div id="welcome_screen" class="levels lvl_0 current">
 
               <h3>SUPERFOOD STORY</h3>
-
 		          <p> PRESS SPACE </p>
 
 	        </div>
 
-
-
-          
+        
 	         <div id="levels" class="levels lvl_1">
              <div id="character"></div>
              <div id="block"></div>
@@ -436,6 +439,7 @@
   var counter=0;
   var game_stage=0;
 
+  var game_ended = false;
 
 
   //check if player makes points 
@@ -453,8 +457,11 @@
           
           block.style.animation = "block 1s infinite linear";
       }else{
-          counter++;
-          document.getElementById("score_points").innerHTML = Math.floor(counter/100);
+
+          if(game_ended == false){
+            counter++;
+            document.getElementById("score_points").innerHTML = Math.floor(counter/100);
+          }
       }
   }, 10)
 
@@ -525,6 +532,8 @@
       game_stage = 1;
       counter=0;
 
+      $("#lvl_number").html(game_stage);
+      
       change_lvl();
 
     }
@@ -551,13 +560,11 @@
 
 
               $("#levels").removeClass('lvl_'+game_stage);
-
-
-              document.getElementById("lvl_number").innerHTML = game_stage;
-              
+          
               game_stage = game_stage+1;
               $("#levels").addClass('lvl_'+game_stage);
-
+              $("#lvl_number").html(game_stage);
+      
 
               //make sure it doesnt go above 5, if so the game is over
               if(game_stage >= 5){
@@ -580,6 +587,8 @@
       //hide character
        $('#character').hide();
        $('#block').hide();
+
+       game_ended = true;
 
     }
 
