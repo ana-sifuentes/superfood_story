@@ -187,10 +187,18 @@ display:none;
   background-position-y:100%;
   background-repeat: repeat-y;
   background-size: cover;
-  animation: 40s A linear alternate infinite;
+  animation: 40s welcome_screen_animation linear alternate infinite;
   background-image: url('game assets/welcome_screen.svg');
 }
 
+@keyframes welcome_screen_animation {
+    from {
+        background-position-y: 100% 
+    }
+    to {
+        background-position-y: 0%
+    }
+}
 
 #welcome_screen > h3{
     font-weight: 900;
@@ -201,20 +209,9 @@ display:none;
     
 }
 
-
 #welcome_screen p{
   top: 38%;
 position: relative;
-}
-
-
-@keyframes A {
-    from {
-        background-position-y: 100% 
-    }
-    to {
-        background-position-y: 0%
-    }
 }
 
 
@@ -224,6 +221,7 @@ position: relative;
 .levels.current.lvl_1{
   display: block;
   background-position-x: 0%;
+  animation: 30s level_animation linear alternate infinite;
   background-image: url(https://via.placeholder.com/2000x400);
 }
 
@@ -231,8 +229,22 @@ position: relative;
 .levels.current.lvl_2{
   display: block;
   background-position-x: 0%;
+  animation: 30s level_animation linear alternate infinite;
   background-image: url(https://via.placeholder.com/2000x400/FFFF00/000000);
 }
+
+
+@keyframes level_animation {
+    from {
+        background-position-x: 0% 
+    }
+    to {
+        background-position-x: 100%
+    }
+}
+
+
+
 
 /*rediscovery*/
 .levels.current.lvl_3{
@@ -428,7 +440,7 @@ var checkDead = setInterval(function() {
       game_stage = 1;
       counter=0;
 
-      animate_background();
+  //    animate_background();
       change_lvl();
     }
 
@@ -461,8 +473,9 @@ var checkDead = setInterval(function() {
               game_stage = game_stage+1;
               $("#levels").addClass('lvl_'+game_stage);
 
-              $("#levels").css('background-position-x', '0%');
+            /*  $("#levels").css('background-position-x', '0%');
               animate_background();
+            */
 
           
               //make sure it doesnt go above 5
