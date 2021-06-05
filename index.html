@@ -193,17 +193,13 @@ display:none;
   background-position-y:100%;
   background-repeat: repeat-y;
   background-size: cover;
-  animation: 40s welcome_screen_animation linear alternate infinite;
+  animation: 60s welcome_screen_animation linear alternate infinite;
   background-image: url('game assets/welcome_screen.svg');
 }
 
-
-
-
-  
 @keyframes welcome_screen_animation {
     from {
-        background-position-y: 100% 
+        background-position-y: 100%
     }
     to {
         background-position-y: 0%
@@ -264,7 +260,7 @@ display:none;
 
 @keyframes level_animation {
     from {
-        background-position-x: 0% 
+        background-position-x: 0%
     }
     to {
         background-position-x: 100%
@@ -286,10 +282,11 @@ display:none;
 @media only screen and (max-width: 450px) {
 
   .game{  max-width: 300px;}
-  
+
   .levels.current.lvl_0{
-    animation: 05s welcome_screen_animation linear alternate infinite;
+    animation: 20s welcome_screen_animation linear alternate infinite;
   }
+  #welcome_screen > h3{width: 100%}
 
 }
 
@@ -343,9 +340,9 @@ display:none;
 	        <div id="welcome_screen" class="levels lvl_0 current">
 
               <h3>SUPERFOOD STORY</h3>
-              
+
 		          <p> PRESS SPACE </p>
-              
+
 	        </div>
 
 	         <div id="levels" class="levels lvl_1">
@@ -427,7 +424,7 @@ var checkDead = setInterval(function() {
         if(game_stage == 5){
           location.reload();
         }
-        
+
     }
   }
 
@@ -444,7 +441,7 @@ var checkDead = setInterval(function() {
       if(game_stage == 5){
         location.reload();
       }
-      
+
     });
 
 
@@ -478,7 +475,7 @@ var checkDead = setInterval(function() {
     }
 
 
-    //start levels 
+    //start levels
     function change_lvl(){
 
 
@@ -487,25 +484,25 @@ var checkDead = setInterval(function() {
 
         var intervalId = window.setInterval(function(){
 
-            
+
               $("#levels").removeClass('lvl_'+game_stage);
-              
+
               console.log('lvl is now' + game_stage);
 
 
               game_stage = game_stage+1;
               $("#levels").addClass('lvl_'+game_stage);
 
-          
-              //make sure it doesnt go above 5, if so the game is over 
+
+              //make sure it doesnt go above 5, if so the game is over
               if(game_stage >= 5){
-                
+
                   game_stage = 5;
                   clearInterval(intervalId);
 
                   console.log('the game is over');
                   end_game();
-                  
+
               }
 
         }, 30000); //every 30 seconds change lvl
@@ -515,7 +512,7 @@ var checkDead = setInterval(function() {
 
     function end_game(){
 
-      //hide character 
+      //hide character
        $('#character').hide();
        $('#block').hide();
 
