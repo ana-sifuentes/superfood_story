@@ -192,6 +192,7 @@
   .level_data > .column.volume{
     cursor:pointer;
     text-align: right;
+    color:#000000;
   }
   
   .level_data >  .column.volume > .volume_control.on::before{
@@ -381,7 +382,7 @@
     
     <div class="column volume">
       AUDIO: 
-      <span class="volume_control on" id="volume_control"></span>
+      <span class="volume_control off" id="volume_control"></span>
     </div>
     
   </div>
@@ -434,7 +435,6 @@
 $(function(){
   const intro_music = new Audio('game assets/aztec fall.wav');
   intro_music.loop = true;
-  intro_music.play();
 });
 
 
@@ -532,6 +532,7 @@ $(function(){
         }
         else{ //unmute
           $('#volume_control').removeClass('off').addClass('on');
+          intro_music.play();
           $('intro_music').prop("muted", false);
         }
       });
