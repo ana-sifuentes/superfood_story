@@ -333,12 +333,48 @@ display:none;
 
 
 
+  <div class="level_data">
 
+    <div id="score_display">SCORE: 
+      <span id="score_points" class="off"></span>
+    </div>
+
+
+    <div class="volume" style="width: 10%;margin: auto;max-width: 80px;text-align: center; 
+    font-family: 'VCR_OSD_MONO';
+      height: 20px;
+      padding: 10px 0px;
+      font-size: 20px;
+      background-color: #BEBFB9;
+      margin-bottom: 2vh;">
+      Stop
+    </div>
+    
+  </div>
 
 
   <div class="game">
 
 
+
+    <div class="level_data">
+
+      <div id="score_display">SCORE: 
+        <span id="score_points" class="off"></span>
+      </div>
+
+
+      <div class="volume" style="width: 10%;margin: auto;max-width: 80px;text-align: center; 
+      font-family: 'VCR_OSD_MONO';
+        height: 20px;
+        padding: 10px 0px;
+        font-size: 20px;
+        background-color: #BEBFB9;
+        margin-bottom: 2vh;">
+        Stop
+      </div>
+      
+    </div>
 	        <div id="welcome_screen" class="levels lvl_0 current">
 
               <h3>SUPERFOOD STORY</h3>
@@ -348,24 +384,7 @@ display:none;
 	        </div>
 
 
-          <div class="level_data">
 
-            <div id="score_display">SCORE: 
-              <span id="score_points" class="off"></span>
-            </div>
-
-
-            <div class="volume" style="width: 10%;margin: auto;max-width: 80px;text-align: center; 
-            font-family: 'VCR_OSD_MONO';
-              height: 20px;
-              padding: 10px 0px;
-              font-size: 20px;
-              background-color: #BEBFB9;
-              margin-bottom: 2vh;">
-              Stop
-            </div>
-            
-          </div>
           
 	         <div id="levels" class="levels lvl_1">
              <div id="character"></div>
@@ -423,10 +442,7 @@ display:none;
         
           block.style.animation = "none";
         //  alert("Game Over. score: "+Math.floor(counter/100));
-          counter--;
-          if(counter< 0){
-            counter= 0;
-          }
+        counter=0;
           
           block.style.animation = "block 1s infinite linear";
       }else{
