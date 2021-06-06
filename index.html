@@ -447,6 +447,7 @@
   var game_ended = false;
 
 
+  //load music files 
   const intro_music = new Audio('game assets/aztec fall.wav');
   intro_music.loop = true;
 
@@ -525,16 +526,17 @@
         if( $('#volume_control').hasClass('on')  ){
           
           $('#volume_control').removeClass('on').addClass('off');      
-          $('intro_music').prop("muted", true);
+          intro_music.muted = true;
           
         }
         else{ //unmute
           $('#volume_control').removeClass('off').addClass('on');
 
-
-          intro_music.play();
+          if( game_stage == 1 || game_stage == 5){
+            intro_music.play();
+            intro_music.muted = false;
+          }
           
-          $('intro_music').prop("muted", false);
         }
       });
 
@@ -622,33 +624,7 @@
     }
 
 
-/*
-////////////////////////////////////////////////////////////////////////
-//audio
 
-  var audio_music = document.createElement('audio');
-  audio_music.setAttribute('src', 'game assets/aztec fall.wav');
-  audio_music.setAttribute('autoplay', 'autoplay');
-  
-  //audio_music.load()
-  $.get();
-      audio_music.addEventListener("load", function() {
-      audio_music.play();
-  }, true);
-
-
-
-
-  $('.play').click(function() {
-    audio_music.play();
-  });
-
-
-  $('.pause').click(function() {
-    audio_music.pause();
-  });
-
-*/
 
 </script>
 </html>
