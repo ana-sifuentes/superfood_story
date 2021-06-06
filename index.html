@@ -533,11 +533,8 @@
         else{ //unmute
           $('#volume_control').removeClass('off').addClass('on');
 
-          if( game_stage == 0 || game_stage == 5){
-            intro_music.play();
-            intro_music.muted = false;
-          }
-          
+          play_song(game_stage);
+
         }
       });
 
@@ -564,7 +561,7 @@
 
       $("#lvl_number").html(game_stage);
       
-      intro_music.muted = true;
+      play_song(game_stage);
       
       change_lvl();
 
@@ -611,6 +608,25 @@
 
         }, 30000); //every 30 seconds change lvl
 
+    }
+
+
+    function play_song(game_stage){
+
+
+      switch (game_stage) {
+        case 0: case 5:
+          intro_music.muted = false;
+          intro_music.play();
+          break;
+
+        case 1: case 2: case 3: case 4:  
+          intro_music.muted = true;
+          break;
+        default:
+          
+      }
+      
     }
 
 
