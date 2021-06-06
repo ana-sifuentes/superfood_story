@@ -526,6 +526,7 @@
         if( $('#volume_control').hasClass('on')  ){
           
           $('#volume_control').removeClass('on').addClass('off');      
+
           intro_music.muted = true;
           
         }
@@ -562,6 +563,8 @@
       counter=0;
 
       $("#lvl_number").html(game_stage);
+      
+      intro_music.muted = true;
       
       change_lvl();
 
