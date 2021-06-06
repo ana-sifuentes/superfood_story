@@ -160,11 +160,11 @@
 
 
 
-  
+
 /*****************************************************************/
 /* level data */
 
-.level_data{   
+.level_data{
     width: 100%;
     height: auto;
     border: 1px solid black;
@@ -180,7 +180,7 @@
     color:#000000;
   }
 
-  .level_data > .column{ 
+  .level_data > .column{
     width:33%;
     float:left;
   }
@@ -194,11 +194,11 @@
     text-align: right;
     color:#000000;
   }
-  
+
   .level_data >  .column.volume > .volume_control.on::before{
     content:'ON';
   }
-  
+
   .level_data >  .column.volume > .volume_control.off::before{
     content:'OFF';
   }
@@ -370,21 +370,21 @@
 
   <div class="level_data">
 
-    <div class="column score" id="score"> 
-      SCORE: 
+    <div class="column score" id="score">
+      SCORE:
       <span id="score_points"> </span>
     </div>
 
-    <div class="column level"> 
+    <div class="column level">
       LEVEL <span id="lvl_number"></span>
     </div>
 
-    
+
     <div class="column volume">
-      AUDIO: 
+      AUDIO:
       <span class="volume_control off" id="volume_control"></span>
     </div>
-    
+
   </div>
 
 
@@ -397,7 +397,7 @@
 
 	        </div>
 
-        
+
 	         <div id="levels" class="levels lvl_1">
              <div id="character"></div>
              <div id="block"></div>
@@ -413,7 +413,7 @@
     </div>
 
 
-    
+
 
 
 	</div>
@@ -431,7 +431,7 @@
 //based on the code by : https://github.com/Beat0154
 
 
-//audio files 
+//audio files
 
 
 
@@ -447,29 +447,26 @@
   var game_ended = false;
 
 
-  //load music files 
+  //load music files
   const intro_music = new Audio('game assets/aztec fall.wav');
   intro_music.loop = true;
 
 
 
-  
-  //check if player makes points 
+
+  //check if player makes points
 
   var check_lose_points = setInterval(function() {
-    
+
       let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
       let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
 
       if(blockLeft<70 && blockLeft>-20 && characterTop>=185){
-        
+
           block.style.animation = "none";
-          counter--;
-          if(counter<0){
-            counter=0;
-          }
+          counter =0;
           block.style.animation = "block 1s infinite linear";
-          
+
       }else{
 
           if(game_ended == false){
@@ -520,15 +517,15 @@
       });
 
 
-    	$('.column.volume').click(function(){    
+    	$('.column.volume').click(function(){
 
         //mute
         if( $('#volume_control').hasClass('on')  ){
-          
-          $('#volume_control').removeClass('on').addClass('off');      
+
+          $('#volume_control').removeClass('on').addClass('off');
 
           intro_music.muted = true;
-          
+
         }
         else{ //unmute
           $('#volume_control').removeClass('off').addClass('on');
@@ -546,12 +543,12 @@
     //title screen
     function title_screen(){
 
-      //remove the title screen 
+      //remove the title screen
       $('#welcome_screen').removeClass('current');
 
       //show levels screen
       $("#levels").addClass('current');
-      
+
       //show game data
       $('.level_data').addClass('playing');
 
@@ -560,9 +557,9 @@
       counter=0;
 
       $("#lvl_number").html(game_stage);
-      
+
       play_song(game_stage);
-      
+
       change_lvl();
 
     }
@@ -589,11 +586,11 @@
 
 
               $("#levels").removeClass('lvl_'+game_stage);
-          
+
               game_stage = game_stage+1;
               $("#levels").addClass('lvl_'+game_stage);
               $("#lvl_number").html(game_stage);
-      
+
 
               //make sure it doesnt go above 5, if so the game is over
               if(game_stage >= 5){
@@ -620,13 +617,13 @@
           intro_music.play();
           break;
 
-        case 1: case 2: case 3: case 4:  
+        case 1: case 2: case 3: case 4:
           intro_music.muted = true;
           break;
         default:
-          
+
       }
-      
+
     }
 
 
@@ -637,7 +634,7 @@
        $('#block').hide();
 
        $('.column.level').html('GAME OVER');
-       
+
        game_ended = true;
 
     }
