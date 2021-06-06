@@ -532,7 +532,7 @@
         else{ //unmute
           $('#volume_control').removeClass('off').addClass('on');
 
-          if( game_stage == 1 || game_stage == 5){
+          if( game_stage == 0 || game_stage == 5){
             intro_music.play();
             intro_music.muted = false;
           }
