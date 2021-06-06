@@ -584,10 +584,14 @@
 
         var intervalId = window.setInterval(function(){
 
-
+              //remove previous lvl
               $("#levels").removeClass('lvl_'+game_stage);
 
+              //add +1 stage
               game_stage = game_stage+1;
+
+              //update music, lvl class and lvl display
+              play_song(game_stage);
               $("#levels").addClass('lvl_'+game_stage);
               $("#lvl_number").html(game_stage);
 
