@@ -211,8 +211,9 @@
   width: 100%;
   position: relative;
   display: none;
-  background-repeat: no-repeat;
   background-position-x: 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .levels.current{
@@ -260,33 +261,25 @@
 
 /*mesoamerica*/
 .levels.current.lvl_1{
-  display: block;
-  background-position-x: 0%;
-  animation: 30s level_animation linear infinite;
-  background-image: url(https://via.placeholder.com/2000x400/FFFFFF/000000?text=LEVEL_1);
+  animation: 40s level_animation linear infinite;
+  background-image: url('game assets/Level_background_LEVEL 1.svg');
 }
 
 /*colonization*/
 .levels.current.lvl_2{
-  display: block;
-  background-position-x: 0%;
-  animation: 30s level_animation linear infinite;
-  background-image: url('game assets/Level_background_LEVEL 1.svg');
+  animation: 40s level_animation linear infinite;
+  background-image: url('game assets/Level_background_LEVEL 2.svg');
 }
 
 /*rediscovery*/
 .levels.current.lvl_3{
-  display: block;
-  background-position-x: 0%;
-  animation: 30s level_animation linear infinite;
+  animation: 40s level_animation linear infinite;
   background-image: url(https://via.placeholder.com/2000x400/FF0000/000000?text=LEVEL_3);
 }
 
 /*modernity*/
 .levels.current.lvl_4{
-  display: block;
-  background-position-x: 0%;
-  animation: 30s level_animation linear infinite;
+  animation: 40s level_animation linear infinite;
   background-image: url(https://via.placeholder.com/2000x400/0000FF/000000?text=LEVEL_4);
 }
 
@@ -571,7 +564,7 @@
 
         console.log('changing levels');
 
-        //change lvls every 30 seconds
+        //change lvls every 40 seconds
         var change_lvl_interval = window.setInterval(function(){
 
               //remove previous lvl
@@ -596,7 +589,7 @@
 
               }
 
-        }, 30000);
+        }, 40000);
 
     }
 
