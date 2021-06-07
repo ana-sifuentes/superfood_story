@@ -622,7 +622,7 @@
         console.log( "char: "+character_position.top+"- p: "+point_position.left+"- e:"+enemy_position.left);
         
         //if the user touches the point 
-        if( character_position.top <= 200 && point_position.left >= 20 && point_position.left <= 100){
+        if( character_position.top <= 210 && point_position.left >= 20 && point_position.left <= 100){
           score++;
         }
         
@@ -632,9 +632,9 @@
           score--;
 
           //prevent negative score 
-        //  if(score <0 ){
-          //  score =0;
-          //}
+         if(score <0 ){
+            score =0;
+          }
         }
         
         //update score
