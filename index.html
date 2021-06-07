@@ -86,11 +86,12 @@
 }
 
 #character{
-    width: 81px;  /*20*/
+    width: 80px;  /*20*/
     height: 98px; /*50*/
     background-image:url("assets/chia_seed.png");
     position:relative;
-    top: 202px;
+    left:20px;
+    top: 200px;
 }
 .animate{
     animation: jump 0.3s linear;
@@ -98,13 +99,13 @@
 
 
 @keyframes jump{
-    0%{top: 202px;}
+    0%{top: 200px;}
     30%{top: 100px;}
     70%{top: 100px;}
-    100%{top: 202px;}
+    100%{top: 200px;}
 }
 
-#block{
+.enemy{
     width: 30px; /*20*/
     height: 20px;
     position: relative;
@@ -234,7 +235,7 @@
   font-weight: 900;
   font-size: 50px;
   line-height: normal;
-  top: 35%;
+  top: 150px;
   position: relative;
   width: 75%;
   background-color: white;
@@ -242,7 +243,7 @@
 }
 
 #welcome_screen p{
-  top: 38%;
+  top: 165px;
   position: relative;
 }
 
@@ -295,7 +296,7 @@
 /*GAME ENDED*/
 .levels.current.lvl_5{
   display: block;
-  background-position-x: 0%;
+  background-position-x: 52%;
   background-image: url(https://via.placeholder.com/600x400?text=GAME_END);
 }
 
@@ -406,7 +407,7 @@
 
 	         <div id="levels" class="levels lvl_1">
              <div id="character"></div>
-             <div id="block"></div>
+             <div id="enemy" class="enemy"></div>
              <div id="point" class="point showing"></div>
 	         </div>
 
@@ -431,70 +432,39 @@
 
 
 
-
+<!---LOAD JQUERY--->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+<!--GAME CODE---->
 <script>
-//based on the code by : https://github.com/Beat0154
 
+  //initial code based on: https://github.com/Beat0154
 
-//audio files
+////////////////////////////////////////////////////////////////////////
 
-
-
-  //variables
-  var character = document.getElementById("character");
-  var block = document.getElementById("block");
-
-
-  //counter set to 0 before stage 1
-  var counter=0;
-  var game_stage=0;
-
+  //variables 
+  let score = 0;
+  let game_stage = 0;
   var game_ended = false;
 
 
-  //load music files
+  //music files
 
   var audio_on = false;
   const intro_music = new Audio('game assets/aztec fall.wav');
   intro_music.loop = true;
 
 
-
-  //check if player makes points
-
-  var check_lose_points = setInterval(function() {
-
-      let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-      let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-
-      if(blockLeft<70 && blockLeft>-20 && characterTop>=185){
-
-          block.style.animation = "none";
-          counter =0;
-          block.style.animation = "block 1s infinite linear";
-
-      }else{
-
-          if(game_ended == false){
-            counter++;
-            document.getElementById("score_points").innerHTML = Math.floor(counter/100);
-          }
-      }
-  }, 10)
-
-
-
-  ////////////////////////////////////////////////////////////////////////
-  //user clicks space or button
+////////////////////////////////////////////////////////////////////////
+//user clicks space or button
 
     //when the user clicks
     document.body.onkeyup = function(e){
         if(e.keyCode == 32){
 
           if(game_stage == 0){
-             title_screen();
+             start_game();
+             console.log('the game begins!');  
           }
 
           if(game_stage > 0 && game_stage <5){
@@ -511,7 +481,8 @@
   		$('#mobile_button').click(function(){
 
         if(game_stage == 0){
-           title_screen();
+           start_game();
+           console.log('the game begins!');  
         }
 
         if(game_stage > 0 && game_stage <5){
@@ -524,7 +495,9 @@
 
       });
 
-
+////////////////////////////////////////////////////////////////////////
+//user clicks on the audio control 
+      
     	$('.column.volume').click(function(){
 
         //mute
@@ -547,11 +520,11 @@
 
 
 
-////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 //functions
 
-    //title screen
-    function title_screen(){
+    //game starts
+    function start_game(){
 
       //remove the title screen
       $('#welcome_screen').removeClass('current');
@@ -561,27 +534,25 @@
 
       //show game data
       $('.level_data').addClass('playing');
-
-      //setupt to switch levels
-      game_stage = 1;
-      counter=0;
-
       $("#lvl_number").html(game_stage);
 
+      //update variables 
+      game_stage = 1;
+      score = 0;
+      console.log('LEVEL: '+game_stage);
+
+      //start the points and enemies functions
+      random_point();
+      check_points();
+
+      //change songs 
       play_song(game_stage);
 
-      change_lvl();
+      //start the loop to change lvls 
+      change_lvl();    
 
-    }
+       
 
-
-    //player jumps
-    function jump(){
-        if(character.classList == "animate"){return}
-        character.classList.add("animate");
-        setTimeout(function(){
-            character.classList.remove("animate");
-        },300);
     }
 
 
@@ -589,11 +560,9 @@
     function change_lvl(){
 
 
-        console.log('gaming begins!');
+        console.log('changing levels');
 
-
-        random_point();
-        
+        //change lvls every 30 seconds
         var change_lvl_interval = window.setInterval(function(){
 
               //remove previous lvl
@@ -601,42 +570,88 @@
 
               //add +1 stage
               game_stage = game_stage+1;
-
+              console.log('LEVEL: '+game_stage);
+              
               //update music, lvl class and lvl display
               play_song(game_stage);
               $("#levels").addClass('lvl_'+game_stage);
               $("#lvl_number").html(game_stage);
 
 
-              //make sure it doesnt go above 5, if so the game is over
+              //if its above lvl 5, the game is over
               if(game_stage >= 5){
 
                   game_stage = 5;
                   clearInterval(change_lvl_interval);
-
-                  console.log('the game is over');
                   end_game();
 
               }
 
-        }, 30000); //every 30 seconds change lvl
+        }, 30000); 
 
     }
 
 
 
+    
+    //player jumps
+    function jump(){
+      
+      if(character.classList == "animate"){return}
+        character.classList.add("animate");
+        setTimeout(function(){
+          character.classList.remove("animate");
+        },300);
+    }
+
+
+    function check_points(){
+
+      let character_position;
+      let point_position;
+      let enemy_position;
+      
+      setInterval(function() {
+
+        character_position  = $('#character').position();
+        point_position = $('#point').position();
+        enemy_position = $('#enemy').position();
+        
+        //if the user touches the point 
+        if( character_position.top >= 210 && point_position.left >= 20 && point_position.left<= 100){
+          score++;
+        }
+        
+        //check if the user colllides with the enemy
+
+        if( character_position.top <= 210 && enemy_position.left >= 20 && enemy_position.left<= 100){
+          score--;
+
+          //prevent negative score 
+          if(score <0 ){
+            score =0;
+          }
+        }
+        
+        //update score
+        $('#score').html(score);
+        
+      },10); 
+        
+    }
+
     function random_point() {
 
-        $('#score_point').toggleClass("showing");
+      //randomly display the point every 1 second
+      setInterval(function() {
         
-        setInterval(function() {
           var number = Math.floor((Math.random() * 10) + 1);
 
-        if(number > 5 ){
-           $('#point').toggleClass("showing");
-         }
+          if(number > 5 ){
+            $('#point').toggleClass("showing");
+          }
         
-       },1000); //every 1 second
+       },1000); 
 
     }
 
@@ -645,8 +660,6 @@
     function play_song(game_stage){
 
       //mute all songs
-
-
       //if the user has put audio on
       if(audio_on == true){
 
@@ -670,18 +683,42 @@
 
     function end_game(){
 
-      //hide character
+      //hide characters, points and enemies 
        $('#character').hide();
        $('#block').hide();
+       $('#point').hide();
 
+       
        $('.column.level').html('GAME OVER');
-
-       game_ended = true;
-
+        console.log('the game is over');
+        game_ended = true;
     }
 
 
 
+
+
+    /*
+      var check_lose_points = setInterval(function() {
+
+          let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+          let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+
+          if(blockLeft<70 && blockLeft>-20 && characterTop>=185){
+
+              block.style.animation = "none";
+              score = 0;
+              block.style.animation = "block 2s infinite linear";
+
+          }else{
+
+              if(game_ended == false){
+                score++;
+                document.getElementById("score_points").innerHTML = Math.floor(score/100);
+              }
+          }
+      }, 10)*/
+      
 
 </script>
 </html>
