@@ -622,19 +622,19 @@
         console.log( "char: "+character_position.top+"- p: "+point_position.left+"- e:"+enemy_position.left);
         
         //if the user touches the point 
-        if( character_position.top >= 210 && point_position.left >= 20 && point_position.left<= 100){
+        if( character_position.top <= 200 && point_position.left >= 20 && point_position.left <= 100){
           score++;
         }
         
         //check if the user colllides with the enemy
 
-        if( character_position.top <= 210 && enemy_position.left >= 20 && enemy_position.left<= 100){
+        if( character_position.top == 200 && enemy_position.left >= 20 && enemy_position.left<= 100){
           score--;
 
           //prevent negative score 
-          if(score <0 ){
-            score =0;
-          }
+        //  if(score <0 ){
+          //  score =0;
+          //}
         }
         
         //update score
@@ -689,7 +689,7 @@
 
       //hide characters, points and enemies 
        $('#character').hide();
-       $('#block').hide();
+       $('#enemy').hide();
        $('#point').hide();
 
        
@@ -702,26 +702,6 @@
 
 
 
-    /*
-      var check_lose_points = setInterval(function() {
-
-          let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-          let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-
-          if(blockLeft<70 && blockLeft>-20 && characterTop>=185){
-
-              block.style.animation = "none";
-              score = 0;
-              block.style.animation = "block 2s infinite linear";
-
-          }else{
-
-              if(game_ended == false){
-                score++;
-                document.getElementById("score_points").innerHTML = Math.floor(score/100);
-              }
-          }
-      }, 10)*/
       
 
 </script>
