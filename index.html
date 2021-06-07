@@ -17,11 +17,7 @@
   src: url("assets/VCR_OSD_MONO_1.001.ttf");
 }
 
-
-
-
-
-/**********************/
+/*****************************************************************/
 /* MENU */
 
 	.menu.wrapper{
@@ -67,9 +63,7 @@
 	}
 
 
-/**********************/
-
-
+/*****************************************************************/
 
 /* fonts */
 
@@ -78,14 +72,12 @@
 		text-align:center;
 	}
 
-	h1, h2, h3, h4, h5, h6, p{
+	h1, h2, h3, h4, h5, h6 {
 		font-family: 'VCR_OSD_MONO';
 	}
 
-
-/**********************/
+/*****************************************************************/
 /* GAME */
-
 
 *{
     padding: 0;
@@ -122,14 +114,30 @@
     animation: block 1s infinite linear;
 }
 
+@keyframes block{
+    0%{left: 100%}
+    100%{left: -5%}
+}
 
+.point{
+    width: 30px; /*20*/
+    height: 30px;
+    background-color: blue;
+    position: relative;
+    top: 185px;
+    left: 200px
+    display: none;
+  /*  animation: block 1s infinite linear;*/
+}
+
+.point.showing{
+  display: block;
+}
 
 @keyframes block{
     0%{left: 800px}
     100%{left: -30px}
 }
-
-
 
 
 .game{
@@ -140,23 +148,6 @@
   max-width: 600px;
 }
 
-  .mobile_button{
-      width: 50%;
-      max-width: 600px;
-      text-align: center;
-      cursor: pointer;
-      border: 1px solid black;
-      height: 40px;
-      font-family: 'VCR_OSD_MONO';
-      padding: 4vh 0px 2vh 0px;
-      background-color: #BEBFB9;
-      margin: 2vh auto;
-      font-size: 25px;
-  }
-
-  .mobile_button:hover{
-    background-color: #E1E1DF;
-  }
 
 
 
@@ -313,14 +304,31 @@
 
 /***********************************************************************/
 
+.mobile_button{
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid black;
+    height: 40px;
+    font-family: 'VCR_OSD_MONO';
+    padding: 4vh 0px 2vh 0px;
+    background-color: #BEBFB9;
+    margin: 2vh auto;
+    font-size: 25px;
+}
+
+.mobile_button:hover{
+  background-color: #E1E1DF;
+}
+
+/***********************************************************************/
+
 /* MOBILE */
 @media only screen and (max-width: 450px) {
 
   .game{  max-width: 300px;}
-
-  .levels.current.lvl_0{
-    animation: 20s welcome_screen_animation linear alternate infinite;
-  }
+  .levels.current.lvl_0{ animation: 20s welcome_screen_animation linear alternate infinite;}
   #welcome_screen > h3{width: 100%}
 
 }
@@ -401,6 +409,7 @@
 	         <div id="levels" class="levels lvl_1">
              <div id="character"></div>
              <div id="block"></div>
+             <div id="point" class="point showing"></div>
 	         </div>
 
   </div>
@@ -450,7 +459,6 @@
   //load music files
   const intro_music = new Audio('game assets/aztec fall.wav');
   intro_music.loop = true;
-
 
 
 
@@ -582,7 +590,9 @@
         console.log('gaming begins!');
 
 
-        var intervalId = window.setInterval(function(){
+        random_point();
+        
+        var change_lvl_interval = window.setInterval(function(){
 
               //remove previous lvl
               $("#levels").removeClass('lvl_'+game_stage);
@@ -600,7 +610,7 @@
               if(game_stage >= 5){
 
                   game_stage = 5;
-                  clearInterval(intervalId);
+                  clearInterval(change_lvl_interval);
 
                   console.log('the game is over');
                   end_game();
@@ -612,8 +622,29 @@
     }
 
 
+
+    function random_point() {
+
+        $('#score_point').toggleClass("showing");
+        
+        setInterval(function() {
+          var number = Math.floor((Math.random() * 10) + 1);
+
+        if(number > 5 ){
+           $('#point').toggleClass("showing");
+         }
+        
+        },2000); //every 2 seconds 
+
+    }
+
+
+  
     function play_song(game_stage){
 
+      //mute all songs
+
+      //depending on the level, play according song
 
       switch (game_stage) {
         case 0: case 5:
