@@ -30,7 +30,7 @@
 
 	.menu.main{
 	 	float: left;
-    		width: 18%;
+  width: 18%;
     		padding: 0px 1%;
     		font-size: 28px;
     		text-align: left;
@@ -86,12 +86,14 @@
 }
 
 #character{
-    width: 80px;  /*20*/
-    height: 98px; /*50*/
+    width: 80px; 
+    height: 100px; 
     background-image:url("assets/chia_seed.png");
     position:relative;
+    background-repeat: no-repeat;
+    background-size: contain;
     left:20px;
-    top: 200px;
+    top: 230px;
 }
 
 .animate{
@@ -100,17 +102,17 @@
 
 
 @keyframes jump{
-    0%{top: 200px;}
-    30%{top: 100px;}
-    70%{top: 100px;}
-    100%{top: 200px;}
+    0%{top: 230px;}
+    30%{top: 130px;}
+    70%{top: 130px;}
+    100%{top: 230px;}
 }
 
 .enemy{
     width: 30px; /*20*/
     height: 20px;
     position: relative;
-    top: 185px;
+    top: 215px;
     left: 110%;
     display: none;
     background-repeat: no-repeat;
@@ -127,7 +129,7 @@
     background-size: contain;
     background-image:url('game assets/coin_rotation_gif.gif');
     position: relative;
-    top: 50px;
+    top: 80px;
     left: 110%;
     display: none;
     animation: animation_points 1s infinite linear;
@@ -626,13 +628,13 @@
 
     
         //if the user touches the point 
-        if( character_position.top < 200 && point_position.left >= 20 && point_position.left <= 100){
+        if( character_position.top < 230 && point_position.left >= 20 && point_position.left <= 100){
           score++;
         }
         
         //check if the user colllides with the enemy
 
-        if( character_position.top == 200 && enemy_position.left >= 20 && enemy_position.left<= 100){
+        if( character_position.top == 230 && enemy_position.left >= 20 && enemy_position.left<= 100){
           score--;
 
           //prevent negative score 
@@ -681,7 +683,10 @@
           let num = Math.floor((Math.random() * 100) + 1);
 
           if(num < frequency ){
-            $('#point').toggleClass("active");
+            $('#point').addClass("active");
+          }
+          else{
+            $('#point').removeClass("active");
           }
         
        },1000); 
@@ -690,7 +695,7 @@
 
 
     
-        function random_enemy() {
+    function random_enemy() {
           
           //define frequency
           var frequency = 0;
@@ -715,14 +720,19 @@
                         
                   
           }
-                
+
+
+              
           //randomly display the point every 1 second
           setInterval(function() {
                   
             let num = Math.floor((Math.random() * 100) + 1);
 
             if(num < frequency ){
-              $('#point').toggleClass("active");
+              $('#enemy').addClass("active");
+            }
+            else{
+              $('#enemy').removeClass("active");
             }
                   
             },2000); 
