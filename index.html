@@ -112,6 +112,9 @@
     position: relative;
     top: 185px;
     left: 110%;
+    display: none;
+    background-repeat: no-repeat;
+    background-size: contain;
     background-image:url("assets/fireball.png");
     animation: animation_points 2s infinite linear;
 }
@@ -130,7 +133,7 @@
     animation: animation_points 1s infinite linear;
 }
 
-.point.showing{
+.point.active, .enemy.active{
   display: block;
 }
 
@@ -546,6 +549,7 @@
 
       //start the points and enemies functions
       random_point();
+      random_enemy();
       check_points();
 
       //change songs 
@@ -646,13 +650,38 @@
 
     function random_point() {
 
+
+      //define frequency
+      var frequency = 0;
+      
+
+      switch(game_stage){
+        case 1:default:
+        frequency = 99; // 90%
+        break;
+
+        case 2:
+        frequency = 75; // 75%
+        break;
+
+        case 3:
+        frequency = 50; // 50%
+        break;
+
+        case 4:
+        frequency = 25; // 25%
+        break;
+              
+        
+      }
+      
       //randomly display the point every 1 second
       setInterval(function() {
         
-          var number = Math.floor((Math.random() * 10) + 1);
+          let num = Math.floor((Math.random() * 100) + 1);
 
-          if(number > 5 ){
-            $('#point').toggleClass("showing");
+          if(num < frequency ){
+            $('#point').toggleClass("active");
           }
         
        },1000); 
@@ -660,6 +689,47 @@
     }
 
 
+    
+        function random_enemy() {
+          
+          //define frequency
+          var frequency = 0;
+                
+
+          switch(game_stage){
+            case 1:default:
+            frequency = 25; // 25%
+            break;
+
+            case 2:
+            frequency = 50; // 50%
+            break;
+
+            case 3:
+            frequency = 75; // 75%
+            break;
+
+            case 4:
+            frequency = 99; // 99%
+            break;
+                        
+                  
+          }
+                
+          //randomly display the point every 1 second
+          setInterval(function() {
+                  
+            let num = Math.floor((Math.random() * 100) + 1);
+
+            if(num < frequency ){
+              $('#point').toggleClass("active");
+            }
+                  
+            },2000); 
+
+        }
+
+        
   
     function play_song(game_stage){
 
