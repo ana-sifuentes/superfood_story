@@ -455,6 +455,8 @@
 
 
   //load music files
+
+  var audio_on = false;
   const intro_music = new Audio('game assets/aztec fall.wav');
   intro_music.loop = true;
 
@@ -531,11 +533,13 @@
           $('#volume_control').removeClass('on').addClass('off');
 
           intro_music.muted = true;
+          audio_on = false;
 
         }
         else{ //unmute
           $('#volume_control').removeClass('off').addClass('on');
 
+          audio_on = true;
           play_song(game_stage);
 
         }
@@ -642,21 +646,25 @@
 
       //mute all songs
 
-      //depending on the level, play according song
 
-      switch (game_stage) {
-        case 0: case 5:
-          intro_music.muted = false;
-          intro_music.play();
-          break;
+      //if the user has put audio on
+      if(audio_on == true){
 
-        case 1: case 2: case 3: case 4:
-          intro_music.muted = true;
-          break;
-        default:
+        //depending on the level, play according song
+        switch (game_stage) {
+          case 0: case 5:
+            intro_music.muted = false;
+            intro_music.play();
+            break;
 
+          case 1: case 2: case 3: case 4:
+            intro_music.muted = true;
+            break;
+          default:
+
+        }
       }
-
+      
     }
 
 
