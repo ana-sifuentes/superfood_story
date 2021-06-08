@@ -15,44 +15,75 @@
 	.st9{fill:#FEFCFD;}
 	.st10{fill:#C1C7D5;}
 	.st11{clip-path:url(#SVGID_2_);}
-	.st12{fill:#1B1C5C;}
-	.st13{fill:#2A2D68;}
-	.st14{fill:#FFF6D1;}
-	.st15{opacity:0.49;}
-	.st16{fill:#FF7D01;}
-	.st17{fill:#E36407;}
-	.st18{fill:#231100;}
-	.st19{fill:#3C260F;}
-	.st20{fill:#9E1F25;}
-	.st21{fill:#CF232E;}
-	.st22{fill:#F7A33B;}
-	.st23{fill:#F5C032;}
-	.st24{fill:#F7A72A;}
-	.st25{fill:#EA700D;}
-	.st26{fill:#A43200;}
-	.st27{fill:#FFC114;}
-	.st28{fill:#363147;}
-	.st29{fill:#4E7795;}
-	.st30{fill:#839472;}
-	.st31{fill:#EDECDA;}
-	.st32{fill:#9C9561;}
-	.st33{fill:#40362A;}
-	.st34{fill:#6D653E;}
-	.st35{fill:#E3D3B2;}
-	.st36{fill:#231F20;}
-	.st37{display:none;}
-	.st38{display:inline;fill:#2EFF55;}
-	.st39{display:inline;fill:none;stroke:#FF29D8;stroke-width:5;stroke-miterlimit:10;}
-	.st40{display:inline;fill:none;stroke:#C7FF2C;stroke-width:5;stroke-miterlimit:10;}
-	.st41{display:inline;fill:#213967;}
-	.st42{display:inline;fill:#232959;}
-	.st43{display:inline;fill:#39579F;}
-	.st44{display:inline;fill:#8695C0;}
-	.st45{display:inline;}
-	.st46{display:inline;fill:#A9B1C4;}
-	.st47{display:inline;fill:#FF812C;}
-	.st48{display:inline;fill:#2EFFFF;}
-	.st49{display:inline;opacity:0.4;}
+	.st12{fill:#FEFEBE;}
+	.st13{fill:#FFEABA;}
+	.st14{fill:#E2D7FF;}
+	.st15{fill:#BED5FF;}
+	.st16{fill:#94ADFF;}
+	.st17{fill:#96C2C5;}
+	.st18{fill:#4B677F;}
+	.st19{fill:#70B1B5;}
+	.st20{fill:#1B1C5C;}
+	.st21{fill:#2A2D68;}
+	.st22{fill:#FFF6D1;}
+	.st23{opacity:0.49;}
+	.st24{fill:#FF7D01;}
+	.st25{fill:#E36407;}
+	.st26{fill:#231100;}
+	.st27{fill:#3C260F;}
+	.st28{fill:#9E1F25;}
+	.st29{fill:#CF232E;}
+	.st30{fill:#F7A33B;}
+	.st31{fill:#F5C032;}
+	.st32{fill:#F7A72A;}
+	.st33{fill:#EA700D;}
+	.st34{fill:#A43200;}
+	.st35{fill:#FFC114;}
+	.st36{fill:#363147;}
+	.st37{fill:#4E7795;}
+	.st38{fill:#B77366;}
+	.st39{fill:#668941;}
+	.st40{fill:#15120F;}
+	.st41{fill:#94BB4F;}
+	.st42{fill:#839472;}
+	.st43{fill:#EDECDA;}
+	.st44{fill:#9C9561;}
+	.st45{fill:#40362A;}
+	.st46{fill:#6D653E;}
+	.st47{fill:#E3D3B2;}
+	.st48{fill:#D8A741;}
+	.st49{fill:#F0F0D8;}
+	.st50{fill:#231F20;}
+	.st51{fill:#D07633;}
+	.st52{fill:#6C1114;}
+	.st53{fill:#F8B832;}
+	.st54{fill:none;stroke:#F0F0D8;stroke-width:7;stroke-miterlimit:10;}
+	.st55{fill:#FCB912;}
+	.st56{fill:#FFDE01;}
+	.st57{fill:#FCF54D;}
+	.st58{fill:none;stroke:#FCFFFF;stroke-miterlimit:10;}
+	.st59{fill:#35BCC0;}
+	.st60{fill:#A53A1C;}
+	.st61{fill:#66890B;}
+	.st62{fill:#95BC51;}
+	.st63{fill:#3F6905;}
+	.st64{fill:#CBE46E;}
+	.st65{fill:#757DE0;}
+	.st66{fill:#CAC5FF;}
+	.st67{fill:#E9ECFD;}
+	.st68{display:none;}
+	.st69{display:inline;fill:#2EFF55;}
+	.st70{display:inline;fill:none;stroke:#FF29D8;stroke-width:5;stroke-miterlimit:10;}
+	.st71{display:inline;fill:none;stroke:#C7FF2C;stroke-width:5;stroke-miterlimit:10;}
+	.st72{display:inline;fill:#213967;}
+	.st73{display:inline;fill:#232959;}
+	.st74{display:inline;fill:#39579F;}
+	.st75{display:inline;fill:#8695C0;}
+	.st76{display:inline;}
+	.st77{display:inline;fill:#A9B1C4;}
+	.st78{display:inline;fill:#FF812C;}
+	.st79{display:inline;fill:#2EFFFF;}
+	.st80{display:inline;opacity:0.4;}
 </style>
 <g id="background">
 </g>
@@ -61,7 +92,7 @@
 	<rect y="0" class="st6" width="2000" height="61.3"/>
 	<rect x="669.3" y="273.3" class="st7" width="1330.7" height="126.7"/>
 	<rect y="28" class="st9" width="242.7" height="236"/>
-	<rect x="0" y="138.9" class="st9" width="142.7" height="117.1"/>
+	<rect y="138.9" class="st9" width="142.7" height="117.1"/>
 	<rect x="220" y="140" class="st9" width="165.3" height="97.3"/>
 	<rect x="230.7" y="56" class="st9" width="145.3" height="121.3"/>
 	<rect x="296" y="181.3" class="st9" width="216" height="68"/>
@@ -88,30 +119,30 @@
 <g id="Layer_5">
 </g>
 <g id="montanias">
-	<polygon class="st29" points="1546.7,327.8 1546.7,278.7 1372.7,278.7 1372.7,242.7 1272.7,242.7 1186.1,242.7 1070.1,242.7 
+	<polygon class="st37" points="1546.7,327.8 1546.7,278.7 1372.7,278.7 1372.7,242.7 1272.7,242.7 1186.1,242.7 1070.1,242.7 
 		1070.1,185.3 794.1,185.3 794.1,242.7 670.1,242.7 670.1,262.7 580.6,262.7 580.6,220 402.1,220 402.1,164 164.7,164 164.7,220 
 		96.6,220 96.6,234.7 -5.3,234.7 -5.3,278.7 -5.3,304 -5.3,364 1120.4,364 1546.7,364 1618.7,364 1618.7,327.8 	"/>
 	<rect x="581.9" y="284" class="st7" width="1191.4" height="116"/>
 	<rect x="429.3" y="314.7" class="st7" width="178.7" height="28"/>
 </g>
 <g id="Layer_8">
-	<rect x="422.7" y="164" class="st30" width="84" height="164"/>
-	<rect x="577.3" y="164" class="st30" width="84" height="164"/>
-	<rect x="893.3" y="293.3" class="st30" width="190.7" height="13.3"/>
-	<rect x="924" y="240" class="st30" width="70.7" height="57.3"/>
-	<rect x="1326.7" y="197.3" class="st31" width="33.3" height="146.7"/>
-	<rect x="1344" y="137.3" class="st31" width="40" height="85.3"/>
-	<rect x="1457.3" y="174.7" class="st30" width="84" height="164"/>
-	<polygon class="st31" points="2000,306.9 2000,98.2 1985.5,98.2 1985.5,123.9 1936.1,123.9 1936.1,91.7 1900.7,91.7 1900.7,123.9 
+	<rect x="422.7" y="164" class="st42" width="84" height="164"/>
+	<rect x="577.3" y="164" class="st42" width="84" height="164"/>
+	<rect x="893.3" y="293.3" class="st42" width="190.7" height="13.3"/>
+	<rect x="924" y="240" class="st42" width="70.7" height="57.3"/>
+	<rect x="1326.7" y="197.3" class="st43" width="33.3" height="146.7"/>
+	<rect x="1344" y="137.3" class="st43" width="40" height="85.3"/>
+	<rect x="1457.3" y="174.7" class="st42" width="84" height="164"/>
+	<polygon class="st43" points="2000,306.9 2000,98.2 1985.5,98.2 1985.5,123.9 1936.1,123.9 1936.1,91.7 1900.7,91.7 1900.7,123.9 
 		1859.1,123.9 1859.1,193 1794.7,193 1794.7,261.3 1790.7,261.3 1790.7,338.2 2000,338.2 	"/>
 </g>
 <g id="floor">
-	<rect y="326.7" class="st30" width="2000" height="27.3"/>
-	<rect x="246.7" y="325.9" class="st35" width="1753.3" height="28"/>
+	<rect y="326.7" class="st42" width="2000" height="27.3"/>
+	<rect x="246.7" y="325.9" class="st47" width="1753.3" height="28"/>
 </g>
 <g id="info">
-	<rect y="353.3" class="st36" width="2000" height="46.7"/>
+	<rect y="353.3" class="st50" width="2000" height="46.7"/>
 </g>
-<g id="reference" class="st37">
+<g id="reference" class="st68">
 </g>
 </svg>
