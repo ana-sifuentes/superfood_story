@@ -36,15 +36,17 @@
 
 	body{margin:0px; scroll-snap-type: y proximity; float:left;height: auto;}
 
-	p{font-family: 'Linux_Libertine'; font-size:18px;}
+	p{font-family: 'Linux_Libertine'; font-size:25px;}
 
 	h1, h2, h3, h4, h5, h6{ font-family: 'VCR_OSD_MONO'; margin:0px; padding:0px;}
 
-	h2{font-size: 2.5em; font-weight: 900;}
+	h2{font-size: 80px; font-weight: 900;}
 
-	h3{font-size: 2em; font-weight: 900; }
+	h3{font-size: 50px; font-weight: 900; }
 
-	img {width:100%;}
+  h4{font-size: 30px; font-weight: 900; }
+
+	img {width:100%; max-height: 90vh;}
 
 	html {scroll-behavior: smooth;}
 
@@ -112,6 +114,7 @@
 		scroll-snap-align: start;
 		overflow: auto;
 		min-height: 91vh;
+    margin-top:20vh;
 	}
 
 	/*wrapper for the section content, this makes the margins */
@@ -419,23 +422,34 @@
 		<div class="content_wrapper">
 
 
-      <div class="column third_size"></div>
-			<div class="column third_size">
-			<h4> But first…</h4>
-			<h3>What is a superfood? </h3>
-			<p>
-				“Superfood” is <b>a marketing term</b> not a scientific one.
+
+<style>
+	.support_size { width: 25%; }
+  .center_size{width: 48%;}
+
+
+  	@media only screen and (max-width: 700px) {
+      .support_size, .center_size{ width:98%;}
+    }
+</style>
+
+
+      <div class="column support_size"></div>
+			<div class="column center_size">
+			     <h4> But first…</h4>
+			     <h3>What is a superfood? </h3>
+			     <p>“Superfood” is <b>a marketing term</b> not a scientific one.
 		  </p>
       </div>
-      <div class="column third_size"></div>
+      <div class="column support_size"></div>
 
       <div class="column full_size">
-      <img src="article images/what_is_superfood.svg">
+        <img src="article images/what_is_superfood.svg">
       </div>
 
 
-      <div class="column third_size"></div>
-			<div class="column third_size">
+      <div class="column support_size"></div>
+			<div class="column center_size">
       <p>
 			The term was first used in <a href="https://www.hsph.harvard.edu/nutritionsource/superfoods/">
       1917 by The United Fruit Company</a>, now ‘Chiquita Banana’.
@@ -453,7 +467,13 @@
       has risen since 2014</a>.
 			</p>
 			</div>
-      <div class="column third_size"></div>
+      <div class="column support_size"></div>
+
+      
+      <div class="column full_size">
+        <img src="article images/what_is_superfood.svg">
+      </div>
+      
 
 		</div>
 		</div>
