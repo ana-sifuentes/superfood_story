@@ -332,9 +332,10 @@
       background-repeat: repeat-y;
       background-size: cover;
       animation: 80s welcome_screen_animation linear alternate infinite;
-      background-image: url('game assets/welcome_screen.svg');
-      
+      background-image: url('game assets/welcome_screen.svg');  
 	}
+
+
 
   @keyframes welcome_screen_animation {
       from {
@@ -350,7 +351,7 @@
 	.section_wrapper.banner > h1{
     font-weight: 900;
     line-height: normal;
-    top:40%;
+    top:30%;
     font-size: 90px;
     position: relative;
     width: 60%;
@@ -409,9 +410,10 @@
 
 	@media only screen and (max-width: 700px) {
 
+    .section_wrapper.banner{animation: 40s welcome_screen_animation linear alternate infinite;}
+    
     .section_wrapper.banner > h1{  font-size: 60px;}
-    
-    
+      
     .support_size, .center_size{ width:98%;}
     
 		.content_wrapper{width:95%; margin: auto;}
