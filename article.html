@@ -106,14 +106,14 @@
 
 	/*wrapper for each section*/
 	.section_wrapper{
-    	height: auto;
-    	padding: 4vh 0px 5vh 0px;
-    	width: 100%;
-    	background-color: white;
-		float:left;
-		scroll-snap-align: start;
-		overflow: auto;
-		min-height: 91vh;
+    height: auto;
+    padding: 4vh 0px 5vh 0px;
+    width: 100%;
+    background-color: white;
+	  float:left;
+	  scroll-snap-align: start;
+	  overflow: auto;
+	  min-height: 91vh;
     margin-top:20vh;
 	}
 
@@ -322,7 +322,7 @@
       background-position-y:100%;
       background-repeat: repeat-y;
       background-size: cover;
-      animation: 60s welcome_screen_animation linear alternate infinite;
+      animation: 80s welcome_screen_animation linear alternate infinite;
       background-image: url('game assets/welcome_screen.svg');
       
 	}
@@ -340,11 +340,11 @@
 
 	.section_wrapper.banner > h1{
     font-weight: 900;
-    font-size: 50px;
     line-height: normal;
     top: 150px;
+    font-size: 90px;
     position: relative;
-    width: 75%;
+    width: 60%;
     background-color: white;
     margin: auto;
 	}
@@ -385,16 +385,18 @@
 	/*less than 900px*/
 	@media only screen and (max-width: 1000px) {
 
-		.section_wrapper{height: auto;}
-		.section_wrapper.banner{background-image: url('assets/welcome_banner_square_chia.svg');}
-		.main_title{font-size:45px;}
+    .support_size{width: 15%;}
+    .center_size{ width:68%;}
+    
+
+    /********/
+
 		.full_size, .third_size, .two_third_size { width: 98%; }
 		.option{width:24%; font-size: 15px;}
 
 		.info_blocks_wrapper > .column.third_size{width:31.3%;}
 
-    .support_size{width: 15%;}
-    .center_size{ width:68%;}
+
         
 	}
 
@@ -402,13 +404,12 @@
 	@media only screen and (max-width: 700px) {
 
     p{font-size:18px;}
+    
     .support_size, .center_size{ width:98%;}
+    
 		.content_wrapper{width:95%; margin: auto;}
 
-
-
-
-
+    /******/
 
 		.info_block > .intro {width: 49%; margin: auto;}
 
