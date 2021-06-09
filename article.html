@@ -1,8 +1,8 @@
 <html lang="en">
-	
-<meta name="viewport" content="width=device-width, initial-scale=1" />	
-	
-	
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
 <head>
     <meta charset="UTF-8">
     <title> SUPERFOOD STORY </title>
@@ -19,15 +19,10 @@
 }
 
 @font-face {
-  font-family: Resolve-Light;
-  src: url("assets/Resolve-Light 3.otf");
-}
-
-@font-face {
   font-family: Linux_Libertine;
   src: url("assets/LinLibertine_R.ttf");
 }
-	
+
 
 /**********************************************************************/
 /* TAGS */
@@ -47,9 +42,9 @@
 	html {scroll-behavior: smooth;}
 
 	a{color:black;}
-	
+
 	a:hover{text-decoration: none;}
-	
+
 	ol li{padding:7px 0px;}
 
 /**********************************************************************/
@@ -64,12 +59,12 @@
     	background-color: white;
 		height: 9vh;
 	}
-	
+
 	/*when the section is collapsed*/
 	.top_wrapper.collapsed{
 		height:1vh;
 	}
-	
+
 	/*menu wrapper, menu items go here */
 	.menu_wrapper{
 		height: 8vh;
@@ -77,7 +72,7 @@
 	.menu_wrapper.collapsed{
 		height:0vh;
 	}
-	
+
 	/*scroll progress bar container */
 	.progress-container {
 		background-color: gray;
@@ -94,7 +89,7 @@
 	}
 
 
-	
+
 /**********************************************************************/
 /*GENERAL SETUP FOR THE ARTICLE*/
 
@@ -119,7 +114,7 @@
 
 
 	/*main layout class */
-	.column  { 
+	.column  {
 		float:left;
 		margin:1% 1%;
 		padding: 0px;
@@ -136,11 +131,11 @@
 	.clear{
 		clear:both;
 		height: 30px;
-	}	
+	}
 
 	.click_button{
-		background-color:black; 
-		color:white; 
+		background-color:black;
+		color:white;
 		width: 25%;
 		padding: 1vh;
 		font-size: 18px;
@@ -151,13 +146,13 @@
 
 /**********************************************************************/
 /**SECTION FUNCTIONALITIES **/
-	
+
 
 	.options_wrapper{
 		width:100%;
 		float: left;
 	}
-	
+
 	/*buttons for option select*/
 	.option{
 		width:70%;
@@ -173,9 +168,9 @@
 		background-color:black;
 		border: solid 1px black;
 	}
-	
 
-	
+
+
 	/*selected option*/
 	.option.selected, .option:hover{
 		background-color:white;
@@ -186,30 +181,30 @@
 		background-color: darkgray;
 		border: 1px solid darkgray;
 	}
-	
+
 	.option.gray:hover{
 		background-color:lightgrey;
 		color:darkgray;
 	}
-	
+
 	/****/
-	
+
 	.gallery_wrapper{
-		
+
 	}
-	
+
 	.gallery_image.selected {
     	display: block;
     	background-color: white;
     	height: auto;
 	}
-	
+
 	.gallery_image {
     	display: none;
 	}
-	
-	
-	
+
+
+
 	/****************************/
 	/*information blocks*/
 	.info_blocks_wrapper{
@@ -217,31 +212,31 @@
     	width: 100%;
 		display: block;
 	}
-						
-	.info_block > .intro, 
+
+	.info_block > .intro,
 	.info_block > .content.showing{
 		display:block;
 		cursor:pointer;
 	}
-					
-	.info_block > .content, 
+
+	.info_block > .content,
 	.info_block > .intro.hidden{
 		display: none;
 	}
 
 
-	
-	
+
+
 	/****************************/
 	/*carrousel*/
-			
+
 	.carrousel_wrapper{
-		width:100%; 
-		margin:auto; 
+		width:100%;
+		margin:auto;
 		float: left;
 		display: flex;
 	}
-				
+
 	.carrousel_controls{
 		width: 3.5%;
     	float: left;
@@ -254,13 +249,13 @@
     	padding-top: 15%;
     	font-weight: 900;
 	}
-				
-				
+
+
 	.carrousel_controls:hover{
 		background-color:white;
 		color:black;
 	}
-				
+
 	.carrousel_controls.previous::before{
 		content: "<";
 	}
@@ -268,25 +263,25 @@
 	.carrousel_controls.next::before{
 		content: ">";
 	}
-	
+
 	.carrousel_images_wrapper{
 		width:93%;
 		float:left;
 	}
-				
+
 	.carrousel_image{
 		display: none;
 	}
-				
+
 	.carrousel_image.selected{
 		display: block;
 	}
-		
+
 
 
 /**********************************************************************/
 /*SECTION SPECIFIC*/
-			
+
 	/*intro*/
 	.section_wrapper.banner{
 		margin-top: 9vh;
@@ -298,28 +293,28 @@
     	justify-content: center;
 	    background-repeat: repeat;
 	    background-position: center;
-	    background-size: contain;		
+	    background-size: contain;
 	}
-	
-	
+
+
 	.main_title{
 	    font-size: 60px;
 	    text-align: center;
 	    margin: 0px;
     	background-color: white;
 	}
-		
+
 	.main_intro{
 	    text-align: center;
 	    padding: 2vh 10px;
 		background-color: white;
 	}
-		
-		
+
+
 	/*choose superfood*/
 
 	.superfoods_wrapper{width:100%; float:left;margin:auto;}
-					
+
 	.superfood_item {
 		width: 14%;
    		height: auto;
@@ -328,92 +323,92 @@
     	margin: 0 1%;
     	cursor: pointer;
 	}
-	
+
 
 	.superfood_item:hover{background-color: aliceblue;}
-				
+
 
 	.section_wrapper.border_division{
 		border-bottom: 1px solid black;
 	}
 
-/**********************************************************************/	
-/*MOBILE*/	
+/**********************************************************************/
+/*MOBILE*/
 
 
 
 	/*less than 900px*/
 	@media only screen and (max-width: 1000px) {
-		
+
 		.section_wrapper{height: auto;}
 		.section_wrapper.banner{background-image: url('assets/welcome_banner_square_chia.svg');}
 		.main_title{font-size:45px;}
 		h3, h4, p{text-align: center;}
 		.full_size, .third_size, .two_third_size { width: 98%; }
 		.option{width:24%; font-size: 15px;}
-		
+
 		.info_blocks_wrapper > .column.third_size{width:31.3%;}
 	}
 
 
 	@media only screen and (max-width: 700px) {
-		
-		.content_wrapper{width:100%; margin: auto;}			
-		
+
+		.content_wrapper{width:100%; margin: auto;}
+
 		.info_block > .intro {width: 49%; margin: auto;}
-			
+
 		.superfood_item{width:31.25%; margin 10px 1%;}
-		
+
 		.info_blocks_wrapper > .column.third_size{width:98%;}
 	}
-	
+
 	</style>
-	
-	
+
+
 
 	<body>
 
-	
-		<div class="top_wrapper" id="navwrapper">	
+
+		<div class="top_wrapper" id="navwrapper">
   			<div class="menu_wrapper"  id="navbar">
 
 
 			</div>
-			
+
  			 <div class="progress-container">
  				   <div class="progress-bar" id="progress_bar"></div>
  			 </div>
-			
+
 		</div>
-	
-	
-	
+
+
+
 		<!-----WELCOME BANNER --->
 		<div class="section_wrapper banner" id="introduction">
-			
-			
+
+
 				<div style=" padding-top: 30vh;">
-				
+
 					<h1 class="main_title"> THE HISTORY OF <br> SUPERFOODS</h1>
 						<p class="main_intro">
 							Superfoods are considered more nutritionally dense than other foods.<br>
 							However, this marketing term can be misleading, leaving <br>
-							consumers vulnerable and the foods themselves a mystery. 
+							consumers vulnerable and the foods themselves a mystery.
 						</p>
 					<a href="#superfoods" style="color: white; text-decoration: none;">
 					<h3 class="click_button"> START </h3>
-					</a>	
-					
-				</div>
-			
-		
-		</div>	
-			
+					</a>
 
-		<!----- SUPERFOODS --->	
-		<div class="section_wrapper" id="superfoods">				
-		<div class="content_wrapper">	
-			
+				</div>
+
+
+		</div>
+
+
+		<!----- SUPERFOODS --->
+		<div class="section_wrapper" id="superfoods">
+		<div class="content_wrapper">
+
 			<div class="column third_size">
 			<h4> But first…</h4>
 			<h3>What is a superfood? </h3>
@@ -422,148 +417,148 @@
 			<br><br>
 			The term was first used in <a href="https://www.hsph.harvard.edu/nutritionsource/superfoods/">1917 by The United Fruit Company</a>, now ‘Chiquita Banana’. In a series of pamphlets, bananas were called superfoods in order to promote sales. Researchers began publishing articles about bananas using the term and in turn, the media printed headlines talking about the ‘super nutritious’ bananas. All of this increased banana sales for years to come.
 			<br><br>
-			This particular story will set the script for future superfoods. Superfoods equal money: the global industry was estimated to be worth <a href="https://www.grandviewresearch.com/industry-analysis/superfood-market#:~:text=Industry%20Insights,5.9%25%20over%20the%20forecast%20period">137 billion USD in 2018</a>, between 2011 and 2015 there was a <a href="https://www.mintel.com/press-centre/food-and-drink/super-growth-for-super-foods-new-product-development-shoots-up-202-globally-over-the-past-five-years">202% increase</a> in the number of new products that claimed the 'super' status and the use of the term <a href="https://books.google.com/ngrams/graph?content=superfood&year_start=1917&year_end=2019&corpus=26&smoothing=0&direct_url=t1%3B%2Csuperfood%3B%2Cc0">has risen since 2014</a>. 
-			<br> 	
-			
+			This particular story will set the script for future superfoods. Superfoods equal money: the global industry was estimated to be worth <a href="https://www.grandviewresearch.com/industry-analysis/superfood-market#:~:text=Industry%20Insights,5.9%25%20over%20the%20forecast%20period">137 billion USD in 2018</a>, between 2011 and 2015 there was a <a href="https://www.mintel.com/press-centre/food-and-drink/super-growth-for-super-foods-new-product-development-shoots-up-202-globally-over-the-past-five-years">202% increase</a> in the number of new products that claimed the 'super' status and the use of the term <a href="https://books.google.com/ngrams/graph?content=superfood&year_start=1917&year_end=2019&corpus=26&smoothing=0&direct_url=t1%3B%2Csuperfood%3B%2Cc0">has risen since 2014</a>.
+			<br>
 
 
- 
+
+
 			</p>
-				
-			
+
+
 					<a href="#marketing" style="color: white; text-decoration: none;">
 						<h3 class="click_button"> NEXT </h3>
-					</a>	
-				
-				
-			</div>	
-			
-			
+					</a>
+
+
+			</div>
+
+
 			<div class="column two_third_size">
 				<img src="assets/superfoods_main_img.svg">
-			</div>	
-			
-	
+			</div>
+
+
 		</div>
 		</div>
-			
-		<!----- MARKETING --->	
-		<div class="section_wrapper" id="marketing">				
-		<div class="content_wrapper">	
-			
+
+		<!----- MARKETING --->
+		<div class="section_wrapper" id="marketing">
+		<div class="content_wrapper">
+
 			<div class="column third_size">
 			<h4> Are 'superfoods' really</h4>
 			<h3>Super? </h3>
 			<p>
 			No one ‘superfood’ can cover all nutritional needs.<br>
-			
+
 			Marketers use the term ‘superfood’ to stretch the nutritional value of a food, using carefully worded statements that imply extraordinary health benefits.
-			<br><br>	
+			<br><br>
 			For example, in 2017 a Canadian news agency, <a href="https://www.youtube.com/watch?v=3tzYUeoFuNw"> CBC News, found a granola-quinoa product</a> that claimed it lowered cholesterol, controlled blood sugar and prevented cancer. Only after the news agency filed a complaint against them, the company was forced to change their marketing.
 			<br><br>
 			This example shows how lack of regulation allows companies to exaggerate the health benefits of a product, putting a lot of weight on the consumer’s decisions. To protect consumers from these predatory practices, the <a href="http://news.bbc.co.uk/2/hi/health/6252390.stm">European Union banned the term in 2007</a>, unless it was accompanied by a specific authorised health claim.
 			<br><br>
 			However, other areas of the world lack regulation.
-				
+
 
 			</p>
-				
-			
+
+
 					<a href="#food_system" style="color: white; text-decoration: none;">
 						<h3 class="click_button"> NEXT </h3>
-					</a>	
-				
-				
-			</div>	
-			
-			
+					</a>
+
+
+			</div>
+
+
 			<div class="column two_third_size">
 				<img src="assets/marketing-01.svg">
-			</div>	
-			
-	
+			</div>
+
+
 		</div>
 		</div>
-	
+
 		<!---FOOD SYSTEMS------>
-		<div class="section_wrapper" id="food_system">				
+		<div class="section_wrapper" id="food_system">
 		<div class="content_wrapper">
-					
-				
-					
+
+
+
 		<div class="column third_size">
 			<h3> The complexity of food systems </h3>
-	
+
 			<p>With superfoods we have a glimpse on how complex food systems are. <br>
 			There are interconnected systems in play that affect what food is <br>
-				available to us and there are many steps before we can even select it. 
+				available to us and there are many steps before we can even select it.
 
 				<a href="#indigenous">		NEXT  </a>	 </P>
-			
+
 		</div>
-			
-		<div class="column two_third_size">	
-				<img src="assets/food_system.svg">	
-	
-		</div>	
-			
-	
+
+		<div class="column two_third_size">
+				<img src="assets/food_system.svg">
+
+		</div>
+
+
 		</div>
 		</div>
-			
-		
-		
+
+
+
 		<!---- INDIGENOUS FOODS---->
-		
+
 		<div class="section_wrapper" id="indigenous">
 		<div class="content_wrapper">
-	
+
 		<div class="column full_size">
-		
+
 			<h4>The plot thickens...</h4>
 			<h3>Indigenous foods</h3>
-			
+
 			<p>The story is even more complicated when it comes to foods with an indigenous origin.
 			<br>
-			These foods used to play a key role in ancient civilizations but colonization 
+			These foods used to play a key role in ancient civilizations but colonization
 			<br>often led to three potential scenarios: exploitation, neglect or eradication.
-			</p>	
-		
-		</div>	
-			
+			</p>
+
+		</div>
+
 		<div class="info_blocks_wrapper">
-			
-		<div class="column third_size">	
+
+		<div class="column third_size">
 			<img src="assets/indigenous_TOMATOES.svg">
 			<h4>Exploitation: Tomatoes </h4>
 			<p>
 			<a href="http://www.vegetablefacts.net/vegetable-history/history-of-tomatoes/">Taken from mesoamerica</a> and incorporated into western diets, nowadays they are associated with the Mediterranean cuisine and its cultures.
 			</p>
 		</div>
-		
-		<div class="column third_size">	
+
+		<div class="column third_size">
 			<img src="assets/indigenous_AVOCADO.svg">
 			<h4>Neglect: Avocados </h4>
 			<p>	Another mesoamerican crop was exported outside the region but it didn't <a href="https://www.thespruceeats.com/history-of-avocado-1807562">gain popularity until the 21st century.</a>
-			</p>	
+			</p>
 		</div>
-		<div class="column third_size">		
-			<img src="assets/indigenous_CHIA.svg">	
-			<h4>Eradication: Chia seeds</h4> 
+		<div class="column third_size">
+			<img src="assets/indigenous_CHIA.svg">
+			<h4>Eradication: Chia seeds</h4>
 			<p>Due to their high value religious value for the Aztecs, they <a href="https://www.researchgate.net/publication/311540950_Chia_Crop_Salvia_hispanica_l_its_History_and_Importance_as_a_Source_of_Polyunsaturated_Fatty_Acids_Omega-3_Around_the_World_a_Review">were prohibited and lost for almost 400 years</a>. Since their ‘rediscovery’ they has become a very popular food.
 			</p>
-		</div>	
-			
-		</div>	
-			
+		</div>
+
+		</div>
+
 		</div>
 		</div>
-		
-		<!---CHOOSE SUPERFOOD-->			
-		<div class="section_wrapper border_division" id="choose_superfood">			
+
+		<!---CHOOSE SUPERFOOD-->
+		<div class="section_wrapper border_division" id="choose_superfood">
 		<div class="content_wrapper ">
-			
-	
+
+
 		<div class="column third_size">
 			<h3> Choose your superfood!</h3>
 
@@ -571,12 +566,12 @@
 			Let's look at our characters and their stats.
 			<br><br>
 			<a href="https://www.nutritionvalue.org/">Healthy:</a> nutrition and health benefits. <br>
-				
+
 			<a href="https://healabel.com/water-footprint-of-foods">Sustainability:</a> carbon footprint and water footprint<br>
-				
+
 			<a href="https://healabel.com/about">Laborers</a>: reports on labor issues.<br>
-			Background: what scenario it faced. 
-	
+			Background: what scenario it faced.
+
 			<br><br>
 			<a href="#origin">	NEXT  </a>
 			</p>
@@ -587,15 +582,15 @@
 				</i>
 				</p>
 		</div>
-		
-		
-			
+
+
+
 		<div class="column two_third_size">
-		
-			
+
+
 			<style>
-			
-				table{    
+
+				table{
 				width: 100%;
    				text-align: center;
     			margin-bottom: 5px;
@@ -610,62 +605,62 @@
     				padding: 0px;
     				padding-top: 8px;
 				}
-				
+
 				td.option.selected, td.option:hover{
 					border: 1px solid black;
 				}
 			</style>
-			
-			<table class="options_wrapper" id="choose_options"> 
+
+			<table class="options_wrapper" id="choose_options">
 				<tr>
-					<td  class="option" id="choose_option_1"> AMARANTH</td>	
+					<td  class="option" id="choose_option_1"> AMARANTH</td>
 					<td  class="option" id="choose_option_2">AVOCADO </td>
 					<td  class="option selected" id="choose_option_3">CHIA </td>
-					<td  class="option" id="choose_option_4"> QUINOA</td>	
+					<td  class="option" id="choose_option_4"> QUINOA</td>
 					<td  class="option" id="choose_option_5">SPIRULINA </td>
 					<td  class="option" id="choose_option_6">TOMATOES </td>
-				</tr>			
+				</tr>
 			</table>
-			
+
 			<div class="gallery_wrapper" id="choose_images">
-				
-				<div class="gallery_image " id="choose_image_1"> 
+
+				<div class="gallery_image " id="choose_image_1">
 					<img src="assets/choose_superfood_AMARANTH.svg">
 				</div>
-					
-				<div class="gallery_image" id="choose_image_2"> 
+
+				<div class="gallery_image" id="choose_image_2">
 					<img src="assets/choose_superfood_AVOCADO.svg">
 				</div>
-				
-				<div class="gallery_image selected" id="choose_image_3"> 
+
+				<div class="gallery_image selected" id="choose_image_3">
 					<img src="assets/choose_superfood_CHIA.svg">
 				</div>
-				
-				<div class="gallery_image" id="choose_image_4"> 
+
+				<div class="gallery_image" id="choose_image_4">
 					<img src="assets/choose_superfood_QUINOA.svg">
 				</div>
-				
-				<div class="gallery_image" id="choose_image_5"> 
+
+				<div class="gallery_image" id="choose_image_5">
 					<img src="assets/choose_superfood_SPIRULINA.svg">
 				</div>
-				
-				<div class="gallery_image" id="choose_image_6"> 
+
+				<div class="gallery_image" id="choose_image_6">
 					<img src="assets/choose_superfood_TOMATOES.svg">
 				</div>
-				
-				
-			</div>	
-			
-	
+
+
+			</div>
+
+
 		</div>
-			
-		
+
+
 		</div>
 		</div>
-		
+
 		<!---CHIA ORIGIN------>
-		<div class="section_wrapper" id="origin">				
-		<div class="content_wrapper">	
+		<div class="section_wrapper" id="origin">
+		<div class="content_wrapper">
 		<div class="column full_size">
 			<h3> Origin of chia </h3>
 			<p>Chia is actually from mesoamerica, present day Mexico and Guatemala. <br>
@@ -673,616 +668,601 @@
 				famous for their strong military, amazing architecture and progressive education.
 				<br> 	<a href="#lost">		NEXT  </a>
 			</p>
-			
-	
+
+
 			<div class="carrousel_wrapper" id="origin_carrousel">
-			
-			
+
+
 				<div class="carrousel_controls previous">  </div>
-				
+
 				<div class="carrousel_images_wrapper">
-					
+
 					<img class="carrousel_image selected" id="origin_carrousel_image_1" src="assets/origin_ARCHITECHTURE.svg">
 					<img class="carrousel_image" id="origin_carrousel_image_2" src="assets/origin_MILITARY.svg">
 					<img class="carrousel_image" id="origin_carrousel_image_3" src="assets/origin_EDUCATION.svg">
-					
+
 				</div>
 				<div class="carrousel_controls next">  </div>
 			</div>
-			
-		</div>	
-			
-			
 
-			
-			
+		</div>
+
+
+
+
+
 
 		</div>
 		</div>
-						
+
 		<!---LOST + REDISCOVERY------>
-		<div class="section_wrapper" id="lost">				
+		<div class="section_wrapper" id="lost">
 		<div class="content_wrapper">
 		<div class="column third_size">
 			<h3> Lost for almost 400 years </h3>
-			<p>Because of the key role chia had in Aztec society and religion, 
-				it was banned during colonization and lost for almost 400 years. 
+			<p>Because of the key role chia had in Aztec society and religion,
+				it was banned during colonization and lost for almost 400 years.
 				<br><br>
-				Thankfully, chia managed to survive in small, isolated communities. 
+				Thankfully, chia managed to survive in small, isolated communities.
 				<br>
-				Chia resurfaced around the 1930s thanks to a strange 
-				combination of <a href="https://www.smithsonianmag.com/arts-culture/chia-pet-180308610/">terracota decorations</a>, 
+				Chia resurfaced around the 1930s thanks to a strange
+				combination of <a href="https://www.smithsonianmag.com/arts-culture/chia-pet-180308610/">terracota decorations</a>,
 				<a href="https://www.researchgate.net/publication/311540950_Chia_Crop_Salvia_hispanica_l_its_History_and_Importance_as_a_Source_of_Polyunsaturated_Fatty_Acids_Omega-3_Around_the_World_a_Review"> nutritional research</a> and ,<a href="https://www.doctoroz.com/blog/chia-ancient-super-secret">the media</a>.
-				
-				<br><br>
-				Chia sales increased around 2009,when the  <a href="https://mobil.bfr.bund.de/cm/343/efsa_opinion_on_the_safety_of_chia_seeds_salvia_hispania_l.pdf">>EU recognized it as a novel food</a>, authorizing it in the region. 
 
-				
-				
+				<br><br>
+				Chia sales increased around 2009,when the  <a href="https://mobil.bfr.bund.de/cm/343/efsa_opinion_on_the_safety_of_chia_seeds_salvia_hispania_l.pdf">>EU recognized it as a novel food</a>, authorizing it in the region.
+
+
+
 				<br> 	<a href="#timeline">		NEXT  </a>
 			</p>
-				
-			
-		</div>	
-			
+
+
+		</div>
+
 		<div class="column two_third_size">
-		
-			
+
+
 			<div class="carrousel_wrapper" id="lost_carrousel">
-			
-			
+
+
 				<div class="carrousel_controls previous">  </div>
-				
+
 				<div class="carrousel_images_wrapper">
-					
-				
-					
+
+
+
 				<img class="carrousel_image selected" id="lost_carrousel_image_1"  src="assets/lost_rediscovery_TLALOC.svg">
-					
+
 				<img class="carrousel_image" id="lost_carrousel_image_2" src="assets/lost_rediscovery_NUTRITION PILAR.svg">
-					
+
 				<img class="carrousel_image" id="lost_carrousel_image_3" src="assets/lost_rediscovery_ERADICATION.svg">
-				
+
 				<img class="carrousel_image" id="lost_carrousel_image_4" src="assets/lost_rediscovery_CHIA PET.svg">
-				
+
 				<img class="carrousel_image" id="lost_carrousel_image_5" src="assets/lost_rediscovery_NUTRITIONAL RESEARCH.svg">
-				
+
 				<img class="carrousel_image" id="lost_carrousel_image_6" src="assets/lost_rediscovery_MEDIA PROMOTION.svg">
-				
-												
-					
+
+
+
 				</div>
 				<div class="carrousel_controls next">  </div>
 			</div>
 
 		</div>
-			
-		
+
+
 		</div>
 		</div>
-	
+
 		<!---TIMELINE------>
-		<div class="section_wrapper" id="timeline">				
+		<div class="section_wrapper" id="timeline">
 		<div class="content_wrapper">
 		<div class="column full_size">
 			<h3> TIMELINE </h3>
-			<p>What happened to chia? <br> 
-			Explore the story on this interactive timeline or you can also see it as a <a href="/superfood_story/index"> videogame! </a> 
+			<p>What happened to chia? <br>
+			Explore the story on this interactive timeline or you can also see it as a <a href="/superfood_story/index"> videogame! </a>
 			<br>
 					<a href="#nutrinfo">		NEXT  </a>
 			</p>
 
-				
-					
+
+
 			<div class="carrousel_wrapper" id="timeline_carrousel">
-			
+
 				<div class="carrousel_controls previous">  </div>
-				
+
 				<div class="carrousel_images_wrapper">
-					
+
 					<img class="carrousel_image selected" id="timeline_carrousel_image_1" src="https://via.placeholder.com/1200x650">
 					<img class="carrousel_image" id="timeline_carrousel_image_2" src="https://via.placeholder.com/1200x650">
 					<img class="carrousel_image" id="timeline_carrousel_image_3" src="https://via.placeholder.com/1200x650">
-					
+
 				</div>
 				<div class="carrousel_controls next">  </div>
 			</div>
-	
-			
-		
-			
-	
+
+
+
+
+
 		</div>
 		</div>
 		</div>
-							
-		<!---NUTRINFO------>	
-		<div class="section_wrapper" id="nutrinfo">				
+
+		<!---NUTRINFO------>
+		<div class="section_wrapper" id="nutrinfo">
 		<div class="content_wrapper">
-		
-		
+
+
 			<div class="column third_size">
 			<h3> Nutritional Information</h3>
 			<p>
 				What am I getting when I eat chia?<br>
-				Let's break it down. 
+				Let's break it down.
 				<br><br>
 				You can also see how it compares to other similar foods.
-				
+
 				<br> <a href="#myths">		NEXT  </a>
 			</p>
-			
-				
-			<p> 50 GRAMS </p>	
-				
-				
+
+
+			<p> 50 GRAMS </p>
+
+
 			<div class="options_wrapper" id="nutrinfo_options">
-			
-			
+
+
 				<div class="option selected" id="nutrinfo_option_1">
 					CHIA
 				</div>
-				
+
 				<div class="option"  id="nutrinfo_option_2">
-					ALMONDS 
+					ALMONDS
 				</div>
-				
-				
+
+
 				<div class="option" id="nutrinfo_option_3">
 					SUNFLOWER SEEDS
 				</div>
-				
+
 				<div class="option" id="nutrinfo_option_4">
 					PEANUTS
 				</div>
-				
-			</div>
-		
-			
-			
-		</div>	
-			
-			<div class="column two_third_size">
-		
-			
-				<div class="gallery_wrapper" id="nutrinfo_images">
-				
-				<div class="gallery_image selected" id="nutrinfo_image_1"> 
-				
-					<img src="assets/nutrinfo_CHIA.svg" >
-				
-				</div>
-					
-				<div class="gallery_image " id="nutrinfo_image_2"> 
-				
-					<img src="assets/nutrinfo_CHIA VS ALMONDS.svg" >
-				
-				</div>
-					
-				<div class="gallery_image " id="nutrinfo_image_3"> 
-				
-					<img src="assets/nutrinfo_CHIA VS SUNFLOWER.svg" >
-				
-				</div>
-					
-				
-				<div class="gallery_image" id="nutrinfo_image_4" > 
-					<img src="assets/nutrinfo_CHIA VS PEANUT.svg" >
-				</div>
-				
-			</div>	
-			
 
 			</div>
-			
-		
-			
+
+
+
+		</div>
+
+			<div class="column two_third_size">
+
+
+				<div class="gallery_wrapper" id="nutrinfo_images">
+
+				<div class="gallery_image selected" id="nutrinfo_image_1">
+
+					<img src="assets/nutrinfo_CHIA.svg" >
+
+				</div>
+
+				<div class="gallery_image " id="nutrinfo_image_2">
+
+					<img src="assets/nutrinfo_CHIA VS ALMONDS.svg" >
+
+				</div>
+
+				<div class="gallery_image " id="nutrinfo_image_3">
+
+					<img src="assets/nutrinfo_CHIA VS SUNFLOWER.svg" >
+
+				</div>
+
+
+				<div class="gallery_image" id="nutrinfo_image_4" >
+					<img src="assets/nutrinfo_CHIA VS PEANUT.svg" >
+				</div>
+
+			</div>
+
+
+			</div>
+
+
+
 		</div>
 		</div>
 
 		<!--MYTHS-->
-		<div class="section_wrapper" id="myths">				
+		<div class="section_wrapper" id="myths">
 		<div class="content_wrapper">
 
-		
+
 		<div class="column third_size">
 			<h3> The myths of chia </h3>
-			<p>There is a lot of fuzz around chia, <br> but what is a myth and what is real? 
+			<p>There is a lot of fuzz around chia, <br> but what is a myth and what is real?
 			<br> <a href="#growing">		NEXT  </a>
 			</p>
-				
-				
+
+
 			<div class="options_wrapper" id="myths_options">
-			
-			
+
+
 				<div class="option  selected" id="myths_option_1">
 					WEIGHTLOSS
 				</div>
-				
+
 				<div class="option"  id="myths_option_2">
 					HEART HEALTH
 				</div>
-				
-				
+
+
 				<div class="option" id="myths_option_3">
 					DIGESTIVE HELP
 				</div>
-				
-				
+
+
 			</div>
-		
-			
-			
-		</div>	
-			
+
+
+
+		</div>
+
 		<div class="column two_third_size">
-		
-			
+
+
 			<div class="gallery_wrapper" id="myths_images">
-				
-				<div class="gallery_image selected" id="myths_image_1"> 
-					
+
+				<div class="gallery_image selected" id="myths_image_1">
+
 					<img src="assets/myths_WEIGHTLOSS.svg">
 				</div>
-					
-				<div class="gallery_image" id="myths_image_2"> 
+
+				<div class="gallery_image" id="myths_image_2">
 					<img src="assets/myths_HEART HEALTH.svg">
 				</div>
-				
-				<div class="gallery_image" id="myths_image_3"> 
+
+				<div class="gallery_image" id="myths_image_3">
 					<img src="assets/myths_TOILET.svg">
 				</div>
-				
-			</div>	
-			
+
+			</div>
+
 
 		</div>
-						
+
 		</div>
 		</div>
-					
+
 		<!---GROWING CHIA------>
 
-		<div class="section_wrapper" id="growing">				
+		<div class="section_wrapper" id="growing">
+      
 		<div class="content_wrapper">
 		<div class="column full_size">
 			<h3> Growing chia </h3>
 			<p>Chia is a very sustainable crop.<br>
 			It grows well in arid regions even with low quality soils <BR>
-			  and requires little irrigation once established. 
+			  and requires little irrigation once established.
 				<BR>
-				And you can also grow it on paper towels at home! 
+				And you can also grow it on paper towels at home!
 				<br> <a href="#worldwide">		NEXT  </a>
 					</p>
 		</div>
-			
-			
-				
+
+
+
 				<div class="info_blocks_wrapper">
-					
-				<div class="column third_size info_block" id="growing_info_1">
-					
-					<div class="intro">
-					
-						<img src="assets/growing_CHIA FARM.svg">
-						
-						<h3 class="click_button"> READ MORE </h3>
-					</div>
-					
-					<div class="content ">
+
+				<div class="column third_size" id="growing_info_1">
+
+
+				  <img src="assets/growing_CHIA FARM.svg">
+				
 						<h4>Modern Farming</h4>
-						<p>Chia seed production is <a href="https://foodprint.org/real-food/chia-seeds/">very sustainable</a> with a low water footprint and there is no significant damage to soil. It also doesn't need any sprays since the essentials oils in chia are natural insect repellants. 
-						
-						<br>
-						<br> However, look for <a href="https://www.fairtrade.net/about">fair trade</a> chia seeds since <a href="https://www.osha.gov/agricultural-operations#:~:text=Farmworkers%20are%20at%20high%20risk,use%20and%20prolonged%20sun%20exposure.">agriculture is one of the most dangerous industries</a>. Workers might be exposed to harsh and unsafe working conditions, low wages and other forms of abuse.  </p>
-						
-						<h3 class="click_button"> BACK</h3>
-						
-					</div>
-					
-				</div>	
-				
-	
-				
-				<div class="column third_size info_block" id="growing_info_2">
-					
-					<div class="intro">
-						<img src="assets/growing_CHINAMPAS.svg">
-						
-											
-						<h3 class="click_button"> READ MORE </h3>
-						
-					</div>
-					
-					<div class="content">
-						
+						<p>
+              Chia seed production is <a href="https://foodprint.org/real-food/chia-seeds/">very sustainable</a> 
+              with a low water footprint and there is no significant damage to soil. 
+              It also doesn't need any sprays since the essentials oils in chia are natural insect repellants.
+
+						<br> 
+            However, look for <a href="https://www.fairtrade.net/about">fair trade</a> chia seeds 
+            since <a href="https://www.osha.gov/agricultural-operations#:~:text=Farmworkers%20are%20at%20high%20risk,use%20and%20prolonged%20sun%20exposure.">
+            agriculture is one of the most dangerous industries</a>. 
+            Workers might be exposed to harsh and unsafe working conditions, low wages and other forms of abuse.  
+          </p>
+
+			
+
+				</div>
+
+
+
+				<div class="column third_size" id="growing_info_2">
+
+					<img src="assets/growing_CHINAMPAS.svg">
+
 						<h4>Chinampas</h4>
-						<p>The Aztecs used a  highly efficient agricultural technique called <a href="https://www.sustainability-times.com/clean-cities/ancient-aztec-chinampas-hold-promise-for-urban-agriculture/">chinampas</a>, <br>
+						<p>The Aztecs used a  highly efficient agricultural technique called 
+              <a href="https://www.sustainability-times.com/clean-cities/ancient-aztec-chinampas-hold-promise-for-urban-agriculture/">
+                chinampas</a>, <br>
 							which translates to a square made of canes. <br>
-							Chinampas were ‘floating’ gardens that maximized resources around them. By absorbing nutrients from the lake bed and being constantly irrigated by the water that sorrounds them, they are highly efficient. 
-						
+							Chinampas were ‘floating’ gardens that maximized resources around them. 
+              By absorbing nutrients from the lake bed and being constantly irrigated by the water that sorrounds them, 
+              they are highly efficient.
 						</p>
-						
-						<h3 class="click_button"> BACK</h3>
-					</div>
-					
-				</div>	
-				
-		
-				
+
+
+				</div>
+
+
+
 				<div class="column third_size info_block" id="growing_info_3">
-					
-					<div class="intro">
+
 						<img src="assets/growing_MICROGREENS.svg">
-						
-						<h3 class="click_button"> READ MORE </h3>
-						
-					</div>
-					
-					<div class="content">
+
+
 						<h4>Microgreens</h4>
 						<p>Chia is very easy to grow at home, it doesn’t even need soil!
 							<br>
-							You can soak the seeds for a day, place them on a paper towel and see them grow over the next 2 weeks. 
+							You can soak the seeds for a day, place them on a paper towel and 
+              see them grow over the next 2 weeks.
 							<br>
-							Once they are ready for harvest,when they are about 3cm in height,  you can add them to salads or other dishes. 
-						
+							Once they are ready for harvest,when they are about 3cm in height,  
+              you can add them to salads or other dishes.
+
 							<br>
 							You can find a complete guide <a href="https://www.epicgardening.com/chia-microgreens/">here</a>.
 						</p>
-						
-						<h3 class="click_button"> BACK</h3>
-					</div>
-					
-				</div>	
-				
 
-			
-	
+
+				</div>
+
 			</div>
-			
-			
-		
-			
+
+
+
+
 		</div>
 		</div>
-	
+
 		<!--- CHIA WORLDWIDE------>
 
-		<div class="section_wrapper" id="worldwide">				
+		<div class="section_wrapper" id="worldwide">
 		<div class="content_wrapper">
 
-			
-					
+
+
 			<div class="column third_size">
 			<h3> Chia worldwide </h3>
 			<p>Although the crop is native to Mexico and Guatemala, nowadays the top producers are Bolivia, Paraguay and Argentina.
 				<br><br>
-				In 2020 the top importers were the United States, Germany and Spain. 
+				In 2020 the top importers were the United States, Germany and Spain.
 				<br><br>
-				Agriculture sustainability and efficency varies a lot by country, according to the <a href="https://dashboards.sdgindex.org/map/indicators/sdg2_snmi">Sustainable Development Goals only 2 countries have achieved this. </a> An option to make sure 
-				
+				Agriculture sustainability and efficency varies a lot by country, according to the <a href="https://dashboards.sdgindex.org/map/indicators/sdg2_snmi">Sustainable Development Goals only 2 countries have achieved this. </a> An option to make sure
+
 			 	<br> <a href="#prediction">	NEXT  </a>
 				</p>
-				
-				
+
+
 			<div class="options_wrapper" id="worldwide_options">
-			
-			
+
+
 				<div class="option  selected" id="worldwide_option_1">
 					OVERVIEW
 				</div>
-				
+
 				<div class="option "  id="worldwide_option_2">
 					IMPORT / EXPORT
 				</div>
-				
+
 				<div class="option "  id="worldwide_option_3">
-					SUSTAINABILITY 
+					SUSTAINABILITY
 				</div>
-								
-			
-				
+
+
+
 			</div>
-		
-			
-			
-		</div>	
-			
+
+
+
+		</div>
+
 			<div class="column two_third_size" >
-			
+
 			<div class="gallery_wrapper" id="worldwide_images">
-				
-				<div class="gallery_image selected" id="worldwide_image_1"> 
-					
+
+				<div class="gallery_image selected" id="worldwide_image_1">
+
 					<img src="assets/worldwide_OVERVIEW.svg">
 				</div>
-					
-				<div class="gallery_image" id="worldwide_image_2"> 
+
+				<div class="gallery_image" id="worldwide_image_2">
 					<img src="assets/worldwide_FLOW.svg">
 				</div>
-				<div class="gallery_image" id="worldwide_image_3"> 
+				<div class="gallery_image" id="worldwide_image_3">
 					<img src="assets/chia_worldwide_SUSTAINABILITY.svg">
 				</div>
-				
-	
-				
-			</div>	
-			
 
-			</div>	
+
+
+			</div>
+
+
+			</div>
 
 		</div>
-			
-	
-			
-			
-			
+
+
+
+
+
 		</div>
-				
+
 		<!--- PREDICTIONS------>
-		<div class="section_wrapper" id="prediction">				
+		<div class="section_wrapper" id="prediction">
 		<div class="content_wrapper">
 		<div class="column full_size">
 			<h3> Predictions </h3>
-			<p>What will happen with chia in the future? 
+			<p>What will happen with chia in the future?
 			<br>
 			Most likely chia production will increase in the next couple of years,<br>
 			but let's explore 3 potential scenarios.
-			
+
 			<br> <a href="#conclusion">		NEXT  </a>
 			</p>
 		</div>
-			
-	
+
+
 			<div class="info_blocks_wrapper" id="prediction_info">
-				
-				
-				<div class="column third_size info_block" id="prediction_info_1">
-					
-					<div class="intro">
-						<img src="assets/predictions_TRENDS.svg">
-						<h3 class="click_button"> READ MORE </h3>
-					</div>
-					
-					<div class="content">
+
+
+				<div class="column third_size" id="prediction_info_1">
+
+	
+					<img src="assets/predictions_TRENDS.svg">
+
+
 						<h4>Trends continue</h4>
-						<p>When the global demand for chia started to increase in the early 2010s, <a href="https://www.mercadero.nl/turning-point-in-chia-market/">overproduction followed creating an inflation period</a>, however the market  stabilized around 2016. If the trend continues, more and more people will want to consume chia and stable production would follow.
-						<br><br> The global chia market for 2021 was evaluated in <a href="https://www.marketdataforecast.com/market-reports/chia-seeds-market">66.5 million USD </a> and it projected to keep growing at around 5.8% annually. 
+						<p>When the global demand for chia started to increase in the early 2010s, 
+              <a href="https://www.mercadero.nl/turning-point-in-chia-market/">overproduction 
+                followed creating an inflation period</a>, however the market  stabilized around 2016. 
+                If the trend continues, more and more people will want to consume chia and stable production would follow.
+						<br><br> The global chia market for 2021 was evaluated in 
+            <a href="https://www.marketdataforecast.com/market-reports/chia-seeds-market">66.5 million USD </a>
+             and it projected to keep growing at around 5.8% annually.
 						</p>
-						<h3 class="click_button"> BACK </h3>
-					</div>
 					
-				</div>	
-				
-				
-				<div class="column third_size info_block" id="prediction_info_2">
-					
-					<div class="intro">
+				</div>
+
+
+				<div class="column third_size" id="prediction_info_2">
+
+		
 						<img src="assets/predictions_ERADICATION.svg">
-						<h3 class="click_button"> READ MORE </h3>
-					</div>
-					
-					<div class="content">
-						<h4>Eradication</h4>
-						<p>It might seem unlikely, but history can repeat itself. The trend of superfoods seems to be in its heyday, with a market that grows every year. However, a new trend could come where superfoods are completely eradicated. Chia faced eradication once and since trends come and go, chia could fall again into obscurity.</p>
-						<h3 class="click_button"> BACK </h3>
-					</div>
-					
-				</div>	
-				
-				<div class="column third_size info_block" id="prediction_info_3">
-					
-					<div class="intro">
-						<img src="assets/predictions_CRYPTOCHIA.svg">
-						<h3 class="click_button"> READ MORE </h3>
-					</div>
-					
-					<div class="content">
-						<h4>Cryptochia</h4>
-						<p>Chia is also the name of a <a href="https://www.chia.net/">new type of cryptocurrency</a> that claims to be more eco-friendly than its counterparts since the technology behind it uses less power. This could mean chia will be a sustainable way to handle crypto transactions. 
-						<br>
-						However, the chia coin launch has disrupted the <a href="https://www.theguardian.com/technology/2021/may/26/new-cryptocurrency-chia-blamed-for-hard-drive-shortages">short term supply of disk drives</a>.
-						<br>
-						Cryptocurrencies and the market around them, change day by day, so the story keeps developing. </p>
-						<h3 class="click_button"> BACK </h3>
-					</div>
-					
-				</div>		
 				
 
+						<h4>Eradication</h4>
+						<p>It might seem unlikely, but history can repeat itself.
+               The trend of superfoods seems to be in its heyday, with a market that grows every year. 
+               However, a new trend could come where superfoods are completely eradicated. 
+               Chia faced eradication once and since trends come and go, chia could fall again into obscurity.
+             </p>
+					
+				</div>
+
+				<div class="column third_size" id="prediction_info_3">
+
+
+						<img src="assets/predictions_CRYPTOCHIA.svg">
+
+
+						<h4>Cryptochia</h4>
+						<p>Chia is also the name of a <a href="https://www.chia.net/">new type of cryptocurrency</a> 
+              that claims to be more eco-friendly than its counterparts since the technology behind it uses less power. 
+              This could mean chia will be a sustainable way to handle crypto transactions.
+						<br>
+						However, the chia coin launch has disrupted the <a href="https://www.theguardian.com/technology/2021/may/26/new-cryptocurrency-chia-blamed-for-hard-drive-shortages">
+              short term supply of disk drives</a>.
+						<br>
+						Cryptocurrencies and the market around them, change day by day, so the story keeps developing. </p>
+
+				</div>
+
+
 			</div>
-			
-			
-			
-		
+
+
+
+
 		</div>
 		</div>
-	
+
 
 		<!---CONCLUSION----->
 
-		<div class="section_wrapper" id="conclusion">				
-		<div class="content_wrapper">	
+		<div class="section_wrapper" id="conclusion">
+		<div class="content_wrapper">
 
 
-		
+
 		<div class="column third_size">
 			<h3> What now? </h3>
 			<p>
-			Food is something so essential that we often overlook how complex it is. 
+			Food is something so essential that we often overlook how complex it is.
 			<br><br>
-				
-			Superfoods used to have a role in indigenous diets, colonization and globalization have obscured this fact. 
+
+			Superfoods used to have a role in indigenous diets, colonization and globalization have obscured this fact.
 			<br><br>
-			While some of these crops are more nutritionally dense end even more sustainable, marketers have stretched their benefits to increase sales. 
+			While some of these crops are more nutritionally dense end even more sustainable, marketers have stretched their benefits to increase sales.
 			<br><br>
-			Consumers are vulnerable to misinformation but their purchases end up shaping agriculture practices around the world. 
-			
-			<br><br> 
-			One small seed can have a giant impact.
-				
-			<br><br>	
+			Consumers are vulnerable to misinformation but their purchases end up shaping agriculture practices around the world.
+
+			<br><br>
 			Maybe you are wondering if you should you eat chia? <br>
 			The answer isn't that simple, there are lots of things to consider,<br>
-			sometimes the best solution is asking more questions. 
-			<br>
-				
+			sometimes the best solution is asking more questions.
+      
+      <br><br>
+      One small seed can have a giant impact.
+
 			</p>
-		</div>	
-			
+		</div>
+
 		<div class="column two_third_size">
-			<img src="assets/conclusion-01.svg">	
-		</div>	
-			
+			<img src="assets/conclusion-01.svg">
+		</div>
+
 		</div>
 		</div>
-	
-			
+
+
 		<!--- CREDITS --->
-				
-		<div class="section_wrapper" id="credits">	
+
+		<div class="section_wrapper" id="credits">
 		<div class="content_wrapper" >
 		<div class="column full_size">
-			
+
    			<h3> CREDITS </h3>
     		<p> Superfood Story is a  project developed by <b>Ana Sifuentes</b> as part of the MADD ELISAVA Masters</p>
 
-			
-			
-			
+
+
+
 			<h3>SOURCES</h3>
-			
-			
+
+
 			<h4>Primary</h4>
 			<OL>
 				<li>Amaranth: Promise and history <br>
 				<i>Raúl Hernández Garciadiego  and Gisela Herrerías Guerra </i> <br>
 					<a href="http://www.alternativas.org.mx/Amaranto.pdf">http://www.alternativas.org.mx/Amaranto.pdf</a>
 				</li>
-				
-				
-				
+
+
+
 				<li>Maya to Aztec: Ancient Mesoamerica Revealed <br>
 				<i>Professor Edwin Barnhart </i><br>
 					<a href="https://www.thegreatcoursesplus.com/maya-to-aztec-ancient-mesoamerica-revealed">
 						https://www.thegreatcoursesplus.com/maya-to-aztec-ancient-mesoamerica-revealed
 					</a>
-				</li>				
-				
+				</li>
+
 				<li>Nutrition Value <br>
 				<i>USDA Food Data Central</i><br>
 				<a href="https://www.nutritionvalue.org/">https://www.nutritionvalue.org/</a>
 				</li>
-				
+
 				<li>Ofrendas de amaranto para los dioses de la lluvia. Tradición mesomaericana<br>
 				<i>Aurora Montúfar López</i><br>
 				<a href="https://arqueologiamexicana.mx/mexico-antiguo/ofrendas-de-amaranto-para-los-dioses-de-la-lluvia-tradicion-mesoamericana">https://arqueologiamexicana.mx</a>
 				</li>
-				
-			</OL>	
-		
-			
+
+			</OL>
+
+
 			<h4>Auxiliary</h4>
 		</div>
 		</div>
@@ -1290,7 +1270,7 @@
 
 
 
-	
+
 	</body>
 
 
@@ -1303,120 +1283,120 @@
 	<script>
 
 
-				
-				//section functionality 
+
+				//section functionality
 
 				$('.option').click(function(){
 
-							
+
 					var clicked = $(this).attr('id');
 					var num = clicked.slice(-1);
 					var total =  $('#'+clicked).parent().children().length;
 
 					var section =  clicked.substring(0, clicked.indexOf('_'));
-				
+
 					num = num.toString();
-					
+
 					//remove previous selections
 					$('#'+clicked).removeClass('selected');
 					$('#'+section+'_images > .gallery_image.selected').removeClass('selected');
-				
-					//apped new selection 
+
+					//apped new selection
 					$('#'+section+'_option_'+num).addClass('selected');
 					$('#'+section+'_image_'+num).addClass('selected');
-	
-					
+
+
 				});
-				
-					
+
+
 				$('.info_block').click(function(){
 
-					
+
 					var clicked_id =  $(this).attr('id');
-					
+
 					$('#'+clicked_id +'> .intro').toggleClass('hidden');
 					$('#'+clicked_id +'> .content').toggleClass('showing');
 
-	
+
 				});
-	
+
 
 				$('.carrousel_controls').click(function(){
-		
+
 					//get which section
 					var section = $(this).parent().attr('id');
-					
+
 					//get which image is selected
 					var current_image = '#'+section+' > .carrousel_images_wrapper > .carrousel_image.selected';
-					
+
 					//get what number it is
 					var num =  parseInt(($(current_image).attr('id')).slice(-1));
-				
+
 					//get total images in gallery
 					var total =  $('#'+section+' > .carrousel_images_wrapper').children().length;
-					
-					
-					
+
+
+
 					//get if previous or next to add or subtract
 					if( $(this).hasClass('next')){
 							num = num +1;
 					}
 					else if( $(this).hasClass('previous')){
-							num = num -1;	
+							num = num -1;
 					}
-								
-					
-					//adjust for total numbers 
+
+
+					//adjust for total numbers
 					if(num > total){
 						num = 1;
 					}
 					if(num == 0){
 						num = total;
 					}
-					
-					
+
+
 					//hide current selected
 					$(current_image).removeClass('selected');
 					//ad new selection
 					$('#'+section+'_image_'+num).addClass('selected');
-					
-					
+
+
 				});
 
 
-		
-				
-			
+
+
+
 				//sections of the page
 				var page_sections =['introduction','superfoods', 'marketing',
 								    'food_system','indigenous','choose_superfood','origin',
 								    'lost','timeline','nutrinfo','myths','growing',
-								    'worldwide','prediction','conclusion','credits' ];	
-			
+								    'worldwide','prediction','conclusion','credits' ];
+
 				//get height of all sections
 				var section_length =[];
-			
+
 
 				let h=0;
-				for(x=0; x< page_sections.length; x++){			
+				for(x=0; x< page_sections.length; x++){
 					h = h + $('#'+page_sections[x]).height();
 					section_length[x] = h;
 					console.log("section  :"+page_sections[x]+" - "+h);
 
 				}
-		
 
 
-		//scrolling controls 
-		var position = $(window).scrollTop(); 
+
+		//scrolling controls
+		var position = $(window).scrollTop();
 
 		$(window).scroll(function() {
-	
+
 			//start scroll progress function
 			progress_bar_scrolling();
 
    			if ($(document).scrollTop() > section_length[0] ){
-				
+
 				$('#navbar').addClass('collapsed');
 				$('#navwrapper').addClass('collapsed');
 			}
@@ -1424,95 +1404,95 @@
 				$('#navbar').removeClass('collapsed');
 				$('#navwrapper').removeClass('collapsed');
 			}
-			
+
 			var scroll = $(window).scrollTop();
-		
+
 			/*
 			//scroll down
 			if(scroll > position) {
-			
+
 			//scroll up
 			} else {
-        		
+
 			}
-			*/	
+			*/
 			position = scroll;
-	
-			
-			
-			
+
+
+
+
 		});
-	
-		
-	
-		
-		//functions		
-
-	
-		
-
-		
 
 
 
-	
-		//progres bar scrolling 
+
+		//functions
+
+
+
+
+
+
+
+
+
+		//progres bar scrolling
 		function progress_bar_scrolling() {
-					
+
 					//height of the page
-					let page_heigth = $('body').height();			
-					
+					let page_heigth = $('body').height();
+
 					//how much did the user scroll
 					let window_scrolled = $(document).scrollTop() +300;
-					
+
 					//what % it represents
 					let scrolled_percentage = (window_scrolled / page_heigth) *100;
-					
+
 					//make sure it reaches the bottom
 					if(scrolled_percentage > 94){
 						scrolled_percentage = 100;
 					}
-					
+
 					if(scrolled_percentage < 5){
 						scrolled_percentage = 0;
 					}
-					
-					
+
+
 					//change progress bar width
 					$('#progress_bar').css('width', scrolled_percentage+'%');
 				}
 
-		
-		
-		
+
+
+
 		/***
-			
+
 		//scrolling with keys
 
 			//sections of the page
 			var page_sections =['introduction','superfoods', 'marketing',
 							    'food_system','indigenous','choose_superfood','origin',
 							    'lost','timeline','nutrinfo','myths','growing',
-							    'worldwide','prediction','conclusion','credits' ];	
-		
+							    'worldwide','prediction','conclusion','credits' ];
+
 			//get height of all sections
 			var section_length =[];
-		
+
 
 			let h=0;
-			for(x=0; x< page_sections.length; x++){			
+			for(x=0; x< page_sections.length; x++){
 				h = h + $('#'+page_sections[x]).height();
 				section_length[x] = h;
 				console.log("section  :"+page_sections[x]+" - "+h);
 
 			}
-		
+
 		document.onkeydown = function(e) {
-	
+
     		switch(e.which) {
-        	case 37: case 38:  //up / left 
-				section_scrolling(section_length,-1);		
-	
+        	case 37: case 38:  //up / left
+				section_scrolling(section_length,-1);
+
         	break;
 
         	case 39: case 40: // down / right
@@ -1524,36 +1504,36 @@
     		e.preventDefault(); // prevent the default action (scroll / move caret)
 		};
 		function section_scrolling( section_length, direction){
-						
+
 			let current_position = $(window).scrollTop();
-			
+
 			var w=0;
-			
+
 			for(x=0; x< section_length.length; x++){
-			
+
 				console.log('position'+current_position);
-				
+
 				if(current_position > section_length[x] && current_position < section_length[x+1]){
 					console.log(section_length[x] +''+ section_length[x+1]);
-					
+
 					w=x;
 					console.log(w);
 				}
 
 			}
-			
+
 			w= w+direction;
 			console.log('value:   '+w);
 			$(window).scrollTop($('#'+page_sections[w]).offset().top);
-	
+
 		}
-		
-		
-		
-		
+
+
+
+
 		***/
 
-</script>		
+</script>
 
 
 
