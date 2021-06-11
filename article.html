@@ -790,7 +790,7 @@
         <tr>
           <th>Laborers </th>
           <td>Multiple issues and reports</td>
-          <td>Several issues and reports<td>
+          <td>Several issues and reports</td>
           <td>No known issues</td>
           <td>Fair trade agriculture</td>  
         </tr>
@@ -807,6 +807,17 @@
       </table>  
 
       
+
+      <div class="clear"></div>
+
+      <div class="options_wrapper" id="choose_options">
+        <div class="option" id="choose_option_1"> AMARANTH</div>
+        <div class="option" id="choose_option_2"> AVOCADO</div>
+        <div class="option selected" id="choose_option_3"> CHIA</div>
+        <div class="option" id="choose_option_4"> QUINOA</div>
+        <div class="option" id="choose_option_5"> SPIRULINA</div>
+        <div class="option" id="choose_option_6"> TOMATOES</div>
+      </div>
       
 		  </div>
       <div class="column support_size"></div>
@@ -821,33 +832,37 @@
 				width: 100%;
    				text-align: center;
     			margin-bottom: 5px;
-    			font-family: 'VCR_OSD_MONO';
 				}
 
-				td.option{
-				    width: 33%;
-    				height: 30px;
-    				margin: 0px;
-    				border: 1px solid white;
-    				padding: 0px;
-    				padding-top: 8px;
+				td{
+    				border: 1px solid black;
 				}
 
-				td.option.selected, td.option:hover{
-					border: 1px solid black;
-				}
+        th{
+          text-align: left;
+        }
+
+        .option{
+          width: 10%;
+/* min-width: 100px; */
+color: white;
+float: left;
+margin: 5px 2px;
+height: 30px;
+padding: 15px 0px 5px 0px;
+text-align: center;
+font-weight: 900;
+cursor: pointer;
+font-family: 'VCR_OSD_MONO';
+background-color: black;
+border: solid 1px black;
+width:10%;
+        }
 			</style>
 
 
 
-      <div class="options_wrapper" id="choose_options">
-        <div class="option" id="choose_option_1"> AMARANTH</div>
-        <div class="option" id="choose_option_2"> AVOCADO</div>
-        <div class="option selected" id="choose_option_3"> CHIA</div>
-        <div class="option" id="choose_option_4"> QUINOA</div>
-        <div class="option" id="choose_option_5"> SPIRULINA</div>
-        <div class="option" id="choose_option_6"> TOMATOES</div>
-      </div>
+
 
 
       
