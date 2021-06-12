@@ -69,6 +69,14 @@
 
   b{font-family: 'Linux_Libertine_Bold'; }
 
+
+
+  table{width: 100%; text-align: center;  margin-bottom: 5px; border-collapse: collapse;}
+
+  td{border: 1px solid black;  width:20%  }
+
+  
+
 /**********************************************************************/
 /* MENU */
 
@@ -157,10 +165,14 @@
 
 
 
-
 	.clear{
 		clear:both;
 	}
+
+  .clear.space{
+    height: 50px;
+  }
+
 
 	.click_button{
 		background-color:black;
@@ -204,21 +216,31 @@
 	}
 
 	/*buttons for option select*/
-	.option{
-		width:70%;
-		color:white;
-		float:left;
-		margin:5px 0px;
-		height: 30px;
-		padding:15px 0px 5px 0px;
-		text-align: center;
-		font-weight: 900;
-		cursor: pointer;
-		font-family: 'VCR_OSD_MONO';
-		background-color:black;
-		border: solid 1px black;
-	}
+  
+  .option{
+      color: white;
+      text-align: center;
+      float: left;
+      margin: 0px 0.5%;
+      height: 30px;
+      font-size: 12px;
+    padding: 15px 0px 0px 0px;
+      text-align: center;
+      font-weight: 900;
+      cursor: pointer;
+    font-family: 'VCR_OSD_MONO';
+    background-color: black;
+      border: solid 1px black;
+      width:31.95%;
+  }
 
+    .option.six{
+      width: 15.25%;
+    }
+
+    .option.four{
+      width:23.6%;
+  }
 
 
 	/*selected option*/
@@ -227,15 +249,6 @@
 		color:black;
 	}
 
-	.option.gray{
-		background-color: darkgray;
-		border: 1px solid darkgray;
-	}
-
-	.option.gray:hover{
-		background-color:lightgrey;
-		color:darkgray;
-	}
 
 	/****/
 
@@ -622,41 +635,6 @@
 
 
 
-		<!---FOOD SYSTEMS -------------------------------------------------------------------------------------
-
-		<div class="section_wrapper" id="food_system">
-		<div class="content_wrapper">
-
-
-    <div class="column support_size"></div>
-    <div class="column center_size">
-
-    <p class="quote_txt">
-    With superfoods we have a glimpse on how different actors have an impact on our food.
-    <br><br>
-    Our modern food systems are <b>complex, interconnected webs of activities</b>
-    involving: governance, marketing and economics, agriculture and
-    sustainability, society and even our health.
-    </p>
-		</div>
-    <div class="column support_size"></div>
-
-
-
-    <div class="clear"></div>
-
-
-
-		<div class="column full_size">
-				<img src="assets/food_system.svg">
-		</div>
-
-
-		</div>
-		</div>
-
-    --------->
-
 
 		<!---- INDIGENOUS FOODS------------------------------------------------------------------------------------->
 
@@ -800,7 +778,7 @@
             </a>     
           </td>
           
-          <td colspan="4">  How resource intensive is the crop? (carbon and water footprints) </td>
+          <td colspan="4">  How resource intensive is the crop? </td>
         </tr>
 
         <tr>
@@ -818,7 +796,7 @@
             </a>   
           </td>
           
-          <td colspan="4">    Are there any reports of violations of worker's rights?  </td>
+          <td colspan="4"> Are there any reports of violations of worker's rights?  </td>
         </tr>
 
         <tr>
@@ -864,143 +842,42 @@
       </div>
 
 
-      <div class="clear space"></div>
-      <div class="clear space"></div>
-
-      
-            <div style="width:50%; float:left;">
-
-              <h3>NAME</h3>
-
-              <img src="https://via.placeholder.com/250x250">
-
-            </div>
-
-            <div style="  width: 40%;  margin: 6% 4%;  float: left; max-width: 300px;  font-family: 'VCR_OSD_MONO';">
-
-              <table>
-
-                <tr>
-                  <th> HEALTHY</th>
-                </tr>
-                <tr  height="30px">
-                  <td bgcolor="#CF232E"> Red</td>
-                  <td bgcolor="#EE5E2F">  Orange</td>
-                  <td bgcolor="#F3A634"> Yellow</td>
-                  <td bgcolor="#1A5C31">Green </td>
-                </tr>
-
-                <tr><td colspan="4" height="30px"></td></tr>
-
-                <tr>
-                  <th> SUSTAINABILITY</th>
-                </tr>
-                
-                <tr  height="30px">
-                  <td bgcolor="#CF232E"> </td>
-                  <td bgcolor="#EE5E2F"> </td>
-                  <td bgcolor="#F3A634"> </td>
-                  <td bgcolor="#1A5C31"> </td>
-                </tr>
-
-                <tr><td colspan="4" height="30px"></td></tr>
-
-                <tr>
-                  <th> LABORERS</th>
-                </tr>
-                
-                <tr  height="30px">
-                  <td bgcolor="#CF232E"> </td>
-                  <td bgcolor="#EE5E2F"> </td>
-                  <td bgcolor="#F3A634"> </td>
-                  <td bgcolor="#1A5C31"> </td>
-                </tr>
-
-                <tr><td colspan="4" height="30px"></td></tr>
-
-                <tr>
-                  <th> BACKSTORY</th>
-                </tr>
-                
-                <tr  height="30px">
-                  <td bgcolor="#CF232E"> </td>
-                  <td bgcolor="#EE5E2F"> </td>
-                  <td bgcolor="#F3A634"> </td>
-                  <td bgcolor="#1A5C31"> </td>
-                </tr>
-
-                
-
-              </table>
-
-
-            </div>
+    </div>
+    <div class="column support_size"></div>
 
 
 
-			<style>
+<div class="column full_size">
+  
+  <div class="clear space"></div>
+  <div class="clear space"></div>
 
-				table{
-				width: 100%;
-   				text-align: center;
-    			margin-bottom: 5px;
-        border-collapse: collapse;
-				}
+  
+  <div style="width:30%; float:left;">
 
-				td{
-    				border: 1px solid black;
-            width:18%
-				}
+      <h4>NAME</h4>
 
-        th{
-          text-align: left;
-          	border: 1px solid black;
-            
-        }
+          <img src="https://via.placeholder.com/250x250">
 
-        .option{
-          color: white;
-          text-align: center;
-          float: left;
-          margin: 0px 0.5%;
-          height: 30px;
-          font-size: 12px;
-          padding: 15px 0px 0px 0px;
-          text-align: center;
-          font-weight: 900;
-          cursor: pointer;
-          font-family: 'VCR_OSD_MONO';
-          background-color: black;
-          border: solid 1px black;
-          width:31.95%;
-        }
+  </div>
 
-        .option.six{
-          width: 15.25%;
-        }
+  <div style=" width: 30%; float:right; font-family: 'VCR_OSD_MONO';">
 
-        .option.four{
-          width:23.6%;
-        }
-
-
-        .clear.space{
-          clear: both;
-          height: 50px;
-        }
-
-			</style>
+          <h5>SUSTAINABILITY</H5>
+          <div class="" style="width:100%;height:30px; border:1px solid black;">
+            <div class="" style="width: 25%; float:left; background-color:#CF232E;"></div>
+            <div class="" style="width: 25%; float:left; background-color:#F3A634;"></div>
+            <div class="" style="width: 25%; float:left; background-color:#CF232E;"></div>
+            <div class="" style="width: 25%; float:left; background-color:#F3A634;"></div>
+          </div>  
+  </div>
 
 
 
+</div> 
 
 
-
-
-
-
-
-
+<!---
 
 			<div class="gallery_wrapper" id="choose_images">
 
@@ -1029,10 +906,7 @@
 				</div>
       </div>
 
-      </div>
-      <div class="column support_size"></div>
-
-
+--->
 
 
 
