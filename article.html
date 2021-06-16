@@ -396,9 +396,9 @@
   <style>
 
     .column_sixty{width:60%; float:left}
-    .column_sixty > img {width: 80%; margin: 10px auto; display: block;}
+    .column_sixty > img {width: 80%; margin: 10px auto; display: block; opacity: 50%; }
     .column_forty{width:40%; float:left; padding:2% 0px;}
-    .column_forty > h5 {text-align: left;}
+    .column_sixty > h4, .column_forty > h5 {text-align: left;}
     .bar_wrapper{    width: 98%; height: 30px; border: 1px solid black;  margin: 5px auto 25px auto;}
     .bar{width: 25%; float:left; height: 30px; background-color: white;}
     .bar.red{background-color:#CF232E;}
@@ -407,8 +407,16 @@
     .bar.green{background-color:#1A5C31;}
 
 
+    .lock{
+      background-image: url('article images/lock.svg'); height: 30px;
+      width: 30px;
+      background-size: auto;
+      display: block;
+      float: left;
+      background-repeat: no-repeat;
+    }
+    
   </style>
-
 
 
 
@@ -706,11 +714,12 @@
 
           <div class="column_sixty">
 
-              <h4> <span class="lock" 
-                style="background-img:url('article images/lock.svg');heigth:30px;width:30px;"> </span> 
-              AMARANTH</h4>
+              <h4> 
+              <span class="lock"> </span> 
+              AMARANTH
+              </h4>
               <img src="article images/amaranth_gif.gif">
-
+              
           </div>
 
           <div class="column_forty">
@@ -760,8 +769,12 @@
 
                     <div class="column_sixty">
 
-                        <h4>AVOCADO</h4>
-                        <img src="article images/avocado_gif.gif">
+                      <h4> 
+                      <span class="lock"> </span> 
+                      AVOCADO
+                      </h4>
+                      
+                      <img src="article images/avocado_gif.gif">
 
                     </div>
 
@@ -811,7 +824,7 @@
                     <div class="column_sixty">
 
                         <h4>CHIA</h4>
-                        <img src="article images/chia_gif.gif">
+                        <img style="opacity:100%;" src="article images/chia_gif.gif">
 
                     </div>
 
@@ -860,7 +873,10 @@
 
                     <div class="column_sixty">
 
-                        <h4>QUINOA</h4>
+                      <h4> 
+                      <span class="lock"> </span> 
+                      QUINOA
+                      </h4>
                         <img src="article images/quinoa_gif.gif">
 
                     </div>
@@ -910,7 +926,10 @@
 
                     <div class="column_sixty">
 
-                        <h4>SPIRULINA</h4>
+                      <h4> 
+                      <span class="lock"> </span> 
+                      SPIRULINA
+                      </h4>
                         <img src="article images/spirulina_gif.gif">
 
                     </div>
@@ -960,7 +979,10 @@
 
                     <div class="column_sixty">
 
-                        <h4>TOMATOES</h4>
+                      <h4> 
+                      <span class="lock"> </span> 
+                      TOMATOES
+                      </h4>
                         <img src="article images/tomato_gif.gif">
 
                     </div>
@@ -2040,6 +2062,22 @@
 					$('#'+section+'_option_'+num).addClass('selected');
 					$('#'+section+'_image_'+num).addClass('selected');
 
+
+
+          //if choose superfood section
+          if(section == "choose_images"){
+
+            var confirm_selection = $('#choose_images > .gallery_image.selected').attr('id');
+            
+            if(confirm_selection == 'choose_image_3' ){
+              $('#chia_info').show();
+            }
+            else{
+              $('#chia_info').hide();
+            }
+
+        
+          }
 
 				});
 
