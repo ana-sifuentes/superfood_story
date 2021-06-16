@@ -2065,11 +2065,11 @@
 
 
           //if choose superfood section
-          if(section == "choose_images"){
+          if(section == "choose"){
 
             var confirm_selection = $('#choose_images > .gallery_image.selected').attr('id');
             
-            if(confirm_selection == 'choose_image_3' ){
+            if(confirm_selection != 'choose_image_3'){
               $('#chia_info').show();
             }
             else{
