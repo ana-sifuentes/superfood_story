@@ -1120,6 +1120,27 @@
 		</div>
 
 
+
+<!------------------------------------------------------------------------------------------------------------>
+<div id="other_info">
+  <div class="section_wrapper">
+  <div class="content_wrapper">
+
+    <div class="column support_size"></div>
+    <div class="column center_size">
+
+      <h4>THIS DRAMATIC SUPERSTORY IS...</h4>
+      <H3>coming soon</h3>
+      
+      <p>As the project grows, more 'superfoods' will be added
+    </div>
+    <div class="column support_size"></div>
+
+  </div>
+  </div>
+  
+</div>
+
 <!------------------------------------------------------------------------------------------------------------>
 <div id="chia_info">
 
@@ -1131,16 +1152,23 @@
       <div class="column center_size">
 
 
-      <h4> The dramatic story of chia...</h4>
-			<h3> Lost for almost 400 years! </h3>
+      <h4> GET READY TO...</h4>
+			<h3> EXPLORE THE SUPERSTORY OF CHIA SEEDS! </h3>
 
       <p> The story of chia is full of ups and downs. From tribute to the gods
         to a novelty decoration; from being almost eradicated to
         being over produced.
-        <br><br>
-        Let's unravel the story.
       </p>
 
+
+      <h4>SUPERFOOD STORY</h4>
+      <H3>the videogame</h3>
+      <P>You can explore the story of chia in this article or through a <a href="">videogame</a>!
+      <img src="https://via.placeholder.com/250X150">
+
+      <div class="option" style="width:100%;">
+        PLAY SUPERFOOD STORY!
+      </div>
 
 
       <div class="clear space"></div>
@@ -2069,11 +2097,13 @@
 
             var confirm_selection = $('#choose_images > .gallery_image.selected').attr('id');
             
-            if(confirm_selection != 'choose_image_3'){
+            if(confirm_selection == 'choose_image_3'){
               $('#chia_info').show();
+              $('#other_info').hide();
             }
             else{
               $('#chia_info').hide();
+              $('#other_info').show();
             }
 
         
