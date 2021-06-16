@@ -269,71 +269,11 @@
 		display: block;
 	}
 
-	.info_block > .intro,
-	.info_block > .content.showing{
-		display:block;
-		cursor:pointer;
-	}
-
-	.info_block > .content,
-	.info_block > .intro.hidden{
-		display: none;
-	}
 
 
 
 
-	/****************************/
-	/*carrousel*/
-
-	.carrousel_wrapper{
-		width:100%;
-		margin:auto;
-		float: left;
-		display: flex;
-	}
-
-	.carrousel_controls{
-		width: 3.5%;
-    	float: left;
-   		background-color: black;
-    	color: white;
-    	text-align: center;
-    	font-family: 'VCR_OSD_MONO';
-    	cursor: pointer;
-    	font-size: xxx-large;
-    	padding-top: 15%;
-    	font-weight: 900;
-	}
-
-
-	.carrousel_controls:hover{
-		background-color:white;
-		color:black;
-	}
-
-	.carrousel_controls.previous::before{
-		content: "<";
-	}
-
-	.carrousel_controls.next::before{
-		content: ">";
-	}
-
-	.carrousel_images_wrapper{
-		width:93%;
-		float:left;
-	}
-
-	.carrousel_image{
-		display: none;
-	}
-
-	.carrousel_image.selected{
-		display: block;
-	}
-
-
+	
 
 /**********************************************************************/
 /*SECTION SPECIFIC*/
@@ -444,7 +384,7 @@
 
     /******/
 
-		.info_block > .intro {width: 49%; margin: auto;}
+	
 
 		.superfood_item{width:31.25%; margin 10px 1%;}
 
@@ -1089,7 +1029,7 @@
                 <td colspan="2">
                 <a href="https://www.nutritionvalue.org/">
                 <b>Nutrition</b>
-                </a> <br><br>
+                </a> <br>
                 How nutritionally dense the food is?
                </td>
 
@@ -1105,7 +1045,7 @@
                 <td colspan="2">
                   <a href="https://healabel.com/water-footprint-of-foods">
                   <b>Sustainability</b>
-                  </a> <br><br>
+                  </a> <br>
                   How sustainable is the crop? </td>
 
                   <td>High carbon and water footprints </td>
@@ -1120,7 +1060,7 @@
 
                 <td colspan="2">
                   <a href="https://healabel.com/about"><b>Laborers</b>
-                  </a>   <br><br>
+                  </a>   <br>
                   Are there any reports of violations of worker's rights?  </td>
 
                 <td>Multiple issues and reports</td>
@@ -1134,7 +1074,7 @@
 
                 <td colspan="2">
                 <b>Backstory</b>
-                <br><br>
+                <br>
                 What is the origin of this food? </td>
 
                 <td>Eradication </td>
@@ -1156,6 +1096,8 @@
 		</div>
 
 
+<!------------------------------------------------------------------------------------------------------------>
+<div id="chia_info">
 
 		<!---INTRO TO CHIA ---------------------------------------------------------------->
 		<div class="section_wrapper">
@@ -1701,6 +1643,11 @@
 		</div>
 
 
+
+
+<!------------------------------------------------------------------------------------------------------------>
+</div>
+
 		<!--- CREDITS ------------------------------------------------------------------------>
 
 		<div class="section_wrapper" id="credits">
@@ -2084,7 +2031,7 @@
 					num = num.toString();
 
 					//remove previous selections
-					$('#'+clicked).removeClass('selected');
+					$('#'+section+'_options > .selected').removeClass('selected');
 					$('#'+section+'_images > .gallery_image.selected').removeClass('selected');
 
 					//apped new selection
@@ -2093,63 +2040,6 @@
 
 
 				});
-
-
-				$('.info_block').click(function(){
-
-
-					var clicked_id =  $(this).attr('id');
-
-					$('#'+clicked_id +'> .intro').toggleClass('hidden');
-					$('#'+clicked_id +'> .content').toggleClass('showing');
-
-
-				});
-
-
-				$('.carrousel_controls').click(function(){
-
-					//get which section
-					var section = $(this).parent().attr('id');
-
-					//get which image is selected
-					var current_image = '#'+section+' > .carrousel_images_wrapper > .carrousel_image.selected';
-
-					//get what number it is
-					var num =  parseInt(($(current_image).attr('id')).slice(-1));
-
-					//get total images in gallery
-					var total =  $('#'+section+' > .carrousel_images_wrapper').children().length;
-
-
-
-					//get if previous or next to add or subtract
-					if( $(this).hasClass('next')){
-							num = num +1;
-					}
-					else if( $(this).hasClass('previous')){
-							num = num -1;
-					}
-
-
-					//adjust for total numbers
-					if(num > total){
-						num = 1;
-					}
-					if(num == 0){
-						num = total;
-					}
-
-
-					//hide current selected
-					$(current_image).removeClass('selected');
-					//ad new selection
-					$('#'+section+'_image_'+num).addClass('selected');
-
-
-				});
-
-
 
 
 
