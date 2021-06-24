@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+</head>
+<body>
+
+<script>
+var config = {
+  type: Phaser.AUTO,
+  width: 800,
+  height: 600,
+  physics: {
+    default: 'arcade',
+    arcade: {
+      gravity: { y: 800 }
+    }
+  },
+  scene: {
+    preload: _preloadAssets,
+    create: _init,
+    update: _update
+  }
+};
+
+var game = new Phaser.Game(config);
+var jumpSpeeds = [
+  -200, -200, -200, -200, -200, 
+  -210, -220, -230, -240, -250, 
+  -260, -260, -260, -270, -280,
+  -290, -300, -310, -320, -330
+  -340, -350
+];
+
+var platforms_1 = [
+   200,  600, 1000, 1600, 2000, 
+  2400, 2800, 3200, 3800, 4200, 
+  4600, 5000, 5600, 6200, 6800
+];
+
+var coins_1 = [
+  300, 600, 900
+];
+
+function _preloadAssets() {
+  this.load.image('sky', 'assets/sky.png');
+  this.load.image('bg1', 'assets/mountains-back.png');
+  this.load.image('bg2', 'assets/mountains-mid1.png');
+  this.load.image('bg3', 'assets/mountains-mid2.png');
+  this.load.image('ground', 'assets/platform.png');
+  
+  this.load.image('coin', 'assets/star.png');
+
+  this.load.spritesheet('player', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
+}
+
+function _init() {
+  // bg parallax
+  this.layers_0 = this.add.tileSprite(400, 200, 800, 600, 'sky');
+  this.layers_1 = this.add.tileSprite(400, 200, 800, 600, 'bg1');
+  this.layers_2 = this.add.tileSprite(400, 350, 800, 600, 'bg2');
+  this.layers_3 = this.add.tileSprite(400, 650, 800, 600, 'bg3');
+  this.layers_0.setScrollFactor(0);
+  this.layers_1.setScrollFactor(0);
+  this.layers_2.setScrollFactor(0);
+  this.layers_3.setScrollFactor(0);
+
+  // plats
+  this.platforms = this.physics.add.staticGroup();
+  platforms_1.forEach(platX => this.platforms.create(platX, 610, 'ground'));
+
+  // items
+  this.coins = this.physics.add.staticGroup();
+  coins_1.forEach(coinX => this.coins.create(coinX, 500, 'coin'));
+
+  // player
+  this.player = this.physics.add.sprite(50, 520, 'player'); 
+  this.physics.add.collider(this.player, this.platforms);
+  this.physics.add.overlap(this.player, this.coins, _collectCoin, null, this);
+
+  this.anims.create({
+    key: 'run',
+    frames: this.anims.generateFrameNumbers('player', { start: 5, end: 8 }),
+    frameRate: 10,
+    repeat: -1
+  });
+
+  // inputs
+  this.keyboard = this.input.keyboard.createCursorKeys();
+
+  // camera
+  this.cameras.main.setBackgroundColor('#697e96');
+  this.cameras.main.startFollow(this.player, true, 1, 0, -200, 200);
+}
+
+function _update() {
+  if (this.gameOver) {
+    this.player.setVelocity(0, 0);
+    return;
+  }
+
+  // parallax
+  this.layers_1.tilePositionX -= 0.05;
+  this.layers_2.tilePositionX -= 0.3;
+  this.layers_3.tilePositionX -= 0.75;
+
+  // auto move
+  this.player.setVelocityX(400);
+  this.player.anims.play('run', true);
+
+  // jump
+  if (this.player.body.touching.down) {
+    this.jumpHeld = 0;
+  }
+
+  if (this.keyboard.space.isDown && this.jumpHeld < 20) {
+    this.jumpHeld++;
+    this.player.setVelocityY(jumpSpeeds[this.jumpHeld]);
+  }
+
+  if (this.player.y > 650) {
+    this.gameOver = true;
+  }
+}
+
+function _collectCoin(player, coin) {
+  coin.disableBody(true, true);
+}
+</script>
+</body>
+</html>
