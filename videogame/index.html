@@ -25,16 +25,16 @@ var config = {
 
 var game = new Phaser.Game(config);
 var jumpSpeeds = [
-  -200, -200, -200, -200, -200, 
-  -210, -220, -230, -240, -250, 
+  -200, -200, -200, -200, -200,
+  -210, -220, -230, -240, -250,
   -260, -260, -260, -270, -280,
   -290, -300, -310, -320, -330
   -340, -350
 ];
 
 var platforms_1 = [
-   200,  600, 1000, 1600, 2000, 
-  2400, 2800, 3200, 3800, 4200, 
+   200,  600, 1000, 1600, 2000,
+  2400, 2800, 3200, 3800, 4200,
   4600, 5000, 5600, 6200, 6800
 ];
 
@@ -43,12 +43,12 @@ var coins_1 = [
 ];
 
 function _preloadAssets() {
-  this.load.image('sky', 'background_sky.png');
-  this.load.image('bg1', 'background_clouds.png');
-  this.load.image('bg2', 'background_mountains.png');
-  this.load.image('bg3', 'background_chinampas.png');
-  this.load.image('ground', 'background_platform.png');
-  
+  this.load.image('sky', 'assets/background_sky.png');
+  this.load.image('bg1', 'assets/background_clouds.png');
+  this.load.image('bg2', 'assets/background_mountains.png');
+  this.load.image('bg3', 'assets/background_chinampas.png');
+  this.load.image('ground', 'assets/background_platform.png');
+
   this.load.image('coin', 'assets/star.png');
 
   this.load.spritesheet('player', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
@@ -74,7 +74,7 @@ function _init() {
   coins_1.forEach(coinX => this.coins.create(coinX, 500, 'coin'));
 
   // player
-  this.player = this.physics.add.sprite(50, 520, 'player'); 
+  this.player = this.physics.add.sprite(50, 520, 'player');
   this.physics.add.collider(this.player, this.platforms);
   this.physics.add.overlap(this.player, this.coins, _collectCoin, null, this);
 
