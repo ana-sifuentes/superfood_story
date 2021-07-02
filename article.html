@@ -46,15 +46,17 @@
 
 	body{margin:0px; scroll-snap-type: y proximity; float:left;height: auto;}
 
-	p{font-family: 'Linux_Libertine'; font-size:1.5em;}
+	p{font-family: 'Linux_Libertine'; font-size:22px;}
 
 	h1, h2, h3, h4, h5, h6{ font-family: 'VCR_OSD_MONO'; margin:0px; padding:0px; text-align: center; text-transform: uppercase;}
 
-	h3{font-size: 3em; font-weight: 900; }
+	h2{font-size: 80px; font-weight: 900;}
 
-  h4{font-size: 1.8em; font-weight: 900; }
+	h3{font-size: 50px; font-weight: 900; }
 
-	img {width:100%;}
+  h4{font-size: 25px; font-weight: 900; }
+
+	img {width:100%; max-height: 90vh;}
 
 	html {scroll-behavior: smooth;}
 
@@ -94,11 +96,9 @@
 	/*menu wrapper, menu items go here */
 	.menu_wrapper{
 		height: 8vh;
-    display: flex;
 	}
 	.menu_wrapper.collapsed{
 		height:0vh;
-    display: none;
 	}
 
 	/*scroll progress bar container */
@@ -182,7 +182,7 @@
 
   .img_caption{
     font-style: italic;
-    font-size: 1.5em;
+    font-size: 18px;
   }
 
   .center_txt{
@@ -206,7 +206,6 @@
 	.options_wrapper{
 		width:100%;
 		float: left;
-    display: flex;
 	}
 
 	/*buttons for option select*/
@@ -225,10 +224,25 @@
     font-family: 'VCR_OSD_MONO';
     background-color: black;
       border: solid 1px black;
-      width:30%;
+      width:31.95%;
   }
 
+    .option.six{
+      width: 15.25%;
+    }
 
+    .option.five{
+      width:18%;
+  }
+
+  .option.two{
+    width: 48%;
+  }
+
+  .option.one{
+    width: 98%;
+    color:white;
+  }
 
 	/*selected option*/
 	.option.selected, .option:hover{
@@ -328,14 +342,14 @@
 
 
 
-	/*less than 1024px*/
-	@media only screen and (max-width: 1024px) {
+	/*less than 1000px*/
+	@media only screen and (max-width: 1000px) {
 
-    .support_size{width: 10%;}
-    .center_size{ width:78%;}
+    .support_size{width: 15%;}
+    .center_size{ width:68%;}
 
-    .section_wrapper.banner > h1{  font-size: 5em;}
-    .section_wrapper.banner{animation: 60s welcome_screen_animation linear alternate infinite;}
+
+    .section_wrapper.banner > h1{  font-size: 90px; width:100%; top: 40%; background-color: white; padding:10px 0px;}
 
 
     /********/
@@ -352,11 +366,14 @@
 
 	@media only screen and (max-width: 700px) {
 
-    .support_size, .center_size{ width:98%;}
-    .section_wrapper.banner > h1{  font-size:3.5em;}
-    .section_wrapper.banner{animation: 30s welcome_screen_animation linear alternate infinite;}
 
-    ol li{font-size: 12px;}  
+    ol li{font-size: 12px;}
+
+    .section_wrapper.banner{animation: 40s welcome_screen_animation linear alternate infinite;}
+
+    .section_wrapper.banner > h1{  font-size: 60px;}
+
+    .support_size, .center_size{ width:98%;}
 
 		.content_wrapper{width:92%; margin: auto;}
 
@@ -413,6 +430,14 @@
 
     #other_info{display: none;}
 
+
+    .menu_logo{
+    font-family: 'VCR_OSD_MONO';
+    height: 4vh;
+    padding-top: 2vh;
+    font-size: 1.2em;
+    font-weight: 900;
+    }
   </style>
 
 
@@ -420,15 +445,14 @@
 	<body>
 
 
+
+
 		<div class="top_wrapper" id="navwrapper">
   			<div class="menu_wrapper"  id="navbar">
 
+          <div class="menu_logo">SUPERFOOD STORY</div>
 
-          <div style="font-family:'VCR_OSD_MONO'; font-size:1em; font-weight:900;"> 
-            SUPERFOOD STORY
-          </div>
-          
-			  </div>
+			</div>
 
  			 <div class="progress-container">
  				   <div class="progress-bar" id="progress_bar"></div>
@@ -512,7 +536,7 @@
         <p>
         <b>Superfoods equal money</b>: <br>
         • Between 2011 and 2015 there was a <a href="https://www.mintel.com/press-centre/food-and-drink/super-growth-for-super-foods-new-product-development-shoots-up-202-globally-over-the-past-five-years">
-          202% increase</a> in the number of new products that claimed the 'superfood' status.
+          202% increase</a> in the number of new products that claimed the 'super'status.
           <br>
         • In 2018 the global industry was estimated to be worth <a href="https://www.grandviewresearch.com/industry-analysis/superfood-market#:~:text=Industry%20Insights,5.9%25%20over%20the%20forecast%20period">
             137 billion USD</a>.
@@ -562,8 +586,8 @@
       CBC News</a>, found a granola-quinoa product that claimed it lowered cholesterol,
       controlled blood sugar and prevented cancer.
       <br><br>
-      Only after the news agency filed a 
-      complaint against them was the company forced to change their marketing.
+      Only after the news agency filed a complaint against them,
+      the company was forced to change their marketing.
       </p>
 
 
@@ -628,8 +652,8 @@
 			<h4>Exploitation: <br> Tomatoes </h4>
 			<p>
 			<a href="http://www.vegetablefacts.net/vegetable-history/history-of-tomatoes/">
-        Taken from Mesoamerica</a> and incorporated into western diets, 
-        they are now associated with Mediterranean cuisine and its cultures.
+        Taken from Mesoamerica</a> and incorporated into western diets, nowadays
+        they are associated with the Mediterranean cuisine and its cultures.
 			</p>
 		</div>
 
@@ -643,7 +667,7 @@
 		<div class="column third_size">
 			<img src="article images/indigenous_QUINOA.svg">
 			<h4>Eradication: <br> Quinoa</h4>
-			<p>Due to their high religious value in Mesoamerican civilizations, quinoa <a href="https://foodfirst.org/news/the-story-behind-the-popular-superfood-quinoa/">
+			<p>Due to their high religious value in ancient civilizations, quinoa <a href="https://foodfirst.org/news/the-story-behind-the-popular-superfood-quinoa/">
         was prohibited and lost for almost 400 years</a>.
 			</p>
 		</div>
@@ -684,8 +708,8 @@
       With superfoods we have a glimpse of how different actors have an impact on our food.
       <br><br>
       Our modern food systems are <b>complex, interconnected webs of activities</b>
-      involving: governance, marketing and economics, 
-      agriculture and sustainability, society and our health.
+      involving: governance, marketing and economics, agriculture and
+      sustainability, society and even our health.
       </p>
 
 
@@ -697,12 +721,12 @@
       <div class="clear space"></div>
 
       <div class="options_wrapper" id="choose_options">
-        <div class="option " id="choose_option_1"> AMARANTH</div>
-        <div class="option " id="choose_option_2"> AVOCADO</div>
-        <div class="option selected" id="choose_option_3"> CHIA</div>
-        <div class="option " id="choose_option_4"> QUINOA</div>
-        <div class="option " id="choose_option_5"> SPIRULINA</div>
-        <div class="option " id="choose_option_6"> TOMATOES</div>
+        <div class="option six" id="choose_option_1"> AMARANTH</div>
+        <div class="option six" id="choose_option_2"> AVOCADO</div>
+        <div class="option six selected" id="choose_option_3"> CHIA</div>
+        <div class="option six" id="choose_option_4"> QUINOA</div>
+        <div class="option six" id="choose_option_5"> SPIRULINA</div>
+        <div class="option six" id="choose_option_6"> TOMATOES</div>
       </div>
 
 
@@ -1155,7 +1179,7 @@
         <img src="https://via.placeholder.com/250X150">
 
         <a href="https://ana-sifuentes.github.io/superfood_story/">
-        <div class="option">
+        <div class="option one">
 
           <h4> PLAY SUPERFOOD STORY!</h4>
         </div>
@@ -1220,19 +1244,19 @@
     <p>Highlights of Aztec life:</p>
       <div class="options_wrapper" id="origin_options">
 
-        <div class="option selected" id="origin_option_1">
+        <div class="option five selected" id="origin_option_1">
           NUTRITION
         </div>
 
-        <div class="option " id="origin_option_2">
+        <div class="option five " id="origin_option_2">
           MILITARY
         </div>
 
-        <div class="option " id="origin_option_3">
+        <div class="option five " id="origin_option_3">
           ARCHITECTURE
         </div>
 
-        <div class="option " id="origin_option_4">
+        <div class="option five " id="origin_option_4">
           SOCIETY
         </div>
 
@@ -1324,24 +1348,24 @@
 
 
 
-          <div class="option " id="nutrinfo_option_1">
+          <div class="option five " id="nutrinfo_option_1">
             ALL
           </div>
 
-          <div class="option selected" id="nutrinfo_option_2">
+          <div class="option five selected" id="nutrinfo_option_2">
             CHIA
           </div>
 
-          <div class="option"  id="nutrinfo_option_3">
+          <div class="option five"  id="nutrinfo_option_3">
             ALMONDS
           </div>
 
 
-          <div class="option" id="nutrinfo_option_4">
+          <div class="option five" id="nutrinfo_option_4">
             SUNFLOWER SEEDS
           </div>
 
-          <div class="option" id="nutrinfo_option_5">
+          <div class="option five" id="nutrinfo_option_5">
             PEANUTS
           </div>
 
@@ -1642,11 +1666,11 @@
 
         <div class="options_wrapper" id="worldwide_options">
 
-            <div class="option selected" id="worldwide_option_1">
+            <div class="option two selected" id="worldwide_option_1">
               OVERVIEW
             </div>
 
-            <div class="option"  id="worldwide_option_2">
+            <div class="option two"  id="worldwide_option_2">
               IMPORT / EXPORT
             </div>
           </div>
