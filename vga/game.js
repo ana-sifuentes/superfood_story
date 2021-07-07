@@ -187,7 +187,7 @@ function _titleCreate(scene) {
     boundsAlignH: 'center'
   };
 
-  var continueText = window.mobileAndTabletCheck() ? 'TOUCH SCREEN to start' : 'Press SPACE to start';
+  var continueText = window.mobileAndTabletCheck() ? 'TOUCH SCREEN TO START' : 'PRESS SPACE TO START';
 
   scene.title = scene.add.text(GAME_WIDTH / 2, 100, 'SUPER FOOD STORY', bigTextStyles);
   scene.continue = scene.add.text(GAME_WIDTH / 2, 500, continueText, smallTextStyles);
@@ -266,7 +266,7 @@ function _menuCreate(scene) {
   };
 
   var level_id = stage === 2 ? '?' : (stage + 1);
-  var continueText = window.mobileAndTabletCheck() ? 'TOUCH SCREEN to start' : 'Press SPACE to start';
+  var continueText = window.mobileAndTabletCheck() ? 'TOUCH SCREEN TO START' : 'PRESS SPACE TO START';
 
   scene.level = scene.add.text(GAME_WIDTH / 2, 30, 'Level ' + level_id, smallTextStyles);
   scene.stageName = scene.add.text(GAME_WIDTH / 2, 90, STAGE_NAMES[stage], bigTextStyles);
@@ -546,7 +546,7 @@ function _playCreate(scene) {
   }
   
   // ui
-  var continueText = window.mobileAndTabletCheck() ? 'TOUCH SCREEN to restart' : 'Press SPACE to restart';
+  var continueText = window.mobileAndTabletCheck() ? 'TOUCH SCREEN TO RESTART' : 'PRESS SPACE TO RESTART';
 
   scene.gameOverText = scene.add.text(GAME_WIDTH / 2, 150, 'Game Over', {color: '#fff', fontSize: 60, fontFamily: 'VCR_OSD_MONO'});
   scene.continueText = scene.add.text(GAME_WIDTH / 2, 250, continueText, {color: '#fff', fontSize: 60, fontFamily: 'VCR_OSD_MONO'});
