@@ -189,7 +189,7 @@ function _titleCreate(scene) {
 
   var continueText = window.mobileAndTabletCheck() ? 'TOUCH SCREEN TO START' : 'PRESS SPACE TO START';
 
-  scene.title = scene.add.text(GAME_WIDTH / 2, 100, 'SUPER FOOD STORY', bigTextStyles);
+  scene.title = scene.add.text(GAME_WIDTH / 2, 100, 'SUPERFOOD STORY', bigTextStyles);
   scene.continue = scene.add.text(GAME_WIDTH / 2, 500, continueText, smallTextStyles);
 
   scene.title.setOrigin(0.5, 0.5);
